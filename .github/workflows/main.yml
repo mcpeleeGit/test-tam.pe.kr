@@ -44,4 +44,5 @@ jobs:
             # ftp password
          password: ${{ secrets.FTP_PASSWORD }}
             # Server port to connect to (read your web hosts docs)
+         server-dir: html/
         
