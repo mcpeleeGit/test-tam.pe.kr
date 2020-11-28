@@ -17,81 +17,90 @@
 <body>
     <table>
         <tr>
+            <td>Login (PopUp)</td>
             <td>
-                Login
-            </td>
-            <td>
-                <a id="custom-login-btn" href="javascript:loginWithKakao()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
+                <a id="custom-login-btn" href="javascript:loginWithKakao()">
+                    <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" />
+                </a>
             </td>
         </tr>
         <tr>
+            <td>Logout</td>
             <td>
-                Logout
+                <Button onclick="javascript:logoutWithKakao()">Logout</Button>
             </td>
+        </tr>
+        <tr>
+            <td>Unlink</td>
             <td>
-                <input id="logout" type="button" value="LogOut" onclick="javascript:logoutWithKakao()" />
+                <Button onclick="javascript:unlinkWithKakao()">Unlink</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>Profile</td>
+            <td>
+                <Button onclick="javascript:profileWithKakao()">Profile</Button>
+                <p id="userid"></p>
+                <p id="nickname"></p>
+                <img id="profile_image"/>
+                <img id="thumbnail_image"/>
             </td>
         </tr>        
     </table>
-    
-    
-    <p id="token-result"></p>
+
     <script type="text/javascript">
         function loginWithKakao() {
-            Kakao.Auth.authorize({
-                redirectUri: 'http://localhost:3000/kakao-redirect.html' //★ 수정 할 것
+            Kakao.Auth.login({
+                success: function (authObj) {
+                    alert(JSON.stringify(authObj));
+                    Kakao.Auth.setAccessToken(authObj.access_token);
+                    //★ 추가 할 것 : 로그인 성공 후 처리 
+                },
+                fail: function (err) {
+                    alert(JSON.stringify(err))
+                },
             })
         }
-        // 아래는 데모를 위한 UI 코드입니다.
-        displayToken()
-        function displayToken() {
-            const token = getCookie('authorize-access-token')
-            if (token) {
-                Kakao.Auth.setAccessToken(token)
-                Kakao.Auth.getStatusInfo(({ status }) => {
-                    if (status === 'connected') {
-                        document.getElementById('token-result').innerText = 'login success. token: ' + Kakao.Auth.getAccessToken()
 
-                        // 로그아웃 버튼 활성화
-                        displayLogout();
-                        
-                        // 프로필 조회
-
-
-                    } else {
-                        Kakao.Auth.setAccessToken(null)
-                    }
-                })
-            }
-        }
-        function getCookie(name) {
-            const value = "; " + document.cookie;
-            const parts = value.split("; " + name + "=");
-            if (parts.length === 2) return parts.pop().split(";").shift();
-        }
-
-        //로그아웃
         function logoutWithKakao() {
             if (!Kakao.Auth.getAccessToken()) {
                 console.log('Not logged in.');
                 return;
             }
+            console.log(Kakao.Auth.getAccessToken()); //before Logout
             Kakao.Auth.logout(function () {
-                console.log(Kakao.Auth.getAccessToken());
+                console.log(Kakao.Auth.getAccessToken()); //after Logout
+                //★ 추가 할 것 : 로그아웃 성공 후 처리 
             });
-            displayLogout();
-        }
-        // 아래는 데모를 위한 UI 코드입니다.        
-        function displayLogout(){
-            if (!Kakao.Auth.getAccessToken()) {
-                document.getElementById('logout').disabled = true;
-                console.log('Not logged in.');
-                return;
-            }
-
-            document.getElementById('logout').disabled = false;
         }
 
+        function unlinkWithKakao() {
+            Kakao.API.request({
+                url: '/v1/user/unlink',
+                success: function (response) {
+                    console.log(response);
+                },
+                fail: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        function profileWithKakao() {
+            Kakao.API.request({
+                url: '/v2/user/me',
+                success: function (response) {
+                    console.log(response);
+                    document.getElementById("userid").innerText = response.id;
+                    document.getElementById("nickname").innerText = response.kakao_account.profile.nickname;
+                    document.getElementById("profile_image").src = response.properties.profile_image;
+                    document.getElementById("thumbnail_image").src = response.properties.thumbnail_image;
+                },
+                fail: function (error) {
+                    console.log(error);
+                }
+            });
+        }
     </script>
 
 </body>
