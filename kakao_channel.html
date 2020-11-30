@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Kakao JavaScript SDK</title>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('2d68640b56d986af5c8a48505c7c8c71'); //★ 수정 할 것
+
+        // SDK 초기화 여부를 판단합니다.
+        console.log(Kakao.isInitialized());
+    </script>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>Login (PopUp)</td>
+            <td>
+                <a id="custom-login-btn" href="javascript:loginWithKakao()">
+                    <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" />
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>Logout</td>
+            <td>
+                <Button onclick="javascript:logoutWithKakao()">Logout</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>Unlink</td>
+            <td>
+                <Button onclick="javascript:unlinkWithKakao()">Unlink</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>Kakao Story</td>
+            <td>
+                <Button onclick="javascript:add()">Add</Button>
+                <Button onclick="javascript:chat()">Chat</Button>
+                <Button onclick="javascript:plusfriends()">plusfriends</Button>
+                
+                <p id="kakao-talk-channel-chat-button"></p>
+                <p id="kakao-add-channel-button"></p>
+
+            </td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        function loginWithKakao() {
+            Kakao.Auth.login({
+                success: function (authObj) {
+                    alert(JSON.stringify(authObj));
+                    Kakao.Auth.setAccessToken(authObj.access_token);
+                    //★ 추가 할 것 : 로그인 성공 후 처리 
+                },
+                fail: function (err) {
+                    alert(JSON.stringify(err))
+                },
+            })
+        }
+
+        function logoutWithKakao() {
+            if (!Kakao.Auth.getAccessToken()) {
+                console.log('Not logged in.');
+                return;
+            }
+            console.log(Kakao.Auth.getAccessToken()); //before Logout
+            Kakao.Auth.logout(function () {
+                console.log(Kakao.Auth.getAccessToken()); //after Logout
+                //★ 추가 할 것 : 로그아웃 성공 후 처리 
+            });
+        }
+
+        function unlinkWithKakao() {
+            Kakao.API.request({
+                url: '/v1/user/unlink',
+                success: function (response) {
+                    console.log(response);
+                },
+                fail: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        function add() {
+            Kakao.Channel.addChannel({
+                channelPublicId: '_xcLqmC'
+            });
+        }
+
+        function chat() {
+            Kakao.Channel.chat({
+                channelPublicId: '_xcLqmC' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+            });
+        }
+        btn_chat();
+        function btn_chat() {
+            Kakao.Channel.createChatButton({
+                container: '#kakao-talk-channel-chat-button',
+                channelPublicId: '_xcLqmC' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+            });
+        }
+        btn_added();
+        function btn_added() {
+            Kakao.Channel.createAddChannelButton({
+                container: '#kakao-add-channel-button',
+                channelPublicId: '_xcLqmC' // 채널 홈 URL에 명시된 id로 설정합니다.
+            });
+        }
+
+        function plusfriends() {
+            Kakao.API.request({
+                url: '/v1/api/talk/plusfriends',
+                success: function (response) {
+                    console.log(response);
+                },
+                fail: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
