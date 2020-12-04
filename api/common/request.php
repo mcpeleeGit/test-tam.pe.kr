@@ -12,5 +12,15 @@ class Request {
             $class->{$prop->getName()} = $data->{$prop->getName()};
         }
     }    
+
+    public static function setParam(&$class)
+    {
+        $reflect = new ReflectionClass($class);
+        $props   = $reflect->getProperties(ReflectionProperty::IS_PUBLIC);
+        
+        foreach ($props as $prop) {
+            $class->{$prop->getName()} = $_GET[$prop->getName()];
+        }
+    }        
 }
 ?>

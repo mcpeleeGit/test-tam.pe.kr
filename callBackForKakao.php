@@ -4,7 +4,7 @@
  $code = $_GET["code"]; // 서버로 부터 토큰을 발급받을 수 있는 코드를 받아옵니다.
  $client_id = "4408b5bb51bdf4c89879e933556a21e8"; //★ 수정 할 것
  $client_secret = "QZhr9itOs0mxVRDxIvuOfOLzjZMc5q1U"; //★ 수정 할 것 (보안 설정을 켰다면 사용)
- $redirect_uri = urlencode("http://leedongha.dothome.co.kr/callBackForKakao.php"); //★ 수정 할 것 (앞에서 설정한 것과 동일하게)
+ $redirect_uri = urlencode("http://localhost/callBackForKakao.php"); //★ 수정 할 것 (앞에서 설정한 것과 동일하게)
  $returnUrl = "https://kauth.kakao.com/oauth/token?grant_type=authorization_code&client_id=".$client_id."&redirect_uri=".$redirect_uri."&code=".$code."&client_secret=".$client_secret;
  
  $isPost = false;

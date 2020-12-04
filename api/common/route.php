@@ -29,8 +29,22 @@ class Route {
 
         $ctr_name = $url[3].'Controller';
         $ctr = new $ctr_name();
-        if( isset( $url[4] )){           
-            $ctr->{$url[4]}();
+        if( isset( $url[4] )){      
+            $fullName   = $url[4];
+            $searchName = '?';
+            $pos        = strpos($fullName, $searchName);           
+            if($pos === false) {
+                $functionName = $url[4]; 
+            } else {
+                $functionName = preg_split('#￦?#', $url[4]); 
+
+                echo($functionName);
+                die;
+
+                $functionName = $functionName[0];
+            }                
+            
+            $ctr->{$functionName}();
         }
         else{
             $ctr->defaultMethod();
