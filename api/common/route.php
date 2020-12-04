@@ -36,11 +36,7 @@ class Route {
             if($pos === false) {
                 $functionName = $url[4]; 
             } else {
-                $functionName = preg_split('#￦?#', $url[4]); 
-
-                echo($functionName);
-                die;
-
+                $functionName = explode( '?', $url[4]); 
                 $functionName = $functionName[0];
             }                
             
