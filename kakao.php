@@ -1,7 +1,6 @@
 <?php
- $session_start();
  $client_id = "4408b5bb51bdf4c89879e933556a21e8"; //★ 수정 할 것
- $redirect_uri = urlencode("http://localhost/callBackForKakao.php"); //★ 수정 할 것
+ $redirect_uri = urlencode("http://leedongha.dothome.co.kr/callBackForKakao.php"); //★ 수정 할 것
  $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=".$client_id."&redirect_uri=".$redirect_uri."&response_type=code";
 ?>
 <!DOCTYPE html>
@@ -24,7 +23,7 @@
     <script type="text/javascript">
     function loginWithKakao() {
         Kakao.Auth.authorize({
-        redirectUri: 'http://localhost/callBackForKakao.php' //★ 수정 할 것
+        redirectUri: 'http://leedongha.dothome.co.kr/callBackForKakao.php' //★ 수정 할 것
         })
     }
     </script>
