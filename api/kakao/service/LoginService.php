@@ -4,7 +4,7 @@ class LoginService extends service {
     public function excuteLogin(){
 
         $client_id = "4408b5bb51bdf4c89879e933556a21e8";
-        $redirect_uri = urlencode("http://localhost/callBackForKakao.php");
+        $redirect_uri = urlencode("http://".$_SERVER['HTTP_HOST']."/callBackForKakao.php");
         $kakaoLoginUrl = "Location: https://kauth.kakao.com/oauth/authorize?client_id=".$client_id."&redirect_uri=".$redirect_uri."&response_type=code";
 
         header($kakaoLoginUrl);
