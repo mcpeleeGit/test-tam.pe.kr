@@ -51,7 +51,17 @@
  $userId = $profileResponse->id;
  $userName = $profileResponse->properties->nickname;
  $userEmail = $profileResponse->kakao_account->email;
- 
+
+ session_start();
+ $_SESSION["accessToken"] = $accessToken;
+ echo $_SESSION["accessToken"];
+
+ if($_GET["state"] == "accessAgree"){
+    $_SESSION["accessAgree"] = $_GET["state"]; 
+    echo $_SESSION["accessAgree"];
+ }
+
+
  echo "<br><br> Headers : ".$headers[0];
  echo "<br><br> accessToken : ".$accessToken;
  echo "<br><br> userId : ".$userId;
