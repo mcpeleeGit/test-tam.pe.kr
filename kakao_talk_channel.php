@@ -27,7 +27,7 @@
 
             <?php
             $client_id = "4408b5bb51bdf4c89879e933556a21e8"; //★ 수정 할 것
-            $redirect_uri = urlencode("http://".$_SERVER['HTTP_HOST']."/callBackForKakao.php"); //★ 수정 할 것
+            $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
             $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=accessToken";
             $kakaoAgree = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&scope=plusfriends&state=accessAgree";
 
@@ -43,8 +43,25 @@
                 echo ("2. plusfriends 동의 완료.<br/>");
             }
             ?>
-            
-            3. AccessToken으로 채널 가입(&상태) 여부를 조회<br/>
+
+            3. AccessToken으로 채널 가입(&상태) 여부를 조회<br />
+            <pre><code class="php">
+            $url = "https://kapi.kakao.com/v1/api/talk/plusfriends";
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_POST, false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+            $header = "Bearer " . $_SESSION["accessToken"];
+            $headers = array();
+            $headers[] = "Authorization: " . $header;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+            $res = curl_exec($ch);
+            $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            curl_close($ch);    
+            </code></pre>
+
             <?php
             $url = "https://kapi.kakao.com/v1/api/talk/plusfriends";
             $ch = curl_init();
@@ -70,13 +87,7 @@
         <li class="list-group-item"></li>
     </ul>
 
-    <pre><code class="php">
-        $isPost = false;
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $returnUrl);
-        curl_setopt($ch, CURLOPT_POST, $isPost);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);        
-    </code></pre>
+
 
 
     <!-- Optional JavaScript -->
