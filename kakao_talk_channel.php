@@ -34,7 +34,7 @@
         
         <ul class="list-group">
             <li class="list-group-item">
-                <h2>카카오톡 채널 관계 확인하기</h2>
+                <h2>카카오톡 채널 관계 확인하기(고객용)</h2>
                 <p>로그인한 고객의 채널 가입(&상태) 여부를 조회한다.</p>
 
 
@@ -94,7 +94,11 @@ curl_close($ch);
                 var_dump($res); // Kakao API 서버로 부터 받아온 값
                 ?>
             </li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">
+                <h2>카카오톡 채널 관계 확인하기(관리자용)</h2>
+                <p>관리자가 선택한 고객의 채널 가입(&상태) 여부를 조회한다.</p>
+
+            </li>
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
