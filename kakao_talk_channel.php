@@ -71,7 +71,7 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
                     function btn_added() {
                         Kakao.Channel.createAddChannelButton({
                             container: '#kakao-add-channel-button',
-                            channelPublicId: <?= $CHANNEL_ID ?> //★ 수정 할 것 채널 홈 URL에 명시된 id로 설정합니다.
+                            channelPublicId: '<?= $CHANNEL_ID ?>' //★ 수정 할 것 채널 홈 URL에 명시된 id로 설정합니다.
                         });
                     }
                     btn_chat();
@@ -79,7 +79,7 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
                     function btn_chat() {
                         Kakao.Channel.createChatButton({
                             container: '#kakao-talk-channel-chat-button',
-                            channelPublicId: <?= $CHANNEL_ID ?> //★ 수정 할 것 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+                            channelPublicId: '<?= $CHANNEL_ID ?>' //★ 수정 할 것 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
                         });
                     }
                 </script>
