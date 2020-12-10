@@ -1,6 +1,7 @@
 <?php
 $APP_ADMIN_KEY = "72462462f6fc9baad63f2de2ad3d865b";
 $REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
+$JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,7 +16,6 @@ $REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
     <title>Googsu WebApplication1</title>
     <link href="/static/css/2.86aa6515.chunk.css" rel="stylesheet">
     <link href="/static/css/main.a583af82.chunk.css" rel="stylesheet">
-    <title>카카오톡 채널</title>
     <!--highlight.js cdn-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
@@ -24,6 +24,7 @@ $REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
     </script>
     <!--bootstrapcdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>카카오톡 채널</title>
 </head>
 
 <body>
@@ -35,8 +36,48 @@ $REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
         </nav>
     </header>
     <div class="container">
-
         <ul class="list-group">
+            <li class="list-group-item">
+                <h2>채널 추가/채팅 버튼</h2>
+                <!--JavaScript Kakao SDK : 채널 추가, 채널 채팅 START-->
+                <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                <script>
+                    // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+                    Kakao.init('<?= $JAVASCRIPT_KEY ?>'); //★ 수정 할 것
+                    // SDK 초기화 여부를 판단합니다.
+                    console.log(Kakao.isInitialized());
+                </script>
+                <table>
+                    <tr>
+                        <td>
+                            <p id="kakao-add-channel-button"></p>
+                        </td>
+                        <td>
+                            <p id="kakao-talk-channel-chat-button"></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <script>
+                    btn_added();
+
+                    function btn_added() {
+                        Kakao.Channel.createAddChannelButton({
+                            container: '#kakao-add-channel-button',
+                            channelPublicId: '_GVVxnK' //★ 수정 할 것 채널 홈 URL에 명시된 id로 설정합니다.
+                        });
+                    }
+                    btn_chat();
+
+                    function btn_chat() {
+                        Kakao.Channel.createChatButton({
+                            container: '#kakao-talk-channel-chat-button',
+                            channelPublicId: '_GVVxnK' //★ 수정 할 것 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+                        });
+                    }
+                </script>
+                <!--JavaScript Kakao SDK : 채널 추가, 채널 채팅 END-->    
+            </li>
             <li class="list-group-item">
                 <h2>카카오톡 채널 관계 확인하기(고객용)</h2>
                 <p>로그인한 고객의 채널 가입(&상태) 여부를 조회한다.</p>
@@ -118,30 +159,30 @@ curl_close($ch);
                 <h2>카카오톡 채널 관계 확인하기(관리자용)</h2>
                 <p>관리자가 선택한 고객의 채널 가입(&상태) 여부를 조회한다.</p>
                 <pre><code class="php">
-$url = "https://kapi.kakao.com/v1/api/talk/plusfriends";
+$url = "https://kapi.kakao.com/v1/api/talk/plusfriends?target_id_type=user_id&target_id=1515035367";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_POST, false);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-$header = "Bearer " . $_SESSION["accessToken"];
+$header = "KakaoAK " . $APP_ADMIN_KEY; //★ 수정 할 것
 $headers = array();
 $headers[] = "Authorization: " . $header;
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $res = curl_exec($ch);
 $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-curl_close($ch);    
+curl_close($ch); 
             </code></pre>
 
                 <?php
-                $url = "https://kapi.kakao.com/v1/api/talk/plusfriends";
+                $url = "https://kapi.kakao.com/v1/api/talk/plusfriends?target_id_type=user_id&target_id=1515035367";
                 $ch = curl_init();
                 curl_setopt($ch, CURLOPT_URL, $url);
                 curl_setopt($ch, CURLOPT_POST, false);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-                $header = "KakaoAK " . $_SESSION["accessToken"];
+                $header = "KakaoAK " . $APP_ADMIN_KEY; //★ 수정 할 것
                 $headers = array();
                 $headers[] = "Authorization: " . $header;
                 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -156,7 +197,14 @@ curl_close($ch);
                     ?>
                 </div>
             </li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">
+                <hr />
+                <h2>카카오톡 채널 관계 알림 받기</h2>
+                <p>"내 애플리케이션>카카오톡 채널>카카오톡 채널 추가/차단 콜백" 설정 시, 해당 API로 아래 값 전달</p>
+                <pre><code class="json">
+{"event":"added","id":"1111","id_type":"app_user_id","plus_friend_public_id":"_FLX","plus_friend_uuid":"@ad","updated_at":"2020-01-01T00:00:00Z"}
+            </code></pre>
+            </li>
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
         </ul>

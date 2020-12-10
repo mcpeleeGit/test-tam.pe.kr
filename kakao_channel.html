@@ -90,27 +90,27 @@
 
         function add() {
             Kakao.Channel.addChannel({
-                channelPublicId: '_xcLqmC'
+                channelPublicId: '_GVVxnK'
             });
         }
 
         function chat() {
             Kakao.Channel.chat({
-                channelPublicId: '_xcLqmC' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+                channelPublicId: '_GVVxnK' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
             });
         }
         btn_chat();
         function btn_chat() {
             Kakao.Channel.createChatButton({
                 container: '#kakao-talk-channel-chat-button',
-                channelPublicId: '_xcLqmC' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+                channelPublicId: '_GVVxnK' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
             });
         }
         btn_added();
         function btn_added() {
             Kakao.Channel.createAddChannelButton({
                 container: '#kakao-add-channel-button',
-                channelPublicId: '_xcLqmC' // 채널 홈 URL에 명시된 id로 설정합니다.
+                channelPublicId: '_GVVxnK' // 채널 홈 URL에 명시된 id로 설정합니다.
             });
         }
 
