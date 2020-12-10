@@ -1,3 +1,7 @@
+<?php
+$APP_ADMIN_KEY = "72462462f6fc9baad63f2de2ad3d865b";
+$REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
+?>
 <!doctype html>
 <html lang="en">
 
@@ -26,12 +30,12 @@
     <header>
         <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
             <div class="container"><a class="navbar-brand" href="/"><img src="/img/icon/googsu.png" class="logo" alt="logo">Kakao API Test</a>
-            <h1>카카오톡 채널</h1>
+                <h1>카카오톡 채널</h1>
             </div>
         </nav>
     </header>
     <div class="container">
-        
+
         <ul class="list-group">
             <li class="list-group-item">
                 <h2>카카오톡 채널 관계 확인하기(고객용)</h2>
@@ -39,7 +43,7 @@
 
 
                 <?php
-                $client_id = "4408b5bb51bdf4c89879e933556a21e8"; //★ 수정 할 것
+                $client_id = $REST_API_KEY; //★ 수정 할 것
                 $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
                 $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=accessToken";
                 $kakaoAgree = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&scope=plusfriends&state=accessAgree";
@@ -50,12 +54,24 @@
                 } else {
                     echo ("1. 카카오톡 로그인으로 AccessToken 취득 완료. <a href=" . $kakaoLoginUrl . ">AccessToken 다시 취득하기</a><br/>");
                 }
+                ?>
+                <pre><code class="php">
+$client_id = $REST_API_KEY; //★ 수정 할 것
+$redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것                    
+$kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" 
+.$client_id."&redirect_uri=".$redirect_uri."&response_type=code&state=accessToken";
+                </code></pre>
+                <?php
                 if (!isset($_SESSION["accessAgree"])) {
                     echo ("2. <a href=" . $kakaoAgree . ">plusfriends 동의받기</a><br/>");
                 } else {
                     echo ("2. plusfriends 동의 완료.<br/>");
                 }
                 ?>
+                <pre><code class="php">
+$kakaoAgree = "https://kauth.kakao.com/oauth/authorize?client_id=" 
+.$client_id."&redirect_uri=".$redirect_uri."&response_type=code&scope=plusfriends&state=accessAgree";
+                </code></pre>
 
                 3. AccessToken으로 채널 가입(&상태) 여부를 조회<br />
                 <pre><code class="php">
@@ -90,14 +106,55 @@ curl_close($ch);
                 $res = curl_exec($ch);
                 $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
                 curl_close($ch);
-
-                var_dump($res); // Kakao API 서버로 부터 받아온 값
                 ?>
+                <div class="alert alert-primary" role="alert" style="display:inline-block;">
+                    <?php
+                    var_dump($res); // Kakao API 서버로 부터 받아온 값
+                    ?>
+                </div>
             </li>
             <li class="list-group-item">
+                <hr />
                 <h2>카카오톡 채널 관계 확인하기(관리자용)</h2>
                 <p>관리자가 선택한 고객의 채널 가입(&상태) 여부를 조회한다.</p>
+                <pre><code class="php">
+$url = "https://kapi.kakao.com/v1/api/talk/plusfriends";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
+$header = "Bearer " . $_SESSION["accessToken"];
+$headers = array();
+$headers[] = "Authorization: " . $header;
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+$res = curl_exec($ch);
+$status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);    
+            </code></pre>
+
+                <?php
+                $url = "https://kapi.kakao.com/v1/api/talk/plusfriends";
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_URL, $url);
+                curl_setopt($ch, CURLOPT_POST, false);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+                $header = "KakaoAK " . $_SESSION["accessToken"];
+                $headers = array();
+                $headers[] = "Authorization: " . $header;
+                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+                $res = curl_exec($ch);
+                $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                curl_close($ch);
+                ?>
+                <div class="alert alert-primary" role="alert" style="display:inline-block;">
+                    <?php
+                    var_dump($res); // Kakao API 서버로 부터 받아온 값
+                    ?>
+                </div>
             </li>
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>

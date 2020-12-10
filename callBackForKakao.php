@@ -81,7 +81,7 @@ var_dump($loginResponse); // Kakao API Return Json
                $accessToken = json_decode($loginResponse)->access_token;
             }
             ?>
-            <div class="alert alert-primary" role="alert">
+            <div class="alert alert-primary" role="alert" style="display:inline-block;">
             <?php
             var_dump($loginResponse); // Kakao API Return Json
             ?>
@@ -136,7 +136,7 @@ var_dump($profileResponse); // Kakao API 서버로 부터 받아온 값
             $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
             curl_close($ch);
             ?>
-            <div class="alert alert-primary" role="alert">
+            <div class="alert alert-primary" role="alert" style="display:inline-block;">
             <?php
             var_dump($profileResponse); // Kakao API 서버로 부터 받아온 값
             ?>
