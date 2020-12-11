@@ -153,7 +153,7 @@ var_dump($profileResponse); // Kakao API 서버로 부터 받아온 값
 session_start();
 $_SESSION["accessToken"] = $accessToken;
 echo $_SESSION["accessToken"];
-
+ 
 if($_GET["state"] == "accessAgree"){
 $_SESSION["accessAgree"] = $_GET["state"];
 echo $_SESSION["accessAgree"];
@@ -162,17 +162,21 @@ echo $_SESSION["accessAgree"];
             <?php
             //액세스 토큰, 세션 저장
             $_SESSION["accessToken"] = $accessToken;
-            echo $_SESSION["accessToken"];
+            echo "accessToken : ".$_SESSION["accessToken"]."<br/>";
             //로그인이 아닌 "추가 항목 동의 받기"로 콜백 받은 경우 세션 처리
             if ($_GET["state"] == "accessAgree") {
                $_SESSION["accessAgree"] = $_GET["state"];
-               echo $_SESSION["accessAgree"];
-            }
+               echo "accessAgree call : ".$_SESSION["accessAgree"]."<br/>";
+            }else{
+               echo "state : ".$_GET["state"]."<br/>";
+            }            
             ?>
          </li>
          <li class="list-group-item">
-            <a href="/">Top Page</a><br />
-            <a href="/kakao_talk_channel.php">Kakao_talk_channel Sample Page</a><br />
+            <h3>돌아가기</h3>
+            ▶ <a href="/">Top Page</a><br />
+            ▶ <a href="/kakao_talk_channel.php">Kakao_talk_channel Sample Page</a><br />
+            ▶ <a href="/kakao.php">Kakao Login Sample Page</a><br />
          </li>
          <li class="list-group-item"></li>
       </ul>
