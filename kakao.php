@@ -30,7 +30,7 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
     </script>
     <!--bootstrapcdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>카카오 로그인</title>
+    <title>카카오 로그인(JavaScript SDK)</title>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
         // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
@@ -44,7 +44,7 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
     <header>
         <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
             <div class="container"><a class="navbar-brand" href="/"><img src="/img/icon/googsu.png" class="logo" alt="logo">Kakao API Test</a>
-                <h1>카카오 로그인</h1>
+                <h1>카카오 로그인(JavaScript SDK)</h1>
             </div>
         </nav>
     </header>
@@ -216,27 +216,6 @@ function profileWithKakao() {
         }
     });
 }
-                </code></pre>
-            </li>
-
-            <li class="list-group-item">
-                <h2>REST API 로그인</h2>
-                <?php
-                //state는 Cross-Site Request Forgery(CSRF) 공격으로부터 보호하기 위해 난수 설정 후, 콜백 페이지에서 검증할 수 있는 기능이나
-                //로그인 후, 원래 페이지로 돌아가기 위한 파라메터로 사용하기도 함.
-                $state = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/returnPage.php?test=한글&p=인코딩");
-                $client_id = $REST_API_KEY; //★ 수정 할 것
-                $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
-                $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=" . $state;
-                ?>
-                <a href="<?= $kakaoLoginUrl ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
-                <pre><code class="PHP">
-//state는 Cross-Site Request Forgery(CSRF) 공격으로부터 보호하기 위해 난수 설정 후, 콜백 페이지에서 검증할 수 있는 기능이나
-//로그인 후, 원래 페이지로 돌아가기 위한 파라메터로 사용하기도 함.
-$state = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/returnPage.php?test=한글&p=인코딩"); 
-$client_id = $REST_API_KEY; //★ 수정 할 것
-$redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
-$kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=" . $state;
                 </code></pre>
             </li>
         </ul>
