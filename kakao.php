@@ -20,7 +20,6 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
     <base href="/" />
     <link rel="manifest" href="/manifest.json">
     <link rel="shortcut icon" href="/favicon.ico">
-    <title>Googsu WebApplication1</title>
     <link href="/static/css/2.86aa6515.chunk.css" rel="stylesheet">
     <link href="/static/css/main.a583af82.chunk.css" rel="stylesheet">
     <!--highlight.js cdn-->
