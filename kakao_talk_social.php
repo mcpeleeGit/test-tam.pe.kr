@@ -1,0 +1,243 @@
+<?php
+session_start();
+$APP_ADMIN_KEY = "72462462f6fc9baad63f2de2ad3d865b";
+$REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
+$JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
+?>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <base href="/" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/static/css/2.86aa6515.chunk.css" rel="stylesheet">
+    <link href="/static/css/main.a583af82.chunk.css" rel="stylesheet">
+    <!--highlight.js cdn-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        document.querySelectorAll("code").forEach(function(element) {
+            element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        });
+    </script>
+    <!--bootstrapcdn-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>카카오톡 소셜</title>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('<?= $JAVASCRIPT_KEY ?>'); //★ 수정 할 것
+        // SDK 초기화 여부를 판단합니다.
+        console.log(Kakao.isInitialized());
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
+            <div class="container"><a class="navbar-brand" href="/"><img src="/img/icon/googsu.png" class="logo" alt="logo">Kakao API Test</a>
+                <h1>카카오톡 소셜</h1>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h2>프로필 가져오기</h2>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#JavaScript">JavaScript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#PHP">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="JavaScript">
+
+                        <script type="text/javascript">
+                            function loginWithKakaoPopUp() {
+                                Kakao.Auth.login({
+                                    success: function(authObj) {
+                                        document.getElementById("Response").innerText = JSON.stringify(authObj);
+                                        Kakao.Auth.setAccessToken(authObj.access_token);
+                                    },
+                                    fail: function(err) {
+                                        document.getElementById("Response").innerText = JSON.stringify(err);
+                                    },
+                                })
+                            }
+
+                            function talkProfileWithKakao() {
+                                Kakao.API.request({
+                                    url: '/v1/api/talk/profile',
+                                    success: function(response) {
+                                        document.getElementById("Response").innerText = response;
+                                        document.getElementById("talk_nickname").innerText = response.nickName;
+                                        document.getElementById("talk_profile_image").src = response.profileImageURL;
+                                        document.getElementById("talk_thumbnail_image").src = response.thumbnailURL;
+                                        document.getElementById("talk_countryISO").innerText = response.countryISO;
+                                    },
+                                    fail: function(error) {
+                                        document.getElementById("Response").innerText = error;
+                                    }
+                                });
+                            }
+                        </script>
+                        <p></p>
+                        <a id="custom-login-btn" href="javascript:loginWithKakaoPopUp()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
+                        <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkProfileWithKakao()">talk Profile</button>
+
+                        <p id="talk_nickname"></p><p id="talk_countryISO"></p>
+                        <img id="talk_profile_image" class="logo2" />
+                        <img id="talk_thumbnail_image" class="logo2" />
+                        <div id="Response" class="alert alert-primary" role="alert" style="display:inline-block;">Response</div>                        
+                        <pre><code class="JavaScript">
+Kakao.init('{JAVASCRIPT_KEY}'); //★ 수정 할 것 : SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+console.log(Kakao.isInitialized()); // SDK 초기화 여부를 판단합니다.
+
+function loginWithKakaoPopUp() {
+    Kakao.Auth.login({
+        success: function(authObj) {
+            alert(JSON.stringify(authObj));
+            Kakao.Auth.setAccessToken(authObj.access_token);
+            //★ 추가 할 것 : 로그인 성공 후 처리 
+        },
+        fail: function(err) {
+            alert(JSON.stringify(err))
+        },
+    })
+}
+
+function talkProfileWithKakao() {
+    Kakao.API.request({
+        url: '/v1/api/talk/profile',
+        success: function(response) {
+            console.log(response);
+            document.getElementById("talk_nickname").innerText = response.nickName;
+            document.getElementById("talk_profile_image").src = response.profileImageURL;
+            document.getElementById("talk_thumbnail_image").src = response.thumbnailURL;
+            document.getElementById("talk_countryISO").innerText = response.countryISO;
+        },
+        fail: function(error) {
+            console.log(error);
+        }
+    });
+}
+                        </code></pre>
+
+                    </div>
+                    <div class="tab-pane fade" id="PHP">
+
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="list-group-item">
+                <h2>친구 목록 가져오기</h2>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#JavaScript1">JavaScript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#PHP1">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="JavaScript1">
+
+                        <script type="text/javascript">
+                            function talkFriendListAuthorizeWithKakao() {
+                                Kakao.Auth.login({
+                                    scope: 'talk_message,friends',
+                                    success: function(response) {
+                                        console.log(response);
+                                    },
+                                    fail: function(error) {
+                                        console.log(error);
+                                    }
+                                });
+                            }
+
+                            function talkFriendListWithKakao() {
+                                Kakao.API.request({
+                                    url: '/v1/api/talk/friends',
+                                    success: function(response) {
+                                        console.log(response);
+                                        document.getElementById("friend_list").innerText = JSON.stringify(response);
+                                    },
+                                    fail: function(error) {
+                                        console.log(error);
+                                    }
+                                });
+                            }
+                        </script>
+                        <p></p>
+                        <a id="custom-login-btn" href="javascript:loginWithKakaoPopUp()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
+                        <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListAuthorizeWithKakao()">talk Friend List authorize</button>
+                        <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListWithKakao()">talk Friend List</button>
+
+                        <p id="friend_list"></p>
+                        <pre><code class="JavaScript">
+function talkFriendListAuthorizeWithKakao() {
+    Kakao.Auth.login({
+        scope: 'talk_message,friends',
+        success: function(response) {
+            console.log(response);
+        },
+        fail: function(error) {
+            console.log(error);
+        }
+    });
+}
+
+function talkFriendListWithKakao() {
+    Kakao.API.request({
+        url: '/v1/api/talk/friends',
+        success: function(response) {
+            console.log(response);
+            document.getElementById("friend_list").innerText = JSON.stringify(response);
+        },
+        fail: function(error) {
+            console.log(error);
+        }
+    });
+}
+                        </code></pre>
+
+                    </div>
+                    <div class="tab-pane fade" id="PHP1">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<tr>
+    <td>talk Friend List authorize</td>
+    <td>
+        <Button onclick="javascript:talkFriendListAuthorizeWithKakao()">talk Friend List authorize</Button>
+    </td>
+</tr>
+<tr>
+    <td>talk Friend List</td>
+    <td>
+        <Button onclick="javascript:talkFriendListWithKakao()">talk Friend List</Button>
+        <p id="friend_list"></p>
+    </td>
+</tr>
+</table>
