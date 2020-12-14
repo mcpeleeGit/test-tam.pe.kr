@@ -92,7 +92,7 @@ $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
                         <img id="talk_profile_image" class="logo2" />
                         <img id="talk_thumbnail_image" class="logo2" />
                         <p></p>
-                        <div id="Response" class="alert alert-primary" role="alert" style="display:inline-block;">Response</div>
+                        <div id="Response" class="alert alert-primary" role="alert" class="w-100 p-3">Response</div>
                         <pre><code class="JavaScript">
 Kakao.init('{JAVASCRIPT_KEY}'); //★ 수정 할 것 : SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
 console.log(Kakao.isInitialized()); // SDK 초기화 여부를 판단합니다.
@@ -100,12 +100,11 @@ console.log(Kakao.isInitialized()); // SDK 초기화 여부를 판단합니다.
 function loginWithKakaoPopUp() {
     Kakao.Auth.login({
         success: function(authObj) {
-            alert(JSON.stringify(authObj));
+            document.getElementById("Response").innerText = JSON.stringify(authObj);
             Kakao.Auth.setAccessToken(authObj.access_token);
-            //★ 추가 할 것 : 로그인 성공 후 처리 
         },
         fail: function(err) {
-            alert(JSON.stringify(err))
+            document.getElementById("Response").innerText = JSON.stringify(err);
         },
     })
 }
@@ -114,19 +113,29 @@ function talkProfileWithKakao() {
     Kakao.API.request({
         url: '/v1/api/talk/profile',
         success: function(response) {
-            console.log(response);
+            document.getElementById("Response").innerText = JSON.stringify(response);
             document.getElementById("talk_nickname").innerText = response.nickName;
             document.getElementById("talk_profile_image").src = response.profileImageURL;
             document.getElementById("talk_thumbnail_image").src = response.thumbnailURL;
             document.getElementById("talk_countryISO").innerText = response.countryISO;
         },
         fail: function(error) {
-            console.log(error);
+            document.getElementById("Response").innerText = error;
         }
     });
 }
                         </code></pre>
+                        <pre><code class="language-html">
+<a id="custom-login-btn" href="javascript:loginWithKakaoPopUp()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
+<button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkProfileWithKakao()">talk Profile</button>
 
+<div id="talk_nickname"></div>
+<div id="talk_countryISO"></div>
+<img id="talk_profile_image" class="logo2" />
+<img id="talk_thumbnail_image" class="logo2" />
+<p></p>
+<div id="Response" class="alert alert-primary" role="alert"  class="w-100 p-3">Response</div>
+                        </code></pre>
                     </div>
                     <div class="tab-pane fade" id="PHP">
 
@@ -178,7 +187,7 @@ function talkProfileWithKakao() {
                         <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListAuthorizeWithKakao()">talk Friend List authorize</button>
                         <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListWithKakao()">talk Friend List</button>
                         <p></p>
-                        <div id="Response1" class="alert alert-primary" role="alert" style="display:inline-block;">Response</div>
+                        <div id="Response1" class="alert alert-primary" role="alert" class="w-100 p-3">Response</div>
 
                         <pre><code class="JavaScript">
 function talkFriendListAuthorizeWithKakao() {
@@ -206,7 +215,12 @@ function talkFriendListWithKakao() {
     });
 }
                         </code></pre>
-
+                        <pre><code class="language-html">
+<button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListAuthorizeWithKakao()">talk Friend List authorize</button>
+<button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListWithKakao()">talk Friend List</button>
+<p></p>
+<div id="Response1" class="alert alert-primary" role="alert" class="w-100 p-3 divres">Response</div>
+                        </code></pre>
 
 
                     </div>
