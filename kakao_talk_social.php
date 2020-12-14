@@ -92,7 +92,7 @@ $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
                         <img id="talk_profile_image" class="logo2" />
                         <img id="talk_thumbnail_image" class="logo2" />
                         <p></p>
-                        <div id="Response" class="alert alert-primary" role="alert" class="w-100 p-3">Response</div>
+                        <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;"  class="w-100 p-3">Response</div>
                         <pre><code class="JavaScript">
 Kakao.init('{JAVASCRIPT_KEY}'); //★ 수정 할 것 : SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
 console.log(Kakao.isInitialized()); // SDK 초기화 여부를 판단합니다.
@@ -134,7 +134,7 @@ function talkProfileWithKakao() {
 <img id="talk_profile_image" class="logo2" />
 <img id="talk_thumbnail_image" class="logo2" />
 <p></p>
-<div id="Response" class="alert alert-primary" role="alert"  class="w-100 p-3">Response</div>
+<div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;"  class="w-100 p-3">Response</div>
                         </code></pre>
                     </div>
                     <div class="tab-pane fade" id="PHP">
@@ -187,7 +187,7 @@ function talkProfileWithKakao() {
                         <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListAuthorizeWithKakao()">talk Friend List authorize</button>
                         <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListWithKakao()">talk Friend List</button>
                         <p></p>
-                        <div id="Response1" class="alert alert-primary" role="alert" class="w-100 p-3">Response</div>
+                        <div id="Response1" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">Response</div>
 
                         <pre><code class="JavaScript">
 function talkFriendListAuthorizeWithKakao() {
@@ -203,7 +203,7 @@ function talkFriendListAuthorizeWithKakao() {
 }
 
 function talkFriendListWithKakao() {
-    Kakao.API.request({
+    Kakao.API.request({ 
         url: '/v1/api/talk/friends',
         success: function(response) {
             console.log(response);
@@ -219,7 +219,7 @@ function talkFriendListWithKakao() {
 <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListAuthorizeWithKakao()">talk Friend List authorize</button>
 <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListWithKakao()">talk Friend List</button>
 <p></p>
-<div id="Response1" class="alert alert-primary" role="alert" class="w-100 p-3 divres">Response</div>
+<div id="Response1" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">Response</div>
                         </code></pre>
 
 
