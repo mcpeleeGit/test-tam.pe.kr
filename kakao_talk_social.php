@@ -19,12 +19,6 @@ $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
     <!--highlight.js cdn-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-        document.querySelectorAll("code").forEach(function(element) {
-            element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-        });
-    </script>
     <!--bootstrapcdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>카카오톡 소셜</title>
@@ -77,7 +71,7 @@ $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
                                 Kakao.API.request({
                                     url: '/v1/api/talk/profile',
                                     success: function(response) {
-                                        document.getElementById("Response").innerText = response;
+                                        document.getElementById("Response").innerText = JSON.stringify(response);
                                         document.getElementById("talk_nickname").innerText = response.nickName;
                                         document.getElementById("talk_profile_image").src = response.profileImageURL;
                                         document.getElementById("talk_thumbnail_image").src = response.thumbnailURL;
@@ -93,10 +87,12 @@ $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
                         <a id="custom-login-btn" href="javascript:loginWithKakaoPopUp()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
                         <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkProfileWithKakao()">talk Profile</button>
 
-                        <p id="talk_nickname"></p><p id="talk_countryISO"></p>
+                        <div id="talk_nickname"></div>
+                        <div id="talk_countryISO"></div>
                         <img id="talk_profile_image" class="logo2" />
                         <img id="talk_thumbnail_image" class="logo2" />
-                        <div id="Response" class="alert alert-primary" role="alert" style="display:inline-block;">Response</div>                        
+                        <p></p>
+                        <div id="Response" class="alert alert-primary" role="alert" style="display:inline-block;">Response</div>
                         <pre><code class="JavaScript">
 Kakao.init('{JAVASCRIPT_KEY}'); //★ 수정 할 것 : SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
 console.log(Kakao.isInitialized()); // SDK 초기화 여부를 판단합니다.
@@ -157,10 +153,10 @@ function talkProfileWithKakao() {
                                 Kakao.Auth.login({
                                     scope: 'talk_message,friends',
                                     success: function(response) {
-                                        console.log(response);
+                                        document.getElementById("Response1").innerText = JSON.stringify(response);
                                     },
                                     fail: function(error) {
-                                        console.log(error);
+                                        document.getElementById("Response1").innerText = error;
                                     }
                                 });
                             }
@@ -169,21 +165,21 @@ function talkProfileWithKakao() {
                                 Kakao.API.request({
                                     url: '/v1/api/talk/friends',
                                     success: function(response) {
-                                        console.log(response);
-                                        document.getElementById("friend_list").innerText = JSON.stringify(response);
+                                        document.getElementById("Response1").innerText = JSON.stringify(response);
                                     },
                                     fail: function(error) {
-                                        console.log(error);
+                                        document.getElementById("Response1").innerText = error;
                                     }
                                 });
                             }
                         </script>
+
                         <p></p>
-                        <a id="custom-login-btn" href="javascript:loginWithKakaoPopUp()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
                         <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListAuthorizeWithKakao()">talk Friend List authorize</button>
                         <button type="button" class="btn btn-primary btn-lg" onclick="javascript:talkFriendListWithKakao()">talk Friend List</button>
+                        <p></p>
+                        <div id="Response1" class="alert alert-primary" role="alert" style="display:inline-block;">Response</div>
 
-                        <p id="friend_list"></p>
                         <pre><code class="JavaScript">
 function talkFriendListAuthorizeWithKakao() {
     Kakao.Auth.login({
@@ -211,6 +207,8 @@ function talkFriendListWithKakao() {
 }
                         </code></pre>
 
+
+
                     </div>
                     <div class="tab-pane fade" id="PHP1">
 
@@ -223,21 +221,12 @@ function talkFriendListWithKakao() {
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        document.querySelectorAll("code").forEach(function(element) {
+            element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        });
+    </script>
 </body>
 
 </html>
-
-<tr>
-    <td>talk Friend List authorize</td>
-    <td>
-        <Button onclick="javascript:talkFriendListAuthorizeWithKakao()">talk Friend List authorize</Button>
-    </td>
-</tr>
-<tr>
-    <td>talk Friend List</td>
-    <td>
-        <Button onclick="javascript:talkFriendListWithKakao()">talk Friend List</Button>
-        <p id="friend_list"></p>
-    </td>
-</tr>
-</table>
