@@ -83,11 +83,7 @@ var_dump($loginResponse); // Kakao API Return Json
                $accessToken = json_decode($loginResponse)->access_token;
             }
             ?>
-            <div class="alert alert-primary" role="alert" style="display:inline-block;">
-            <?php
-            var_dump($loginResponse); // Kakao API Return Json
-            ?>
-            </div>   
+            <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3"><?= var_dump($loginResponse);?></div>
          </li>
          <li class="list-group-item">
             <h2>사용자 정보 가져 오기</h2>
@@ -138,12 +134,7 @@ var_dump($profileResponse); // Kakao API 서버로 부터 받아온 값
             $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
             curl_close($ch);
             ?>
-            <div class="alert alert-primary" role="alert" style="display:inline-block;">
-            <?php
-            var_dump($profileResponse); // Kakao API 서버로 부터 받아온 값
-            ?>
-            </div>            
-            
+            <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3"><?= var_dump($profileResponse);?></div>           
          </li>
          <li class="list-group-item">
             <h2>카카오 인가 후, 자체 후속처리</h2>

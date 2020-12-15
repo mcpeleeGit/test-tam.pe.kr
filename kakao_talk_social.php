@@ -146,7 +146,8 @@ function talkProfileWithKakao() {
                         $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=login";
                         ?>
                         <a href="<?= $kakaoLoginUrl ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
-                        <!---->
+                        <p></p>
+                        <!--talk profile-->
                         <div id="Response" class="alert alert-success" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                             GET kapi.kakao.com/v1/api/talk/profile HTTP/1.1 Authorization: Bearer {ACCESS_TOKEN}
                         </div>
@@ -166,6 +167,21 @@ function talkProfileWithKakao() {
                         curl_close($ch);
                         ?>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3"><?= var_dump($res) ?></div>
+                        <pre><code class="php">
+$url = "https://kapi.kakao.com/v1/api/talk/profile";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$header = "Bearer " . $_SESSION["accessToken"];
+$headers = array();
+$headers[] = "Authorization: " . $header;
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+$res = curl_exec($ch);
+$status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+                        </code></pre>
                     </div>
                 </div>
             </li>
@@ -252,6 +268,42 @@ function talkFriendListWithKakao() {
 
                     </div>
                     <div class="tab-pane fade" id="PHP1">
+                        <p></p>
+                        <!--talk friend-->
+                        <div id="Response" class="alert alert-success" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                            GET kapi.kakao.com/v1/api/talk/friends HTTP/1.1 Authorization: Bearer {ACCESS_TOKEN}
+                        </div>
+                        <?php
+                        $url = "https://kapi.kakao.com/v1/api/talk/friends";
+                        $ch = curl_init();
+                        curl_setopt($ch, CURLOPT_URL, $url);
+                        curl_setopt($ch, CURLOPT_POST, false);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        $header = "Bearer " . $_SESSION["accessToken"];
+                        $headers = array();
+                        $headers[] = "Authorization: " . $header;
+                        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+                        $res = curl_exec($ch);
+                        $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                        curl_close($ch);
+                        ?>
+                        <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3"><?= var_dump($res) ?></div>
+                        <pre><code class="php">
+$url = "https://kapi.kakao.com/v1/api/talk/friends";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$header = "Bearer " . $_SESSION["accessToken"];
+$headers = array();
+$headers[] = "Authorization: " . $header;
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+$res = curl_exec($ch);
+$status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+                        </code></pre>
 
                     </div>
                 </div>
