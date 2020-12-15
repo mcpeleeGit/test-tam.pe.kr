@@ -122,7 +122,7 @@ var_dump($profileResponse); // Kakao API 서버로 부터 받아온 값
 
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $getProfileUrl);
-            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $data); //POST로 보낼 데이터 지정하기
 
