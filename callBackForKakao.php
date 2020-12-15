@@ -175,6 +175,7 @@ echo $_SESSION["accessAgree"];
             <h3>돌아가기</h3>
             ▶ <a href="/">Top Page</a><br />
             ▶ <a href="/kakao_talk_channel.php">Kakao_talk_channel Sample Page</a><br />
+            ▶ <a href="/kakao_talk_social.php">kakao_talk_social Sample Page</a><br />
             ▶ <a href="/kakao.php">Kakao Login Sample Page</a><br />
          </li>
          <li class="list-group-item"></li>

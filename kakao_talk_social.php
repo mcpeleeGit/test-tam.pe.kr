@@ -92,7 +92,7 @@ $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
                         <img id="talk_profile_image" class="logo2" />
                         <img id="talk_thumbnail_image" class="logo2" />
                         <p></p>
-                        <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;"  class="w-100 p-3">Response</div>
+                        <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">Response</div>
                         <pre><code class="JavaScript">
 Kakao.init('{JAVASCRIPT_KEY}'); //★ 수정 할 것 : SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
 console.log(Kakao.isInitialized()); // SDK 초기화 여부를 판단합니다.
@@ -138,7 +138,34 @@ function talkProfileWithKakao() {
                         </code></pre>
                     </div>
                     <div class="tab-pane fade" id="PHP">
+                        <p></p>
+                        <!--REST API Login-->
+                        <?php
+                        $client_id = $REST_API_KEY;
+                        $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php");
+                        $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=login";
+                        ?>
+                        <a href="<?= $kakaoLoginUrl ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
+                        <!---->
+                        <div id="Response" class="alert alert-success" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                            GET kapi.kakao.com/v1/api/talk/profile HTTP/1.1 Authorization: Bearer {ACCESS_TOKEN}
+                        </div>
+                        <?php
+                        $url = "https://kapi.kakao.com/v1/api/talk/profile";
+                        $ch = curl_init();
+                        curl_setopt($ch, CURLOPT_URL, $url);
+                        curl_setopt($ch, CURLOPT_POST, false);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        $header = "Bearer " . $_SESSION["accessToken"];
+                        $headers = array();
+                        $headers[] = "Authorization: " . $header;
+                        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
+                        $res = curl_exec($ch);
+                        $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                        curl_close($ch);
+                        ?>
+                        <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3"><?= var_dump($res) ?></div>
                     </div>
                 </div>
             </li>
