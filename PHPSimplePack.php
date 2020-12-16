@@ -58,6 +58,11 @@ $KakaoAPIService = new KakaoAPIService();
                     </div>
                 </div>
             </li>
+<?php
+if (!isset($_GET["code"])) {
+    die();
+}
+?>            
             <li class="list-group-item">
                 <h2>로그인 콜백 처리</h2>
                 <ul class="nav nav-tabs">
