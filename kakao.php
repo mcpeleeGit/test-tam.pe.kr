@@ -135,7 +135,7 @@ function loginWithKakaoPopUp() {
                     </div>
                     <div class="tab-pane fade" id="PHP">
                         <p></p>
-                        <p>/oauth/authorize 요청은 Url만 호출 하므로 언어에 상관 없이 처리 가능하다. 다만, CallBack Url설정 시, 인코딩을 해야한다.</p>
+                        <p>/oauth/authorize 요청은 Url만 호출 하므로 언어에 상관 없이 처리 가능합니다. 다만, CallBack Url설정 시, 인코딩을 해야합니다.</p>
                         <!--REST API Login-->
                         <?php
                         //state는 Cross-Site Request Forgery(CSRF) 공격으로부터 보호하기 위해 난수 설정 후, 콜백 페이지에서 검증할 수 있는 기능이나
