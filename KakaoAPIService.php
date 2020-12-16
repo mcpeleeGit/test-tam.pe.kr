@@ -1,8 +1,8 @@
 <?php
 class KakaoAPIService {  
 
-    protected string $REST_API_KEY;
-    protected string $REDIRECT_URI;
+    protected $REST_API_KEY;
+    protected $REDIRECT_URI;
 
     public function __construct()
     {
