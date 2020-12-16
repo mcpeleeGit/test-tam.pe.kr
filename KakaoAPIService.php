@@ -4,9 +4,11 @@ class KakaoAPIService {
     protected $REST_API_KEY;
     protected $REDIRECT_URI;
     protected $CLIENT_SECRET;
+    public $JAVASCRIPT_KEY;
 
     public function __construct()
     {   //★ 수정 할 것
+        $this->JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
         $this->REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
         $this->CLIENT_SECRET = "QZhr9itOs0mxVRDxIvuOfOLzjZMc5q1U";
         $this->REDIRECT_URI = urlencode("http://".$_SERVER['HTTP_HOST']."/PHPSimplePack.php");
