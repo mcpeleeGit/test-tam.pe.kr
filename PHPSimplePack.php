@@ -47,11 +47,13 @@ require('KakaoAPIService.php');
                         <a href="<?= $KakaoAPIService->getKakaoLoginLink() ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
                         <p></p>
                         <pre><code class="php">
+&lt;?php
 require('KakaoAPIService.php');
 $KakaoAPIService = new KakaoAPIService();
-                        </code></pre>
-                        <pre><code class="language-html">
-<a href="<?= $KakaoAPIService->getKakaoLoginLink() ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>                        
+?&gt;
+&lt;a href="&lt;?= $KakaoAPIService->getKakaoLoginLink() ?&gt;"&gt;
+    &lt;img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /&gt;
+&lt;/a&gt;                        
                         </code></pre>
                     </div>
                 </div>
@@ -88,9 +90,6 @@ $KakaoAPIService = new KakaoAPIService();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
         hljs.initHighlightingOnLoad();
-        document.querySelectorAll("code").forEach(function(element) {
-            element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-        });
     </script>
 </body>
 
