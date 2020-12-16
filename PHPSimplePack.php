@@ -39,20 +39,19 @@ require('KakaoAPIService.php');
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade" id="PHP">
+                    <div class="tab-pane active" id="PHP">
                         <p></p>
                         <?php
                         $KakaoAPIService = new KakaoAPIService();
-                        $KakaoAPIService->getKakaoLoginLink()
                         ?>
                         <a href="<?= $KakaoAPIService->getKakaoLoginLink() ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
                         <p></p>
                         <pre><code class="php">
-<?php
 require('KakaoAPIService.php');
 $KakaoAPIService = new KakaoAPIService();
-?>
-<a href="<?= $KakaoAPIService->getKakaoLoginLink() ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
+                        </code></pre>
+                        <pre><code class="language-html">
+<a href="<?= $KakaoAPIService->getKakaoLoginLink() ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>                        
                         </code></pre>
                     </div>
                 </div>
@@ -61,11 +60,11 @@ $KakaoAPIService = new KakaoAPIService();
                 <h2>로그인 콜백 처리</h2>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#PHP">PHP</a>
+                        <a class="nav-link active" data-toggle="tab" href="#PHP1">PHP</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade" id="PHP">
+                    <div class="tab-pane fade active" id="PHP1">
                         <p></p>
                         <?php
                         $client_id = $REST_API_KEY;
