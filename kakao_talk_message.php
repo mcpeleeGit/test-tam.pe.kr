@@ -48,46 +48,18 @@ $KakaoAPIService = new KakaoAPIService();
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="JavaScript">
-
-                        <script type="text/javascript">
-                            function defaultSend() {
-                                Kakao.API.request({
-                                    url: '/v2/api/talk/memo/default/send',
-                                    data: {
-                                        template_object: {
-                                            object_type: 'feed',
-                                            content: {
-                                                title: '카카오톡 링크 4.0',
-                                                description: '디폴트 템플릿 FEED',
-                                                image_url:
-                                                    'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                                                link: {
-                                                    web_url: 'https://developers.kakao.com',
-                                                    mobile_web_url: 'https://developers.kakao.com',
-                                                },
-                                            },
-                                            social: {
-                                                like_count: 100,
-                                                comment_count: 200,
-                                            },
-                                            button_title: '바로 확인',
-                                        },
-                                    },
-                                    success: function (response) {
-                                        document.getElementById("Response").innerText = JSON.stringify(response);
-                                    },
-                                    fail: function (error) {
-                                        document.getElementById("Response").innerText = error;
-                                    },
-                                });
-                            }                            
-                        </script>
-                        <p></p>
-                        <button type="button" class="btn btn-primary btn-lg" onclick="javascript:defaultSend()">나에게 기본 메시지 보내기</button>
-                        <p></p>
-                        <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">Response</div>
-                        <pre><code class="JavaScript">
 <script type="text/javascript">
+    function loginWithKakaoPopUp() {
+        Kakao.Auth.login({
+            success: function(authObj) {
+                document.getElementById("Response").innerText = JSON.stringify(authObj);
+                Kakao.Auth.setAccessToken(authObj.access_token);
+            },
+            fail: function(err) {
+                document.getElementById("Response").innerText = JSON.stringify(err);
+            },
+        })
+    }                        
     function defaultSend() {
         Kakao.API.request({
             url: '/v2/api/talk/memo/default/send',
@@ -118,30 +90,97 @@ $KakaoAPIService = new KakaoAPIService();
                 document.getElementById("Response").innerText = error;
             },
         });
-    }                            
+    }        
+
+    function defaultScrapSend() {
+        Kakao.API.request({
+            url: '/v2/api/talk/memo/scrap/send',
+            data: {
+                request_url: 'http://test-tam.pe.kr',
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            fail: function (error) {
+                console.log(error);
+            },
+        });
+    }
+
+    function defaultTemplateSend() {
+        Kakao.API.request({
+            url: '/v2/api/talk/memo/send',
+            data: {
+                template_id: 41666,
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            fail: function (error) {
+                console.log(error);
+            },
+        });
+    }
+
+    function friendSend() {
+        Kakao.API.request({
+            url: '/v1/api/talk/friends/message/default/send',
+            data: {
+                receiver_uuids: ['rZysmaufrZStgbiOuY66jryQo5OmlKCY-A'],
+                template_object: {
+                    object_type: 'feed',
+                    content: {
+                        title: '카카오톡 링크 4.0',
+                        description: '디폴트 템플릿 FEED',
+                        image_url:
+                            'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                        link: {
+                            web_url: 'https://developers.kakao.com',
+                            mobile_web_url: 'https://developers.kakao.com',
+                        },
+                    },
+                    social: {
+                        like_count: 100,
+                        comment_count: 200,
+                    },
+                    button_title: '바로 확인',
+                },
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            fail: function (error) {
+                console.log(error);
+            },
+        });
+    }                                                
 </script>
 <p></p>
+<a id="custom-login-btn" href="javascript:loginWithKakaoPopUp()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
 <button type="button" class="btn btn-primary btn-lg" onclick="javascript:defaultSend()">나에게 기본 메시지 보내기</button>
+<button type="button" class="btn btn-primary btn-lg" onclick="javascript:defaultScrapSend()">나에게 스크랩 메시지 보내기</button>
+<button type="button" class="btn btn-primary btn-lg" onclick="javascript:defaultTemplateSend()">나에게 템플릿 메시지 보내기</button>
+<button type="button" class="btn btn-primary btn-lg" onclick="javascript:friendSend()">친구에게 기본 메시지 보내기</button>  
 <p></p>
 <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">Response</div>
-                        </code></pre>
+<pre><code class="JavaScript" id="sample"></code></pre>
                     </div>
                     <div class="tab-pane fade" id="PHP">
                         <p></p>
-                        <!--REST API Login-->
-                        <?php
-                        $client_id = $REST_API_KEY;
-                        $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php");
-                        $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=login&scope=talk_message,friends";
-                        ?>
-                        <a href="<?= $kakaoLoginUrl ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>scope=talk_message,friends
+                        <script type="text/javascript">
+                            function loginWithKakao() {
+                                Kakao.Auth.authorize({
+                                    redirectUri: 'http://<?= $_SERVER['HTTP_HOST'] ?>/callBackForKakao.php' //★ 수정 할 것
+                                })
+                            }
+                        </script>
+                        <a id="custom-login-btn" href="javascript:loginWithKakao()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
                         <p></p>
-                        <!--talk profile-->
                         <div id="Response" class="alert alert-success" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            GET kapi.kakao.com/v1/api/talk/profile HTTP/1.1 Authorization: Bearer {ACCESS_TOKEN}
+                            POST kapi.kakao.com/v2/api/talk/memo/default/send HTTP/1.1 Authorization: Bearer {ACCESS_TOKEN}
                         </div>
                         <?php
-                        
+                           // $KakaoAPIService->getMessage();
                         ?>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3"><?= var_dump($res) ?></div>
                         <pre><code class="php">
@@ -151,7 +190,6 @@ $KakaoAPIService = new KakaoAPIService();
                 </div>
             </li>
 
-
         </ul>
     </div>
 
@@ -159,98 +197,10 @@ $KakaoAPIService = new KakaoAPIService();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
+    alert(document.getElementById("JavaScript").innerHTML);
+        document.getElementById("sample").innerHTML = document.getElementById("JavaScript").innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
         hljs.initHighlightingOnLoad();
-        document.querySelectorAll("code").forEach(function(element) {
-            element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-        });
     </script>
-</body>
-
-</html>
-
-
-        <tr>
-            <td>kakao Link Message</td>
-            <td>
-                
-                <Button onclick="javascript:defaultScrapSend()">defaultScrapSend send</Button>
-                <Button onclick="javascript:defaultTemplateSend()">defaultTemplateSend send</Button>
-            </td>
-        </tr>
-        <tr>
-            <td>kakao Link Message</td>
-            <td>
-                <Button onclick="javascript:friendSend()">friend send</Button>
-            </td>
-        </tr>
-    </table>
-
-
-
-        function defaultScrapSend() {
-            Kakao.API.request({
-                url: '/v2/api/talk/memo/scrap/send',
-                data: {
-                    request_url: 'http://leedongha.dothome.co.kr/',
-                },
-                success: function (response) {
-                    console.log(response);
-                },
-                fail: function (error) {
-                    console.log(error);
-                },
-            });
-        }
-
-        function defaultTemplateSend() {
-            Kakao.API.request({
-                url: '/v2/api/talk/memo/send',
-                data: {
-                    template_id: 41666,
-                },
-                success: function (response) {
-                    console.log(response);
-                },
-                fail: function (error) {
-                    console.log(error);
-                },
-            });
-        }
-
-        function friendSend() {
-            Kakao.API.request({
-                url: '/v1/api/talk/friends/message/default/send',
-                data: {
-                    receiver_uuids: ['rZysmaufrZStgbiOuY66jryQo5OmlKCY-A'],
-                    template_object: {
-                        object_type: 'feed',
-                        content: {
-                            title: '카카오톡 링크 4.0',
-                            description: '디폴트 템플릿 FEED',
-                            image_url:
-                                'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                            link: {
-                                web_url: 'https://developers.kakao.com',
-                                mobile_web_url: 'https://developers.kakao.com',
-                            },
-                        },
-                        social: {
-                            like_count: 100,
-                            comment_count: 200,
-                        },
-                        button_title: '바로 확인',
-                    },
-                },
-                success: function (response) {
-                    console.log(response);
-                },
-                fail: function (error) {
-                    console.log(error);
-                },
-            });
-        }
-    </script>
-
 </body>
 
 </html>
