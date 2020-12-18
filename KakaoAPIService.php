@@ -53,6 +53,65 @@ class KakaoAPIService {
         return $return;        
     }
 
+    public function getAddress($query){
+        $callUrl = "https://dapi.kakao.com/v2/local/search/address.json?query=".urlencode($query);
+        $headers[] = "Authorization: KakaoAK " . $this->REST_API_KEY;
+        $response = KakaoAPIService::excuteCurl($callUrl, "GET", $headers);
+        return KakaoAPIService::getReturnKey($response, "meta");     
+    }
+
+    public function getCoord2regioncode($x, $y){
+        $callUrl = "https://dapi.kakao.com/v2/local/geo/coord2regioncode.json?x=".$x."&y=".$y;
+        $headers[] = "Authorization: KakaoAK " . $this->REST_API_KEY;
+        $response = KakaoAPIService::excuteCurl($callUrl, "GET", $headers);
+        return KakaoAPIService::getReturnKey($response, "meta");                 
+    }
+
+    public function getCoord2address($x, $y){
+        $callUrl = "https://dapi.kakao.com/v2/local/geo/coord2address.json?x=".$x."&y=".$y;
+        $headers[] = "Authorization: KakaoAK " . $this->REST_API_KEY;
+        $response = KakaoAPIService::excuteCurl($callUrl, "GET", $headers);
+        return KakaoAPIService::getReturnKey($response, "meta");        
+    }    
+    
+    public function getTranscoord($x, $y, $input_coord="WTM", $output_coord="WGS84"){
+        $callUrl = "https://dapi.kakao.com/v2/local/geo/transcoord.json?x=".$x."&y=".$y."&input_coord=".$input_coord."&output_coord=".$output_coord;
+        $headers[] = "Authorization: KakaoAK " . $this->REST_API_KEY;
+        $response = KakaoAPIService::excuteCurl($callUrl, "GET", $headers);
+        return KakaoAPIService::getReturnKey($response, "meta");        
+    }    
+
+    public function getKeywordAddress($query, $x, $y, $radius=1000){
+        $callUrl = "https://dapi.kakao.com/v2/local/search/keyword.json?query=".urlencode($query)."&x=".$x."&y=".$y."&radius=".$radius;
+        $headers[] = "Authorization: KakaoAK " . $this->REST_API_KEY;
+        $response = KakaoAPIService::excuteCurl($callUrl, "GET", $headers);
+        return KakaoAPIService::getReturnKey($response, "meta");
+    }   
+    
+    public function getCategoryAddress($category_group_code, $x, $y, $radius=1000){
+        $callUrl = "https://dapi.kakao.com/v2/local/search/category.json?category_group_code=".$category_group_code."&x=".$x."&y=".$y."&radius=".$radius;
+        $headers[] = "Authorization: KakaoAK " . $this->REST_API_KEY;
+        $response = KakaoAPIService::excuteCurl($callUrl, "GET", $headers);
+        return KakaoAPIService::getReturnKey($response, "meta");
+    }      
+    
+    private function getReturnKey($response, $issetKey="", $getKey="", $sessionKey=""){
+        $return = "";
+        if( isset( json_decode($response["response"])->{$issetKey} )){               
+            if($getKey==""){
+                $return = $response["response"];
+            }
+            else{
+                $return = $response["response"]->{$getKey};
+            }
+        }
+        else{
+            echo($response["status_code"]);
+            echo($response["response"]);
+        }
+        return $return;        
+    }
+
     private function excuteCurl($callUrl, $method, $headers = array()){
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $callUrl);

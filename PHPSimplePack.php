@@ -33,7 +33,7 @@ require('KakaoAPIService.php');
         <h2>GitHub - <a href="https://github.com/kakao-tam/KakaoAPIForPHPSimplePack">https://github.com/kakao-tam/KakaoAPIForPHPSimplePack</a></h2>
         <ul class="list-group">
             <li class="list-group-item">
-                <h2>로그인 링크 가져오기</h2>
+                <h2>카카오 로그인 - 로그인 링크 가져오기</h2>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#PHP">PHP</a>
@@ -66,7 +66,7 @@ if (!isset($_GET["code"])) {
 }
 ?>            
             <li class="list-group-item">
-                <h2>로그인 콜백 처리</h2>
+                <h2>카카오 로그인 - 로그인 콜백 처리</h2>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#PHP1">PHP</a>
@@ -78,7 +78,7 @@ if (!isset($_GET["code"])) {
                         <div id="Response1" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                         <?= $KakaoAPIService->getToken() ?>
                         </div>
-                        <div id="Response1" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        <div id="Response2" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                         <?= $KakaoAPIService->getProfile() ?>
                         </div>                        
                         <p></p>
@@ -91,7 +91,132 @@ if (!isset($_GET["code"])) {
                     </div>
                 </div>
             </li>
-
+            <li class="list-group-item">
+                <h2>카카오 로컬 - 주소 조회</h2>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        <?= $KakaoAPIService->getAddress("전북 삼성동 100") ?>
+                        </div>           
+                        <p></p>
+                        <pre><code class="php">
+//주소 조회
+&lt;?= $KakaoAPIService->getAddress("전북 삼성동 100") ?&gt;
+                        </code></pre>
+                    </div>
+                </div>
+            </li>  
+            <li class="list-group-item">
+                <h2>카카오 로컬 - 좌표로 행정구역정보 받기</h2>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        <?= $KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191) ?> 
+                        </div>           
+                        <p></p>
+                        <pre><code class="php">
+//좌표로 행정구역정보 받기
+&lt;?= $KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191) ?&gt;
+                        </code></pre>
+                    </div>
+                </div>
+            </li>     
+            <li class="list-group-item">
+                <h2>카카오 로컬 - 좌표로 주소 변환하기</h2>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        <?= $KakaoAPIService->getCoord2address(127.1086228, 37.4012191) ?> 
+                        </div>           
+                        <p></p>
+                        <pre><code class="php">
+//좌표로 주소 변환하기
+&lt;?= $KakaoAPIService->getCoord2address(127.1086228, 37.4012191) ?&gt;
+                        </code></pre>
+                    </div>
+                </div>
+            </li>      
+            <li class="list-group-item">
+                <h2>카카오 로컬 - 좌표계 변환</h2>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        <?= $KakaoAPIService->getTranscoord(127.1086228, 37.4012191) ?> 
+                        </div>           
+                        <p></p>
+                        <pre><code class="php">
+//좌표계 변환
+&lt;?= $KakaoAPIService->getTranscoord(127.1086228, 37.4012191) ?&gt;
+                        </code></pre>
+                    </div>
+                </div>
+            </li>   
+            <li class="list-group-item">
+                <h2>카카오 로컬 - 키워드로 장소 검색</h2>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        <?= $KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191) ?> 
+                        </div>           
+                        <p></p>
+                        <pre><code class="php">
+//키워드로 장소 검색
+&lt;?= $KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191) ?&gt;
+                        </code></pre>
+                    </div>
+                </div>
+            </li>    
+            <li class="list-group-item">
+                <h2>카카오 로컬 - 카테고리로 장소 검색</h2>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        <?= $KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191) ?>     
+                        </div>           
+                        <p></p>
+                        <pre><code class="php">
+//카테고리로 장소 검색
+&lt;?= $KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191) ?&gt;
+                        </code></pre>
+                    </div>
+                </div>
+            </li>                                                         
         </ul>
     </div>
 
