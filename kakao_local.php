@@ -4,6 +4,7 @@ $KakaoAPIService = new KakaoAPIService();
 ?>
 <!doctype html>
 <html lang="kr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -32,6 +33,15 @@ $KakaoAPIService = new KakaoAPIService();
     <div class="container">
         <ul class="list-group">
             <li class="list-group-item">
+                <h2>Kakao REST API 주소 검색 </h2>
+                PHP Simple Pack - KakaoAPIService.php DownLoad : <a href="https://github.com/kakao-tam/KakaoAPIForPHPSimplePack">https://github.com/kakao-tam/KakaoAPIForPHPSimplePack</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item">
                 <h2>주소 검색</h2>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -45,7 +55,7 @@ $KakaoAPIService = new KakaoAPIService();
                             GET dapi.kakao.com/v2/local/search/address.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getAddress("전북 삼성동 100") ?>                    
+                            <?= $KakaoAPIService->getAddress("전북 삼성동 100") ?>
                         </div>
                         <pre><code class="php">
 public function getAddress($query){
@@ -73,7 +83,7 @@ public function getAddress($query){
                             GET dapi.kakao.com/v2/local/geo/coord2regioncode.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191) ?>                    
+                            <?= $KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191) ?>
                         </div>
                         <pre><code class="php">
 public function getCoord2regioncode($x, $y){
@@ -100,7 +110,7 @@ public function getCoord2regioncode($x, $y){
                             GET dapi.kakao.com/v2/local/geo/coord2address.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getCoord2address(127.1086228, 37.4012191) ?>                    
+                            <?= $KakaoAPIService->getCoord2address(127.1086228, 37.4012191) ?>
                         </div>
                         <pre><code class="php">
 public function getCoord2address($x, $y){
@@ -127,7 +137,7 @@ public function getCoord2address($x, $y){
                             GET dapi.kakao.com/v2/local/geo/transcoord.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getTranscoord(160710.37729270622, -4388.879299157299) ?>                    
+                            <?= $KakaoAPIService->getTranscoord(160710.37729270622, -4388.879299157299) ?>
                         </div>
                         <pre><code class="php">
 public function getTranscoord($x, $y){
@@ -139,7 +149,7 @@ public function getTranscoord($x, $y){
                         </code></pre>
                     </div>
                 </div>
-            </li>  
+            </li>
             <li class="list-group-item">
                 <h2>키워드로 장소 검색</h2>
                 <ul class="nav nav-tabs">
@@ -154,7 +164,7 @@ public function getTranscoord($x, $y){
                             GET dapi.kakao.com/v2/local/search/keyword.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191) ?>                    
+                            <?= $KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191) ?>
                         </div>
                         <pre><code class="php">
 public function getKeywordAddress($query, $x, $y, $radius=1000){
@@ -166,7 +176,7 @@ public function getKeywordAddress($query, $x, $y, $radius=1000){
                         </code></pre>
                     </div>
                 </div>
-            </li>      
+            </li>
             <li class="list-group-item">
                 <h2>카테고리로 장소 검색</h2>
                 <ul class="nav nav-tabs">
@@ -181,7 +191,7 @@ public function getKeywordAddress($query, $x, $y, $radius=1000){
                             GET dapi.kakao.com/v2/local/search/keyword.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191) ?>                    
+                            <?= $KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191) ?>
                         </div>
                         <pre><code class="php">
 public function getCategoryAddress($category_group_code, $x, $y, $radius=1000){
@@ -193,7 +203,7 @@ public function getCategoryAddress($category_group_code, $x, $y, $radius=1000){
                         </code></pre>
                     </div>
                 </div>
-            </li>                               
+            </li>
         </ul>
     </div>
 
