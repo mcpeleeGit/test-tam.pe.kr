@@ -34,7 +34,7 @@ $KakaoAPIService = new KakaoAPIService();
         <ul class="list-group">
             <li class="list-group-item">
                 <h2>Kakao REST API 주소 검색 </h2>
-                PHP Simple Pack - KakaoAPIService.php DownLoad : <a href="https://github.com/kakao-tam/KakaoAPIForPHPSimplePack">https://github.com/kakao-tam/KakaoAPIForPHPSimplePack</a>
+                PHP Simple Pack : <a href="https://github.com/kakao-tam/KakaoAPIForPHPSimplePack">KakaoAPIService.php Github</a> / <a href="/PHPSimplePack.php">사용방법</a>
             </li>
         </ul>
     </div>
