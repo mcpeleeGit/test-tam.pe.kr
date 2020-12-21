@@ -2,7 +2,7 @@
 require('KakaoAPIService.php');
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="kr">
 
 <head>
     <meta charset="utf-8">
@@ -43,9 +43,9 @@ require('KakaoAPIService.php');
 
 public function __construct()
 {   //★ 수정 할 것
-    $this->JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
-    $this->REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
-    $this->CLIENT_SECRET = "QZhr9itOs0mxVRDxIvuOfOLzjZMc5q1U";
+    $this->JAVASCRIPT_KEY = "22222222222222222222222222222222";
+    $this->REST_API_KEY   = "44444444444444444444444444444444";
+    $this->CLIENT_SECRET  = "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ";
     $this->REDIRECT_URI = urlencode("http://".$_SERVER['HTTP_HOST']."/PHPSimplePack.php");
 
     session_start();
@@ -241,7 +241,7 @@ $KakaoAPIService = new KakaoAPIService();
                         <p></p>
                         <pre><code class="php">
 //카테고리로 장소 검색
-&lt;?= $KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191) ?&gt;
+&lt;?= $KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191, 100) ?&gt;
                         </code></pre>
                     </div>
                 </div>
