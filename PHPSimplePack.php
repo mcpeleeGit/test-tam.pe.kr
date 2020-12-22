@@ -18,51 +18,38 @@ require('KakaoAPIService.php');
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
     <!--bootstrapcdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>PHP Simple Pack - KakaoAPIService.php 사용방법</title>
+    <title>PHP Simple Pack</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
             <div class="container"><a class="navbar-brand" href="/"><img src="/img/icon/googsu.png" class="logo" alt="logo">Kakao API Test</a>
-                <h1>PHP Simple Pack - KakaoAPIService.php 사용방법</h1>
+                <h1>PHP Simple Pack</h1>
             </div>
         </nav>
     </header>
     <div class="container">
         <ul class="list-group">
             <li class="list-group-item">
-                <h3>1. KakaoAPIService.php DownLoad 와 기본 설정</h3>
-                PHP Simple Pack : <a href="https://github.com/kakao-tam/KakaoAPIForPHPSimplePack"> Github KakaoAPIService.php DownLoad</a>
-                <pre><code class="php">
-
-// * KakaoAPIService.php 파일의 생성자에 JAVASCRIPT_KEY, REST_API_KEY, REDIRECT_URI, CLIENT_SECRET 를 각각 설정합니다.
-// * JAVASCRIPT_KEY, REST_API_KEY : https://developers.kakao.com > 내 애플리케이션 > 앱 설정 > 요약 정보
-// * REDIRECT_URI : https://developers.kakao.com > 내 애플리케이션 > 제품 설정 > 카카오 로그인
-// * CLIENT_SECRET : https://developers.kakao.com > 내 애플리케이션 > 제품 설정 > 카카오 로그인 > 보안
-
+                <h3>사용방법</h3>
+                * PHP Simple Pack : <a href="https://github.com/kakao-tam/KakaoAPIForPHPSimplePack">[Github]</a> <a href="https://kakao-tam.tistory.com/23">[Blog]</a> 
+                <pre><code class="php"> * KakaoAPIService.php 수정
 public function __construct()
 {   //★ 수정 할 것
     $this->JAVASCRIPT_KEY = "22222222222222222222222222222222";
     $this->REST_API_KEY   = "44444444444444444444444444444444";
     $this->CLIENT_SECRET  = "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ";
     $this->REDIRECT_URI = urlencode("http://".$_SERVER['HTTP_HOST']."/PHPSimplePack.php");
-
-    session_start();
-}
-                        </code></pre>
-                <h3>2. import와 선언</h3>
-                <pre><code class="php">
+...             </code></pre>
+                <pre><code class="php"> * API 사용하려고 하는 곳에 선언
 &lt;?php
 require('KakaoAPIService.php');
 $KakaoAPIService = new KakaoAPIService();
-?&gt;
-                        </code></pre>
+?&gt;                   </code></pre>
                 <h3>끝.</h3>
                 <p>
-                    * 아래 유형별 API를 한줄 호출하여 사용하면 됩니다. <br/>
-                    * <b>아래 "카카오계정으로 로그인" 버튼을 클릭하여 로그인 시, 로그인 후 호출 가능한 API의 결과도 확인 할 수 있습니다.</b><br/>
-                    * 초보 개발자도 쉽게 사용하도록 단일 클래스에 구조적 프로그래밍으로 구현했습니다. 가져다 마음대로 수정해서 사용해도됩니다.
+                    * 아래 유형별 API를 한줄 호출하여 사용 <br/>
                 </p>
             </li>
         </ul>
@@ -134,8 +121,7 @@ $KakaoAPIService = new KakaoAPIService();
                             <?= $KakaoAPIService->getAddress("전북 삼성동 100") ?>
                         </div>
                         <p></p>
-                        <pre><code class="php">
-//주소 조회
+                        <pre><code class="php">//주소 조회
 &lt;?= $KakaoAPIService->getAddress("전북 삼성동 100") ?&gt;
                         </code></pre>
                     </div>
