@@ -72,6 +72,23 @@ class KakaoAPIService
         echo ("https://kauth.kakao.com/oauth/logout?client_id=" . $this->REST_API_KEY . "&logout_redirect_uri=" . $this->LOGOUT_REDIRECT_URI . "&state=logout");
     }    
 
+    public function setUnLink()
+    {
+        $callUrl = "https://kapi.kakao.com/v1/user/unlink";
+        $headers[] = "Authorization: Bearer " . $_SESSION["accessToken"];
+        $response = $this->excuteCurl($callUrl, "POST", $headers);
+        return $this->getReturnKey($response, "id");
+    }    
+
+    public function setUnLinkForAdmin($id)
+    {
+        $callUrl = "https://kapi.kakao.com/v1/user/unlink";
+        $data = 'target_id_type=user_id&target_id='.$id;
+        $headers[] = "Authorization: KakaoAK " . $this->ADMIN_KEY;
+        $response = $this->excuteCurl($callUrl, "POST", $headers, $data);
+        return $this->getReturnKey($response, "id");
+    }    
+
     public function getAddress($query)
     {
         $callUrl = "https://dapi.kakao.com/v2/local/search/address.json?query=" . urlencode($query);

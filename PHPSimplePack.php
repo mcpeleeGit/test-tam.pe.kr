@@ -156,7 +156,29 @@ $KakaoAPIService = new KakaoAPIService();
                     </div>
                 </div>
             </li>                 
-
+            <li class="list-group-item">
+                <h4>카카오 로그인 - 연결 끊기</h4>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP1">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP1">
+                        <p></p>
+                        <pre><code class="php"> 
+&lt;?= $KakaoAPIService->setUnLink() ?&gt; //연결 끊기
+&lt;?= $KakaoAPIService->setUnLinkForAdmin(1515035367) ?&gt; //Admin연결 끊기</code></pre>
+                        <div id="Response1" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        {"id":1515035367}
+                        </div>
+                        <div id="Response2" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        {"id":1515035367}
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </li>  
             <li class="list-group-item">
                 <h4>카카오 로컬 - 주소 조회</h4>
                 <ul class="nav nav-tabs">
