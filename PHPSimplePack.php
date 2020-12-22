@@ -180,6 +180,44 @@ $KakaoAPIService = new KakaoAPIService();
                 </div>
             </li>  
             <li class="list-group-item">
+                <h4>카카오 로그인 - 토큰 갱신하기</h4>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP1">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP1">
+                        <p></p>
+                        <pre><code class="php"> 
+&lt;?= $KakaoAPIService->setTokenRefresh() ?&gt; //토큰 갱신하기</code></pre>
+                        <div id="Response1" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        9RjyTpQUBKZ6w1wCGXYvfULyH0ljPfc8fU2OqwopyWAAAAF2iU5m4Q
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <h4>카카오 로그인 - 사용자 정보 저장하기</h4>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP1">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP1">
+                        <p></p>
+                        <pre><code class="php"> 
+&lt;?= $KakaoAPIService->setUpdateProfile('test API name') ?&gt; //사용자 정보 저장하기</code></pre>
+                        <div id="Response1" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                        {"id":1515035367}
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </li>            
+            <li class="list-group-item">
                 <h4>카카오 로컬 - 주소 조회</h4>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">

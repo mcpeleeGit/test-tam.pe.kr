@@ -39,15 +39,9 @@ class KakaoAPIService
         $code = $_GET["code"]; // 서버로 부터 토큰을 발급받을 수 있는 코드를 받아옵니다.
         $callUrl = "https://kauth.kakao.com/oauth/token?grant_type=authorization_code&client_id=" . $this->REST_API_KEY . "&redirect_uri=" . $this->REDIRECT_URI . "&code=" . $code . "&client_secret=" . $this->CLIENT_SECRET;
         $response = $this->excuteCurl($callUrl, "POST");
+        //Custom 설정 : refreshToken은 2개월 보존되며, 1개월 남았을 때 갱신 가능하므로 세션이 아닌 개별 저장소에 저장하는 것이 좋음
+        $_SESSION["refreshToken"] = json_decode($response["response"])->refresh_token;
         return $this->getReturnKey($response, "access_token", "access_token", "accessToken");
-    }
-
-    public function getProfile()
-    {
-        $callUrl = "https://kapi.kakao.com/v2/user/me";
-        $headers[] = "Authorization: Bearer " . $_SESSION["accessToken"];
-        $response = $this->excuteCurl($callUrl, "POST", $headers);
-        return $this->getReturnKey($response, "id");
     }
 
     public function setLogOut()
@@ -61,7 +55,7 @@ class KakaoAPIService
     public function setLogOutForAdmin($id)
     {
         $callUrl = "https://kapi.kakao.com/v1/user/logout";
-        $data = 'target_id_type=user_id&target_id='.$id;
+        $data = 'target_id_type=user_id&target_id=' . $id;
         $headers[] = "Authorization: KakaoAK " . $this->ADMIN_KEY;
         $response = $this->excuteCurl($callUrl, "POST", $headers, $data);
         return $this->getReturnKey($response, "id");
@@ -70,7 +64,7 @@ class KakaoAPIService
     public function getKakaoWithLogOutLink()
     {
         echo ("https://kauth.kakao.com/oauth/logout?client_id=" . $this->REST_API_KEY . "&logout_redirect_uri=" . $this->LOGOUT_REDIRECT_URI . "&state=logout");
-    }    
+    }
 
     public function setUnLink()
     {
@@ -78,15 +72,57 @@ class KakaoAPIService
         $headers[] = "Authorization: Bearer " . $_SESSION["accessToken"];
         $response = $this->excuteCurl($callUrl, "POST", $headers);
         return $this->getReturnKey($response, "id");
-    }    
+    }
 
     public function setUnLinkForAdmin($id)
     {
         $callUrl = "https://kapi.kakao.com/v1/user/unlink";
-        $data = 'target_id_type=user_id&target_id='.$id;
+        $data = 'target_id_type=user_id&target_id=' . $id;
         $headers[] = "Authorization: KakaoAK " . $this->ADMIN_KEY;
         $response = $this->excuteCurl($callUrl, "POST", $headers, $data);
         return $this->getReturnKey($response, "id");
+    }
+
+    public function getAccessTokenInfo()
+    {
+        $callUrl = "https://kapi.kakao.com/v1/user/access_token_info";
+        $headers[] = "Authorization: Bearer " . $_SESSION["accessToken"];
+        $response = $this->excuteCurl($callUrl, "GET", $headers);
+        return $this->getReturnKey($response, "id");
+    }
+
+    public function setTokenRefresh()
+    {
+        $callUrl = "https://kauth.kakao.com/oauth/token?grant_type=refresh_token&client_id=" . $this->REST_API_KEY . "&refresh_token=" . $_SESSION["refreshToken"] . "&client_secret=" . $this->CLIENT_SECRET;
+        $response = $this->excuteCurl($callUrl, "POST");
+        return $this->getReturnKey($response, "access_token", "access_token", "accessToken");
+    }
+
+    public function getProfile()
+    {
+        $callUrl = "https://kapi.kakao.com/v2/user/me";
+        $headers[] = "Authorization: Bearer " . $_SESSION["accessToken"];
+        $response = $this->excuteCurl($callUrl, "POST", $headers);
+        return $this->getReturnKey($response, "id");
+    }
+
+    public function setUpdateProfile($nickname)
+    {
+        $callUrl = "https://kapi.kakao.com/v1/user/update_profile";
+        $data = 'properties={"nickname":"'.$nickname.'"}';     
+        $headers = array('Content-type:application/x-www-form-urlencoded;charset=utf-8');        
+        $headers[] = "Authorization: Bearer " . $_SESSION["accessToken"];
+        $response = $this->excuteCurl($callUrl, "POST", $headers, $data);
+        return $this->getReturnKey($response, "id");
+    }    
+
+    public function getUserListForAdmin()
+    {
+        $callUrl = "https://kapi.kakao.com/v1/user/ids";
+        $headers = array('Content-type:application/x-www-form-urlencoded;charset=utf-8');
+        $headers[] = "Authorization: KakaoAK " . $this->ADMIN_KEY;
+        $response = $this->excuteCurl($callUrl, "GET", $headers);
+        return $this->getReturnKey($response, "elements");
     }    
 
     public function getAddress($query)
@@ -150,8 +186,7 @@ class KakaoAPIService
                 }
             }
         } else {
-            echo ($response["status_code"]);
-            echo ($response["response"]);
+            return ($response["status_code"]).($response["response"]);
         }
         return $return;
     }
@@ -162,12 +197,12 @@ class KakaoAPIService
         curl_setopt($ch, CURLOPT_URL, $callUrl);
         if ($method == "POST") {
             curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         } else {
             curl_setopt($ch, CURLOPT_POST, false);
         }
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);        
         $response = curl_exec($ch);
         $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
