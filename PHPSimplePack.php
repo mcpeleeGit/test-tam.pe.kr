@@ -1,5 +1,6 @@
 <?php
 require('KakaoAPIService.php');
+$KakaoAPIService = new KakaoAPIService();
 ?>
 <!doctype html>
 <html lang="kr">
@@ -33,7 +34,7 @@ require('KakaoAPIService.php');
         <ul class="list-group">
             <li class="list-group-item">
                 <h3>사용방법</h3>
-                * PHP Simple Pack : <a href="https://github.com/kakao-tam/KakaoAPIForPHPSimplePack">[Github]</a> <a href="https://kakao-tam.tistory.com/23">[Blog]</a> 
+                * PHP Simple Pack : <a href="https://github.com/kakao-tam/KakaoAPIForPHPSimplePack">[Github]</a> <a href="https://kakao-tam.tistory.com/23">[Blog]</a>
                 <pre><code class="php"> * KakaoAPIService.php 수정
 public function __construct()
 {   //★ 수정 할 것
@@ -49,7 +50,7 @@ $KakaoAPIService = new KakaoAPIService();
 ?&gt;                   </code></pre>
                 <h3>끝.</h3>
                 <p>
-                    * 아래 유형별 API를 한줄 호출하여 사용 <br/>
+                    * 아래 유형별 API를 한줄 호출하여 사용 <br />
                 </p>
             </li>
         </ul>
@@ -57,8 +58,7 @@ $KakaoAPIService = new KakaoAPIService();
     <div class="container">
         <ul class="list-group">
             <li class="list-group-item">
-                <h2>카카오 로그인 - 로그인 링크 가져오기</h2>
-                <p>로그인 페이지의 로그인 버튼 or 이미지에 링크를 설정합니다.</p>
+                <h4>카카오 로그인 - 로그인 링크 가져오기</h4>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#PHP">PHP</a>
@@ -67,22 +67,18 @@ $KakaoAPIService = new KakaoAPIService();
                 <div class="tab-content">
                     <div class="tab-pane active" id="PHP">
                         <p></p>
-                        <?php
-                        $KakaoAPIService = new KakaoAPIService();
-                        ?>
                         <a href="<?= $KakaoAPIService->getKakaoLoginLink() ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
                         <p></p>
-                        <pre><code class="php">
+                        <pre><code class="php"> * 로그인 페이지의 로그인 버튼 or 이미지에 링크를 설정합니다.
 &lt;a href="&lt;?= $KakaoAPIService->getKakaoLoginLink() ?&gt;"&gt;
     &lt;img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /&gt;
-&lt;/a&gt;                        
-                        </code></pre>
+&lt;/a&gt;              </code></pre>
                     </div>
                 </div>
             </li>
 
             <li class="list-group-item">
-                <h2>카카오 로그인 - 로그인 콜백 처리</h2>
+                <h4>카카오 로그인 - 로그인 콜백 처리</h4>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#PHP1">PHP</a>
@@ -91,6 +87,9 @@ $KakaoAPIService = new KakaoAPIService();
                 <div class="tab-content">
                     <div class="tab-pane active" id="PHP1">
                         <p></p>
+                        <pre><code class="php"> * 위의 로그인을 실행하면, 설정된 CallBack Page에서 결과를 확인 할 수 있습니다.
+&lt;?= $KakaoAPIService->getToken() ?&gt; //토큰 조회
+&lt;?= $KakaoAPIService->getProfile() ?&gt; //프로필 조회</code></pre>
                         <div id="Response1" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                             <?= $KakaoAPIService->getToken() ?>
                         </div>
@@ -98,17 +97,68 @@ $KakaoAPIService = new KakaoAPIService();
                             <?= $KakaoAPIService->getProfile() ?>
                         </div>
                         <p></p>
-                        <pre><code class="php">
-//토큰 조회
-&lt;?= $KakaoAPIService->getToken() ?&gt;
-//프로필 조회
-&lt;?= $KakaoAPIService->getProfile() ?&gt;
-                        </code></pre>
                     </div>
                 </div>
             </li>
             <li class="list-group-item">
-                <h2>카카오 로컬 - 주소 조회</h2>
+                <h4>카카오 로그인 - 추가 항목 동의 받기</h4>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP">
+                        <p></p>
+                        <a href="<?= $KakaoAPIService->getAuthorizeLink("talk_message,plusfriends") ?>">추가 항목 동의 받기</a>
+                        <p></p>
+                        <pre><code class="php"> //필수 동의가 아닌 사용중 동의가 필요할때 
+&lt;a href="&lt;?= $KakaoAPIService->getAuthorizeLink("talk_message,plusfriends") ?&gt;"&gt;추가 항목 동의 받기&lt;/a&gt;              </code></pre>
+                    </div>
+                </div>
+            </li>         
+            <li class="list-group-item">
+                <h4>카카오 로그인 - 로그아웃</h4>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP1">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP1">
+                        <p></p>
+                        <pre><code class="php"> 
+&lt;?= $KakaoAPIService->setLogOut() ?&gt; //로그아웃
+&lt;?= $KakaoAPIService->setLogOutForAdmin(1515035367) ?&gt; //Admin로그아웃</code></pre>
+                        <div id="Response1" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                            {"id":1515035367}
+                        </div>
+                        <div id="Response2" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                            {"id":1515035367}
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </li>            
+            <li class="list-group-item">
+                <h4>카카오 로그인 - 카카오계정과 함께 로그아웃</h4>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#PHP1">PHP</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="PHP1">
+                        <p></p>
+                        <a href="<?= $KakaoAPIService->getKakaoWithLogOutLink() ?>">카카오계정과 함께 로그아웃</a>
+                        <pre><code class="php"> * 로그인 페이지의 로그인 버튼 or 이미지에 링크를 설정합니다.
+&lt;a href="&lt;?= $KakaoAPIService->getKakaoWithLogOutLink() ?&gt;"&gt;카카오계정과 함께 로그아웃&lt;/a&gt;              </code></pre>
+                    </div>
+                </div>
+            </li>                 
+
+            <li class="list-group-item">
+                <h4>카카오 로컬 - 주소 조회</h4>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
@@ -116,19 +166,18 @@ $KakaoAPIService = new KakaoAPIService();
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <pre><code class="php">//주소 조회
+&lt;?= $KakaoAPIService->getAddress("전북 삼성동 100") ?&gt;</code></pre>
                         <p></p>
                         <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                             <?= $KakaoAPIService->getAddress("전북 삼성동 100") ?>
                         </div>
-                        <p></p>
-                        <pre><code class="php">//주소 조회
-&lt;?= $KakaoAPIService->getAddress("전북 삼성동 100") ?&gt;
-                        </code></pre>
                     </div>
                 </div>
             </li>
             <li class="list-group-item">
-                <h2>카카오 로컬 - 좌표로 행정구역정보 받기</h2>
+                <h4>카카오 로컬 - 좌표로 행정구역정보 받기</h4>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
@@ -136,20 +185,18 @@ $KakaoAPIService = new KakaoAPIService();
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <pre><code class="php">//좌표로 행정구역정보 받기
+&lt;?= $KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191) ?&gt;</code></pre>
                         <p></p>
                         <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                             <?= $KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191) ?>
                         </div>
-                        <p></p>
-                        <pre><code class="php">
-//좌표로 행정구역정보 받기
-&lt;?= $KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191) ?&gt;
-                        </code></pre>
                     </div>
                 </div>
             </li>
             <li class="list-group-item">
-                <h2>카카오 로컬 - 좌표로 주소 변환하기</h2>
+                <h4>카카오 로컬 - 좌표로 주소 변환하기</h4>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
@@ -157,20 +204,19 @@ $KakaoAPIService = new KakaoAPIService();
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <pre><code class="php">//좌표로 주소 변환하기
+&lt;?= $KakaoAPIService->getCoord2address(127.1086228, 37.4012191) ?&gt;
+                        </code></pre>
                         <p></p>
                         <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                             <?= $KakaoAPIService->getCoord2address(127.1086228, 37.4012191) ?>
                         </div>
-                        <p></p>
-                        <pre><code class="php">
-//좌표로 주소 변환하기
-&lt;?= $KakaoAPIService->getCoord2address(127.1086228, 37.4012191) ?&gt;
-                        </code></pre>
                     </div>
                 </div>
             </li>
             <li class="list-group-item">
-                <h2>카카오 로컬 - 좌표계 변환</h2>
+                <h4>카카오 로컬 - 좌표계 변환</h4>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
@@ -178,20 +224,18 @@ $KakaoAPIService = new KakaoAPIService();
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <pre><code class="php">//좌표계 변환
+&lt;?= $KakaoAPIService->getTranscoord(127.1086228, 37.4012191) ?&gt;</code></pre>
                         <p></p>
                         <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                             <?= $KakaoAPIService->getTranscoord(127.1086228, 37.4012191) ?>
                         </div>
-                        <p></p>
-                        <pre><code class="php">
-//좌표계 변환
-&lt;?= $KakaoAPIService->getTranscoord(127.1086228, 37.4012191) ?&gt;
-                        </code></pre>
                     </div>
                 </div>
             </li>
             <li class="list-group-item">
-                <h2>카카오 로컬 - 키워드로 장소 검색</h2>
+                <h4>카카오 로컬 - 키워드로 장소 검색</h4>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
@@ -199,20 +243,18 @@ $KakaoAPIService = new KakaoAPIService();
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="PHP2">
+                        <p></p>
+                        <pre><code class="php">//키워드로 장소 검색
+&lt;?= $KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191) ?&gt;</code></pre>
                         <p></p>
                         <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                             <?= $KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191) ?>
                         </div>
-                        <p></p>
-                        <pre><code class="php">
-//키워드로 장소 검색
-&lt;?= $KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191) ?&gt;
-                        </code></pre>
                     </div>
                 </div>
             </li>
             <li class="list-group-item">
-                <h2>카카오 로컬 - 카테고리로 장소 검색</h2>
+                <h4>카카오 로컬 - 카테고리로 장소 검색</h4>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#PHP2">PHP</a>
@@ -221,14 +263,12 @@ $KakaoAPIService = new KakaoAPIService();
                 <div class="tab-content">
                     <div class="tab-pane active" id="PHP2">
                         <p></p>
+                        <pre><code class="php">//카테고리로 장소 검색
+&lt;?= $KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191, 100) ?&gt;</code></pre>
+                        <p></p>
                         <div id="Response3" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                             <?= $KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191, 100) ?>
                         </div>
-                        <p></p>
-                        <pre><code class="php">
-//카테고리로 장소 검색
-&lt;?= $KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191, 100) ?&gt;
-                        </code></pre>
                     </div>
                 </div>
             </li>
