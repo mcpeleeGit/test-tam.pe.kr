@@ -132,58 +132,30 @@ function loginWithKakaoPopUp() {
                         <pre><code class="language-html">
 <a id="custom-login-btn" href="javascript:loginWithKakaoPopUp()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
 </code></pre>
-                    </div>
-                    <div class="tab-pane fade" id="PHP">
-                        <p></p>
-                        <p>/oauth/authorize 요청은 Url만 호출 하므로 언어에 상관 없이 처리 가능합니다. 다만, CallBack Url설정 시, 인코딩을 해야합니다.</p>
-                        <!--REST API Login-->
-                        <?php
-                        //state는 Cross-Site Request Forgery(CSRF) 공격으로부터 보호하기 위해 난수 설정 후, 콜백 페이지에서 검증할 수 있는 기능이나
-                        //로그인 후, 원래 페이지로 돌아가기 위한 파라메터로 사용하기도 함.
-                        $state = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/returnPage.php?test=한글&p=인코딩");
-                        $client_id = $REST_API_KEY; //★ 수정 할 것
-                        $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
-                        $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=" . $state;
-                        ?>
-                        <a href="<?= $kakaoLoginUrl ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
-                        <p></p>
-                        <!--talk profile-->
-                        <div id="Response" class="alert alert-success" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            GET kauth.kakao.com/oauth/authorize HTTP/1.1 
-                        </div>
-                        <pre><code class="php">
-//state는 Cross-Site Request Forgery(CSRF) 공격으로부터 보호하기 위해 난수 설정 후, 콜백 페이지에서 검증할 수 있는 기능이나
-//로그인 후, 원래 페이지로 돌아가기 위한 파라메터로 사용하기도 함.
-$state = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/returnPage.php?test=한글&p=인코딩"); 
-$client_id = $REST_API_KEY; //★ 수정 할 것
-$redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
-$kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=" . $state;
-                        </code></pre>
-                    </div>
-                </div>
-            </li>
 
-            <li class="list-group-item">
-                <h2>JavaScript SDK 로그아웃</h2>
-                <p>JavaScript SDK로 로그인(PopUp)한 경우만 사용, Redirect로그인 or REST API 로그인은 이후 로직 REST API로 로그아웃 구현 해야함.</p>
-                <p>JavaScript SDK를 사용하고자 한다면, Kakao.Auth.setAccessToken(authObj.access_token); 설정 후 사용</p>
-                <button type="button" class="btn btn-primary" onclick="javascript:logoutWithKakao()">Kakao LogOut</button>
-                <script type="text/javascript">
-                    function logoutWithKakao() {
-                        if (!Kakao.Auth.getAccessToken()) {
-                            console.log('Not logged in.');
-                            alert("Not logged in.");
-                            return;
-                        }
-                        console.log(Kakao.Auth.getAccessToken()); //before Logout
-                        Kakao.Auth.logout(function() {
-                            console.log(Kakao.Auth.getAccessToken()); //after Logout
-                            alert("LogOut Success");
-                            //★ 추가 할 것 : 로그아웃 성공 후 처리 
-                        });
-                    }
-                </script>
-                <pre><code class="JavaScript">
+
+
+
+                        <h2>JavaScript SDK 로그아웃</h2>
+                        <p>JavaScript SDK로 로그인(PopUp)한 경우만 사용, Redirect로그인 or REST API 로그인은 이후 로직 REST API로 로그아웃 구현 해야함.</p>
+                        <p>JavaScript SDK를 사용하고자 한다면, Kakao.Auth.setAccessToken(authObj.access_token); 설정 후 사용</p>
+                        <button type="button" class="btn btn-primary" onclick="javascript:logoutWithKakao()">Kakao LogOut</button>
+                        <script type="text/javascript">
+                            function logoutWithKakao() {
+                                if (!Kakao.Auth.getAccessToken()) {
+                                    console.log('Not logged in.');
+                                    alert("Not logged in.");
+                                    return;
+                                }
+                                console.log(Kakao.Auth.getAccessToken()); //before Logout
+                                Kakao.Auth.logout(function() {
+                                    console.log(Kakao.Auth.getAccessToken()); //after Logout
+                                    alert("LogOut Success");
+                                    //★ 추가 할 것 : 로그아웃 성공 후 처리 
+                                });
+                            }
+                        </script>
+                        <pre><code class="JavaScript">
 function logoutWithKakao() {
     if (!Kakao.Auth.getAccessToken()) {
         console.log('Not logged in.');
@@ -198,26 +170,25 @@ function logoutWithKakao() {
     });
 }
                 </code></pre>
-            </li>
-            <li class="list-group-item">
-                <h2>JavaScript 연결 끊기</h2>
-                <p>JavaScript SDK로 로그인(PopUp)한 경우만 사용, Redirect로그인 or REST API 로그인은 이후 로직 REST API로 로그아웃 구현 해야함.</p>
-                <p>JavaScript SDK를 사용하고자 한다면, Kakao.Auth.setAccessToken(authObj.access_token); 설정 후 사용</p>
-                <button type="button" class="btn btn-primary" onclick="javascript:unlinkWithKakao()">Kakao UnLink</button>
-                <script type="text/javascript">
-                    function unlinkWithKakao() {
-                        Kakao.API.request({
-                            url: '/v1/user/unlink',
-                            success: function(response) {
-                                console.log(response);
-                            },
-                            fail: function(error) {
-                                console.log(error);
+
+                        <h2>JavaScript 연결 끊기</h2>
+                        <p>JavaScript SDK로 로그인(PopUp)한 경우만 사용, Redirect로그인 or REST API 로그인은 이후 로직 REST API로 로그아웃 구현 해야함.</p>
+                        <p>JavaScript SDK를 사용하고자 한다면, Kakao.Auth.setAccessToken(authObj.access_token); 설정 후 사용</p>
+                        <button type="button" class="btn btn-primary" onclick="javascript:unlinkWithKakao()">Kakao UnLink</button>
+                        <script type="text/javascript">
+                            function unlinkWithKakao() {
+                                Kakao.API.request({
+                                    url: '/v1/user/unlink',
+                                    success: function(response) {
+                                        console.log(response);
+                                    },
+                                    fail: function(error) {
+                                        console.log(error);
+                                    }
+                                });
                             }
-                        });
-                    }
-                </script>
-                <pre><code class="JavaScript">
+                        </script>
+                        <pre><code class="JavaScript">
 function unlinkWithKakao() {
     Kakao.API.request({
         url: '/v1/user/unlink',
@@ -230,35 +201,33 @@ function unlinkWithKakao() {
     });
 }
                 </code></pre>
-            </li>
 
-            <li class="list-group-item">
-                <h2>JavaScript 사용자 정보 가져오기</h2>
-                <p>JavaScript SDK로 로그인(PopUp)한 경우만 사용, Redirect로그인 or REST API 로그인은 이후 로직 REST API로 로그아웃 구현 해야함.</p>
-                <p>JavaScript SDK를 사용하고자 한다면, Kakao.Auth.setAccessToken(authObj.access_token); 설정 후 사용</p>
-                <button type="button" class="btn btn-primary" onclick="javascript:profileWithKakao()">Kakao Profile</button>
-                <p id="userid"></p>
-                <p id="nickname"></p>
-                <img id="profile_image" />
-                <img id="thumbnail_image" />
-                <script type="text/javascript">
-                    function profileWithKakao() {
-                        Kakao.API.request({
-                            url: '/v2/user/me',
-                            success: function(response) {
-                                console.log(response);
-                                document.getElementById("userid").innerText = response.id;
-                                document.getElementById("nickname").innerText = response.kakao_account.profile.nickname;
-                                document.getElementById("profile_image").src = response.properties.profile_image;
-                                document.getElementById("thumbnail_image").src = response.properties.thumbnail_image;
-                            },
-                            fail: function(error) {
-                                console.log(error);
+                        <h2>JavaScript 사용자 정보 가져오기</h2>
+                        <p>JavaScript SDK로 로그인(PopUp)한 경우만 사용, Redirect로그인 or REST API 로그인은 이후 로직 REST API로 로그아웃 구현 해야함.</p>
+                        <p>JavaScript SDK를 사용하고자 한다면, Kakao.Auth.setAccessToken(authObj.access_token); 설정 후 사용</p>
+                        <button type="button" class="btn btn-primary" onclick="javascript:profileWithKakao()">Kakao Profile</button>
+                        <p id="userid"></p>
+                        <p id="nickname"></p>
+                        <img id="profile_image" />
+                        <img id="thumbnail_image" />
+                        <script type="text/javascript">
+                            function profileWithKakao() {
+                                Kakao.API.request({
+                                    url: '/v2/user/me',
+                                    success: function(response) {
+                                        console.log(response);
+                                        document.getElementById("userid").innerText = response.id;
+                                        document.getElementById("nickname").innerText = response.kakao_account.profile.nickname;
+                                        document.getElementById("profile_image").src = response.properties.profile_image;
+                                        document.getElementById("thumbnail_image").src = response.properties.thumbnail_image;
+                                    },
+                                    fail: function(error) {
+                                        console.log(error);
+                                    }
+                                });
                             }
-                        });
-                    }
-                </script>
-                <pre><code class="JavaScript">
+                        </script>
+                        <pre><code class="JavaScript">
 function profileWithKakao() {
     Kakao.API.request({
         url: '/v2/user/me',
@@ -275,8 +244,40 @@ function profileWithKakao() {
     });
 }
                 </code></pre>
-            </li>
 
+
+                    </div>
+                    <div class="tab-pane fade" id="PHP">
+                        <p></p>
+                        <h4><a href="/PHPSimplePack.php">PHP Simple Pack 참고</a></h4>
+                        <p></p>
+                        <p>/oauth/authorize 요청은 Url만 호출 하므로 언어에 상관 없이 처리 가능합니다. 다만, CallBack Url설정 시, 인코딩을 해야합니다.</p>
+                        <!--REST API Login-->
+                        <?php
+                        //state는 Cross-Site Request Forgery(CSRF) 공격으로부터 보호하기 위해 난수 설정 후, 콜백 페이지에서 검증할 수 있는 기능이나
+                        //로그인 후, 원래 페이지로 돌아가기 위한 파라메터로 사용하기도 함.
+                        $state = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/returnPage.php?test=한글&p=인코딩");
+                        $client_id = $REST_API_KEY; //★ 수정 할 것
+                        $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
+                        $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=" . $state;
+                        ?>
+                        <a href="<?= $kakaoLoginUrl ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
+                        <p></p>
+                        <!--talk profile-->
+                        <div id="Response" class="alert alert-success" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
+                            GET kauth.kakao.com/oauth/authorize HTTP/1.1
+                        </div>
+                        <pre><code class="php">
+//state는 Cross-Site Request Forgery(CSRF) 공격으로부터 보호하기 위해 난수 설정 후, 콜백 페이지에서 검증할 수 있는 기능이나
+//로그인 후, 원래 페이지로 돌아가기 위한 파라메터로 사용하기도 함.
+$state = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/returnPage.php?test=한글&p=인코딩"); 
+$client_id = $REST_API_KEY; //★ 수정 할 것
+$redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
+$kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=" . $state;
+                        </code></pre>
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
 
