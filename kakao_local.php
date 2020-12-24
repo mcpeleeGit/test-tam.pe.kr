@@ -55,7 +55,7 @@ $KakaoAPIService = new KakaoAPIService();
                             GET dapi.kakao.com/v2/local/search/address.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getAddress("전북 삼성동 100") ?>
+                            <?= json_encode($KakaoAPIService->getAddress("전북 삼성동 100")) ?>
                         </div>
                         <pre><code class="php">
 public function getAddress($query){
@@ -83,7 +83,7 @@ public function getAddress($query){
                             GET dapi.kakao.com/v2/local/geo/coord2regioncode.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191) ?>
+                            <?= json_encode($KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191)) ?>
                         </div>
                         <pre><code class="php">
 public function getCoord2regioncode($x, $y){
@@ -110,7 +110,7 @@ public function getCoord2regioncode($x, $y){
                             GET dapi.kakao.com/v2/local/geo/coord2address.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getCoord2address(127.1086228, 37.4012191) ?>
+                            <?= json_encode($KakaoAPIService->getCoord2address(127.1086228, 37.4012191)) ?>
                         </div>
                         <pre><code class="php">
 public function getCoord2address($x, $y){
@@ -137,7 +137,7 @@ public function getCoord2address($x, $y){
                             GET dapi.kakao.com/v2/local/geo/transcoord.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getTranscoord(160710.37729270622, -4388.879299157299) ?>
+                            <?= json_encode($KakaoAPIService->getTranscoord(160710.37729270622, -4388.879299157299)) ?>
                         </div>
                         <pre><code class="php">
 public function getTranscoord($x, $y){
@@ -164,7 +164,7 @@ public function getTranscoord($x, $y){
                             GET dapi.kakao.com/v2/local/search/keyword.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191) ?>
+                            <?= json_encode($KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191)) ?>
                         </div>
                         <pre><code class="php">
 public function getKeywordAddress($query, $x, $y, $radius=1000){
@@ -191,7 +191,7 @@ public function getKeywordAddress($query, $x, $y, $radius=1000){
                             GET dapi.kakao.com/v2/local/search/keyword.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= $KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191) ?>
+                            <?= json_encode($KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191)) ?>
                         </div>
                         <pre><code class="php">
 public function getCategoryAddress($category_group_code, $x, $y, $radius=1000){
