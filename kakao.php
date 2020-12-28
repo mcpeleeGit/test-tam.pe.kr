@@ -59,6 +59,9 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#PHP">PHP</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#AndroidKotlin">Android(Kotlin)</a>
+                    </li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="JavaScript">
@@ -275,6 +278,128 @@ $client_id = $REST_API_KEY; //★ 수정 할 것
 $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
 $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=" . $state;
                         </code></pre>
+                    </div>
+
+                    <div class="tab-pane fade" id="AndroidKotlin">
+                        <p></p>
+                        <p>Build.gradle(App) 수정</p>
+                        <pre><code class="php">
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+...중략
+
+dependencies {
+    implementation "com.kakao.sdk:v2-user:2.2.0" // 카카오 로그인
+    implementation "com.kakao.sdk:v2-talk:2.2.0" // 친구, 메시지(카카오톡)
+    implementation "com.kakao.sdk:v2-story:2.2.0" // 카카오스토리
+    implementation "com.kakao.sdk:v2-link:2.2.0" // 메시지(카카오링크)
+    implementation "com.kakao.sdk:v2-navi:2.2.0" // 카카오내비
+...중략
+}                   </code></pre>
+                        <p></p>
+                        <p>Build.gradle(Module) 수정</p>
+                        <pre><code class="php">
+buildscript {
+...중략
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        // Kakao SDK
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+    }
+}
+                 </code></pre>
+                        <p></p>
+                        <p>GlobalApplication 클래스 생성</p>
+                        <pre><code class="php">
+class GlobalApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()f
+        KakaoSdk.init(this, "ccccccccccccccccccccccccccccccccccc") //네이티브 앱 키
+        var keyHash = Utility.getKeyHash(this)
+        Log.d("keyHash",keyHash)
+    }
+}                    </code></pre>
+                        <p></p>
+                        <p>Login (HomeFragment)</p>
+                        <pre><code class="php">
+private fun kakaoLogin(root: View?) {
+    val buttonkakaoLogin = root?.findViewById(R.id.kakao_login_button) as ImageButton
+    val textHome = root?.findViewById(R.id.text_home) as TextView
+    val callback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
+        if (error != null) {
+            when {
+                error.toString() == AuthErrorCause.AccessDenied.toString() -> { textHome.text = "AccessDenied :"+error.message }
+                error.toString() == AuthErrorCause.InvalidClient.toString() -> { textHome.text = "InvalidClient :"+error.message }
+                error.toString() == AuthErrorCause.InvalidGrant.toString() -> { textHome.text = "InvalidGrant :"+error.message }
+                error.toString() == AuthErrorCause.InvalidRequest.toString() -> { textHome.text = "InvalidRequest :"+error.message }
+                error.toString() == AuthErrorCause.InvalidScope.toString() -> { textHome.text = "InvalidScope :"+error.message }
+                error.toString() == AuthErrorCause.Misconfigured.toString() -> { textHome.text = "Misconfigured :"+error.message }
+                error.toString() == AuthErrorCause.ServerError.toString() -> { textHome.text = "ServerError :"+error.message }
+                error.toString() == AuthErrorCause.Unauthorized.toString() -> { textHome.text = "Unauthorized :"+error.message  }
+                else -> { textHome.text = error.message }
+            }
+        }
+        else if (token != null) {
+            textHome.text = "로그인에 성공하였습니다."
+            val intent = Intent(requireContext(), SecondActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    buttonkakaoLogin.setOnClickListener {
+        if(LoginClient.instance.isKakaoTalkLoginAvailable(requireContext())){
+            LoginClient.instance.loginWithKakaoTalk(requireContext(), callback = callback)
+        }else{
+            LoginClient.instance.loginWithKakaoAccount(requireContext(), callback = callback)
+        }
+    }
+}                    </code></pre>
+                        <p></p>
+                        <p>SecondActivity에서 로그인 성공 이후 처리</p>
+                        <pre><code class="php">
+// 프로필 정보
+UserApiClient.instance.me { user, error ->
+    id.text = "회원번호: ${user?.id}"
+    nickname.text = "닉네임: ${user?.kakaoAccount?.profile?.nickname}"
+    profileimage_url.text = "프로필 링크: ${user?.kakaoAccount?.profile?.profileImageUrl}"
+    thumbnailimage_url.text = "썸네일 링크: ${user?.kakaoAccount?.profile?.thumbnailImageUrl}"
+}                   
+
+// Log out
+kakao_logout_button.setOnClickListener {
+    UserApiClient.instance.logout { error ->
+        if (error != null) {
+            Toast.makeText(this, "로그아웃 실패 $error", Toast.LENGTH_SHORT).show()
+        }else {
+            Toast.makeText(this, "로그아웃 성공", Toast.LENGTH_SHORT).show()
+        }
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP))
+    }
+}
+
+// UnLink
+kakao_unlink_button.setOnClickListener {
+    UserApiClient.instance.unlink { error ->
+        if (error != null) {
+            Toast.makeText(this, "unlink 실패 $error", Toast.LENGTH_SHORT).show()
+        }else {
+            Toast.makeText(this, "unlink 성공", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP))
+        }
+    }
+}
+
+
+</code></pre>
                     </div>
                 </div>
             </li>
