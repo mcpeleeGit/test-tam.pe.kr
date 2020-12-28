@@ -161,10 +161,10 @@ $KakaoAPIService = new KakaoAPIService();
 </script>
 <p></p>
 <a id="custom-login-btn" href="javascript:loginWithKakaoPopUp()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
-<button type="button" class="btn btn-primary btn-lg" onclick="javascript:defaultSend()">나에게 기본 메시지 보내기</button>
-<button type="button" class="btn btn-primary btn-lg" onclick="javascript:defaultScrapSend()">나에게 스크랩 메시지 보내기</button>
-<button type="button" class="btn btn-primary btn-lg" onclick="javascript:defaultTemplateSend()">나에게 템플릿 메시지 보내기</button>
-<button type="button" class="btn btn-primary btn-lg" onclick="javascript:friendSend()">친구에게 기본 메시지 보내기</button>  
+<button type="button" class="btn btn-primary btn-sm" onclick="javascript:defaultSend()">나에게 기본 메시지 보내기</button>
+<button type="button" class="btn btn-primary btn-sm" onclick="javascript:defaultScrapSend()">나에게 스크랩 메시지 보내기</button>
+<button type="button" class="btn btn-primary btn-sm" onclick="javascript:defaultTemplateSend()">나에게 템플릿 메시지 보내기</button>
+<button type="button" class="btn btn-primary btn-sm" onclick="javascript:friendSend()">친구에게 기본 메시지 보내기</button>  
 <p></p>
 <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">Response</div>
 <pre><code class="JavaScript" id="sample"></code></pre>
@@ -184,7 +184,7 @@ $KakaoAPIService = new KakaoAPIService();
                             POST kapi.kakao.com/v2/api/talk/memo/default/send HTTP/1.1 Authorization: Bearer {ACCESS_TOKEN}
                         </div>
                         <?php
-                           // $KakaoAPIService->sendMessage();
+                           $KakaoAPIService->sendMessage($data);
                         ?>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3"><?= var_dump($res) ?></div>
                         <pre><code class="php">

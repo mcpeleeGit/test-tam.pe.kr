@@ -102,6 +102,14 @@ class KakaoAPIService extends KakaoService
         return $this->excuteCurl($callUrl, "GET", $headers);
     }
 
+    public function sendMessage($data)
+    {
+        $callUrl = "https://kapi.kakao.com/v2/api/talk/memo/default/send";
+        $headers = array('Content-type:application/x-www-form-urlencoded;charset=utf-8');
+        $headers[] = "Authorization: Bearer " . $_SESSION["accessToken"];
+        return $this->excuteCurl($callUrl, "POST", $headers, $data);
+    }    
+
     public function getAddress($query)
     {
         $callUrl = "https://dapi.kakao.com/v2/local/search/address.json?query=" . urlencode($query);
@@ -144,3 +152,4 @@ class KakaoAPIService extends KakaoService
         return $this->excuteCurl($callUrl, "GET", $headers);
     }
 }
+?>
