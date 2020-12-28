@@ -1,5 +1,11 @@
 <?php
    session_start();
+   $state = $_GET["state"];
+   if (substr($state,0,4) == 'http') {
+      $gobackuri = $state;
+   }else{
+      $gobackuri = "javascript:history.back()";
+   }           
 ?>
 <!doctype html>
 <html lang="en">
@@ -28,7 +34,7 @@
    <header>
       <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
          <div class="container"><a class="navbar-brand" href="/"><img src="/img/icon/googsu.png" class="logo" alt="logo">Kakao API Test</a>
-         <h1>인가코드 받기(CallBack Page)</h1>
+         <h1><a href="<?=$gobackuri?>" class="btn btn-primary">Go Back</a>인가코드 받기(CallBack Page)</h1>
          </div>
       </nav>
    </header>

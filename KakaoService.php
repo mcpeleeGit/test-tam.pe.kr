@@ -5,8 +5,8 @@ class KakaoService
     protected $REST_API_KEY;
     protected $ADMIN_KEY;
     protected $CLIENT_SECRET;
-    protected $REDIRECT_URI;
-    protected $LOGOUT_REDIRECT_URI;
+    public $REDIRECT_URI;
+    public $LOGOUT_REDIRECT_URI;
     protected $RETURN_TYPE;
 
     public function __construct($return_type)

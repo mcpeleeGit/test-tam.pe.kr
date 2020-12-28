@@ -18,9 +18,14 @@ class KakaoAPIService extends KakaoService
         return $this->rtn("https://kauth.kakao.com/oauth/authorize?client_id=" . $this->REST_API_KEY . "&redirect_uri=" . $this->REDIRECT_URI . "&response_type=code&state=accessToken");
     }
 
-    public function getAuthorizeLink($scope)
+    public function getKakaoLoginLinkAndReturnUrl($state)
     {
-        return $this->rtn("https://kauth.kakao.com/oauth/authorize?client_id=" . $this->REST_API_KEY . "&redirect_uri=" . $this->REDIRECT_URI . "&response_type=code&state=accessAgree&scope=" . $scope);
+        return $this->rtn("https://kauth.kakao.com/oauth/authorize?client_id=" . $this->REST_API_KEY . "&redirect_uri=" . $this->REDIRECT_URI . "&response_type=code&state=".$state);
+    }    
+
+    public function getAuthorizeLink($scope, $state = "accessAgree")
+    {
+        return $this->rtn("https://kauth.kakao.com/oauth/authorize?client_id=" . $this->REST_API_KEY . "&redirect_uri=" . $this->REDIRECT_URI . "&response_type=code&state=".$state."&scope=" . $scope);
     }
 
     public function getKakaoWithLogOutLink()
