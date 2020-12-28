@@ -1,6 +1,12 @@
 <?php
 require('KakaoAPIService.php');
 $KakaoAPIService = new KakaoAPIService();
+
+$lang="";
+if(isset($_GET["lang"])){
+    $lang = $_GET["lang"];
+}
+
 ?>
 <!doctype html>
 <html lang="kr">
@@ -40,14 +46,14 @@ $KakaoAPIService = new KakaoAPIService();
                 <h2>나에게 기본 메시지 보내기</h2>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#JavaScript">JavaScript</a>
+                        <a class="nav-link <?=$lang==""? 'active':''?>" data-toggle="tab" href="#JavaScript">JavaScript</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#PHP">PHP</a>
+                        <a class="nav-link <?=$lang=="php"? 'active':''?>" data-toggle="tab" href="#PHP">PHP</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade show active" id="JavaScript">
+                    <div class="tab-pane fade <?=$lang==""? 'show active':''?>" id="JavaScript">
 <script type="text/javascript">
     function loginWithKakaoPopUp() {
         Kakao.Auth.login({
@@ -169,7 +175,7 @@ $KakaoAPIService = new KakaoAPIService();
 <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">Response</div>
 <pre><code class="JavaScript" id="sample"></code></pre>
                     </div>
-                    <div class="tab-pane fade" id="PHP">
+                    <div class="tab-pane fade <?=$lang=="php"? 'show active':''?>" id="PHP">
                         <p></p>
                         <script type="text/javascript">
                             function loginWithKakao() {
@@ -179,16 +185,398 @@ $KakaoAPIService = new KakaoAPIService();
                             }
                         </script>
                         <a id="custom-login-btn" href="javascript:loginWithKakao()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
+                        <a href="<?=$KakaoAPIService->getAuthorizeLink("talk_message,friends")?>" class="btn btn-primary">메세지 발송 권한 획득</a>
                         <p></p>
                         <div id="Response" class="alert alert-success" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
                             POST kapi.kakao.com/v2/api/talk/memo/default/send HTTP/1.1 Authorization: Bearer {ACCESS_TOKEN}
                         </div>
                         <?php
-                           $KakaoAPIService->sendMessage($data);
+$data = 'template_object={
+    "object_type": "feed",
+    "content": {
+        "title": "디저트 사진",
+        "description": "아메리카노, 빵, 케익",
+        "image_url": "http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
+        "image_width": 640,
+        "image_height": 640,
+        "link": {
+        "web_url": "http://www.daum.net",
+        "mobile_web_url": "http://m.daum.net",
+        "android_execution_params": "contentId=100",
+        "ios_execution_params": "contentId=100"
+        }
+    },
+    "social": {
+        "like_count": 100,
+        "comment_count": 200,
+        "shared_count": 300,
+        "view_count": 400,
+        "subscriber_count": 500
+    },
+    "buttons": [
+        {
+        "title": "웹으로 이동",
+        "link": {
+            "web_url": "http://www.daum.net",
+            "mobile_web_url": "http://m.daum.net"
+        }
+        },
+        {
+        "title": "앱으로 이동",
+        "link": {
+            "android_execution_params": "contentId=100",
+            "ios_execution_params": "contentId=100"
+        }
+        }
+    ]
+}';
+$res = $KakaoAPIService->sendMessage($data);
+$data = 'template_object={
+    "object_type": "list",
+    "header_title": "WEEKELY MAGAZINE",
+    "header_link": {
+        "web_url": "http://www.daum.net",
+        "mobile_web_url": "http://m.daum.net",
+        "android_execution_params": "main",
+        "ios_execution_params": "main"
+    },
+    "contents": [
+        {
+        "title": "자전거 라이더를 위한 공간",
+        "description": "매거진",
+        "image_url": "http://mud-kage.kakao.co.kr/dn/QNvGY/btqfD0SKT9m/k4KUlb1m0dKPHxGV8WbIK1/openlink_640x640s.jpg",
+        "image_width": 640,
+        "image_height": 640,
+        "link": {
+            "web_url": "http://www.daum.net/contents/1",
+            "mobile_web_url": "http://m.daum.net/contents/1",
+            "android_execution_params": "/contents/1",
+            "ios_execution_params": "/contents/1"
+        }
+        },
+        {
+        "title": "비쥬얼이 끝내주는 오레오 카푸치노",
+        "description": "매거진",
+        "image_url": "http://mud-kage.kakao.co.kr/dn/boVWEm/btqfFGlOpJB/mKsq9z6U2Xpms3NztZgiD1/openlink_640x640s.jpg",
+        "image_width": 640,
+        "image_height": 640,
+        "link": {
+            "web_url": "http://www.daum.net/contents/2",
+            "mobile_web_url": "http://m.daum.net/contents/2",
+            "android_execution_params": "/contents/2",
+            "ios_execution_params": "/contents/2"
+        }
+        },
+        {
+        "title": "감성이 가득한 분위기",
+        "description": "매거진",
+        "image_url": "http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
+        "image_width": 640,
+        "image_height": 640,
+        "link": {
+            "web_url": "http://www.daum.net/contents/3",
+            "mobile_web_url": "http://m.daum.net/contents/3",
+            "android_execution_params": "/contents/3",
+            "ios_execution_params": "/contents/3"
+        }
+        }
+    ],
+    "buttons": [
+        {
+        "title": "웹으로 이동",
+        "link": {
+            "web_url": "http://www.daum.net",
+            "mobile_web_url": "http://m.daum.net"
+        }
+        },
+        {
+        "title": "앱으로 이동",
+        "link": {
+            "android_execution_params": "main",
+            "ios_execution_params": "main"
+        }
+        }
+    ]
+}';
+$res = $KakaoAPIService->sendMessage($data);                        
+$data = 'template_object={
+    "object_type": "location",
+    "content": {
+        "title": "카카오 판교오피스",
+        "description": "카카오 판교오피스 위치입니다.",
+        "image_url": "https://mud-kage.kakao.com/dn/drTdbB/bWYf06POFPf/owUHIt7K7NoGD0hrzFLeW0/kakaolink40_original.png",
+        "image_width": 800,
+        "image_height": 800,
+        "link": {
+        "web_url": "https://developers.kakao.com",
+        "mobile_web_url": "https://developers.kakao.com/mobile",
+        "android_execution_params": "platform=android",
+        "ios_execution_params": "platform=ios"
+        }
+    },
+    "buttons": [
+        {
+        "title": "웹으로 보기",
+        "link": {
+            "web_url": "https://developers.kakao.com",
+            "mobile_web_url": "https://developers.kakao.com/mobile"
+        }
+        }
+    ],
+    "address": "경기 성남시 분당구 판교역로 235 에이치스퀘어 N동 7층",
+    "address_title": "카카오 판교오피스"
+}';
+$res = $KakaoAPIService->sendMessage($data);
+$data = 'template_object={
+    "object_type": "commerce",
+    "content": {
+        "title": "Ivory long dress (4 Color)",
+        "image_url": "http://mud-kage.kakao.co.kr/dn/RY8ZN/btqgOGzITp3/uCM1x2xu7GNfr7NS9QvEs0/kakaolink40_original.png",
+        "image_width": 640,
+        "image_height": 640,
+        "link": {
+        "web_url": "https://style.kakao.com/main/women/contentId=100",
+        "mobile_web_url": "https://style.kakao.com/main/women/contentId=100",
+        "android_execution_params": "contentId=100",
+        "ios_execution_params": "contentId=100"
+        }
+    },
+    "commerce": {
+        "regular_price": 208800,
+        "discount_price": 146160,
+        "discount_rate": 30
+    },
+    "buttons": [
+        {
+        "title": "구매하기",
+        "link": {
+            "web_url": "https://style.kakao.com/main/women/contentId=100/buy",
+            "mobile_web_url": "https://style.kakao.com/main/women/contentId=100/buy",
+            "android_execution_params": "contentId=100&buy=true",
+            "ios_execution_params": "contentId=100&buy=true"
+        }
+        },
+        {
+        "title": "공유하기",
+        "link": {
+            "web_url": "https://style.kakao.com/main/women/contentId=100/share",
+            "mobile_web_url": "https://style.kakao.com/main/women/contentId=100/share",
+            "android_execution_params": "contentId=100&share=true",
+            "ios_execution_params": "contentId=100&share=true"
+        }
+        }
+    ]
+}';
+$res = $KakaoAPIService->sendMessage($data);
+$data = 'template_object={
+        "object_type": "text",
+        "text": "텍스트 영역입니다. 최대 200자 표시 가능합니다.",
+        "link": {
+            "web_url": "https://developers.kakao.com",
+            "mobile_web_url": "https://developers.kakao.com"
+        },
+        "button_title": "바로 확인"
+    }';
+$res = $KakaoAPIService->sendMessage($data);
                         ?>
-                        <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3"><?= var_dump($res) ?></div>
+                        <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">result_code : <?= $res->result_code ?></div>
                         <pre><code class="php">
+//Feed
+$data = 'template_object={
+    "object_type": "feed",
+    "content": {
+        "title": "디저트 사진",
+        "description": "아메리카노, 빵, 케익",
+        "image_url": "http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
+        "image_width": 640,
+        "image_height": 640,
+        "link": {
+        "web_url": "http://www.daum.net",
+        "mobile_web_url": "http://m.daum.net",
+        "android_execution_params": "contentId=100",
+        "ios_execution_params": "contentId=100"
+        }
+    },
+    "social": {
+        "like_count": 100,
+        "comment_count": 200,
+        "shared_count": 300,
+        "view_count": 400,
+        "subscriber_count": 500
+    },
+    "buttons": [
+        {
+        "title": "웹으로 이동",
+        "link": {
+            "web_url": "http://www.daum.net",
+            "mobile_web_url": "http://m.daum.net"
+        }
+        },
+        {
+        "title": "앱으로 이동",
+        "link": {
+            "android_execution_params": "contentId=100",
+            "ios_execution_params": "contentId=100"
+        }
+        }
+    ]
+}';
+$res = $KakaoAPIService->sendMessage($data);
 
+//List
+$data = 'template_object={
+    "object_type": "list",
+    "header_title": "WEEKELY MAGAZINE",
+    "header_link": {
+        "web_url": "http://www.daum.net",
+        "mobile_web_url": "http://m.daum.net",
+        "android_execution_params": "main",
+        "ios_execution_params": "main"
+    },
+    "contents": [
+        {
+        "title": "자전거 라이더를 위한 공간",
+        "description": "매거진",
+        "image_url": "http://mud-kage.kakao.co.kr/dn/QNvGY/btqfD0SKT9m/k4KUlb1m0dKPHxGV8WbIK1/openlink_640x640s.jpg",
+        "image_width": 640,
+        "image_height": 640,
+        "link": {
+            "web_url": "http://www.daum.net/contents/1",
+            "mobile_web_url": "http://m.daum.net/contents/1",
+            "android_execution_params": "/contents/1",
+            "ios_execution_params": "/contents/1"
+        }
+        },
+        {
+        "title": "비쥬얼이 끝내주는 오레오 카푸치노",
+        "description": "매거진",
+        "image_url": "http://mud-kage.kakao.co.kr/dn/boVWEm/btqfFGlOpJB/mKsq9z6U2Xpms3NztZgiD1/openlink_640x640s.jpg",
+        "image_width": 640,
+        "image_height": 640,
+        "link": {
+            "web_url": "http://www.daum.net/contents/2",
+            "mobile_web_url": "http://m.daum.net/contents/2",
+            "android_execution_params": "/contents/2",
+            "ios_execution_params": "/contents/2"
+        }
+        },
+        {
+        "title": "감성이 가득한 분위기",
+        "description": "매거진",
+        "image_url": "http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
+        "image_width": 640,
+        "image_height": 640,
+        "link": {
+            "web_url": "http://www.daum.net/contents/3",
+            "mobile_web_url": "http://m.daum.net/contents/3",
+            "android_execution_params": "/contents/3",
+            "ios_execution_params": "/contents/3"
+        }
+        }
+    ],
+    "buttons": [
+        {
+        "title": "웹으로 이동",
+        "link": {
+            "web_url": "http://www.daum.net",
+            "mobile_web_url": "http://m.daum.net"
+        }
+        },
+        {
+        "title": "앱으로 이동",
+        "link": {
+            "android_execution_params": "main",
+            "ios_execution_params": "main"
+        }
+        }
+    ]
+}';
+$res = $KakaoAPIService->sendMessage($data);   
+
+//Location
+$data = 'template_object={
+    "object_type": "location",
+    "content": {
+        "title": "카카오 판교오피스",
+        "description": "카카오 판교오피스 위치입니다.",
+        "image_url": "https://mud-kage.kakao.com/dn/drTdbB/bWYf06POFPf/owUHIt7K7NoGD0hrzFLeW0/kakaolink40_original.png",
+        "image_width": 800,
+        "image_height": 800,
+        "link": {
+        "web_url": "https://developers.kakao.com",
+        "mobile_web_url": "https://developers.kakao.com/mobile",
+        "android_execution_params": "platform=android",
+        "ios_execution_params": "platform=ios"
+        }
+    },
+    "buttons": [
+        {
+        "title": "웹으로 보기",
+        "link": {
+            "web_url": "https://developers.kakao.com",
+            "mobile_web_url": "https://developers.kakao.com/mobile"
+        }
+        }
+    ],
+    "address": "경기 성남시 분당구 판교역로 235 에이치스퀘어 N동 7층",
+    "address_title": "카카오 판교오피스"
+}';
+$res = $KakaoAPIService->sendMessage($data);
+
+//Commerce
+$data = 'template_object={
+    "object_type": "commerce",
+    "content": {
+        "title": "Ivory long dress (4 Color)",
+        "image_url": "http://mud-kage.kakao.co.kr/dn/RY8ZN/btqgOGzITp3/uCM1x2xu7GNfr7NS9QvEs0/kakaolink40_original.png",
+        "image_width": 640,
+        "image_height": 640,
+        "link": {
+        "web_url": "https://style.kakao.com/main/women/contentId=100",
+        "mobile_web_url": "https://style.kakao.com/main/women/contentId=100",
+        "android_execution_params": "contentId=100",
+        "ios_execution_params": "contentId=100"
+        }
+    },
+    "commerce": {
+        "regular_price": 208800,
+        "discount_price": 146160,
+        "discount_rate": 30
+    },
+    "buttons": [
+        {
+        "title": "구매하기",
+        "link": {
+            "web_url": "https://style.kakao.com/main/women/contentId=100/buy",
+            "mobile_web_url": "https://style.kakao.com/main/women/contentId=100/buy",
+            "android_execution_params": "contentId=100&buy=true",
+            "ios_execution_params": "contentId=100&buy=true"
+        }
+        },
+        {
+        "title": "공유하기",
+        "link": {
+            "web_url": "https://style.kakao.com/main/women/contentId=100/share",
+            "mobile_web_url": "https://style.kakao.com/main/women/contentId=100/share",
+            "android_execution_params": "contentId=100&share=true",
+            "ios_execution_params": "contentId=100&share=true"
+        }
+        }
+    ]
+}';
+$res = $KakaoAPIService->sendMessage($data);
+
+//text
+$data = 'template_object={
+        "object_type": "text",
+        "text": "텍스트 영역입니다. 최대 200자 표시 가능합니다.",
+        "link": {
+            "web_url": "https://developers.kakao.com",
+            "mobile_web_url": "https://developers.kakao.com"
+        },
+        "button_title": "바로 확인"
+    }';
+$res = $KakaoAPIService->sendMessage($data);
                         </code></pre>
                     </div>
                 </div>
