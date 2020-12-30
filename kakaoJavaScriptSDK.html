@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <base href="/" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/static/css/2.86aa6515.chunk.css" rel="stylesheet">
+    <link href="/static/css/main.a583af82.chunk.css" rel="stylesheet">
+    <!--bootstrapcdn-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Kakao JavaScript SDK Wrapper</title>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="kakaoJavaScriptAPIwrapper.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+    <script>
+        console.stdlog = console.log.bind(console);
+        console.log = function () {
+            toastr.options.timeOut = 4000;
+            toastr.options.closeButton = true;
+            output = JSON.stringify(Array.from(arguments));
+            if (output.indexOf("msg") > -1 && output.indexOf("code") > -1) toastr.error(output);
+            else toastr.success(output);
+            console.stdlog.apply(console, arguments);
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
+            <div class="container"><a class="navbar-brand" href="/"><img src="/img/icon/googsu.png" class="logo"
+                        alt="logo">Kakao API Test</a>
+                <h1>Kakao JavaScript SDK Wrapper</h1>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card-group">
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">카카오 로그인</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">로그인(PopUp)</h5>
+                    <p class="card-text">팝업 방식 로그인은 액세스토큰까지 세팅되므로 토큰 조회 API를 호출할 필요가 없습니다.</p>
+                    <a href="javascript:loginPopUp()" class="btn btn-primary">loginPopUp()</a>
+                    <p></p>
+                    <h5 class="card-title">로그인(Redirect)</h5>
+                    <p class="card-text">리다이렉트 방식 로그인은 카카오 로그인 호출 후, 리다이렉트(콜백URI) 페이지로 이동합니다. 리다이렉트 페이지에서 액세스 토큰조회 REST
+                        API를
+                        호출해야하며 카카오 JavaScript SDK에 액세스 토큰을 세팅해야 이후 SDK 함수 사용 가능합니다.</p>
+                    <a href="javascript:login()" class="btn btn-primary">login()</a>
+                </div>
+            </div>
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-body text-dark">
+                    <h5 class="card-title">로그아웃</h5>
+                    <p class="card-text">SDK 객체에 액세스 토큰을 제거합니다. </p>
+                    <a href="javascript:logout()" class="btn btn-primary">logout()</a>
+                    <p></p>
+                    <h5 class="card-title">연결 끊기</h5>
+                    <p class="card-text">카카오와 연결이 끊어집니다. 다시 로그인 시, 약관 동의를 다시하게 됩니다.</p>
+                    <a href="javascript:unlink()" class="btn btn-primary">unlink()</a>
+                    <p></p>
+                    <h5 class="card-title">추가 항목 동의 받기</h5>
+                    <p class="card-text">동의 항목 설정 중, 이용 중 동의 항목을 사용하기위해 인가 요청. 리다이렉트 방식의 로그인과 동일하며 파라메터로 동의항목을 전달한다.</p>
+                    <a href="javascript:authorize('account_email,talk_message,friends')" class="btn btn-primary">authorize($scope)</a>
+                </div>
+            </div>
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-body text-dark">
+                    <h5 class="card-title">사용자 정보 가져오기</h5>
+                    <p class="card-text">로그인한 사용자의 프로필을 조회합니다. 동의항목 설정에 따라 조회 가능한 항목이 다릅니다. </p>
+                    <a href="javascript:profile()" class="btn btn-primary">profile()</a>
+                    <p></p>
+                    <h5 class="card-title">사용자 정보 저장하기</h5>
+                    <p class="card-text"></p>
+                    <a href="javascript:updateProfile({ properties: { nickname: '홍길동' } })"
+                        class="btn btn-primary">updateProfile($profile)</a>
+                </div>
+            </div>
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Link</div>
+                <div class="card-body">
+                    <h5 class="card-title">GitHub</h5>
+                    <p class="card-text"><a href="https://github.com/kakao-tam/KakaoJavaScriptSDKWrapper"
+                            target="_blank">Kakao JavaScript SDK Wrapper</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-group">
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">카카오톡 소셜</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">프로필 가져오기</h5>
+                    <p class="card-text">현재 로그인한 사용자의 카카오계정에 연결된 카카오톡 프로필 정보를 받는 기능입니다. 사용자 카카오계정에 연결된 카카오톡이 없다면 에러 응답을 받습니다.</p>
+                    <a href="javascript:talkProfile()" class="btn btn-primary">talkProfile()</a>
+                    <p></p>
+                    <h5 class="card-title">친구 목록 가져오기</h5>
+                    <p class="card-text">현재 로그인한 사용자의 카카오계정에 연결된 카카오톡의 친구 정보를 받아 옵니다. 정렬 순서, 한 페이지에 가져올 친구 수 등 파라미터를 선택적으로 사용하여 요청할 수 있습니다.</p>
+                    <a href="javascript:talkFriendList()" class="btn btn-primary">talkFriendList()</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

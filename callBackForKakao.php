@@ -1,11 +1,14 @@
 <?php
    session_start();
-   $state = $_GET["state"];
-   if (substr($state,0,4) == 'http') {
-      $gobackuri = $state;
-   }else{
-      $gobackuri = "javascript:history.back()";
-   }           
+
+   $gobackuri = "javascript:history.back()";
+   if (isset($_GET["state"])){
+      $state = $_GET["state"];
+      if (substr($state,0,4) == 'http') {
+         $gobackuri = $state;
+      } 
+   }
+          
 ?>
 <!doctype html>
 <html lang="en">
