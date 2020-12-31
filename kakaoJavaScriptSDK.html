@@ -28,12 +28,12 @@
             setToastr(output);
             console.stdlog.apply(console, arguments);
         }
-        
-        function setToastr(output){
+
+        function setToastr(output) {
             toastr.options.timeOut = 4000;
             toastr.options.closeButton = true;
             if (output.indexOf("msg") > -1 && output.indexOf("code") > -1) toastr.error(output);
-            else toastr.success(output);            
+            else toastr.success(output);
         }
     </script>
 </head>
@@ -64,7 +64,8 @@
                     <p></p>
                     <h5 class="card-title">추가 항목 동의 받기</h5>
                     <p class="card-text">동의 항목 설정 중, 이용 중 동의 항목을 사용하기위해 인가 요청. 리다이렉트 방식의 로그인과 동일하며 파라메터로 동의항목을 전달한다.</p>
-                    <a href="javascript:authorize('account_email,talk_message,friends')" class="btn btn-primary">authorize($scope)</a>                    
+                    <a href="javascript:authorize('account_email,talk_message,friends')"
+                        class="btn btn-primary">authorize($scope)</a>
                 </div>
             </div>
             <div class="card border-dark mb-3">
@@ -102,14 +103,57 @@
                 <div class="card-header">카카오톡 소셜</div>
                 <div class="card-body text-dark">
                     <h5 class="card-title">프로필 가져오기</h5>
-                    <p class="card-text">현재 로그인한 사용자의 카카오계정에 연결된 카카오톡 프로필 정보를 받는 기능입니다. 사용자 카카오계정에 연결된 카카오톡이 없다면 에러 응답을 받습니다.</p>
+                    <p class="card-text">현재 로그인한 사용자의 카카오계정에 연결된 카카오톡 프로필 정보를 받는 기능입니다. 사용자 카카오계정에 연결된 카카오톡이 없다면 에러 응답을
+                        받습니다.</p>
                     <a href="javascript:talkProfile()" class="btn btn-primary">talkProfile()</a>
                     <p></p>
                     <h5 class="card-title">친구 목록 가져오기</h5>
-                    <p class="card-text">현재 로그인한 사용자의 카카오계정에 연결된 카카오톡의 친구 정보를 받아 옵니다. 정렬 순서, 한 페이지에 가져올 친구 수 등 파라미터를 선택적으로 사용하여 요청할 수 있습니다.</p>
+                    <p class="card-text">현재 로그인한 사용자의 카카오계정에 연결된 카카오톡의 친구 정보를 받아 옵니다. 정렬 순서, 한 페이지에 가져올 친구 수 등 파라미터를
+                        선택적으로 사용하여 요청할 수 있습니다.</p>
                     <a href="javascript:talkFriendList()" class="btn btn-primary">talkFriendList()</a>
                 </div>
             </div>
+            <div class="card border-dark mb-3">
+                <div class="card-header">카카오톡 메세지</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">카카오 링크 기본 메세지 버튼 생성</h5>
+                    <p class="card-text">카카오 링크 방식으로 보낼 버튼 생성. 템플릿을 스크립트 안에서 구성</p>
+                    <p id="btn-link-send"><button class="btn btn-primary">기본 메세지 보내기</button></p>
+                    <script>btn_link_send();</script>
+                    <p></p>                    
+                    <h5 class="card-title">카카오 링크 스크랩 메세지 버튼 생성</h5>
+                    <p class="card-text">Url의 메타 정보를 발송</p>
+                    <p id="btn-link-scrap"><button class="btn btn-primary">스크랩 메세지 보내기</button></p>
+                    <script>btn_link_scrap('http://test-tam.pe.kr');</script>
+                    <p></p>
+                    <h5 class="card-title">카카오 링크 템플릿 메세지 버튼 생성</h5>
+                    <p class="card-text">카카오에 미리 등록한 메세지 템플릿을 발송</p>
+                    <p id="btn-link-template"><button class="btn btn-primary">템플릿 메세지 보내기</button></p>
+                    <script>btn_link_template(41666);</script>
+                </div>
+            </div>
+            <div class="card border-dark mb-3">
+                <div class="card-body text-dark">
+                    <h5 class="card-title">나에게 기본 메세지 보내기</h5>
+                    <p class="card-text">카카오 링크 방식으로 기본 메세지 발송. 템플릿을 스크립트 안에서 구성</p>
+                    <a href="javascript:defaultSend()" class="btn btn-primary">defaultSend()</a>
+                    <p></p>
+                    <h5 class="card-title">나에게 스크랩 메세지 보내기</h5>
+                    <p class="card-text">Url의 메타 정보를 발송</p>
+                    <a href="javascript:defaultScrapSend('http://test-tam.pe.kr')"
+                        class="btn btn-primary">defaultScrapSend($request_url)</a>
+                    <p></p>
+                    <h5 class="card-title">나에게 템플릿 메세지 보내기</h5>
+                    <p class="card-text">카카오에 미리 등록한 메세지 템플릿을 발송</p>
+                    <a href="javascript:defaultTemplateSend(41666)"
+                        class="btn btn-primary">defaultTemplateSend(41666)</a>
+                    <p></p>
+                    <h5 class="card-title">친구에게 기본 메세지 보내기</h5>
+                    <p class="card-text">친구 UUID를 파라메터로 템플릿을 스크립트 안에서 구성하는 기본 메세지 발송</p>
+                    <a href="javascript:friendSend('rZysnKWWpp6ni7KEvIy4jLuXpJShk6ef_A')"
+                        class="btn btn-primary">friendSend($receiver_uuids)</a>
+                </div>
+            </div>            
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -121,6 +165,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>

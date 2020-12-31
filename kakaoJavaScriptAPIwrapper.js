@@ -87,23 +87,172 @@ function authorize(scope) {
 function talkProfile() {
     Kakao.API.request({
         url: '/v1/api/talk/profile',
-        success: function(response) {
+        success: function (response) {
             console.log(response);
         },
-        fail: function(error) {
+        fail: function (error) {
             console.log(error);
         }
     });
 }
 
 function talkFriendList() {
-    Kakao.API.request({ 
+    Kakao.API.request({
         url: '/v1/api/talk/friends',
-        success: function(response) {
+        success: function (response) {
             console.log(response);
         },
-        fail: function(error) {
+        fail: function (error) {
             console.log(error);
         }
     });
 }
+
+function btn_link_send() {
+    Kakao.Link.createDefaultButton({
+        container: '#btn-link-send',
+        objectType: 'feed',
+        content: {
+            title: '디저트 사진',
+            description: '아메리카노, 빵, 케익',
+            imageUrl:
+                'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+            link: {
+                mobileWebUrl: 'https://developers.kakao.com',
+                androidExecParams: 'test',
+            },
+        },
+        social: {
+            likeCount: 10,
+            commentCount: 20,
+            sharedCount: 30,
+        },
+        buttons: [
+            {
+                title: '웹으로 이동',
+                link: {
+                    mobileWebUrl: 'https://developers.kakao.com',
+                },
+            },
+            {
+                title: '앱으로 이동',
+                link: {
+                    mobileWebUrl: 'https://developers.kakao.com',
+                },
+            },
+        ]
+    });
+}
+
+function btn_link_scrap(requestUrl) {
+    Kakao.Link.createScrapButton({
+        container: '#btn-link-scrap',
+        requestUrl: requestUrl
+    });
+}
+
+function btn_link_template(templateId) {
+    Kakao.Link.createCustomButton({
+        container: '#btn-link-template',
+        templateId: templateId,
+        templateArgs: {
+            'title': '제목 영역입니다.',
+            'description': '설명 영역입니다.'
+        }
+    });
+}
+
+function defaultSend() {
+    Kakao.API.request({
+        url: '/v2/api/talk/memo/default/send',
+        data: {
+            template_object: {
+                object_type: 'feed',
+                content: {
+                    title: '카카오톡 링크 4.0',
+                    description: '디폴트 템플릿 FEED',
+                    image_url:
+                        'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                    link: {
+                        web_url: 'https://developers.kakao.com',
+                        mobile_web_url: 'https://developers.kakao.com',
+                    },
+                },
+                social: {
+                    like_count: 100,
+                    comment_count: 200,
+                },
+                button_title: '바로 확인',
+            },
+        },
+        success: function (response) {
+            console.log(response);
+        },
+        fail: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+function defaultScrapSend(request_url) {
+    Kakao.API.request({
+        url: '/v2/api/talk/memo/scrap/send',
+        data: {
+            request_url: request_url,
+        },
+        success: function (response) {
+            console.log(response);
+        },
+        fail: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+function defaultTemplateSend(template_id) {
+    Kakao.API.request({
+        url: '/v2/api/talk/memo/send',
+        data: {
+            template_id: template_id,
+        },
+        success: function (response) {
+            console.log(response);
+        },
+        fail: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+function friendSend(receiver_uuids) {
+    Kakao.API.request({
+        url: '/v1/api/talk/friends/message/default/send',
+        data: {
+            receiver_uuids: [receiver_uuids],
+            template_object: {
+                object_type: 'feed',
+                content: {
+                    title: '카카오톡 링크 4.0',
+                    description: '디폴트 템플릿 FEED',
+                    image_url:
+                        'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                    link: {
+                        web_url: 'https://developers.kakao.com',
+                        mobile_web_url: 'https://developers.kakao.com',
+                    },
+                },
+                social: {
+                    like_count: 100,
+                    comment_count: 200,
+                },
+                button_title: '바로 확인',
+            },
+        },
+        success: function (response) {
+            console.log(response);
+        },
+        fail: function (error) {
+            console.log(error);
+        }
+    });
+}     
