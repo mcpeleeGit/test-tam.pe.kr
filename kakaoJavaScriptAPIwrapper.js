@@ -6,6 +6,7 @@ var REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
 var CLIENT_SECRET = "QZhr9itOs0mxVRDxIvuOfOLzjZMc5q1U";
 var ADMIN_KEY = "72462462f6fc9baad63f2de2ad3d865b";
 var REDIRECT_URI = "callBackForKakao.php";
+var CHANNEL_ID = "_GVVxnK";
 
 Kakao.init(JAVASCRIPT_KEY);
 console.log(Kakao.isInitialized());
@@ -255,4 +256,91 @@ function friendSend(receiver_uuids) {
             console.log(error);
         }
     });
-}     
+}
+
+function friendScrapSend(request_url, receiver_uuids) {
+    Kakao.API.request({
+        url: '/v1/api/talk/friends/message/scrap/send',
+        data: {
+            receiver_uuids: [receiver_uuids],
+            request_url: request_url,
+        },
+        success: function (response) {
+            console.log(response);
+        },
+        fail: function (error) {
+            console.log(error);
+        },
+    });
+}
+
+function friendTemplateSend(template_id, receiver_uuids) {
+    Kakao.API.request({
+        url: '/v1/api/talk/friends/message/send',
+        data: {
+            receiver_uuids: [receiver_uuids],
+            template_id: template_id
+        },
+        success: function (response) {
+            console.log(response);
+        },
+        fail: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+function btn_story_share(url, text) {
+    Kakao.Story.createShareButton({
+        container: '#btn-story-share',
+        url: url,
+        text: text
+    });
+}
+
+function storyShare(url, text) {
+    Kakao.Story.share({
+        url: url,
+        text: text
+    });
+}
+
+function storyAppShare(url, text) {
+    Kakao.Story.open({
+        url: url,
+        text: text
+    });
+}
+
+function btn_story_flow(id) {
+    Kakao.Story.createFollowButton({
+        container: '#btn-tory-flow',
+        id: id
+    });
+}
+
+function btn_channel_added() {
+    Kakao.Channel.createAddChannelButton({
+        container: '#btn-channel-added',
+        channelPublicId: CHANNEL_ID
+    });
+}
+
+function btn_channel_chat() {
+    Kakao.Channel.createChatButton({
+        container: '#btn-channel-chat',
+        channelPublicId: CHANNEL_ID
+    });
+}
+
+function channelPlusfriends() {
+    Kakao.API.request({
+        url: '/v1/api/talk/plusfriends',
+        success: function (response) {
+            console.log(response);
+        },
+        fail: function (error) {
+            console.log(error);
+        }
+    });
+}

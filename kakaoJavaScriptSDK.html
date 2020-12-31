@@ -64,7 +64,7 @@
                     <p></p>
                     <h5 class="card-title">추가 항목 동의 받기</h5>
                     <p class="card-text">동의 항목 설정 중, 이용 중 동의 항목을 사용하기위해 인가 요청. 리다이렉트 방식의 로그인과 동일하며 파라메터로 동의항목을 전달한다.</p>
-                    <a href="javascript:authorize('account_email,talk_message,friends')"
+                    <a href="javascript:authorize('account_email,talk_message,friends,plusfriends,story_publish,story_read')"
                         class="btn btn-primary">authorize($scope)</a>
                 </div>
             </div>
@@ -113,6 +113,8 @@
                     <a href="javascript:talkFriendList()" class="btn btn-primary">talkFriendList()</a>
                 </div>
             </div>
+        </div>
+        <div class="card-group">
             <div class="card border-dark mb-3">
                 <div class="card-header">카카오톡 메세지</div>
                 <div class="card-body text-dark">
@@ -120,7 +122,7 @@
                     <p class="card-text">카카오 링크 방식으로 보낼 버튼 생성. 템플릿을 스크립트 안에서 구성</p>
                     <p id="btn-link-send"><button class="btn btn-primary">기본 메세지 보내기</button></p>
                     <script>btn_link_send();</script>
-                    <p></p>                    
+                    <p></p>
                     <h5 class="card-title">카카오 링크 스크랩 메세지 버튼 생성</h5>
                     <p class="card-text">Url의 메타 정보를 발송</p>
                     <p id="btn-link-scrap"><button class="btn btn-primary">스크랩 메세지 보내기</button></p>
@@ -135,7 +137,7 @@
             <div class="card border-dark mb-3">
                 <div class="card-body text-dark">
                     <h5 class="card-title">나에게 기본 메세지 보내기</h5>
-                    <p class="card-text">카카오 링크 방식으로 기본 메세지 발송. 템플릿을 스크립트 안에서 구성</p>
+                    <p class="card-text">카카오톡 API 방식으로 기본 메세지 발송. 템플릿을 스크립트 안에서 구성</p>
                     <a href="javascript:defaultSend()" class="btn btn-primary">defaultSend()</a>
                     <p></p>
                     <h5 class="card-title">나에게 스크랩 메세지 보내기</h5>
@@ -146,12 +148,70 @@
                     <h5 class="card-title">나에게 템플릿 메세지 보내기</h5>
                     <p class="card-text">카카오에 미리 등록한 메세지 템플릿을 발송</p>
                     <a href="javascript:defaultTemplateSend(41666)"
-                        class="btn btn-primary">defaultTemplateSend(41666)</a>
-                    <p></p>
+                        class="btn btn-primary">defaultTemplateSend($template_id)</a>
+                </div>
+            </div>
+            <div class="card border-dark mb-3">
+                <div class="card-body text-dark">
                     <h5 class="card-title">친구에게 기본 메세지 보내기</h5>
                     <p class="card-text">친구 UUID를 파라메터로 템플릿을 스크립트 안에서 구성하는 기본 메세지 발송</p>
                     <a href="javascript:friendSend('rZysnKWWpp6ni7KEvIy4jLuXpJShk6ef_A')"
                         class="btn btn-primary">friendSend($receiver_uuids)</a>
+                    <p></p>
+                    <h5 class="card-title">친구에게 스크랩 메세지 보내기</h5>
+                    <p class="card-text">Url의 메타 정보를 발송</p>
+                    <a href="javascript:friendScrapSend('http://test-tam.pe.kr', 'rZysnKWWpp6ni7KEvIy4jLuXpJShk6ef_A')"
+                        class="btn btn-primary">friendScrapSend($request_url, $receiver_uuids)</a>
+                    <p></p>
+                    <h5 class="card-title">친구에게 템플릿 메세지 보내기</h5>
+                    <p class="card-text">카카오에 미리 등록한 메세지 템플릿을 발송</p>
+                    <a href="javascript:friendTemplateSend(41666, 'rZysnKWWpp6ni7KEvIy4jLuXpJShk6ef_A')"
+                        class="btn btn-primary">friendTemplateSend($template_id, $receiver_uuids)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-group">
+            <div class="card border-dark mb-3">
+                <div class="card-header">카카오스토리</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">공유 버튼 추가하기</h5>
+                    <p class="card-text">웹 페이지에 카카오스토리 공유 버튼을 추가하는 기능입니다.</p>
+                    <p id="btn-story-share"></p>
+                    <script>btn_story_share('https://developers.kakao.com', '카카오 개발자 사이트로 놀러오세요! #개발자 #카카오 :)');</script>
+                    <p></p>
+                    <h5 class="card-title">공유하기 화면 띄우기</h5>
+                    <p class="card-text">카카오스토리에 새로운 스토리를 쓰는 웹뷰를 띄우는 기능입니다. </p>
+                    <a href="javascript:storyShare('https://developers.kakao.com', '카카오 개발자 사이트로 놀러오세요! #개발자 #카카오 :)')" class="btn btn-primary">storyShare($url)</a>
+                    <p></p>
+                    <h5 class="card-title">카카오스토리 앱으로 공유하기</h5>
+                    <p class="card-text">이 API는 특정 정보를 카카오스토리 앱에 전달해 보다 쉽게 공유할 수 있도록 도와주는 기능입니다. 사용자가 웹 페이지를 공유 완료했는지는
+                        알려주지 않습니다. </p>
+                    <a href="javascript:storyAppShare('http://blog.kakaocorp.co.kr/390','카카오검색에서 카카오스토리를! #카카오스토리 #카카오검색 :)')"
+                        class="btn btn-primary">storyAppShare($url, $text)</a>
+                    <p></p>
+                    <h5 class="card-title">소식 받기</h5>
+                    <p class="card-text">사용자가 특정 카카오스토리 채널의 소식을 받을 수 있도록 하는 기능입니다.</p>
+                    <p id="btn-tory-flow"></p>
+                    <script>btn_story_flow('kakao');</script>
+                </div>
+            </div>
+            <div class="card border-dark mb-3">
+                <div class="card-header">카카오톡 채널</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">카카오톡 채널 추가하기 버튼</h5>
+                    <p class="card-text">사용자가 카카오톡 채널을 친구 추가하러 이동할 수 있도록 연결 페이지를 띄우는 기능입니다.</p>
+                    <p id="btn-channel-added"></p>
+                    <script>btn_channel_added();</script>
+                    <p></p>
+                    <h5 class="card-title">카카오톡 채널 채팅 버튼</h5>
+                    <p class="card-text">1:1 채팅 버튼을 웹 페이지에 추가하고 연결 페이지 호출 </p>
+                    <p id="btn-channel-chat"></p>
+                    <script>btn_channel_chat();</script>
+                    <p></p>
+                    <h5 class="card-title">카카오톡 채널 관계 확인하기</h5>
+                    <p class="card-text">카카오톡 채널 관계 확인하기는 특정 사용자가 앱과 연동된 카카오톡 채널을 추가 또는 차단했는지 확인하는 기능입니다. </p>
+                    <a href="javascript:channelPlusfriends()" class="btn btn-primary">channelPlusfriends()</a>
                 </div>
             </div>            
         </div>
