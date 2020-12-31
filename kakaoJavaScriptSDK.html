@@ -24,12 +24,16 @@
     <script>
         console.stdlog = console.log.bind(console);
         console.log = function () {
+            output = JSON.stringify(Array.from(arguments));
+            setToastr(output);
+            console.stdlog.apply(console, arguments);
+        }
+        
+        function setToastr(output){
             toastr.options.timeOut = 4000;
             toastr.options.closeButton = true;
-            output = JSON.stringify(Array.from(arguments));
             if (output.indexOf("msg") > -1 && output.indexOf("code") > -1) toastr.error(output);
-            else toastr.success(output);
-            console.stdlog.apply(console, arguments);
+            else toastr.success(output);            
         }
     </script>
 </head>
@@ -45,7 +49,7 @@
     </header>
     <div class="container">
         <div class="card-group">
-            <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card border-dark mb-3">
                 <div class="card-header">카카오 로그인</div>
                 <div class="card-body text-dark">
                     <h5 class="card-title">로그인(PopUp)</h5>
@@ -57,9 +61,13 @@
                         API를
                         호출해야하며 카카오 JavaScript SDK에 액세스 토큰을 세팅해야 이후 SDK 함수 사용 가능합니다.</p>
                     <a href="javascript:login()" class="btn btn-primary">login()</a>
+                    <p></p>
+                    <h5 class="card-title">추가 항목 동의 받기</h5>
+                    <p class="card-text">동의 항목 설정 중, 이용 중 동의 항목을 사용하기위해 인가 요청. 리다이렉트 방식의 로그인과 동일하며 파라메터로 동의항목을 전달한다.</p>
+                    <a href="javascript:authorize('account_email,talk_message,friends')" class="btn btn-primary">authorize($scope)</a>                    
                 </div>
             </div>
-            <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card border-dark mb-3">
                 <div class="card-body text-dark">
                     <h5 class="card-title">로그아웃</h5>
                     <p class="card-text">SDK 객체에 액세스 토큰을 제거합니다. </p>
@@ -69,13 +77,6 @@
                     <p class="card-text">카카오와 연결이 끊어집니다. 다시 로그인 시, 약관 동의를 다시하게 됩니다.</p>
                     <a href="javascript:unlink()" class="btn btn-primary">unlink()</a>
                     <p></p>
-                    <h5 class="card-title">추가 항목 동의 받기</h5>
-                    <p class="card-text">동의 항목 설정 중, 이용 중 동의 항목을 사용하기위해 인가 요청. 리다이렉트 방식의 로그인과 동일하며 파라메터로 동의항목을 전달한다.</p>
-                    <a href="javascript:authorize('account_email,talk_message,friends')" class="btn btn-primary">authorize($scope)</a>
-                </div>
-            </div>
-            <div class="card border-dark mb-3" style="max-width: 18rem;">
-                <div class="card-body text-dark">
                     <h5 class="card-title">사용자 정보 가져오기</h5>
                     <p class="card-text">로그인한 사용자의 프로필을 조회합니다. 동의항목 설정에 따라 조회 가능한 항목이 다릅니다. </p>
                     <a href="javascript:profile()" class="btn btn-primary">profile()</a>
@@ -86,7 +87,7 @@
                         class="btn btn-primary">updateProfile($profile)</a>
                 </div>
             </div>
-            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card text-white bg-dark mb-3">
                 <div class="card-header">Link</div>
                 <div class="card-body">
                     <h5 class="card-title">GitHub</h5>
@@ -97,7 +98,7 @@
         </div>
 
         <div class="card-group">
-            <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card border-dark mb-3">
                 <div class="card-header">카카오톡 소셜</div>
                 <div class="card-body text-dark">
                     <h5 class="card-title">프로필 가져오기</h5>
