@@ -250,7 +250,7 @@ function profileWithKakao() {
                         <?php
                         //state는 Cross-Site Request Forgery(CSRF) 공격으로부터 보호하기 위해 난수 설정 후, 콜백 페이지에서 검증할 수 있는 기능이나
                         //로그인 후, 원래 페이지로 돌아가기 위한 파라메터로 사용하기도 함.
-                        $state = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/returnPage.php?test=한글&p=인코딩");
+                        $state = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/kakao.php?test=한글&p=인코딩");
                         $client_id = $REST_API_KEY; //★ 수정 할 것
                         $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
                         $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=" . $state;
