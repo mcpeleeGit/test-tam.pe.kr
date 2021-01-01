@@ -273,6 +273,10 @@ $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_
 
                     <div class="tab-pane fade" id="AndroidKotlin">
                         <p></p>
+                        <a href="https://play.google.com/store/apps/details?id=com.googsu.app" target="_blank"><img src="/img/en_badge_web_generic.png" alt="google"/></a>
+
+
+                        <p></p>
                         <p>Build.gradle(App) 수정</p>
                         <pre><code class="php">
 plugins {
