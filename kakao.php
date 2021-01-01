@@ -273,7 +273,7 @@ $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_
 
                     <div class="tab-pane fade" id="AndroidKotlin">
                         <p></p>
-                        <a href="https://play.google.com/store/apps/details?id=com.googsu.app" target="_blank"><img src="/img/en_badge_web_generic.png" alt="google"/></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.googsu.app" target="_blank"><img src="/img/en_badge_web_generic.png" alt="google" width="222"/></a>
 
 
                         <p></p>
