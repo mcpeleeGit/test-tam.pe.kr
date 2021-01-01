@@ -78,7 +78,6 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
                         </script>
                         <p></p>
                         <pre><code class="JavaScript">
-<script type="text/javascript">                            
 Kakao.init('{JAVASCRIPT_KEY}'); //★ 수정 할 것 : SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
 console.log(Kakao.isInitialized()); // SDK 초기화 여부를 판단합니다.
 
@@ -86,9 +85,7 @@ function loginWithKakao() {
     Kakao.Auth.authorize({
         redirectUri: encodeURI('http://localhost/callBackForKakao.php') //★ 수정 할 것
     })
-}        
-</script>
-                        </code></pre>
+}                       </code></pre>
                         <pre><code class="language-html">
 <a id="custom-login-btn" href="javascript:loginWithKakao()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
                         </code></pre>
@@ -114,7 +111,6 @@ function loginWithKakao() {
                         </script>
                         <p></p>
                         <pre><code class="JavaScript">
-<script type="text/javascript">                            
 Kakao.init('{JAVASCRIPT_KEY}'); //★ 수정 할 것 : SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
 console.log(Kakao.isInitialized()); // SDK 초기화 여부를 판단합니다.
 
@@ -129,9 +125,7 @@ function loginWithKakaoPopUp() {
             alert(JSON.stringify(err))
         },
     })
-} 
-</script>
-</code></pre>
+}</code></pre>
                         <pre><code class="language-html">
 <a id="custom-login-btn" href="javascript:loginWithKakaoPopUp()"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>
 </code></pre>
@@ -171,8 +165,7 @@ function logoutWithKakao() {
         alert("LogOut Success");
         //★ 추가 할 것 : 로그아웃 성공 후 처리 
     });
-}
-                </code></pre>
+}               </code></pre>
 
                         <h2>JavaScript 연결 끊기</h2>
                         <p>JavaScript SDK로 로그인(PopUp)한 경우만 사용, Redirect로그인 or REST API 로그인은 이후 로직 REST API로 로그아웃 구현 해야함.</p>
@@ -202,8 +195,7 @@ function unlinkWithKakao() {
             console.log(error);
         }
     });
-}
-                </code></pre>
+}               </code></pre>
 
                         <h2>JavaScript 사용자 정보 가져오기</h2>
                         <p>JavaScript SDK로 로그인(PopUp)한 경우만 사용, Redirect로그인 or REST API 로그인은 이후 로직 REST API로 로그아웃 구현 해야함.</p>
@@ -245,8 +237,7 @@ function profileWithKakao() {
             console.log(error);
         }
     });
-}
-                </code></pre>
+}               </code></pre>
 
 
                     </div>
