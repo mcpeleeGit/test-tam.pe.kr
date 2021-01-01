@@ -72,7 +72,7 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
                         <script type="text/javascript">
                             function loginWithKakao() {
                                 Kakao.Auth.authorize({
-                                    redirectUri: 'http://<?= $_SERVER['HTTP_HOST'] ?>/callBackForKakao.php' //★ 수정 할 것
+                                    redirectUri: encodeURI('http://<?= $_SERVER['HTTP_HOST'] ?>/callBackForKakao.php') //★ 수정 할 것
                                 })
                             }
                         </script>
@@ -84,7 +84,7 @@ console.log(Kakao.isInitialized()); // SDK 초기화 여부를 판단합니다.
 
 function loginWithKakao() {
     Kakao.Auth.authorize({
-        redirectUri: 'http://localhost/callBackForKakao.php' //★ 수정 할 것
+        redirectUri: encodeURI('http://localhost/callBackForKakao.php') //★ 수정 할 것
     })
 }        
 </script>
