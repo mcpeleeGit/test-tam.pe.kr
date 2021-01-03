@@ -5,8 +5,7 @@ $REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
 $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
 ?>
 <!doctype html>
-<html lang="en">
-
+<html lang="kr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
