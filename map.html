@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="kr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -13,9 +14,11 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
     <!--bootstrapcdn-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<title>카카오 맵</title>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2d68640b56d986af5c8a48505c7c8c71&libraries=services,clusterer,drawing"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>카카오 맵</title>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2d68640b56d986af5c8a48505c7c8c71&libraries=services,clusterer,drawing"></script>
     <script src="kakaoMapsJavaScriptAPIwrapper.js"></script>
 
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -35,12 +38,116 @@
             if (output.indexOf("msg") > -1 && output.indexOf("code") > -1) toastr.error(output);
             else toastr.success(output);
         }
-    </script>	
+    </script>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .map_wrap {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 350px;
+        }
+
+        .radius_border {
+            visibility: hidden;
+            border: 0px solid #919191;
+            border-radius: 5px;
+        }
+
+        .custom_typecontrol {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            overflow: hidden;
+            width: 130px;
+            height: 30px;
+            margin: 0;
+            padding: 0;
+            z-index: 1;
+            font-size: 12px;
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+        }
+
+        .custom_typecontrol span {
+            display: block;
+            width: 65px;
+            height: 30px;
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .custom_typecontrol .unselected_btn {
+            background: #fff;
+            background: linear-gradient(#fff, #e6e6e6);
+        }
+
+        .custom_typecontrol .unselected_btn:hover {
+            background: #f5f5f5;
+            background: linear-gradient(#f5f5f5, #e3e3e3);
+        }
+
+        .custom_typecontrol .unselected_btn:active {
+            background: #e6e6e6;
+            background: linear-gradient(#e6e6e6, #fff);
+        }
+
+        .custom_typecontrol .selected_btn {
+            color: #fff;
+            background: #425470;
+            background: linear-gradient(#425470, #5b6d8a);
+        }
+
+        .custom_typecontrol .selected_btn:hover {
+            color: #fff;
+        }
+
+        .custom_zoomcontrol {
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            width: 36px;
+            height: 80px;
+            overflow: hidden;
+            z-index: 1;
+            background-color: #f5f5f5;
+        }
+
+        .custom_zoomcontrol span {
+            display: block;
+            width: 36px;
+            height: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .custom_zoomcontrol span img {
+            width: 15px;
+            height: 15px;
+            padding: 0px 0;
+            border: none;
+        }
+
+        .custom_zoomcontrol span:first-child {
+            border-bottom: 1px solid #bfbfbf;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
-            <div class="container"><a class="navbar-brand" href="/"><img src="/img/icon/googsu.png" class="logo" alt="logo">Kakao API Test</a>
+            <div class="container"><a class="navbar-brand" href="/"><img src="/img/icon/googsu.png" class="logo"
+                        alt="logo">Kakao API Test</a>
                 <h1>Kakao Maps JavaScript SDK Wrapper</h1>
             </div>
         </nav>
@@ -49,174 +156,236 @@
         <ul class="list-group">
             <li class="list-group-item">
                 <div class="tab-content">
-                        <div id="map" style="width:100%;height:350px;"></div>
-                </div>              
+
+                    <div class="map_wrap">
+                        <div id="map" style="width:100%;height:350px;position:relative;overflow:hidden;"></div>
+                        <!-- 지도타입 컨트롤 div 입니다 -->
+                        <div class="custom_typecontrol radius_border">
+                            <span id="btnRoadmap" class="selected_btn" onclick="map.setMapType('roadmap')">지도</span>
+                            <span id="btnSkyview" class="unselected_btn" onclick="map.setMapType('skyview')">스카이뷰</span>
+                        </div>
+                        <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+                        <div class="custom_zoomcontrol radius_border">
+                            <span onclick="map.zoomIn()"><img
+                                    src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
+                                    alt="확대"></span>
+                            <span onclick="map.zoomOut()"><img
+                                    src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
+                                    alt="축소"></span>
+                        </div>
+                    </div>
+
+                </div>
             </li>
         </ul>
-
 
         <div class="card-group">
             <div class="card border-dark mb-3">
                 <div class="card-header">
-                    <a href="javascript:initMap(33.450701, 126.570667)" class="btn btn-primary">initMap(33.450701, 126.570667)</a> 초기화 
-                    <script>initMap(33.450701, 126.570667);</script>
+                    객체 생성
+                    <script>
+                        map = new Map(33.450701, 126.570667, "map", 3);
+
+                        // 지도에 클릭 이벤트를 등록합니다
+                        // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
+                        kakao.maps.event.addListener(map.map, 'click', function (mouseEvent) {
+                            // 클릭한 위도, 경도 정보를 가져옵니다 
+                            var latlng = mouseEvent.latLng;
+                            var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
+                            message += '경도는 ' + latlng.getLng() + ' 입니다';
+
+                            map.marker.setPosition(latlng);
+                            console.log(message);
+                        });
+                        // 마우스 드래그로 지도 이동이 완료되었을 때 마지막 파라미터로 넘어온 함수를 호출하도록 이벤트를 등록합니다
+                        kakao.maps.event.addListener(map.map, 'dragend', function () {
+                            // 지도 중심좌표를 얻어옵니다 
+                            var latlng = map.map.getCenter();
+                            var message = '변경된 지도 중심좌표는 ' + latlng.getLat() + ' 이고, ';
+                            message += '경도는 ' + latlng.getLng() + ' 입니다';
+                            console.log(message);
+                        });
+                        // 지도가 이동, 확대, 축소로 인해 지도영역이 변경되면 마지막 파라미터로 넘어온 함수를 호출하도록 이벤트를 등록합니다
+                        kakao.maps.event.addListener(map.map, 'bounds_changed', function () {
+                            // 지도 영역정보를 얻어옵니다 
+                            var bounds = map.map.getBounds();
+                            // 영역정보의 남서쪽 정보를 얻어옵니다 
+                            var swLatlng = bounds.getSouthWest();
+                            // 영역정보의 북동쪽 정보를 얻어옵니다 
+                            var neLatlng = bounds.getNorthEast();
+                            var message = '<p>영역좌표는 남서쪽 위도, 경도는  ' + swLatlng.toString() + '이고 <br>';
+                            message += '북동쪽 위도, 경도는  ' + neLatlng.toString() + '입니다 </p>';
+                            console.log(message);
+                        });
+                        // 타일 로드가 완료되면 지도 중심에 마커를 표시합니다
+                        kakao.maps.event.addListener(map.map, 'tilesloaded', displayMarker);
+
+                        function displayMarker() {
+
+                            // 마커의 위치를 지도중심으로 설정합니다 
+                            map.marker.setPosition(map.map.getCenter());
+                            map.marker.setMap(map.map);
+
+                            // 아래 코드는 최초 한번만 타일로드 이벤트가 발생했을 때 어떤 처리를 하고 
+                            // 지도에 등록된 타일로드 이벤트를 제거하는 코드입니다 
+                            // kakao.maps.event.removeListener(map, 'tilesloaded', displayMarker);
+                            console.log("tilesloaded");
+                        }                                          
+                    </script>
+                </div>
+                <div class="card-body text-dark">
+                    map = new Map(33.450701, 126.570667,"map",3);
                 </div>
                 <div class="card-header">
-                    <a href="javascript:setCenter(33.452613, 126.570888)" class="btn btn-primary">setCenter(33.452613, 126.570888)</a> 위치 변경 
+                    위치 변경
+                </div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.setCenter(33.452613, 126.570888)"
+                        class="btn btn-primary">map.setCenter(33.452613, 126.570888)</a>
+                    <a href="javascript:map.panTo(33.450580, 126.574942)" class="btn btn-primary">map.panTo(33.450580,
+                        126.574942)</a>
+                </div>
+                <div class="card-header">
+                    확대/축소
+                </div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.zoomIn()" class="btn btn-primary">map.zoomIn()</a>
+                    <a href="javascript:map.zoomOut()" class="btn btn-primary">map.zoomOut()</a>
+                </div>
+                <div class="card-header">
+                    지도/스카이뷰
+                </div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.setMapType('roadmap')" class="btn btn-primary">map.setMapType('roadmap')</a>
+                    <a href="javascript:map.setMapType('skyview')" class="btn btn-primary">map.setMapType('skyview')</a>
+                </div>
+                <div class="card-header">
+                    지도 이동 막기/허용
+                </div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.setDraggable(false)" class="btn btn-primary">map.setDraggable(false)</a>
+                    <a href="javascript:map.setDraggable(true)" class="btn btn-primary">map.setDraggable(true)</a>
+                </div>
+                <div class="card-header">
+                    마우스 휠이나 멀티터치로 지도 Zoom 막기/허용
+                </div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.setZoomable(false)" class="btn btn-primary">map.setZoomable(false)</a>
+                    <a href="javascript:map.setZoomable(true)" class="btn btn-primary">map.setZoomable(true)</a>
                 </div>
             </div>
             <div class="card border-dark mb-3">
+                <div class="card-header">
+                    객체 하나 더 생성
+                </div>
                 <div class="card-body text-dark">
-                    <h5 class="card-title">로그아웃</h5>
-                    <p class="card-text">SDK 객체에 액세스 토큰을 제거합니다. </p>
-                    <a href="javascript:logout()" class="btn btn-primary">logout()</a>
-                    <p></p>
-                    <h5 class="card-title">연결 끊기</h5>
-                    <p class="card-text">카카오와 연결이 끊어집니다. 다시 로그인 시, 약관 동의를 다시하게 됩니다.</p>
-                    <a href="javascript:unlink()" class="btn btn-primary">unlink()</a>
-                    <p></p>
-                    <h5 class="card-title">사용자 정보 가져오기</h5>
-                    <p class="card-text">로그인한 사용자의 프로필을 조회합니다. 동의항목 설정에 따라 조회 가능한 항목이 다릅니다. </p>
-                    <a href="javascript:profile()" class="btn btn-primary">profile()</a>
-                    <p></p>
-                    <h5 class="card-title">사용자 정보 저장하기</h5>
-                    <p class="card-text"></p>
-                    <a href="javascript:updateProfile({ properties: { nickname: '홍길동' } })"
-                        class="btn btn-primary">updateProfile($profile)</a>
+                    <div id="map2" style="width:100%;height:50px;"></div>
+                </div>
+                <div class="card-body text-dark">
+                    map2 = new Map(33.450701, 126.570667,"map2",3);
+                    <script>
+                        var map2 = new Map(33.450701, 126.570667, "map2", 3);
+                    </script>
+                </div>
+                <div class="card-header">
+                    객체 재설정 (&멀티 포인트)
+                </div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.reset()" class="btn btn-primary">map.reset())</a>
+                </div>
+                <div class="card-header">
+                    지도 사이즈 재설정
+                </div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.resizeMap('100%','200px')"
+                        class="btn btn-primary">map.resizeMap('100%','200px')</a>
+                </div>
+                <div class="card-header">
+                    지도 정보 객체
+                </div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.getInfo()" class="btn btn-primary">map.getInfo()</a>
+                </div>
+                <div class="card-header">
+                    맵타입(지도, 스카이뷰) 선택 객체 추가
+                </div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.addControlForMapType()"
+                        class="btn btn-primary">map.addControlForMapType()</a>
+                </div>
+                <div class="card-header">
+                    Zoom 객체 추가
+                </div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.addControlForZoom()" class="btn btn-primary">map.addControlForZoom()</a>
+                </div>
+                <div class="card-header">
+                    Custom 객체
+                </div>
+                <div class="card-body text-dark">
+                    지도 위, html 객체 표시 하고 스크립트 이벤트 사용하므로 예제 생략
                 </div>
             </div>
+            <div class="card border-dark mb-3">
+                <div class="card-header">교통정보 추가하기</div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.addOverlayMapTypeId('traffic')"
+                        class="btn btn-primary">map.addOverlayMapTypeId('traffic')</a>
+                    <a href="javascript:map.removeOverlayMapTypeId('traffic')"
+                        class="btn btn-primary">map.removeOverlayMapTypeId('traffic')</a>
+                </div>
+                <div class="card-header">로드뷰 정보 추가하기</div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.addOverlayMapTypeId('roadview')"
+                        class="btn btn-primary">map.addOverlayMapTypeId('roadview')</a>
+                    <a href="javascript:map.removeOverlayMapTypeId('roadview')"
+                        class="btn btn-primary">map.removeOverlayMapTypeId('roadview')</a>
+                </div>
+                <div class="card-header">지형도 정보 추가하기</div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.addOverlayMapTypeId('terrain')"
+                        class="btn btn-primary">map.addOverlayMapTypeId('terrain')</a>
+                    <a href="javascript:map.removeOverlayMapTypeId('terrain')"
+                        class="btn btn-primary">map.removeOverlayMapTypeId('terrain')</a>
+                </div>
+                <div class="card-header">지적 편집도 정보 추가하기</div>
+                <div class="card-body text-dark">
+                    <a href="javascript:map.addOverlayMapTypeId('use_district')"
+                        class="btn btn-primary">map.addOverlayMapTypeId('use_district')</a>
+                    <a href="javascript:map.removeOverlayMapTypeId('use_district')"
+                        class="btn btn-primary">map.removeOverlayMapTypeId('use_district')</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-group">
             <div class="card text-white bg-dark mb-3">
                 <div class="card-header">Link</div>
                 <div class="card-body">
                     <h5 class="card-title">GitHub</h5>
-                    <p class="card-text"><a href="https://github.com/kakao-tam/KakaoJavaScriptSDKWrapper"
-                            target="_blank">Kakao JavaScript SDK Wrapper</a></p>
+                    <p class="card-text"><a href="https://github.com/kakao-tam/MapAndLocal" target="_blank">Kakao
+                            MapAndLocal</a></p>
                     <p></p>
                     <h5 class="card-title">Guide</h5>
-                    <p class="card-text"><a href="https://kakao-tam.tistory.com/34" target="_blank">JavaScript - Kakao
+                    <p class="card-text"><a href="https://kakao-tam.tistory.com/36" target="_blank">JavaScript - Kakao
+                            Maps
                             JavaScript SDK Wrapper</a></p>
 
                 </div>
             </div>
         </div>
 
-        <div class="card-group">
-            <div class="card border-dark mb-3">
-                <div class="card-header">카카오톡 소셜</div>
-                <div class="card-body text-dark">
-                    <h5 class="card-title">프로필 가져오기</h5>
-                    <p class="card-text">현재 로그인한 사용자의 카카오계정에 연결된 카카오톡 프로필 정보를 받는 기능입니다. 사용자 카카오계정에 연결된 카카오톡이 없다면 에러 응답을
-                        받습니다.</p>
-                    <a href="javascript:talkProfile()" class="btn btn-primary">talkProfile()</a>
-                    <p></p>
-                    <h5 class="card-title">친구 목록 가져오기</h5>
-                    <p class="card-text">현재 로그인한 사용자의 카카오계정에 연결된 카카오톡의 친구 정보를 받아 옵니다. 정렬 순서, 한 페이지에 가져올 친구 수 등 파라미터를
-                        선택적으로 사용하여 요청할 수 있습니다.</p>
-                    <a href="javascript:talkFriendList()" class="btn btn-primary">talkFriendList()</a>
-                </div>
-            </div>
-        </div>
-        <div class="card-group">
-            <div class="card border-dark mb-3">
-                <div class="card-header">카카오톡 메세지</div>
-                <div class="card-body text-dark">
-                    <h5 class="card-title">카카오 링크 기본 메세지 버튼 생성</h5>
-                    <p class="card-text">카카오 링크 방식으로 보낼 버튼 생성. 템플릿을 스크립트 안에서 구성</p>
-                    <p id="btn-link-send"><button class="btn btn-primary">기본 메세지 보내기</button></p>
-                    <p></p>
-                    <h5 class="card-title">카카오 링크 스크랩 메세지 버튼 생성</h5>
-                    <p class="card-text">Url의 메타 정보를 발송</p>
-                    <p id="btn-link-scrap"><button class="btn btn-primary">스크랩 메세지 보내기</button></p>
-                    <p></p>
-                    <h5 class="card-title">카카오 링크 템플릿 메세지 버튼 생성</h5>
-                    <p class="card-text">카카오에 미리 등록한 메세지 템플릿을 발송</p>
-                    <p id="btn-link-template"><button class="btn btn-primary">템플릿 메세지 보내기</button></p>
-                </div>
-            </div>
-            <div class="card border-dark mb-3">
-                <div class="card-body text-dark">
-                    <h5 class="card-title">나에게 기본 메세지 보내기</h5>
-                    <p class="card-text">카카오톡 API 방식으로 기본 메세지 발송. 템플릿을 스크립트 안에서 구성</p>
-                    <a href="javascript:defaultSend()" class="btn btn-primary">defaultSend()</a>
-                    <p></p>
-                    <h5 class="card-title">나에게 스크랩 메세지 보내기</h5>
-                    <p class="card-text">Url의 메타 정보를 발송</p>
-                    <a href="javascript:defaultScrapSend('http://test-tam.pe.kr')"
-                        class="btn btn-primary">defaultScrapSend($request_url)</a>
-                    <p></p>
-                    <h5 class="card-title">나에게 템플릿 메세지 보내기</h5>
-                    <p class="card-text">카카오에 미리 등록한 메세지 템플릿을 발송</p>
-                    <a href="javascript:defaultTemplateSend(41666)"
-                        class="btn btn-primary">defaultTemplateSend($template_id)</a>
-                </div>
-            </div>
-            <div class="card border-dark mb-3">
-                <div class="card-body text-dark">
-                    <h5 class="card-title">친구에게 기본 메세지 보내기</h5>
-                    <p class="card-text">친구 UUID를 파라메터로 템플릿을 스크립트 안에서 구성하는 기본 메세지 발송</p>
-                    <a href="javascript:friendSend('rZysnKWWpp6ni7KEvIy4jLuXpJShk6ef_A')"
-                        class="btn btn-primary">friendSend($receiver_uuids)</a>
-                    <p></p>
-                    <h5 class="card-title">친구에게 스크랩 메세지 보내기</h5>
-                    <p class="card-text">Url의 메타 정보를 발송</p>
-                    <a href="javascript:friendScrapSend('http://test-tam.pe.kr', 'rZysnKWWpp6ni7KEvIy4jLuXpJShk6ef_A')"
-                        class="btn btn-primary">friendScrapSend($request_url, $receiver_uuids)</a>
-                    <p></p>
-                    <h5 class="card-title">친구에게 템플릿 메세지 보내기</h5>
-                    <p class="card-text">카카오에 미리 등록한 메세지 템플릿을 발송</p>
-                    <a href="javascript:friendTemplateSend(41666, 'rZysnKWWpp6ni7KEvIy4jLuXpJShk6ef_A')"
-                        class="btn btn-primary">friendTemplateSend($template_id, $receiver_uuids)</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-group">
-            <div class="card border-dark mb-3">
-                <div class="card-header">카카오스토리</div>
-                <div class="card-body text-dark">
-                    <h5 class="card-title">공유 버튼 추가하기</h5>
-                    <p class="card-text">웹 페이지에 카카오스토리 공유 버튼을 추가하는 기능입니다.</p>
-                    <p id="btn-story-share"></p>
-                    <p></p>
-                    <h5 class="card-title">공유하기 화면 띄우기</h5>
-                    <p class="card-text">카카오스토리에 새로운 스토리를 쓰는 웹뷰를 띄우는 기능입니다. </p>
-                    <a href="javascript:storyShare('https://developers.kakao.com', '카카오 개발자 사이트로 놀러오세요! #개발자 #카카오 :)')"
-                        class="btn btn-primary">storyShare($url)</a>
-                    <p></p>
-                    <h5 class="card-title">카카오스토리 앱으로 공유하기</h5>
-                    <p class="card-text">이 API는 특정 정보를 카카오스토리 앱에 전달해 보다 쉽게 공유할 수 있도록 도와주는 기능입니다. 사용자가 웹 페이지를 공유 완료했는지는
-                        알려주지 않습니다. </p>
-                    <a href="javascript:storyAppShare('http://blog.kakaocorp.co.kr/390','카카오검색에서 카카오스토리를! #카카오스토리 #카카오검색 :)')"
-                        class="btn btn-primary">storyAppShare($url, $text)</a>
-                    <p></p>
-                    <h5 class="card-title">소식 받기</h5>
-                    <p class="card-text">사용자가 특정 카카오스토리 채널의 소식을 받을 수 있도록 하는 기능입니다.</p>
-                    <p id="btn-tory-flow"></p>
-                </div>
-            </div>
-            <div class="card border-dark mb-3">
-                <div class="card-header">카카오톡 채널</div>
-                <div class="card-body text-dark">
-                    <h5 class="card-title">카카오톡 채널 추가하기 버튼</h5>
-                    <p class="card-text">사용자가 카카오톡 채널을 친구 추가하러 이동할 수 있도록 연결 페이지를 띄우는 기능입니다.</p>
-                    <p id="btn-channel-added"></p>
-                    <p></p>
-                    <h5 class="card-title">카카오톡 채널 채팅 버튼</h5>
-                    <p class="card-text">1:1 채팅 버튼을 웹 페이지에 추가하고 연결 페이지 호출 </p>
-                    <p id="btn-channel-chat"></p>
-                    <p></p>
-                    <h5 class="card-title">카카오톡 채널 관계 확인하기</h5>
-                    <p class="card-text">카카오톡 채널 관계 확인하기는 특정 사용자가 앱과 연동된 카카오톡 채널을 추가 또는 차단했는지 확인하는 기능입니다. </p>
-                    <a href="javascript:channelPlusfriends()" class="btn btn-primary">channelPlusfriends()</a>
-                </div>
-            </div>
-        </div>
-
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
