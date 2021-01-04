@@ -8,8 +8,8 @@ class KakaoService
     public $REDIRECT_URI;
     public $LOGOUT_REDIRECT_URI;
     protected $RETURN_TYPE;
-
     public function __construct($return_type)
+    
     {   //★ 수정 할 것
         $this->JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71"; // https://developers.kakao.com > 내 애플리케이션 > 앱 설정 > 요약 정보
         $this->REST_API_KEY   = "4408b5bb51bdf4c89879e933556a21e8"; // https://developers.kakao.com > 내 애플리케이션 > 앱 설정 > 요약 정보
