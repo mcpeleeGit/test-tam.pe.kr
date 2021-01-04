@@ -19,22 +19,7 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
-
-    <script>
-        console.stdlog = console.log.bind(console);
-        console.log = function () {
-            output = JSON.stringify(Array.from(arguments));
-            setToastr(output);
-            console.stdlog.apply(console, arguments);
-        }
-
-        function setToastr(output) {
-            toastr.options.timeOut = 4000;
-            toastr.options.closeButton = true;
-            if (output.indexOf("msg") > -1 && output.indexOf("code") > -1) toastr.error(output);
-            else toastr.success(output);
-        }
-    </script>
+    <script src="toastrWrapper.js"></script>
 </head>
 
 <body>
