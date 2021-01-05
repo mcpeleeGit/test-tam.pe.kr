@@ -6,7 +6,7 @@
 //4. KakaoService는 환경설정과 출력 유틸
 
 require('KakaoService.php');
-class KakaoAPIService extends KakaoService
+class KakaoPayAPIService extends KakaoService
 {
     private $PAY_CID;
     private $approval_url;
