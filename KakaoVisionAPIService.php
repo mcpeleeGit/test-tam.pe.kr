@@ -67,7 +67,7 @@ class KakaoVisionAPIService extends KakaoService
         } else { 
             $cFile = '@' . realpath($image_full_path);
         }
-        $data = array('extra_info' => '123456', 'file_contents' => $cFile);
+        $data = array('image' => $cFile);
         $headers[] = "Authorization: KakaoAK " . $this->REST_API_KEY;
         return $this->excuteCurl($callUrl, "POST", $headers, $data);
     }
