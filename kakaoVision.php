@@ -106,7 +106,7 @@ $KakaoVisionAPIService = new KakaoVisionAPIService();
                 </div>
             </li>               
             <li class="list-group-item">
-                <h2>썸네일 생성</h2>
+                <h2>썸네일 검출</h2>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link <?= $lang == "" ? 'active' : '' ?>" data-toggle="tab" href="#PHP">PHP</a>
