@@ -40,23 +40,23 @@ class KakaoVisionAPIService extends KakaoService
         return $this->excuteCurl($callUrl, "POST", $headers, $data);
     }
 
-    public function thumbnailDetect($image_url)
-    {
-        $callUrl = "https://dapi.kakao.com/v2/vision/thumbnail/detect";
-        $headers = array('Content-type:application/x-www-form-urlencoded;charset=utf-8');
-        $data = 'image_url=' . urlencode($image_url);
-        $headers[] = "Authorization: KakaoAK " . $this->REST_API_KEY;
-        return $this->excuteCurl($callUrl, "POST", $headers, $data);
-    }    
-
-    public function thumbnailCrop($image_url)
+    public function thumbnailCrop($image_url, $width, $height)
     {
         $callUrl = "https://dapi.kakao.com/v2/vision/thumbnail/crop";
         $headers = array('Content-type:application/x-www-form-urlencoded;charset=utf-8');
-        $data = 'image_url=' . urlencode($image_url);
+        $data = 'width='.$width.'&height='.$height.'&image_url='.urlencode($image_url);
         $headers[] = "Authorization: KakaoAK " . $this->REST_API_KEY;
         return $this->excuteCurl($callUrl, "POST", $headers, $data);
     }
+
+    public function thumbnailDetect($image_url, $width, $height)
+    {
+        $callUrl = "https://dapi.kakao.com/v2/vision/thumbnail/detect";
+        $headers = array('Content-type:application/x-www-form-urlencoded;charset=utf-8');
+        $data = 'width='.$width.'&height='.$height.'&image_url='.urlencode($image_url);
+        $headers[] = "Authorization: KakaoAK " . $this->REST_API_KEY;
+        return $this->excuteCurl($callUrl, "POST", $headers, $data);
+    }    
 
     public function multitagGenerate($image_url)
     {
