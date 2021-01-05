@@ -38,7 +38,7 @@ $KakaoVisionAPIService = new KakaoVisionAPIService();
     <div class="container">
         <ul class="list-group">
         <li class="list-group-item">
-                <h2>OCR</h2>
+                <h2>얼굴 검출</h2>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link <?= $lang == "" ? 'active' : '' ?>" data-toggle="tab" href="#PHP">PHP</a>
@@ -47,9 +47,9 @@ $KakaoVisionAPIService = new KakaoVisionAPIService();
                 <div class="tab-content">
                     <div class="tab-pane fade <?= $lang == "" ? 'show active' : '' ?>" id="PHP">
                         <p></p>
-                        <img src="https://googsu.com/img/whatisrebopaw.jpg" alt="ReBoPA" />
+                        <img src="/test/child.jpg" alt="ReBoPA" />
                         <div id="Response" class="alert alert-success" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= json_encode($KakaoVisionAPIService->textOcr("https://googsu.com/img/whatisrebopaw.jpg")) ?>
+                            <?= json_encode($KakaoVisionAPIService->faceDetect("/test/child.jpg")) ?>
                         </div>
                     </div>
                 </div>
