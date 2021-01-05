@@ -26,6 +26,13 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
     <!--bootstrapcdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--toastr-->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+    <script src="/toastrWrapper.js"></script>    
+
+
     <title>카카오 로그인</title>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
@@ -98,12 +105,12 @@ function loginWithKakao() {
                             function loginWithKakaoPopUp() {
                                 Kakao.Auth.login({
                                     success: function(authObj) {
-                                        alert(JSON.stringify(authObj));
+                                        console.log(JSON.stringify(authObj));
                                         Kakao.Auth.setAccessToken(authObj.access_token);
                                         //★ 추가 할 것 : 로그인 성공 후 처리 
                                     },
                                     fail: function(err) {
-                                        alert(JSON.stringify(err))
+                                        console.log(JSON.stringify(err))
                                     },
                                 })
                             }
@@ -140,13 +147,12 @@ function loginWithKakaoPopUp() {
                             function logoutWithKakao() {
                                 if (!Kakao.Auth.getAccessToken()) {
                                     console.log('Not logged in.');
-                                    alert("Not logged in.");
                                     return;
                                 }
                                 console.log(Kakao.Auth.getAccessToken()); //before Logout
                                 Kakao.Auth.logout(function() {
                                     console.log(Kakao.Auth.getAccessToken()); //after Logout
-                                    alert("LogOut Success");
+                                    console.log("LogOut Success");
                                     //★ 추가 할 것 : 로그아웃 성공 후 처리 
                                 });
                             }
