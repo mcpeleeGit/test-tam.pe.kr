@@ -12,6 +12,7 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
 ?>
 <!doctype html>
 <html lang="kr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -30,7 +31,7 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
-    <script src="/toastrWrapper.js"></script>    
+    <script src="/toastrWrapper.js"></script>
 
 
     <title>카카오 로그인</title>
@@ -65,6 +66,9 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#PHP">PHP</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#JAVA">JAVA</a>
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#AndroidKotlin">Android(Kotlin)</a>
                     </li>
@@ -275,10 +279,168 @@ $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao
 $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=" . $state;
                         </code></pre>
                     </div>
+                    <div class="tab-pane fade" id="JAVA">
+                        <p></p>
+                        <p>Login Button</p>
+                        <pre><code class="java"><a href="https://kauth.kakao.com/oauth/authorize?client_id={REST_API_KEY}&redirect_uri={REDIRECT_URI}&response_type=code&client_secret={CLIENT_SECRET}">
+<img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" />
+</a></code></pre>
+                        <p></p>
+                        <p>Callback Controller</p>
+                        <pre><code class="java">package com.googsu.login.controller;
 
+import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.googsu.login.service.LoginService;
+
+@RestController
+public class LoginController {
+
+	@Autowired
+	public LoginService loginService;
+	
+	@RequestMapping("/login-callback")
+	public String loginCallback(@RequestParam("code") String code) throws UnsupportedEncodingException {
+		System.out.println("controller code : " + code);
+        String access_Token = loginService.getAccessToken(code);
+        System.out.println("controller access_token : " + access_Token);
+        HashMap&lt;String, Object&gt; userInfo = loginService.getUserInfo(access_Token);
+        System.out.println("login Controller : " + userInfo);        		
+		return "Success";
+	}	
+}                       </code></pre>
+                        <p>Kakao Login Service</p>
+                        <pre><code class="java">package com.googsu.login.service;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.HashMap;
+
+import org.springframework.stereotype.Service;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+@Service
+public class LoginService {
+
+	private String CLIENT_ID = "";
+	private String REDIRECT_URI = "http://localhost:8080/login-callback";
+	private String CLIENT_SECRET = "";
+
+    public String getAccessToken (String authorize_code) throws UnsupportedEncodingException {
+        String access_Token = "";
+        String refresh_Token = "";
+        String reqURL = "https://kauth.kakao.com/oauth/token";
+        
+        try {
+            URL url = new URL(reqURL);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setDoOutput(true);
+            
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream()));
+            StringBuilder sb = new StringBuilder();
+            sb.append("grant_type=authorization_code");
+            sb.append("&amp;client_id="+CLIENT_ID); 
+            sb.append("&amp;redirect_uri="+REDIRECT_URI); 
+            sb.append("&amp;client_secret="+CLIENT_SECRET);
+            sb.append("&amp;code=" + authorize_code);
+            bw.write(sb.toString());
+            bw.flush();
+            int responseCode = conn.getResponseCode();
+            System.out.println("responseCode : " + responseCode);
+ 
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String line = "";
+            String result = "";
+            
+            while ((line = br.readLine()) != null) {
+                result += line;
+            }
+            System.out.println("response body : " + result);
+            
+            JsonParser parser = new JsonParser();
+            JsonElement element = parser.parse(result);
+            
+            access_Token = element.getAsJsonObject().get("access_token").getAsString();
+            refresh_Token = element.getAsJsonObject().get("refresh_token").getAsString();
+            
+            System.out.println("access_token : " + access_Token);
+            System.out.println("refresh_token : " + refresh_Token);
+            
+            br.close();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } 
+        
+        return refresh_Token;
+    }
+    
+    public HashMap&lt;String, Object&gt; getUserInfo (String access_Token) {
+        
+        HashMap&lt;String, Object&gt; userInfo = new HashMap<>();
+        String reqURL = "https://kapi.kakao.com/v2/user/me";
+        try {
+            URL url = new URL(reqURL);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setRequestProperty("Authorization", "Bearer " + access_Token);
+            System.out.println("setRequestProperty : " + "Authorization:" + "Bearer " + access_Token);
+            int responseCode = conn.getResponseCode();
+            String responseMsg = conn.getResponseMessage();
+            System.out.println("responseCode : " + responseCode);
+            System.out.println("responseMsg : " + responseMsg);
+            
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            
+            String line = "";
+            String result = "";
+            
+            while ((line = br.readLine()) != null) {
+                result += line;
+            }
+            System.out.println("response body : " + result);
+            
+            JsonParser parser = new JsonParser();
+            JsonElement element = parser.parse(result);
+            
+            JsonObject properties = element.getAsJsonObject().get("properties").getAsJsonObject();
+            JsonObject kakao_account = element.getAsJsonObject().get("kakao_account").getAsJsonObject();
+            
+            String nickname = properties.getAsJsonObject().get("nickname").getAsString();
+            String email = kakao_account.getAsJsonObject().get("email").getAsString();
+            
+            userInfo.put("nickname", nickname);
+            userInfo.put("email", email);
+            
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
+        return userInfo;
+    }
+}   </code></pre>
+                    </div>
                     <div class="tab-pane fade" id="AndroidKotlin">
                         <p></p>
-                        <a href="https://play.google.com/store/apps/details?id=com.googsu.app" target="_blank"><img src="/img/en_badge_web_generic.png" alt="google" width="222"/></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.googsu.app" target="_blank"><img src="/img/en_badge_web_generic.png" alt="google" width="222" /></a>
 
 
                         <p></p>
