@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="kr">
+
+<head>
+    <meta charset="utf-8">
+    <title>카카오 Vision</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+$.ajax({
+    type: "POST",
+    beforeSend: function (request) {
+        request.setRequestHeader("Authorization", "KakaoAK 32b9d94170d9c7dc9552d8afc6994a37");
+    },
+    url: "https://dapi.kakao.com/v2/vision/face/detect",
+    data: "image_url=" + escape("https://www.idaegu.co.kr/news/photo/202001/2020011601000448200029931.jpg"),
+    processData: false,
+    success: function (rtn) {
+        console.log(rtn);
+    }
+});        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

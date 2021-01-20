@@ -314,7 +314,7 @@ function storyAppShare(url, text) {
 
 function btn_story_flow(id) {
     Kakao.Story.createFollowButton({
-        container: '#btn-tory-flow',
+        container: '#btn-story-flow',
         id: id
     });
 }

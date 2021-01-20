@@ -43,6 +43,9 @@ $KakaoVisionAPIService = new KakaoVisionAPIService();
                     <li class="nav-item">
                         <a class="nav-link <?= $lang == "" ? 'active' : '' ?>" data-toggle="tab" href="#PHP">PHP</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $lang == "JavaScript" ? 'active' : '' ?>" data-toggle="tab" href="#JavaScript">JavaScript</a>
+                    </li>                    
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade <?= $lang == "" ? 'show active' : '' ?>" id="PHP">
@@ -52,6 +55,23 @@ $KakaoVisionAPIService = new KakaoVisionAPIService();
                             <?= json_encode($KakaoVisionAPIService->faceDetect("http://test-tam.pe.kr/test/child.jpg")) ?>
                         </div>
                     </div>
+                    <div class="tab-pane fade <?= $lang == "JavaScript" ? 'show active' : '' ?>" id="JavaScript">
+                        <p></p>
+                        <pre><code class="JavaScript">
+$.ajax({
+    type: "POST",
+    beforeSend: function (request) {
+        request.setRequestHeader("Authorization", "KakaoAK {JavaScript Key}");
+    },
+    url: "https://dapi.kakao.com/v2/vision/face/detect",
+    data: "image_url=" + escape("{image full url}"),
+    processData: false,
+    success: function (rtn) {
+        console.log(rtn);
+    }
+});      
+                        </code></pre>
+                    </div>                    
                 </div>
             </li>
             <li class="list-group-item">
