@@ -83,6 +83,7 @@ var_dump($loginResponse); // Kakao API Return Json
 
             $headers = array();
             $loginResponse = curl_exec($ch);
+            echo $loginResponse;
             $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
             curl_close($ch);
 
@@ -134,11 +135,15 @@ var_dump($profileResponse); // Kakao API 서버로 부터 받아온 값
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $data); //POST로 보낼 데이터 지정하기
 
+            
+            
+
             $headers = array();
             $headers[] = "Authorization: " . $header;
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
             $profileResponse = curl_exec($ch);
+            echo $profileResponse;
             $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
             curl_close($ch);
             ?>
