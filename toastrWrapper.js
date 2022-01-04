@@ -10,6 +10,7 @@ console.log = function () {
 function setToastr(output) {
     toastr.options.timeOut = 4000;
     toastr.options.closeButton = true;
+
     if (output.indexOf("msg") > -1 && output.indexOf("code") > -1) toastr.error(output);
     else toastr.success(output);
 }

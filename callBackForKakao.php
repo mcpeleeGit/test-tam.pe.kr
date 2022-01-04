@@ -30,18 +30,29 @@
    </script>
    <!--bootstrapcdn-->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+   <script type="text/javascript">
+         kakaoPixel('541043381581099928').pageView();
+         kakaoPixel('541043381581099928').completeRegistration();
+         function close(){
+            window.close();
+         }
+   </script>   
 </head>
 
 <body>
    <header>
       <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
          <div class="container"><a class="navbar-brand" href="/"><img src="/img/icon/googsu.png" class="logo" alt="logo">Kakao API Test</a>
-         <h1><a href="<?=$gobackuri?>" class="btn btn-primary">Go Back</a>인가코드 받기(CallBack Page)</h1>
+
+         <h1>
+         <a href="javascript:close()" class="btn btn-primary" onclick="close()">close</a>
+            <a href="<?=$gobackuri?>" class="btn btn-primary">Go Back</a>인가코드 받기(CallBack Page)</h1>
          </div>
       </nav>
    </header>
    <div class="container">
-
+   
       <ul class="list-group">
          <li class="list-group-item">
             <h2>액세스 토큰 받기</h2>
@@ -68,6 +79,8 @@ $accessToken= json_decode($loginResponse)->access_token;
 var_dump($loginResponse); // Kakao API Return Json
          </code></pre>
             <?php
+
+
             //토큰 조회
             $code = $_GET["code"]; // 서버로 부터 토큰을 발급받을 수 있는 코드를 받아옵니다.
             $client_id = "4408b5bb51bdf4c89879e933556a21e8"; //★ 수정 할 것
@@ -180,10 +193,26 @@ echo $_SESSION["accessAgree"];
          <li class="list-group-item"></li>
       </ul>
    </div>
-
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47335028-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-47335028-5');
+
+  //alert(location.href);
+  // 싱크 플러그인 하프뷰 닫기
+  //location.href = "<?=$_GET["continue"]?>";
+</script>
+
+

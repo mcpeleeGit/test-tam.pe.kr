@@ -3,7 +3,7 @@ session_start();
 $APP_ADMIN_KEY = "72462462f6fc9baad63f2de2ad3d865b";
 $REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
 $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
-$CHANNEL_ID = "_GVVxnK";
+$CHANNEL_ID = "_tExcIs";
 
 if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
     unset($_SESSION["accessToken"]);
@@ -30,6 +30,13 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
     <!--bootstrapcdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>카카오톡 채널</title>
+    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+    <script type="text/javascript">
+        kakaoPixel('541043381581099928').pageView();
+        kakaoPixel('541043381581099928').viewContent({
+            id: 'kakao_talk_channel'
+        });
+    </script>    
 </head>
 
 <body>
@@ -242,28 +249,31 @@ curl_close($ch);
             </code></pre>
                 <?php
 
-                $url = "https://kapi.kakao.com/v1/talkchannel/create/target_user_file";
-                $ch = curl_init($url);
-                $data = array(
-                    'channel_public_id' => $CHANNEL_ID,
-                    'file_name' => '고객리스트202012',
-                    'schema' => array( //schema에는 자료형을 기술함.
-                        '생년월일' => 'string', 
-                        '성별' => 'string',
-                        'age' => 'number'
-                    )
-                );
-                $payload = json_encode($data);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+$url = "https://kapi.kakao.com/v1/talkchannel/create/target_user_file";
+$ch = curl_init($url);
+$data = array(
+    'channel_public_id' => $CHANNEL_ID,
+    'file_name' => '고객리스트2021082701',
+    'schema' => array( //schema에는 자료형을 기술함.
+        '생년월일' => 'string', 
+        '성별' => 'string',
+        'age' => 'number',
+        '국가' => 'string'
+    )
+);
+// $payload = json_encode($data);
+// curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
 
-                $header = "KakaoAK " . $REST_API_KEY; //★ 수정 할 것
-                $headers = array('Content-Type:application/json');
-                $headers[] = "Authorization: " . $header;
-                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                $res = curl_exec($ch);
-                $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                curl_close($ch);
+// $header = "KakaoAK " . $REST_API_KEY; //★ 수정 할 것
+// $headers = array('Content-Type:application/json');
+// $headers[] = "Authorization: " . $header;
+// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// $res = curl_exec($ch);
+// $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+// curl_close($ch);
+
+          
                 ?>
                 <div class="alert alert-primary" role="alert" style="display:inline-block;">
                     <?php
@@ -293,16 +303,16 @@ curl_close($ch);
             </code></pre>
                 <?php
 
-                $url = "https://kapi.kakao.com/v1/talkchannel/target_user_file?channel_public_id=" . $CHANNEL_ID;
-                $ch = curl_init($url);
-                $header = "KakaoAK " . $REST_API_KEY; //★ 수정 할 것
-                $headers = array('Content-Type:application/json');
-                $headers[] = "Authorization: " . $header;
-                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                $res = curl_exec($ch);
-                $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                curl_close($ch);
+$url = "https://kapi.kakao.com/v1/talkchannel/target_user_file?channel_public_id=" . $CHANNEL_ID;
+$ch = curl_init($url);
+$header = "KakaoAK " . $REST_API_KEY; //★ 수정 할 것
+$headers = array('Content-Type:application/json');
+$headers[] = "Authorization: " . $header;
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$res = curl_exec($ch);
+$status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
                 ?>
                 <div class="alert alert-primary" role="alert" style="display:inline-block;">
                     <?php
@@ -344,40 +354,45 @@ $res = curl_exec($ch);
 $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
             </code></pre>
-                <?php
-                $url = "https://kapi.kakao.com/v1/talkchannel/update/target_users";
-                $ch = curl_init($url);
-                $data = array(
-                    'file_id' => 21274,
-                    'channel_public_id' => $CHANNEL_ID,
-                    'user_type' => 'app',
-                    'users' => array(
-                                array(
-                                    'id' => 1515035367,
-                                    'field' => array(
-                                        '생년월일' => '2000-01-01',
-                                        '성별' => '남자',
-                                        'age' => 19
-                                    )
-                                )
+<?php
+$url = "https://kapi.kakao.com/v1/talkchannel/update/target_users";
+$ch = curl_init($url);
+$data = array(
+    'file_id' => 30945,
+    'channel_public_id' => $CHANNEL_ID,
+    'user_type' => 'app',
+    'users' => array(
+                array(
+                    'id' => 1615828740,
+                    'field' => array(
+                        '생년월일' => '2000-01-01',
+                        '성별' => '남자',
+                        'age' => 29,
+                        '국가' => 'KR'
                     )
-                );
-                $payload = json_encode($data);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+                )
+    )
+);
+$payload = json_encode($data);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
 
-                $header = "KakaoAK " . $REST_API_KEY; 
-                $headers = array('Content-Type:application/json');
-                $headers[] = "Authorization: " . $header;
-                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($ch, CURLOPT_POST, 1);
-                $res = curl_exec($ch);
-                $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                curl_close($ch);
-                ?>            
+$header = "KakaoAK " . $REST_API_KEY; 
+$headers = array('Content-Type:application/json');
+$headers[] = "Authorization: " . $header;
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, 1);
+$res = curl_exec($ch);
+$status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+
+?>            
                 <div class="alert alert-primary" role="alert" style="display:inline-block;">
                     <?php
                     var_dump($res); 
+
+
                     ?>
                 </div>
             </li>
@@ -411,25 +426,29 @@ $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
             </code></pre>
                 <?php
-                $url = "https://kapi.kakao.com/v1/talkchannel/delete/target_users";
-                $ch = curl_init($url);
-                $data = array(
-                    'channel_public_id' => $CHANNEL_ID,
-                    'file_id' => 21274,
-                    'user_type' => 'app',
-                    'user_ids' => array(1515035367)
-                );
-                $payload = json_encode($data);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
 
-                $header = "KakaoAK " . $REST_API_KEY; 
-                $headers = array('Content-Type:application/json');
-                $headers[] = "Authorization: " . $header;
-                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                $res = curl_exec($ch);
-                $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                curl_close($ch);
+
+$url = "https://kapi.kakao.com/v1/talkchannel/delete/target_users";
+$ch = curl_init($url);
+$data = array(
+    'channel_public_id' => $CHANNEL_ID,
+    'file_id' => 30945,
+    'user_type' => 'app',
+    'user_ids' => array(1515035367)
+);
+$payload = json_encode($data);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+
+$header = "KakaoAK " . $REST_API_KEY; 
+$headers = array('Content-Type:application/json');
+$headers[] = "Authorization: " . $header;
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$res = curl_exec($ch);
+$status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+
                 ?>
                 <div class="alert alert-primary" role="alert" style="display:inline-block;">
                     <?php

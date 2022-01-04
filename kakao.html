@@ -3,18 +3,43 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Kakao JavaScript SDK</title>
+
+    <title>메인화면 :: 해커스영어</title>
+
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="전남인터넷신문" />
+    <meta property="og:title" content="(사)한국기자연합회, ‘제9회 자랑스런한국인인물대상’ 9월 10일 개최" />
+    <meta property="og:image" content="http://test-tam.pe.kr/img/3.result.gif" />
+    <meta property="og:description"
+        content />
+    <!-- /news/view.php?idx=305465 -->
+
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
         // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.cleanup();
         Kakao.init('2d68640b56d986af5c8a48505c7c8c71'); //★ 수정 할 것
-
         // SDK 초기화 여부를 판단합니다.
-        console.log(Kakao.isInitialized());
+        console.log(Kakao.Auth.getAppKey());
+
     </script>
 </head>
 
 <body>
+    
+    <a href="http://test-tam.pe.kr/contacts.vcf" target="blank">
+        카카오톡 인앱브라우저에서 vcf 호출 
+    </a>    
+
+    <a href="kakaotalk://inappbrowser?url=http%3A%2F%2Ftest-tam.pe.kr" target="blank">
+        아이폰 웹에서 인앱브라우저 호출
+    </a>
+    <br /><br />
+    <a href="intent://inappbrowser?url=https%3A%2F%2Ftest-tam.pe.kr#Intent;scheme=kakaotalk;package=com.kakao.talk;end"
+        target="blank">
+        안드로이드 웹에서 인앱브라우저 호출
+    </a>
     <table>
         <tr>
             <td>Login (PopUp)</td>
@@ -42,23 +67,179 @@
                 <Button onclick="javascript:profileWithKakao()">Profile</Button>
                 <p id="userid"></p>
                 <p id="nickname"></p>
-                <img id="profile_image"/>
-                <img id="thumbnail_image"/>
+                <img id="profile_image" />
+                <img id="thumbnail_image" />
+            </td>
+        </tr>
+        <tr>
+            <td>test20211014loginpopup</td>
+            <td>
+                <Button onclick="javascript:test20211014loginpopup()">test20211014loginpopup</Button>
             </td>
         </tr>        
     </table>
 
+
+    <div class='reg_btn' style='background-color:#FFE500;' onclick="fkakaoLogin()">
+        <img src='/images/login_03.png' class='img_icon'>
+        <div class='bar_text'>|</div>
+        <div class='btn_text' style='color:#000000;'>카카오 아이디로 로그인</div>
+    </div>
+
+    <a id="kakao-link-btn1">kakao-link-btn1 </a>
+    <a id="kakao-link-btn2">kakao-link-btn2 </a>
+
     <script type="text/javascript">
-        function loginWithKakao() {
+        function test20211014loginpopup() {
+            Kakao.Auth.login({
+                scope: 'friends',
+                success: function (response) {
+                    console.log(response);
+                },
+                fail: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+
+        // 첫번째 버튼 생성
+        Kakao.Link.createCustomButton({
+            container: '#kakao-link-btn1',
+            templateId: 41666,
+            templateArgs: {
+                'title': '타이틀1',
+                'url': '출력페이지 url1',
+                'description': '설명1'
+            },
+            success: function (response) {
+
+            },
+            fail: function (error) {
+            },
+            callback: function (response) {
+            },
+            serverCallbackArgs: {
+                key1: '서버 파라미터 값1'
+            }
+        });
+
+        // 두번째 버튼 생성
+        Kakao.Link.createCustomButton({
+            container: '#kakao-link-btn2',
+            templateId: 41666,
+            templateArgs: {
+                'title': '타이틀의2',
+                'url': '출력페이지 url2',
+                'description': '설명2'
+            },
+            success: function (response) {
+
+            },
+            fail: function (error) {
+            },
+            callback: function (response) {
+            },
+            serverCallbackArgs: {
+                key2: '서버 파라미터 값2'
+            }
+        });
+
+        function fkakaoLogin() {
+
             Kakao.Auth.login({
                 success: function (authObj) {
-                    alert(JSON.stringify(authObj));
-                    Kakao.Auth.setAccessToken(authObj.access_token);
-                    //★ 추가 할 것 : 로그인 성공 후 처리 
+                    // 로그인 성공시, API를 호출합니다.
+                    Kakao.API.request({
+                        url: '/v2/user/me',
+                        success: function (res) {
+                            $.get("login_kakao.asp?uniqKey=" + escape("2021-06-18 오전 10:23:06") + "&actFlag=kakao_chk&user_id=" + escape(JSON.stringify(res.id)), function (data) {
+                                if (data == "ok") {
+                                    alert('안녕하세요.\n\n오늘도 넥서스와 함께 해주셔서 감사합니다.');
+                                    location.href = "/";
+                                }
+                                else {
+                                    if (confirm("카카오계정으로 등록된 회원정보가 없습니다.\n확인을 누르시면 회원 가입페이지로 이동합니다.")) {
+                                        location.href = 'https://www.nexusbook.com/innerFile/reg/reg_step1.asp';
+                                    }
+                                }
+
+                            });
+                        },
+                        fail: function (error) {
+                            alert(JSON.stringify(error));
+                        }
+                    });
+
+                    Kakao.API.request({
+                        url: '/v1/user/service/terms',
+                        success: function (response) {
+                            console.log(response);
+                        },
+                        fail: function (error) {
+                            console.log(error);
+                        }
+                    });
                 },
                 fail: function (err) {
-                    alert(JSON.stringify(err))
+                    alert(JSON.stringify(err));
+                }
+            });
+
+        }
+    </script>
+    <a href="kakaotalk://inappbrowser?url=https%3A%2F%2Fpf-link.kakao.com%2Fqr%2F_gsNPs%2Fpages%2F_vI">in app view
+        channel</a>
+
+    <Button id="CONTAINER_ID">createLoginButton</Button>
+    <script type="text/javascript">
+
+
+        Kakao.Auth.createLoginButton({
+            container: '#CONTAINER_ID',
+            success: function (response) {
+                console.log(response);
+                Kakao.API.request({
+                    url: '/v2/user/me',
+                    success: function (response) {
+                        console.log(response);
+                    },
+                    fail: function (error) {
+                        console.log(error);
+                    }
+                });
+            },
+            fail: function (error) {
+                console.log(error);
+            },
+        });
+
+
+        function loginWithKakao() {
+            Kakao.Auth.loginForm({
+                success: function (authObj) {
+                    console.log('authObj', authObj)
+
+
+
+                    console.log("test");
+                    Kakao.API.request({
+                        url: '/v1/user/service/terms',
+                        success: function (response) {
+                            console.log(response);
+                        },
+                        fail: function (error) {
+                            console.log(error);
+                        },
+                    });
+                    console.log("end");
+
+
+
                 },
+                fail: function (err) {
+                    console.log('err', err)
+                }
             })
         }
 
@@ -93,8 +274,8 @@
                     console.log(response);
                     document.getElementById("userid").innerText = response.id;
                     document.getElementById("nickname").innerText = response.kakao_account.profile.nickname;
-                    document.getElementById("profile_image").src = response.properties.profile_image;
-                    document.getElementById("thumbnail_image").src = response.properties.thumbnail_image;
+                    document.getElementById("profile_image").src = response.kakao_account.profile.profile_image_url;
+                    document.getElementById("thumbnail_image").src = response.kakao_account.profile.thumbnail_image_url;
                 },
                 fail: function (error) {
                     console.log(error);

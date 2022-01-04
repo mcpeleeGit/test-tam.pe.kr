@@ -307,6 +307,7 @@ function storyShare(url, text) {
 
 function storyAppShare(url, text) {
     Kakao.Story.open({
+        install: true,
         url: url,
         text: text
     });

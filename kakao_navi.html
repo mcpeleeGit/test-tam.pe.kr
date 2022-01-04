@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        Kakao.init('2d68640b56d986af5c8a48505c7c8c71'); 
+        console.log(Kakao.isInitialized());
+        
+    </script>
+</head>
+
+<body>
+    <a id="navi" href="#" onclick="navi();">
+        <img
+          src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"
+        />
+      </a>
+      <script type="text/javascript">
+        function navi() {
+          Kakao.Navi.start({
+            name: '현대백화점 판교점',
+            x: 127.11205203011632,
+            y: 37.39279717586919,
+            coordType: 'wgs84',
+          })
+        }
+      </script>
+      
+</html>

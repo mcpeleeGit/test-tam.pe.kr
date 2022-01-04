@@ -26,6 +26,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
     <script src="/toastrWrapper.js"></script>
 
+    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+    <script type="text/javascript">
+          kakaoPixel('541043381581099928').pageView();
+          kakaoPixel('541043381581099928').purchase({
+            total_quantity: "3", // 주문 내 상품 개수(optional)
+            total_price: "500",  // 주문 총 가격(optional)
+            currency: "KRW",     // 주문 가격의 화폐 단위(optional, 기본 값은 KRW)
+            products: [          // 주문 내 상품 정보(optional)
+                { id: "상품고유값 입력", name: "상품명1", quantity: "2", price: "200"},
+                { id: "상품고유값 입력", name: "상품명2", quantity: "1", price: "100"}
+            ]
+        });
+    </script>
+
     <style>
         html,
         body {

@@ -1,4 +1,6 @@
 <?php
+
+
 session_start();
 $APP_ADMIN_KEY = "72462462f6fc9baad63f2de2ad3d865b";
 $REST_API_KEY = "4408b5bb51bdf4c89879e933556a21e8";
@@ -9,10 +11,10 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
     unset($_SESSION["accessToken"]);
     unset($_SESSION["accessAgree"]);
 }
+echo urlencode("http://test-tam.pe.kr/kakao.html");
 ?>
 <!doctype html>
 <html lang="kr">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -20,28 +22,31 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
     <base href="/" />
     <link rel="manifest" href="/manifest.json">
     <link rel="shortcut icon" href="/favicon.ico">
-    <link href="/static/css/2.86aa6515.chunk.css" rel="stylesheet">
-    <link href="/static/css/main.a583af82.chunk.css" rel="stylesheet">
     <!--highlight.js cdn-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
     <!--bootstrapcdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--toastr-->
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
-    <script src="/toastrWrapper.js"></script>
+    <script src="/toastrWrapper.js?test1"></script>
 
 
     <title>카카오 로그인</title>
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script>
         // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
         Kakao.init('<?= $JAVASCRIPT_KEY ?>'); //★ 수정 할 것
         // SDK 초기화 여부를 판단합니다.
         console.log(Kakao.isInitialized());
     </script>
+    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+    <script type="text/javascript">
+        kakaoPixel('541043381581099928').pageView();
+
+    </script>    
 </head>
 
 <body>
@@ -75,6 +80,59 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="JavaScript">
+                    <h2>koe002ㅈㅐ현</h2>
+
+                    <a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=c928fa5ea7b7602e835cae212b9c9522&redirect_uri=http://localhost:8282/login"
+         >
+         koe002ㅈㅐ현
+        </a>
+<a href="https://accounts.kakao.com/weblogin/account">카카오 계정 페이지</a>
+                    <h2>Ajax 토큰조회 테스트</h2>
+<a href="https://kauth.kakao.com/oauth/authorize?client_id=4408b5bb51bdf4c89879e933556a21e8&redirect_uri=http://localhost/kakao.php&response_type=code">Ajax 토큰조회 테스트</a>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+const code = location.search.split('?code=')[1];
+if (code !== undefined) {
+    logoutWithKakaoAjax(code);
+}
+
+function logoutWithKakaoAjax(code) {
+    const JS_APP_KEY ="2d68640b56d986af5c8a48505c7c8c71";
+    const REDIRECT_URI = "http://localhost/kakao.php";
+    const makeFormData = params => {
+        const searchParams = new URLSearchParams()
+            Object.keys(params).forEach(key => {
+                searchParams.append(key, params[key])
+            })
+        return searchParams
+    }
+
+    $.ajax({
+        type: "POST",
+        url: 'https://kauth.kakao.com/oauth/token',
+        data: {
+            grant_type: 'authorization_code',
+            client_id: JS_APP_KEY,
+            redirect_uri: REDIRECT_URI,
+            code
+        },
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded;charset=utf-8");
+        },
+        success: function (res) {
+            console.log("jquery");
+            console.log(res);
+        }
+    });
+}
+</script>
+
+
+<h2>Axios Auth 테스트</h2>
+<script type="text/javascript">
+//axios.get('https://kauth.kakao.com/oauth/authorize?client_id=4408b5bb51bdf4c89879e933556a21e8&redirect_uri=http://localhost/kakao.php&response_type=code', {params: {},withCredentials: false,});
+                        </script>
+
 
                         <p></p>
                         <p>Kakao JavaScript SDK를 이용한 Redirect방식 로그인은 Kakao인증 후, CallBack Url이 호출됩니다. 즉, CallBack Url이 호출된 이후에는 REST API 방식 사용</p>
@@ -82,6 +140,7 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
                         <script type="text/javascript">
                             function loginWithKakao() {
                                 Kakao.Auth.authorize({
+                                    //serviceTerms:' ', //sms
                                     redirectUri: encodeURI('http://<?= $_SERVER['HTTP_HOST'] ?>/callBackForKakao.php') //★ 수정 할 것
                                 })
                             }
@@ -143,6 +202,84 @@ function loginWithKakaoPopUp() {
 
 
 
+
+
+
+
+
+
+
+
+
+<h2>Axios Unlink test</h2>
+<button type="button" class="btn btn-primary" onclick="javascript:AxiosUnlink()">Axios Unlink test</button>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+function AxiosUnlink(){
+    AxiosUnlinktest()
+    .then(({ data }) => {
+      console.log('AxiosUnlinktest:', data)
+    })
+    .catch(err => {
+      console.error('AxiosUnlinktest:', err)
+    })
+}
+
+
+function AxiosUnlinktest2() {
+  const JS_APP_KEY ="4ac81d20d480a5f0a4341acd56f003c3";
+  const makeFormData = params => {
+    const searchParams = new URLSearchParams()
+    Object.keys(params).forEach(key => {
+      searchParams.append(key, params[key])
+    })
+
+    return searchParams
+  }
+
+  return axios({   
+    method: 'POST',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
+      Authorization:'KakaoAK '+JS_APP_KEY
+    },
+    url: 'https://kapi.kakao.com/v1/user/unlink',
+    data: makeFormData({
+      target_id: 1615828740,
+      target_id_type: 'user_id'
+    })
+  })
+}
+
+
+
+function AxiosUnlinktest() {
+  const JS_APP_KEY ="4408b5bb51bdf4c89879e933556a21e8";
+  const makeFormData = params => {
+    const searchParams = new URLSearchParams()
+    Object.keys(params).forEach(key => {
+      searchParams.append(key, params[key])
+    })
+
+    return searchParams
+  }
+
+  return axios({   
+    method: 'POST',
+    headers: {
+      'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
+      'Authorization':'KakaoAK '+JS_APP_KEY
+    },
+    url: 'https://dapi.kakao.com/v2/search/web',
+    data: makeFormData({
+        query: 'test'
+    })
+  })
+}
+</script>
+
+
                         <h2>JavaScript SDK 로그아웃</h2>
                         <p>JavaScript SDK로 로그인(PopUp)한 경우만 사용, Redirect로그인 or REST API 로그인은 이후 로직 REST API로 로그아웃 구현 해야함.</p>
                         <p>JavaScript SDK를 사용하고자 한다면, Kakao.Auth.setAccessToken(authObj.access_token); 설정 후 사용</p>
@@ -175,6 +312,9 @@ function logoutWithKakao() {
         //★ 추가 할 것 : 로그아웃 성공 후 처리 
     });
 }               </code></pre>
+
+
+
 
                         <h2>JavaScript 연결 끊기</h2>
                         <p>JavaScript SDK로 로그인(PopUp)한 경우만 사용, Redirect로그인 or REST API 로그인은 이후 로직 REST API로 로그아웃 구현 해야함.</p>
@@ -253,6 +393,7 @@ function profileWithKakao() {
                     <div class="tab-pane fade" id="PHP">
                         <p></p>
                         <h4><a href="/PHPSimplePack.php">PHP Simple Pack 참고</a></h4>
+                        <h4><a href="/kakaoCurlTest.php">PHP Curl Test</a></h4>
                         <p></p>
                         <p>/oauth/authorize 요청은 Url만 호출 하므로 언어에 상관 없이 처리 가능합니다. 다만, CallBack Url설정 시, 인코딩을 해야합니다.</p>
                         <!--REST API Login-->
@@ -278,6 +419,15 @@ $client_id = $REST_API_KEY; //★ 수정 할 것
 $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php"); //★ 수정 할 것
 $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=" . $state;
                         </code></pre>
+
+                        <!--REST API LogOut With Kakao-->
+                        <?php
+                        $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/kakao.php"); //★ 수정 할 것
+                        $kakaoLogOutUrl = "https://kauth.kakao.com/oauth/logout?client_id=" . $client_id . "&logout_redirect_uri=" . $redirect_uri;
+                        ?>
+                        <a href="<?= $kakaoLogOutUrl ?>">LogOut</a>
+                        <p></p>                        
+                        <?='https://pf-link.kakao.com/qr/_hyMVC/pages/_aI?q?query='.urlencode('state=store%3D1')?>
                     </div>
                     <div class="tab-pane fade" id="JAVA">
                         <p></p>
@@ -568,7 +718,7 @@ kakao_unlink_button.setOnClickListener {
         </ul>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
@@ -580,3 +730,17 @@ kakao_unlink_button.setOnClickListener {
 </body>
 
 </html>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47335028-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-47335028-5');
+
+  alert(document.referrer);
+</script>
+<?=$_SERVER['HTTP_REFERER']?>
+<a href="http://test-tam.pe.kr/kakao.php">http://test-tam.pe.kr/kakao.php</a>

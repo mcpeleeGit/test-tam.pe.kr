@@ -4,14 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Kakao JavaScript SDK</title>
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script>
-        // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
-        Kakao.init('2d68640b56d986af5c8a48505c7c8c71'); //★ 수정 할 것
+    <script type="text/javascript" src="//developers.kakao.com/sdk/js/kakao.min.js" charset="utf-8"></script>
+    <script type='text/javascript'>
+        Kakao.init('2d68640b56d986af5c8a48505c7c8c71');
 
-        // SDK 초기화 여부를 판단합니다.
-        console.log(Kakao.isInitialized());
     </script>
+
 </head>
 
 <body>
@@ -20,10 +18,27 @@
             <td>Login (PopUp)</td>
             <td>
                 <a id="custom-login-btn" href="javascript:loginWithKakao()">
+                    <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222">
+                </a>
+            </td>
+        </tr>
+
+        <script type="text/javascript">
+            function loginWithKakaoRedirect() {
+                Kakao.Auth.authorize({
+                    redirectUri: encodeURI('https://googsu.com/loginCallBack') //★ 수정 할 것
+                })
+            }
+        </script>
+        <tr>
+            <td>Login </td>
+            <td>
+                <a id="custom-login-btn" href="javascript:loginWithKakaoRedirect()">
                     <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" />
                 </a>
             </td>
         </tr>
+
         <tr>
             <td>Logout</td>
             <td>
@@ -83,18 +98,478 @@
                 <Button onclick="javascript:friendSend()">friend send</Button>
             </td>
         </tr>
+        <tr>
+            <td>kakao Link Message</td>
+            <td>
+                <div id="CONTAINER_ID2">createDefaultBussstton</div>
+                <Button onclick="javascript:sendLink()">friend send</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>Test Link</td>
+            <td>
+                <Button onclick="javascript:gogo()">ㄱㅣ타 링크 파라메터</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>Test Link createDefaultButton</td>
+            <td>
+                <div id="CONTAINER_ID3">CONTAINER_ID3</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Test Link createDefaultButton</td>
+            <td>
+                <div id="create-kakao-link-btn">create-kakao-link-btn send_kakao_user()</div>
+            </td>
+        </tr>
+        <tr>
+            <td>2021.08.27 iOS에서 링크 작동 안한다는 제보 재현 테스트</td>
+            <td>
+                <Button onclick="javascript:CONTAINER_ID20210827IOS()">CONTAINER_ID20210827IOS sendDefault</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>2021.09.27 ㅇㅏㄴ드로드서 앱파람 링크 작동 안한다는 제보 재현 테스트</td>
+            <td>
+                <Button onclick="javascript:CONTAINER_ID20210927AND()">CONTAINER_ID20210927AND sendDefault</Button>
+                <Button onclick="javascript:CONTAINER_ID20210929AND()">CONTAINER_ID20210929AND sendCustom</Button>
+                <a href="kakao7fd38c2349a83a4ba5a4bf2257dcfeeb://test?url=http%3A%2F%2Ftest-tam.pe.kr"">kakao.kakaoSDKTest</a>
+                <a href="
+                    kakaoc9b98a7bff62a096ba071901a19a2d86://test?url=http%3A%2F%2Ftest-tam.pe.kr">kakao.webTest</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2021.09.27 장문 카카오 링크 텍스트 타입 제보 테스트</td>
+            <td>
+                <Button onclick="javascript:CONTAINER_ID20210927LONG()">CONTAINER_ID20210927LONG sendDefault</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>인앱브라우저 PDF 테스트</td>
+            <td>
+                <a href="test.pdf">"문서확인" 버튼 클릭 시 실행하는 html 코드</a>
+                <a href="test.pdf" download="test.pdf">"문서다운로드" 버튼 클릭 시 실행하는 html 코드</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2021.10.05 feed(item) 오픈 챗 테스트</td>
+            <td>
+                <Button onclick="javascript:CONTAINER_ID20211005OpenChat()">CONTAINER_ID20211005OpenChat
+                    sendDefault</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>2021.10.06 이미지 로딩 테스트</td>
+            <td>
+                <Button onclick="javascript:CONTAINER_ID20211006ImageLoad()">CONTAINER_ID20211006ImageLoad
+                    sendDefault</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>2021.10.12 only text 테스트</td>
+            <td>
+                <Button onclick="javascript:CONTAINER_ID20211012OnlyText()">CONTAINER_ID20211012OnlyText
+                    sendDefault</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>2021.10.13 web button link 테스트</td>
+            <td>
+                <Button onclick="javascript:CONTAINER_ID20211013WebButton()">CONTAINER_ID20211013WebButton
+                    sendDefault</Button>
+            </td>
+        </tr>
+        <tr>
+            <td>2021.10.15 섬네일 테스트</td>
+            <td>
+                <Button onclick="javascript:CONTAINER_ID20211015thumbnail()">CONTAINER_ID20211015thumbnail
+                    sendDefault</Button>
+            </td>
+        </tr>
     </table>
 
+    
     <script type="text/javascript">
+        function CONTAINER_ID20211015thumbnail() {
+            var title = "섬네일 테스트";
+            var thumUrl = "http://test-tam.pe.kr/img/imgtest.png";
+            var linkUrl = "https://sdssm.smotor.com/cmm/sci/fileUpload/link.do?inline=true&fileDocNo=450d5700-15f8-4d36-a564-7e34c947da56&fileNo=1";
+            var param = {
+                objectType: "feed",
+                content: {
+                    title: title,
+                    description: "상세한 내용을 아래를 클릭하세요.",
+                    imageUrl: thumUrl,
+                    link: {
+                        mobileWebUrl: linkUrl,
+                        webUrl: linkUrl
+                    }
+                },
+                buttons: [{
+                    title: "웹에서 보기",
+                    link: {
+                        mobileWebUrl: linkUrl,
+                        webUrl: linkUrl
+                    }
+                }],
+                installTalk: true,
+                success: function (messageObj) {
+                }
+            };
+
+            Kakao.Link.sendDefault(param);
+        }
+        function CONTAINER_ID20211013WebButton() {
+
+            var title = "쌍용자동차 렉스턴스포츠칸  가격표";
+            var thumUrl = "https://sdssm.smotor.com/cmm/sci/fileUpload/link.do?inline=true&fileDocNo=406428bb-954a-4131-aa80-fc7e423a55bb&fileNo=3";
+            var linkUrl = "https://sdssm.smotor.com/cmm/sci/fileUpload/link.do?inline=true&fileDocNo=450d5700-15f8-4d36-a564-7e34c947da56&fileNo=1";
+
+            var param = {
+                objectType: "feed",
+                content: {
+                    title: title,
+                    description: "상세한 내용을 아래를 클릭하세요.",
+                    imageUrl: thumUrl,
+                    link: {
+                        mobileWebUrl: linkUrl,
+                        webUrl: linkUrl
+                    }
+                },
+                buttons: [{
+                    title: "웹에서 보기",
+                    link: {
+                        mobileWebUrl: linkUrl,
+                        webUrl: linkUrl
+                    }
+                }],
+                installTalk: true,
+
+                success: function (messageObj) {
+                }
+            };
+
+            Kakao.Link.sendDefault(param);
+        }
+        function CONTAINER_ID20211012OnlyText() {
+            Kakao.Link.sendCustom({
+                templateId: 63316,
+                installTalk: true,
+
+                serverCallbackArgs: { // 사용자 정의 파라미터 설정
+                    key: 'value2'
+                }
+            });
+        }
+
+        function CONTAINER_ID20211006ImageLoad() {
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                installTalk: true,
+                content: {
+                    title: "TEST",
+                    imageUrl: 'http://test-tam.pe.kr/img/home.jpg',
+                    link: {
+                        mobileWebUrl: 'http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611',
+                        webUrl: 'http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611',
+                    },
+                },
+                buttons: [
+                    {
+                        title: '앱으로 보기',
+                        link: {
+                            mobileWebUrl: 'http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611',
+                            webUrl: 'http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611',
+                        }
+                    }
+                ]
+            })
+        }
+        function CONTAINER_ID20211005OpenChat() {
+            try {
+                Kakao.Link.sendCustom({
+                    templateId: 62917,
+                    installTalk: true,
+
+                    serverCallbackArgs: { // 사용자 정의 파라미터 설정
+                        key: 'value2'
+                    }
+                });
+            } catch (error) {
+                console.error(error);
+                alert(error);
+                // expected output: ReferenceError: nonExistentFunction is not defined
+                // Note - error messages will vary depending on browser
+            }
+
+
+
+        }
+        function CONTAINER_ID20210927LONG() {
+            Kakao.Link.sendDefault({
+                objectType: 'text',
+                text:
+                    '기본 템플릿으로 \n제공되는 텍스트 템플릿은 텍스트를 \n최대 200자까지 표시할 수 있습니다. \n\n텍스트 템플릿은 텍스트 영역과 하나의 기본 버튼을 가집니다. \n\n임의의 버튼을 설정할 수도 있습니다. 여러 장의 이미지, 프로필 정보 등 보다 확장된 형태의 카카오링크는 다른 템플릿을 이용해 보낼 수 있습니다.',
+                link: {
+                    mobileWebUrl:
+                        'https://developers.kakao.com',
+                    webUrl:
+                        'https://developers.kakao.com',
+                },
+                serverCallbackArgs: { // 사용자 정의 파라미터 설정
+                    key: 'value2'
+                }
+            });
+        }
+
+        function CONTAINER_ID20210929AND() {
+            Kakao.Link.sendCustom({
+                templateId: 57826,
+                templateArgs: {
+                    "title": "테스트상품",
+                    "imageUrl": "https://via.placeholder.com/150/FFFF00/000000?Text=test",
+                    "btn_title": "앱으로 보기",
+                    'path': 'mobile_new/product/product.do?prdMstCd=S0002611',
+                    "regularPrice": 50000
+                }
+            });
+        }
+
+        function CONTAINER_ID20210927AND() {
+            var text = "TEST";
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                installTalk: true,
+                content: {
+                    title: text,
+                    imageUrl: 'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                    link: {
+                        mobileWebUrl: 'http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611',
+                        webUrl: 'http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611',
+                        androidExecParams: 'url=http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611',
+                        iosExecutionParams: 'url=http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611'
+                    },
+                },
+                buttons: [
+                    {
+                        title: '앱으로 보기',
+                        link: {
+                            mobileWebUrl: 'http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611',
+                            webUrl: 'http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611',
+                            iosExecutionParams: 'url=http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611',
+                            androidExecParams: 'url=http://172.16.110.245:8380/mobile_new/product/product.do?prdMstCd=S0002611'
+                        }
+                    }
+                ]
+            })
+        }
+        function CONTAINER_ID20210827IOS() {
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: '',
+                    description: '홍길동님이 돈을 보냈습니다.\n받는사람: 테스트\n받을금액: 5,000원\n입금기한: 2021/08/28 10:51',
+                    imageUrl: 'http://moam-test.n2soft.co.kr/asset/images/kakao_msg_img2.png',
+                    imageWidth: 800,
+                    imageHeight: 400,
+                    link: {
+                        mobileWebUrl: 'http://moam-test.n2soft.co.kr/kao/INT_TRF_KAO_040.do?key=202108271000756',
+                    },
+                },
+                buttons: [
+                    {
+                        title: '입금받기',
+                        link: {
+                            mobileWebUrl: ' http://moam-test.n2soft.co.kr/kao/INT_TRF_KAO_040.do?key=2021082710007560',
+                        },
+                    },
+                ]
+            })
+        }
+
+
+        function sendLink() {
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: '딸기 치즈 케익',
+                    description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+                    imageUrl:
+                        'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                    link: {
+                        mobileWebUrl: 'https://developers.kakao.com',
+                        webUrl: 'https://developers.kakao.com',
+                    },
+                },
+                social: {
+                    likeCount: 286,
+                    commentCount: 45,
+                    sharedCount: 845,
+                },
+                buttons: [
+                    {
+                        title: '웹으로 보기',
+                        link: {
+                            mobileWebUrl: 'http://kko.to/x5wLP6AYM',
+                            webUrl: 'http://kko.to/x5wLP6AYM',
+                        },
+                    },
+                    {
+                        title: '앱으로 보기',
+                        link: {
+                            mobileWebUrl: 'https://developers.kakao.com',
+                            webUrl: 'https://developers.kakao.com',
+                        },
+                    },
+                ],
+            })
+        }
+    </script>
+
+    <script type="text/javascript">
+
+
+
+        function send_kakao_user() {
+
+            Kakao.Link.createCustomButton({
+                container: '#create-kakao-link-btn',
+                templateId: 58183,
+                templateArgs: {
+                    title: "스톤스 쿠반 드롭 귀걸이",
+                    imageUrl: "http://raindrop2000.cafe24.com/web/product/small/202102/47fda9c30060bad098f6e19606d72b76.jpg",
+                    content: "test"
+                }
+            });
+        };
+        send_kakao_user();
+
+        function send_kakao() {
+            Kakao.Link.createScrapButton({
+                container: '#CONTAINER_ID3',
+                requestUrl: 'http://kko.to/x5wLP6AYM'
+            });
+        }
+        send_kakao();
+
+        function gogo() {
+            Kakao.Link.sendCustom({
+                templateId: 57826,
+                templateArgs: {
+                    "title": "테스트상품",
+                    "imageUrl": "https://via.placeholder.com/150/FFFF00/000000?Text=test",
+                    "btn_title": "구매하기",
+                    'path': 'shop_view/?idx=303#review_detail',
+                    "regularPrice": 50000
+                }
+            });
+        }
+
+        function createDefaultButton() {
+
+            var reg = 'test';
+            var gibupgmno = 'test';
+            /*
+                var test = Kakao.Link.createDefaultButton({
+                    container: '#CONTAINER_ID',
+                    objectType: 'feed',
+                    installTalk: true,
+                    content: {
+                        title: "title",
+                        description: '공유하기',
+                        imageUrl: 'imgurl',
+                        link: {
+                            mobileWebUrl: 'http://test-tam.pe.kr/kakao_talk_message.html',
+                            webUrl: 'http://test-tam.pe.kr/kakao_talk_message.html',
+                        },
+                    },
+                    buttons: [
+                        {
+                            title: '웹으로 보기',
+                            link: {
+                                mobileWebUrl: 'http://test-tam.pe.kr/kakao_talk_message.html',
+                                webUrl: 'http://test-tam.pe.kr/kakao_talk_message.html',
+                            },
+                        },
+                        {
+                            title: '앱으로 보기',
+                            link: {
+                                mobileWebUrl: 'http://test-tam.pe.kr/kakao_talk_message.html',
+                                webUrl: 'http://test-tam.pe.kr/kakao_talk_message.html',
+                                androidExecParams: 'market://details?id=com.googsu.myapplication',
+                                iosExecParams: 'xxx',
+                            },
+                        },
+                    ],
+                });
+            
+    */
+            var test = Kakao.Link.createDefaultButton({
+                container: '#CONTAINER_ID2',
+                objectType: 'commerce',
+                content: {
+                    title: '언제 어디든, 더 쉽고 편하게 당신의 일상을 더 즐겁게, 헤이 라이언의 이야기를 들려드릴게요.',
+                    imageUrl:
+                        'http://k.kakaocdn.net/dn/dScJiJ/btqB3cwK1Hi/pv5qHVwetz5RZfPZR3C5K1/kakaolink40_original.png',
+                    link: {
+                        mobileWebUrl: 'http://kko.to/x5wLP6AYM',
+                        webUrl: 'http://kko.to/x5wLP6AYM',
+                    },
+                },
+                commerce: {
+                    productName: '카카오미니',
+                    currencyUnit: '$',
+                    currencyUnitPosition: 1,
+                    regularPrice: 100000,
+                    discountRate: 10,
+                    discountPrice: 90000
+                },
+                buttons: [
+                    {
+                        title: '구매하기',
+                        link: {
+                            mobileWebUrl: 'http://test-tam.pe.kr',
+                            webUrl: 'http://test-tam.pe.kr',
+                        },
+                    },
+                    {
+                        title: '공유하기',
+                        link: {
+                            mobileWebUrl: 'http://test-tam.pe.kr',
+                            webUrl: 'http://test-tam.pe.kr',
+                        },
+                    },
+                ],
+            });
+
+            console.log(test);
+
+
+        }
+
+        window.addEventListener("message", function (event) {
+            console.log("message");
+        });
+
+        window.addEventListener("open", function (event) {
+            console.log("open");
+            console.log(event);
+        });
+
+
+
+
+
         function loginWithKakao() {
             Kakao.Auth.login({
                 success: function (authObj) {
-                    alert(JSON.stringify(authObj));
+
                     Kakao.Auth.setAccessToken(authObj.access_token);
                     //★ 추가 할 것 : 로그인 성공 후 처리 
                 },
                 fail: function (err) {
-                    alert(JSON.stringify(err))
+
                 },
             })
         }
@@ -192,8 +667,8 @@
                             image_url:
                                 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
                             link: {
-                                web_url: 'https://developers.kakao.com',
-                                mobile_web_url: 'https://developers.kakao.com',
+                                web_url: 'http://kko.to/x5wLP6AYM',
+                                mobile_web_url: 'http://kko.to/x5wLP6AYM',
                             },
                         },
                         social: {
@@ -213,10 +688,16 @@
         }
 
         function defaultScrapSend() {
+            Kakao.Link.sendScrap({
+                requestUrl: 'https://devp.greenzip.net/board/view.php?b_type=10&b_id=65'
+            });
+        }
+
+        function defaultScrapSend2() {
             Kakao.API.request({
                 url: '/v2/api/talk/memo/scrap/send',
                 data: {
-                    request_url: 'http://leedongha.dothome.co.kr/',
+                    request_url: 'http://test-tam.pe.kr/kakao.html?4'
                 },
                 success: function (response) {
                     console.log(response);
@@ -253,7 +734,7 @@
                             title: '카카오톡 링크 4.0',
                             description: '디폴트 템플릿 FEED',
                             image_url:
-                                'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                                'http://test-tam.pe.kr/test.jpg',
                             link: {
                                 web_url: 'https://developers.kakao.com',
                                 mobile_web_url: 'https://developers.kakao.com',
@@ -274,6 +755,8 @@
                 },
             });
         }
+
+        createDefaultButton();
     </script>
 
 </body>

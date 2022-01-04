@@ -28,6 +28,12 @@ $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
         // SDK 초기화 여부를 판단합니다.
         console.log(Kakao.isInitialized());
     </script>
+    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+    <script type="text/javascript">
+        kakaoPixel('541043381581099928').addToCart({
+            id: 'kakao_talk_social'
+        });
+    </script>    
 </head>
 
 <body>
@@ -38,6 +44,24 @@ $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
             </div>
         </nav>
     </header>
+eeerwerwerwerwerwere
+    <?php
+                        // $url = "https://kapi.kakao.com/v2/push/send?uuids=[1]&push_message={}";
+                        // $ch = curl_init();
+                        // curl_setopt($ch, CURLOPT_URL, $url);
+                        // curl_setopt($ch, CURLOPT_POST, true);
+                        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        // $header = "KakaoAK 2d91bd51f8b59ecfc699619321614477";
+                        // $headers = array();
+                        // $headers[] = "Authorization: " . $header;
+                        // curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+                        // $res = curl_exec($ch);
+                        // $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                        // curl_close($ch);
+                        // var_dump($res);
+                        ?>
+
     <div class="container">
         <ul class="list-group">
             <li class="list-group-item">
@@ -142,7 +166,7 @@ function talkProfileWithKakao() {
                         <?php
                         $client_id = $REST_API_KEY;
                         $redirect_uri = urlencode("http://" . $_SERVER['HTTP_HOST'] . "/callBackForKakao.php");
-                        $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=login&scope=talk_message,friends";
+                        $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?client_id=" . $client_id . "&redirect_uri=" . $redirect_uri . "&response_type=code&state=login&scope=talk_message";
                         ?>
                         <a href="<?= $kakaoLoginUrl ?>"><img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" /></a>scope=talk_message,friends
                         <p></p>
@@ -273,7 +297,7 @@ function talkFriendListWithKakao() {
                             GET kapi.kakao.com/v1/api/talk/friends HTTP/1.1 Authorization: Bearer {ACCESS_TOKEN}
                         </div>
                         <?php
-                        $url = "https://kapi.kakao.com/v1/api/talk/friends";
+                        $url = "https://kapi.kakao.com/v1/api/talk/friends?limit=3&order=asc";
                         $ch = curl_init();
                         curl_setopt($ch, CURLOPT_URL, $url);
                         curl_setopt($ch, CURLOPT_POST, false);
@@ -285,6 +309,12 @@ function talkFriendListWithKakao() {
 
                         $res = curl_exec($ch);
                         $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+                        foreach (json_decode($res)->elements as $obj) 
+                        {
+                            echo $obj->profile_nickname;
+                        }
+
                         curl_close($ch);
                         ?>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3"><?= var_dump($res) ?></div>

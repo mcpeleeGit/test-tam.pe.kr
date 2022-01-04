@@ -1,0 +1,3870 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>チェジュ航空</title>
+	<link rel="icon" type="image/png" href="https://static.jejuair.net/hpgg/resources/images/icon/favicon.ico" />
+
+
+
+	<meta property="og:title" content="チェジュ航空xU-NEXT" />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="ja_JP" />
+	<meta property="og:url" content="https://www.jejuair.net/ja/event/eventDetail.do?eventNo=0000000099" />
+	<meta property="og:image" content="https://static.jejuair.net/cms/images/event_scrn/20211109170828609.jpg" />
+	<meta property="og:description" content="韓流ドラマ見放題&lt;br&gt;トライアルキャンペーン" />
+
+
+
+
+
+
+	<meta name="title" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="https://static.jejuair.net/hpgg/resources/css/global.css">
+	<link rel="stylesheet" href="https://static.jejuair.net/hpgg/resources/css/component.css">
+	<link rel="stylesheet" href="https://static.jejuair.net/hpgg/resources/css/page.css">
+	<link rel="stylesheet" href="https://static.jejuair.net/hpgg/resources/css/responsive.css">
+	<link rel="stylesheet" href="https://static.jejuair.net/hpgg/resources/css/lang.css">
+
+
+
+
+	<!-- 다국어 관련 스크립트 변수 -->
+	<script type="text/javascript">
+		var I18N = {
+	language : "ja",
+	country : "JP",
+	countryAndLanguage : [{"languages":[{"cntryCd":"KR","langNm":"한국어","cntryNm":"대한민국","langCd":"ko"}],"cntryCd":"KR","cntryNm":"대한민국"},{"languages":[{"cntryCd":"JP","langNm":"日本語","cntryNm":"日本","langCd":"ja"}],"cntryCd":"JP","cntryNm":"日本"},{"languages":[{"cntryCd":"CN","langNm":"中國內地","cntryNm":"中国","langCd":"zh-CN"}],"cntryCd":"CN","cntryNm":"中国"},{"languages":[{"cntryCd":"TW","langNm":"中國台灣","cntryNm":"台灣","langCd":"zh-TW"}],"cntryCd":"TW","cntryNm":"台灣"},{"languages":[{"cntryCd":"HK","langNm":"中國香港","cntryNm":"香港","langCd":"zh-HK"}],"cntryCd":"HK","cntryNm":"香港"},{"languages":[{"cntryCd":"MO","langNm":"中國香港","cntryNm":"澳門","langCd":"zh-HK"}],"cntryCd":"MO","cntryNm":"澳門"},{"languages":[{"cntryCd":"US","langNm":"ENGLISH","cntryNm":"US","langCd":"en"}],"cntryCd":"US","cntryNm":"US"},{"languages":[{"cntryCd":"TH","langNm":"ENGLISH","cntryNm":"THAILAND","langCd":"en"}],"cntryCd":"TH","cntryNm":"THAILAND"},{"languages":[{"cntryCd":"VN","langNm":"ENGLISH","cntryNm":"VIETNAM","langCd":"en"}],"cntryCd":"VN","cntryNm":"VIETNAM"},{"languages":[{"cntryCd":"PH","langNm":"ENGLISH","cntryNm":"PHILLIPINES","langCd":"en"}],"cntryCd":"PH","cntryNm":"PHILLIPINES"},{"languages":[{"cntryCd":"MY","langNm":"ENGLISH","cntryNm":"MALAYSIA","langCd":"en"}],"cntryCd":"MY","cntryNm":"MALAYSIA"},{"languages":[{"cntryCd":"LA","langNm":"ENGLISH","cntryNm":"LAOS","langCd":"en"}],"cntryCd":"LA","cntryNm":"LAOS"},{"languages":[{"cntryCd":"RU","langNm":"ENGLISH","cntryNm":"RUSSIA","langCd":"en"}],"cntryCd":"RU","cntryNm":"RUSSIA"},{"languages":[{"cntryCd":"SG","langNm":"ENGLISH","cntryNm":"SINGAPORE","langCd":"en"}],"cntryCd":"SG","cntryNm":"SINGAPORE"}]
+}
+var APP_DATA = {
+	loginSuccessFirstChecker : '', // 값의 유무로만 판단.
+	// deviceOs : "",
+	// deviceType : ""
+	deviceOs : "none",
+	deviceType : "PC",
+	shortUrl : ""
+}
+var USER_INFO = {
+	get : function() {
+		var data = JSON.stringify();
+		return data || "{}";
+	}
+}
+var PROP = {
+	assetsUrl : "https://static.jejuair.net/hpgg/resources",
+	cmsUrl: "https://static.jejuair.net/cms/images",
+}
+var USER_DEVICE = {
+	getName : function() {
+		return "PC";
+	},
+	isApp : function() {
+		return false;
+	},
+	isMobile : function() {
+		return false;
+	},
+	isWeb : function() {
+		return ;
+	}
+}
+var APPCALL = {
+	setMenu : function() {
+
+		if(APP_DATA.deviceOs == "ios") {
+			window.webkit.messageHandlers.goMenu.postMessage({});
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.goMenu();
+		} else {
+			console.log("PC에서 호출작동됨 :: 메뉴를 개방하라");
+		}
+	},
+	back : function() {
+		if(APP_DATA.deviceOs == "ios") {
+			window.webkit.messageHandlers.goBack.postMessage({});
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.goBack();
+		} else {
+			window.history.back();
+		}
+	},
+	close : function() {
+		if(APP_DATA.deviceOs == "ios") {
+			if(window.webkit.messageHandlers.goClose) {
+				window.webkit.messageHandlers.goClose.postMessage({});
+			}			
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.goClose();
+		} else {
+			console.log("PC는 닫기가 존재하지 않습니다.");
+		}
+	},
+	afterLogin : function(userInfo) { // 로그인 시, APP은 1번 호출한다.
+		if(!userInfo) {
+			userInfo = USER_INFO.get();
+		}
+		if(APP_DATA.deviceOs == "ios") {
+			window.webkit.messageHandlers.userInfo.postMessage(userInfo);
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.userInfo(userInfo);
+		} else {
+			console.log("호출완료");
+		}
+	},
+	callPassport : function() { // 로그인 시, APP은 1번 호출한다.
+		if(APP_DATA.deviceOs == "ios") {
+			window.webkit.messageHandlers.goOCRPassport.postMessage({});
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.goOCRPassport();
+		} else {
+			console.log("호출완료");
+		}
+	},
+	callPastBoardingPass : function() { // 로그인 시, APP은 1번 호출한다.
+		if(APP_DATA.deviceOs == "ios") {
+			window.webkit.messageHandlers.goPastBoardingPass.postMessage({})
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.goPastBoardingPass()
+		} else {
+			console.log("호출완료");
+		}
+	},
+	callBoardingPass : function(jsonString) { // 로그인 시, APP은 1번 호출한다.
+		if(APP_DATA.deviceOs == "ios") {
+			window.webkit.messageHandlers.mobileTicket.postMessage(jsonString)
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.mobileTicket(jsonString)
+		} else {
+			console.log("호출완료");
+		}
+	},
+	goMain: function() { //메인화면 이동
+		if(APP_DATA.deviceOs == "ios") {
+			window.webkit.messageHandlers.callMain.postMessage({});
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.goMain();
+		} else {
+			location.href="/"+I18N.language+"/main/base/index.do";
+		}
+	},
+	goLogout: function() {// 로그아웃시 네티이브 호출
+		if(APP_DATA.deviceOs == "ios") {
+			window.webkit.messageHandlers.goLogout.postMessage({});
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.goLogout();
+		}else {
+			console.log('logout');
+		}
+	},
+	loginState: function() { //로그인 상태 체크
+		if(APP_DATA.deviceOs == "ios") {
+			window.webkit.messageHandlers.onLoginState.postMessage({})
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.onLoginState();
+		}
+	},
+
+	goMyCoupon: function() { //쿠폰 이동
+		if(APP_DATA.deviceOs == "ios") {
+			window.webkit.messageHandlers.goMyCoupon.postMessage({});
+		} else if(APP_DATA.deviceOs == "aos") {
+			window.JejuAir.goMyCoupon();
+		}else {
+			URL_LINK.getI18Url('/member/mypage/myCoupon.do');
+		}
+	},
+
+	goMarket: function() {
+		if(APP_DATA.deviceOs !== "ios" && APP_DATA.deviceOs !== "aos") {
+			var infos = getMobileDevice(navigator.userAgent);
+			if(infos.isiOS) {
+				window.open("https://itunes.apple.com/ko/app/jeju-air/id373053637?l=ko&mt=8", "_blank");
+			}else if(infos.isAndroid) {
+				window.open("https://play.google.com/store/apps/details?id=com.parksmt.jejuair.android16", "_blank");
+			}
+		}
+	}
+}
+var URL_LINK = {
+	getI18Url : function(path) {
+		/*
+		if(path.indexOf('/corpService/') == 0 ) {
+			location.href = path;
+			return;
+		} else if(path.indexOf('/member/auth/') == 0 ) {
+			location.href = path;
+			return;
+		} else
+		*/
+		if(path.indexOf('/bonusProgram/') == 0 ) {
+			location.href = path;
+			return;
+		} else if(path.indexOf('#') == 0 ) {
+			location.href = path;
+			return;
+		} else if(path.indexOf('http') == 0 ) {
+			window.open(path, "_blank");
+			return;
+		}  else if(path.indexOf('/myPage/myBoardingList.do') == 0) {
+			alert("준비중입니다.");
+			return;
+		}
+		if(path.indexOf('viewCheckin.do') !== -1) {
+			URL_LINK.getHwUrl(path);
+		}else{
+			location.href = "/"+I18N.language+path;
+		}
+	},
+	getHwUrl : function(path, params) { //homepage <-> webcheckin
+		var vHtml = '';
+		if(params) {
+			Object.keys(params).map(function(key) {
+				vHtml += '<input type="hidden" name="'+key+'" value="'+params[key]+'">';
+			});
+		}
+		$("body").append("<form id='hybdComForm'><input type='hidden' name='targetUrl' value='" + "/"+I18N.language+path + "'/>"+vHtml+"</form>");
+    	$("#hybdComForm").prop("action", "/"+I18N.language+"/common/connect/index.do").prop("method", "POST").prop("target", "_self").submit();
+	}
+}
+
+if(APP_DATA.loginSuccessFirstChecker !="") {
+	APPCALL.afterLogin();
+}
+
+if(location.href.indexOf('flag=logout')!==-1) {
+	APPCALL.goLogout();
+}
+
+//웹 로그인 상태 확인 콜백
+//true : 로그인 상태
+//false : 비로그인 상태 
+function callbackLoginState(result){
+   var isLogin = "false";//web 로그인여부
+   if(!isLogin && result) { //web비로그인 native로그인일경우
+	 APPCALL.goLogout(); //native로그아웃
+   }
+}
+
+if(USER_DEVICE.isApp) {//앱일경우 native로그인 상태체크
+	APPCALL.loginState();
+}
+
+// 웹뷰 이탈 시 좌석 해제 홈페이지에 없어 에러 발생해 추가함
+function callbackFocusOut() {}
+
+//스크립 오류 발생으로 인해 빈 메소드 추가
+function _AutofillCallbackHandler() {}
+	</script>
+
+
+
+
+
+	<script>
+		window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		'event'		: 'pageview',
+		'dimension2':btoa(JSON.parse(USER_INFO.get()).userId),
+		'dimension3':'PC-WEB',
+		'dimension4': JSON.parse(USER_INFO.get()).membergrade 
+	})
+	</script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PD2BQQ4');
+	</script>
+	<!-- End Google Tag Manager -->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49935507-8"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-49935507-8');
+	</script>
+
+
+	<script type="text/javascript" src="//wcs.naver.net/wcslog.js"> </script>
+	<script type="text/javascript">
+		if (!wcs_add) var wcs_add={};
+		wcs_add["wa"] = "s_29f8dbdc0496";
+		if (!_nasa) var _nasa={};
+		if(window.wcs){
+		wcs.inflow();
+		wcs_do(_nasa);
+	}
+	</script>
+	<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+	<script type="text/javascript">
+		kakaoPixel('6788472491368532022').pageView();
+	</script>
+	<script src='/tuna_.js'></script>
+	<script>
+		!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="AYF4Y-8J9XB-2BDC5-23EM3-Q7Z28",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"AYF4Y-8J9XB-2BDC5-23EM3-Q7Z28",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="oqtyoiaxhnefwyobnspa-f-c528db8f4-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"32","ak.cp":"881439","ak.ai":parseInt("562947",10),"ak.ol":"0","ak.cr":5,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"3d383370","ak.r":32345,"ak.a2":e,"ak.m":"b","ak.n":"essl","ak.bpcip":"116.39.135.0","ak.cport":62040,"ak.gh":"23.59.72.87","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1640066206","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==O9qXBWdPdTc/gAq1rpaVPLbj7z4j/rZuYjeXLxyVvlPnm37vh8zW3gWTL16s9bzHgIQZUMPuBJn03s3ye1Vz1YubWft0hF+/yx2g3+TzzoQrQoRKDrxn+Qv/dAUbzrRMZYU75S1O9XDK9ObVOSm+YJD725swJl3J+GXEKrMqGPcgxm4ACTTZPWd0Mnj4ABbTsxewPz4NUxOCmYcrrUvRYFL4n5Fyw3BjVq/4AHuCp1IuYdhHTIKMCpymuZXMTyTLvQ7nsSOJuQ8ytuGBsLS/oH9CsQ3nbGjq28SQxFRA8UNeR7/5A7X5zBk3l62wXba8iHu16cto0QLFiJwJaDDZVN8xyFDuvF/GNmCo2MhIYzNuWqCt2SpJ+KgpfhnTMsrCYIc/LrKt+Q0L7KZdJNa4HR41RxUtkrL9Lu/2G6KzfsE=","ak.pv":"74","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);
+	</script>
+</head>
+
+<body id="subLayoutBody">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 개선 #1271286440
+<div id="skipNav" class="skip-nav">
+	<a href="#content" class="skip-nav__item">본문 바로가기</a>
+</div>
+-->
+	<!-- 상단 띠배너 공지사항은 메인페이지만 표시합니다. -->
+
+
+
+
+	<!-- 앱설치알림 -->
+
+
+
+
+
+
+
+	<!-- 남은시간 연장 및 공지바 노출-->
+	<div class="top-custom-banner ticketing_top_bar">
+		<!--활성화시 .on 추가-->
+		<div class="top-custom-banner__inner">
+			<dl class="time_bar">
+				<dt>発行完了 : </dt>
+				<dd><strong></strong></dd>
+			</dl>
+			<div class="link-wrap--arrow">
+				<button type="button"  class="link-wrap__text" onclick="javascript:sendExtTripsell();"><span>延長する</span></button>
+			</div>
+			<button type="button" class="top-custom-banner__close" aria-label="閉じる"></button>
+		</div>
+	</div>
+
+	<!-- //남은시간 연장 및 공지바 노출 -->
+	<!-- header -->
+	<div id="header" class="header ">
+		<!-- mobile -->
+		<header class="header__inner mobile-only">
+
+
+
+
+
+
+
+			<button class="header__button" onclick="APPCALL.back()">
+							<span class="hidden">이전으로</span>
+						</button>
+
+
+			<h2 class="header__page-name"></h2>
+
+
+
+
+
+
+			<div class="header__button-wrap subType" data-element="gnbToggle">
+				<!-- 예매전 노출
+			<button type="button" class="header__button-ticket">
+				<span class="hidden">티켓보기</span>
+			</button>
+			// 예매전 노출 -->
+
+				<button type="button" class="gnb__button" >
+
+
+
+
+					<img src="https://static.jejuair.net/hpgg/resources/images/icon/icon-hamburger-header.png" alt="전체메뉴 열기" class="img_sticky" loading="lazy">
+				</button>
+
+
+
+			</div>
+			<!-- 스크롤시 스티키 상단 -->
+
+			<!-- 전체메뉴 -->
+			<div class="gnb" id="gnb">
+				<div class="gnb__header">
+					<div class="gnb__header-top" data-absolute-sticky>
+						<a href="javascript:;" class="button-home" title="홈으로 이동" data-action="menu"
+							data-menu-name="main">
+							<img loading="lazy" src="https://static.jejuair.net/hpgg/resources/images/upload/icon_bottombar_home_on_56x2.png" alt="홈">
+					</a>
+							<a class="select-wrap select-wrap--inline lang-type" id="btnCountrySelector"
+								data-modal-type="full">
+
+
+
+
+								日本
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</a>
+							<div class="additional">
+								<!-- D : '웹'일경우 APP다운로드 버튼 -->
+								<button type="button" class="button button--small" onclick="APPCALL.goMarket()" ><span class="button__text button__icon">APP</span></button>
+								<a href="javascript:;" class="button-search" title="통합검색이동">
+									<img loading="lazy" src="https://static.jejuair.net/hpgg/resources/images/icon/icon-header-search.png" alt="통합 검색 이동">
+						</a>
+									<a href="javascript:;" class="gnb-close" aria-label="닫기">
+										<img loading="lazy" src="https://static.jejuair.net/hpgg/resources/images/icon/icon-header-gnb-close.png" alt="전체메뉴 닫기" class="close">
+						</a>
+							</div>
+					</div>
+					<div class="gnb__header-bot">
+
+						<div class="before">
+							<div class="title">
+								ログインすると、<br>より多くの特典がもらえる！
+						</div>
+								<!-- fixed 영역 -->
+								<div class="sticky-wrap">
+									<div class="button-wrap button-flex sticky__inner gnb-sticky1">
+										<button type="button" class="button button--secondary" data-action="menu" data-menu-name="join"><span class="button__text">会員登録</span></button>
+										<button type="button" class="button button--secondary button--active" data-action="menu" data-menu-name="login"><span class="button__text">ログイン</span></button>
+										<a href="javascript:;" class="gnb-close" aria-label="닫기">
+											<img loading="lazy" src="https://static.jejuair.net/hpgg/resources/images/icon/icon-header-gnb-close.png" alt="전체메뉴 닫기" class="close">
+								</a>
+									</div>
+								</div>
+								<!-- //fixed 영역 -->
+								<div class="title">
+									<div class="title__section title__section--additional">チェジュ航空ホームページ以外でご予約の方
+										<div class="additional">
+											<div class="link-wrap">
+												<a href="javascript:;" class="link-wrap__underline" data-action="menu"
+													data-menu-name="bookingSearch"><span>予約確認</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="icon-link">
+
+
+
+
+									<a href="/ja/ibe/mypage/viewReservationList.do" class="icon-link__item"
+										data-action="menu" data-menu-name="tourAndTicket">
+
+
+
+
+
+										<img src="https://static.jejuair.net/cms/images/banner_image/20211117132333559.png" alt="" loading="lazy"/>
+										<span class="icon-link__text" style="color:">MY予約状況
+								</a>
+							
+								
+									
+									
+										<a href="/ja/prepare/flight/viewScheduleInfo.do" class="icon-link__item" data-action="menu" data-menu-name="tourAndTicket">
+									
+									
+									
+														
+								<img src="https://static.jejuair.net/cms/images/banner_image/20211006171154004.png" alt="" loading="lazy"/>
+								<span class="icon-link__text" style="color:">運航状況の確認
+								</a>
+							
+								
+									
+									
+									
+										<a href="/ja/customerService/csCenter/faqList.do" class="icon-link__item" data-action="menu" data-menu-name="tourAndTicket">
+									
+									
+														
+								<img src="https://static.jejuair.net/cms/images/banner_image/20211006171159032.png" alt="" loading="lazy"/>
+								<span class="icon-link__text" style="color:">カスタマーセンター
+								</a>
+							
+						</div>
+												
+					</div>
+					
+					
+
+					<!-- //로그인 후 -->
+				</div>
+			</div>
+			<hr class="section-spacer">
+			<div class="gnb-wrap">
+				
+				
+				
+				
+					
+						<div class="gnb__box">
+							<div class="gnb__title">会員特典</div>
+							<div class="gnb__list">
+								
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/memberBenefit/memberBenefit.do?param=newMember ')">新規会員特典</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/memberBenefit/memberBenefit.do?param=promotion')">プロモーションコード</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/memberBenefit/refreshPoint/main.do')">Refresh Point</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/memberBenefit/refreshPoint/pointBuy.do')">ポイントの購入</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/memberBenefit/refreshPoint/pointUse.do')">ポイントの使用</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/memberBenefit/refreshPoint/pointSearch.do')">ポイント照会</a>
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+							</div>
+						</div>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+						<div class="gnb__box">
+							<div class="gnb__title">ご旅行の準備</div>
+							<div class="gnb__list">
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/ibe/booking/Availability.do')">ご予約</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/prepare/fare/domesticBenefit.do')">韓国国内線の運賃案内</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/prepare/fare/internationalBenefit.do')">国際線運賃案内</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/prepare/flight/viewScheduleInfo.do')">フライト情報</a>
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+							</div>
+						</div>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+						<div class="gnb__box">
+							<div class="gnb__title">付加サービス</div>
+							<div class="gnb__list">
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/additionalService/service/main.do')">付加サービス</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/additionalService/service/preorderedBaggage.do')">追加手荷物事前購入</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/additionalService/service/preorderedSeat.do')">事前座席指定</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/additionalService/service/preorderedMeal.do')">機内食事前注文</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/additionalService/service/bundleGuide.do')">付加サービスパッケージ</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/additionalService/service/afterPayGuide.do')">あとで支払う</a>
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+							</div>
+						</div>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+						<div class="gnb__box">
+							<div class="gnb__title">プレミアムサービス</div>
+							<div class="gnb__list">
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/premium/businesslite/main.do')">BUSINESS LITE</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/premium/sportsMembership/main.do')">Sports Membership</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/additionalService/service/allianceService.do')">提携サービス</a>
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+							</div>
+						</div>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+						<div class="gnb__box">
+							<div class="gnb__title">マイページ</div>
+							<div class="gnb__list">
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/member/mypage/main.do')">マイページ</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/ibe/mypage/viewOnOffReservationList.do')">予約確認</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/ibe/mypage/viewReservationList.do')">MY予約状況</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/member/mypage/myFlightList.do')">搭乗履歴</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/member/mypage/memberInfoModify.do')">会員情報修正</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/member/mypage/viewMyFavoritesList.do')">お気に入り</a>
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+							</div>
+						</div>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+						<div class="gnb__box">
+							<div class="gnb__title">搭乗案内</div>
+							<div class="gnb__list">
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/ibe/checkin/viewCheckin.do')">モバイル搭乗券</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/linkService/boardingProcessGuide/baggageGuide.do')">お手荷物</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/linkService/fastProcedure/guide.do')">ラクラク搭乗手続き</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/linkService/airport/info.do')">空港情報</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/linkService/help/main.do')">お手伝いが必要なお客様</a>
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+							</div>
+						</div>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+						<div class="gnb__box">
+							<div class="gnb__title">機内サービス</div>
+							<div class="gnb__list">
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/cabinService/service/airCafe.do')">Air Cafe</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/cabinService/immigration/etcFormGuide.do')">出入国書類の書き方</a>
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+							</div>
+						</div>
+					
+				
+					
+				
+					
+				
+					
+						<div class="gnb__box">
+							<div class="gnb__title">イベント</div>
+							<div class="gnb__list">
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/event/event.do')">開催中のイベント</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/event/pastEvent.do')">過去のイベント</a>
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+							</div>
+						</div>
+					
+				
+					
+				
+					
+				
+					
+						<div class="gnb__box">
+							<div class="gnb__title">カスタマーセンター</div>
+							<div class="gnb__list">
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/customerService/csCenter/faqList.do')">カスタマーセンター</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/customerService/cabinLost/cabinLost.do')">機内でのお忘れ物照会</a>
+									
+								
+									
+										<a href="javascript:void(0);" class="gnb__list-item" onclick="URL_LINK.getI18Url('/customerServiceCenter/notice.do')">お知らせ</a>
+									
+								
+							</div>
+						</div>
+					
+				
+					
+				
+					
+				
+					
+				
+				
+				<div class="gnb__footer">
+					
+						
+						
+							<div class="gnb__title">SNS</div>
+							<div class="sns-wrap">
+								
+									<a href="https://www.facebook.com/jejuairjapan" class="sns-wrap__item" target="_blank">
+										<img loading="lazy" src="https://static.jejuair.net/cms/images/sns_ch/20211027200713454.png" alt="https://www.facebook.com/jejuairjapan">
+									</a>
+								
+									<a href="https://www.youtube.com/user/funjejuair" class="sns-wrap__item" target="_blank">
+										<img loading="lazy" src="https://static.jejuair.net/cms/images/sns_ch/20211027200700139.png" alt="https://www.youtube.com/user/funjejuair">
+									</a>
+								
+							</div>
+						
+					
+					
+				</div>
+			</div>
+		</div>
+		<!-- //전체메뉴 -->
+	</header>
+	<!-- //mobile -->
+
+	<!-- pc용 공통 헤더 -->
+	<div class="header__util util pc-only">
+		<div class="util__inner">
+			<div class="util__benefit">
+	         <!-- 기업우대 여행자우대 사이트 한국어만 표출   , 기업우대서비스 오픈이 11월 8일,  오픈 시기  -->
+			 		        			
+			</div>
+
+			<div class="util__link-list" data-custom-toggle="wrap">
+				
+				
+				
+					<a href="javascript:;" class="util__link" data-action="menu" data-menu-name="login">ログイン</a>
+					<a href="javascript:;" class="util__link" data-action="menu" data-menu-name="join">会員登録</a>
+				
+				<!-- // 로그인 전 노출 -->
+
+				
+					
+						
+						
+						<a href="javascript:;" onclick="URL_LINK.getI18Url('/memberBenefit/refreshPoint/main.do')" class="util__link">Refresh Point</a>
+						
+					
+						
+						
+						<a href="javascript:;" onclick="URL_LINK.getI18Url('/customerService/csCenter/faqList.do')" class="util__link">カスタマーセンター</a>
+						
+					
+						
+						
+						<a href="javascript:;" onclick="URL_LINK.getI18Url('/ibe/mypage/viewReservationList.do')" class="util__link">MY予約状況</a>
+						
+					
+				
+				<button type="button" class="util__country" data-custom-toggle="button">
+					<span class="text">
+							
+						
+							
+								日本
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						</span>
+			</button>
+			<div class="header-country__layer" data-custom-toggle="panel">
+				<div class="country__title">
+					地域および言語
+				</div>
+				<div class="country__input">
+					<div class="select-wrap select-wrap--line">
+
+						<select title="国家指定" class="select-wrap__select" name="countryChoice" id="countryChoice">
+
+
+
+									<option value="KR" >대한민국</option>
+								
+									
+									
+										
+										
+									
+									<option value="JP" selected>日本</option>
+								
+									
+									
+									<option value="CN" >中国</option>
+								
+									
+									
+									<option value="TW" >台灣</option>
+								
+									
+									
+									<option value="HK" >香港</option>
+								
+									
+									
+									<option value="MO" >澳門</option>
+								
+									
+									
+									<option value="US" >US</option>
+								
+									
+									
+									<option value="TH" >THAILAND</option>
+								
+									
+									
+									<option value="VN" >VIETNAM</option>
+								
+									
+									
+									<option value="PH" >PHILLIPINES</option>
+								
+									
+									
+									<option value="MY" >MALAYSIA</option>
+								
+									
+									
+									<option value="LA" >LAOS</option>
+								
+									
+									
+									<option value="RU" >RUSSIA</option>
+								
+									
+									
+									<option value="SG" >SINGAPORE</option>
+								
+							</select>
+					</div>
+					<div class="select-wrap select-wrap--line">
+						<select class="select-wrap__select" title="言語設定" name="languageChoice" id="languageChoice">
+
+
+
+
+
+									<option value="ja" selected>日本語</option>
+								
+							</select>
+					</div>
+					<button class="country__button" id="countryAndLanguageChoiceBtn" data-flag="base">確認</button>
+				</div>
+				<button class="button-close" data-custom-toggle="close">
+						<span class="hidden">닫기</span>
+					</button>
+			</div>
+	</div>
+	</div>
+	</div>
+	<header class="header__inner  pc-only">
+		<div class="sticky-header" data-sticky>
+			<div class="header__box">
+				<!-- header__box 추가 -->
+				<h1 class="header__logo">
+
+					<a href="javascript:;" data-action="menu" data-menu-name="main">
+
+
+						<img src="https://static.jejuair.net/cms/images/banner_image/20211014191229348.png" alt="jejuairlogo" loading="lazy"/>
+
+					</a>
+				</h1>
+
+
+				<h2 class="header__page-name"></h2>
+
+
+
+
+
+
+
+
+				<div class="header__link-list">
+
+
+
+
+
+					<a href="javascript:void(0);" class="header__link"
+						onclick="URL_LINK.getI18Url('/ibe/booking/Availability.do')">ご予約</a>
+
+
+
+
+
+
+
+
+					<a href="javascript:void(0);" class="header__link"
+						onclick="URL_LINK.getI18Url('/member/mypage/main.do')">マイページ</a>
+
+
+
+
+
+
+
+
+					<a href="javascript:void(0);" class="header__link"
+						onclick="URL_LINK.getI18Url('/additionalService/service/main.do')">付加サービス</a>
+
+
+
+
+
+
+
+
+					<a href="javascript:void(0);" class="header__link"
+						onclick="URL_LINK.getI18Url('/ibe/checkin/viewCheckin.do')">モバイル搭乗券</a>
+
+
+
+
+
+
+
+
+					<a href="javascript:void(0);" class="header__link"
+						onclick="URL_LINK.getI18Url('/event/event.do')">イベント</a>
+
+
+
+
+				</div>
+
+
+
+
+
+				<div class="header__search-wrap header-search subType" data-custom-toggle="wrap">
+					<!-- <button type="button" class="header__button-ticket">
+					<span class="hidden">티켓보기</span>
+					</button> -->
+					<button type="button" class="header__button-search" data-custom-toggle="button">
+						<img loading="lazy" src="https://static.jejuair.net/hpgg/resources/images/icon/icon-header-search.png" alt="검색">
+					</button>
+					<div class="header-search__layer" data-custom-toggle="panel">
+						<div class="header-search__form" data-element="form">
+							<input type="search" class="search__text" placeholder="キーワードをご入力ください。" data-element="input">
+							<button type="button" data-element="remove" class="input__remove-button">삭제</button>
+							<div class="search-button">
+								<button class="button" type="button">検索</button>
+							</div>
+						</div>
+						<!-- <button type="button" class="search__close" data-custom-toggle="button">
+					<span class="hidden">閉じる</span>
+				</button> -->
+					</div>
+				</div>
+				<div class="header__button-wrap subType" data-element="gnbToggle">
+					<button type="button" class="gnb__button">
+						<img loading="lazy" src="https://static.jejuair.net/hpgg/resources/images/icon/icon-hamburger-header.png" alt="전체메뉴 열기" class="open">
+
+						
+							
+						
+					</button>
+				</div>
+
+				<!-- goto-quick-booking : 스티키 클릭용 -->
+				<div class="goto-quick-booking">
+					<a href="javascript:;">
+						<span>到着地はどこですか？</span>
+						<div class="goto-btn">
+							<span>フライト検索</span>
+						</div>
+					</a>
+				</div>
+				<!-- //goto-quick-booking -->
+
+			</div>
+
+			<!-- 전체메뉴 -->
+			<div class="gnb" id="gnb">
+				<div class="gnb-wrap">
+
+
+
+
+
+					<div class="gnb__box">
+						<div class="gnb__title">会員特典</div>
+						<div class="gnb__list">
+
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/memberBenefit/memberBenefit.do?param=newMember ')">新規会員特典</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/memberBenefit/memberBenefit.do?param=promotion')">プロモーションコード</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/memberBenefit/refreshPoint/main.do')">Refresh Point</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/memberBenefit/refreshPoint/pointBuy.do')">ポイントの購入</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/memberBenefit/refreshPoint/pointUse.do')">ポイントの使用</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/memberBenefit/refreshPoint/pointSearch.do')">ポイント照会</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="gnb__box">
+						<div class="gnb__title">ご旅行の準備</div>
+						<div class="gnb__list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/ibe/booking/Availability.do')">ご予約</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/prepare/fare/domesticBenefit.do')">韓国国内線の運賃案内</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/prepare/fare/internationalBenefit.do')">国際線運賃案内</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/prepare/flight/viewScheduleInfo.do')">フライト情報</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+					<div class="gnb__box">
+						<div class="gnb__title">付加サービス</div>
+						<div class="gnb__list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/additionalService/service/main.do')">付加サービス</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/additionalService/service/preorderedBaggage.do')">追加手荷物事前購入</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/additionalService/service/preorderedSeat.do')">事前座席指定</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/additionalService/service/preorderedMeal.do')">機内食事前注文</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/additionalService/service/bundleGuide.do')">付加サービスパッケージ</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/additionalService/service/afterPayGuide.do')">あとで支払う</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="gnb__box">
+						<div class="gnb__title">プレミアムサービス</div>
+						<div class="gnb__list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/premium/businesslite/main.do')">BUSINESS LITE</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/premium/sportsMembership/main.do')">Sports Membership</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/additionalService/service/allianceService.do')">提携サービス</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+					<div class="gnb__box">
+						<div class="gnb__title">マイページ</div>
+						<div class="gnb__list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/member/mypage/main.do')">マイページ</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/ibe/mypage/viewOnOffReservationList.do')">予約確認</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/ibe/mypage/viewReservationList.do')">MY予約状況</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/member/mypage/myFlightList.do')">搭乗履歴</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/member/mypage/memberInfoModify.do')">会員情報修正</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/member/mypage/viewMyFavoritesList.do')">お気に入り</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="gnb__box">
+						<div class="gnb__title">搭乗案内</div>
+						<div class="gnb__list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/ibe/checkin/viewCheckin.do')">モバイル搭乗券</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/linkService/boardingProcessGuide/baggageGuide.do')">お手荷物</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/linkService/fastProcedure/guide.do')">ラクラク搭乗手続き</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/linkService/airport/info.do')">空港情報</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/linkService/help/main.do')">お手伝いが必要なお客様</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="gnb__box">
+						<div class="gnb__title">機内サービス</div>
+						<div class="gnb__list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/cabinService/service/airCafe.do')">Air Cafe</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/cabinService/immigration/etcFormGuide.do')">出入国書類の書き方</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+					<div class="gnb__box">
+						<div class="gnb__title">イベント</div>
+						<div class="gnb__list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/event/event.do')">開催中のイベント</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/event/pastEvent.do')">過去のイベント</a>
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+					<div class="gnb__box">
+						<div class="gnb__title">カスタマーセンター</div>
+						<div class="gnb__list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/customerService/csCenter/faqList.do')">カスタマーセンター</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/customerService/cabinLost/cabinLost.do')">機内でのお忘れ物照会</a>
+
+
+
+							<a href="javascript:void(0);" class="gnb__list-item"
+								onclick="URL_LINK.getI18Url('/customerServiceCenter/notice.do')">お知らせ</a>
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+					<div class="gnb__footer">
+
+
+
+						<div class="gnb__title">SNS</div>
+						<div class="sns-wrap">
+
+							<a href="https://www.facebook.com/jejuairjapan" target="_blank" class="sns-wrap__item">
+								<img loading="lazy" src="https://static.jejuair.net/cms/images/sns_ch/20211027200713454.png" alt="https://www.facebook.com/jejuairjapan">
+										</a>
+
+								<a href="https://www.youtube.com/user/funjejuair" target="_blank"
+									class="sns-wrap__item">
+									<img loading="lazy" src="https://static.jejuair.net/cms/images/sns_ch/20211027200700139.png" alt="https://www.youtube.com/user/funjejuair">
+										</a>
+
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+
+			<!-- //전체메뉴 -->
+		</div>
+	</header>
+	<!-- //pc용 공통 헤더 -->
+	<!-- pc용 공통 헤더 -->
+	</div>
+	<!-- //header -->
+	<!-- 공통 컨펌(내용) -->
+	<div id="confirmLogout" class="modal modal--simple">
+		<div class="modal-content">
+			<h2 class="alert-title">ログアウトしますか？
+				<!--로그아웃 하시겠습니까?-->
+			</h2>
+		</div>
+		<div class="modal__button-area button-wrap">
+			<button type="button" class="button button--secondary" rel="modal:close" onclick="javascript:closeCurrentModal(this);"><span class="button__text">いいえ<!--아니요--></span></button>
+			<button type="button" class="button button--secondary button--active add--ml-10" onclick="BIZ_COMMONS_SCRIPT.goLogout();"><span class="button__text">はい <!--예--></span></button>
+		</div>
+	</div>
+	<!-- // 공통 컨펌(내용) -->
+
+
+	<div id="body">
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PD2BQQ4" height="0" width="0"
+				style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+		<div class="wrap wrap--no-paddings">
+
+
+			<div id="breadcrumb" class="breadcrumb pc-only" aria-label="breadcrumb">
+				<nav class="breadcrumb__inner">
+					<div class="breadcrumb__item">
+						<a href="javascript:;" class="breadcrumb__link">ホーム</a>
+					</div>
+
+
+
+
+					<div class="breadcrumb__item">
+						<a href="javascript:;" class="breadcrumb__link">イベント</a>
+					</div>
+
+
+
+
+
+
+
+					<div class="breadcrumb__item breadcrumb__item--current" aria-current="page" data-element="toggle"
+						data-options='{"mode": "slide", "speed": 100, "clickToClose": true}'>
+
+
+						<button type="button" class="breadcrumb__link breadcrumb__link--list" data-element="toggle__anchor">開催中のイベント</button>
+
+
+
+						<div class="breadcrumb__siblings-list" data-element="toggle__panel">
+
+
+
+						</div>
+					</div>
+
+
+
+				</nav>
+			</div>
+
+
+
+			<div class="content" id="content">
+				<main id="main" class="main ">
+
+					<div class="event-wrap">
+
+
+						<div class="page-title-wrap pc-only">
+							<div class="page-title">イベント</div>
+						</div>
+
+
+
+
+
+
+						<div class="event-page-banner">
+							<div class="event-top-banner"
+								style="background-image: url(https://static.jejuair.net/cms/images/event_scrn/20211109170828609.jpg)">
+								<div class="event-banner-item">
+									<div class="event-banner">
+										<span class="event-banner__text" style="color: #ffffff;">チェジュ航空xU-NEXT</span>
+
+
+
+										<p class="event-banner__title" style="color: #ffffff;">
+											韓流ドラマ見放題<br>トライアルキャンペーン
+                        </p>
+
+
+											<div class="event-banner__bottom">
+												<span class="event-banner__date" style="color: #ffffff;">2021.11.15 ~ 2022.10.31</span>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="share-wrap">
+							<a href="javascript:;" class="button button--small "
+								data-element="sns_share"><span class="button__text button__icon icon-share">共有する</span></a>
+						</div>
+
+						<div class="section-wrap">
+							<div class="event-detail">
+
+
+
+
+								<script src="https://static.jejuair.net/hpgg/resources/bizjs/event/eventView.js">
+								</script>
+								<input type="hidden" name="eventNo" value="0000000099"/>
+								<input type="hidden" name="langCd" value="ja"/>
+								<input type="hidden" name="isLogin" value="false"/>
+								<input type="hidden" name="readonly" value="false"/>
+								<input type="hidden" name="isApp" value="false"/>
+								<!-- 타이틀영역 -->
+								<div class="event-detail__contents-wrap" data-anchor>
+
+
+
+
+
+
+									<!-- 텍스트 -->
+
+
+									<div class="section-wrap">
+
+
+										<div class="event-anchor-title" data-tab-anchor="チェジュ航空なら、U-NEXTがさらにお得に！">
+											チェジュ航空なら、U-NEXTがさらにお得に！</div>
+
+										<div class="event-txt-wrap sub-section">
+											<strong class="event-section-title"></strong>
+											<p class="text__default">- 期間 :
+												2021.11.15(月)～2022.10.31(月)<br/>- 対象 : こちらの特設ページにて、U-NEXTにご登録の方</p>
+										</div>
+
+									</div>
+									<!--// 텍스트 -->
+
+
+
+
+
+
+
+									<!-- 1. 에어카페 쿠폰 -->
+
+
+									<script
+										src="https://static.jejuair.net/hpgg/resources/bizjs/event/componentViews/couponViewHandler.js">
+									</script>
+									<div class="section-wrap">
+										<div class="event-cupon-wrap">
+
+											<div class="event-cupon service">
+												<div class="event-cupon-top">
+													<div class="event-cupon-name">U-NEXT</div>
+
+													<div class="event-cupon-price">
+														<span class="sub-big">31日間無料</span><span class="sub-small">トライアル</span>
+													</div>
+
+
+													<p class="event-cupon-txt"></p>
+
+													<span class="badge service">特典</span>
+
+												</div>
+
+												<div class="event-cupon-bot">
+
+													<div class="list-item"><s>
+															<font color="#ff5000">月額プラン(2,189円/税込)
+														</s>➔31日間無料</font>
+														<br/>＊220,000本以上の動画が見放題<br/>＊140誌以上の雑誌が読み放題</div>
+
+
+
+													</div>
+
+												</div>
+
+												<div class="event-cupon service">
+													<div class="event-cupon-top">
+														<div class="event-cupon-name">U-NEXT</div>
+
+														<div class="event-cupon-price">
+															<span class="sub-big">1,200</span><span class="sub-small">円分ポイント</span>
+														</div>
+
+
+														<p class="event-cupon-txt"></p>
+
+														<span class="badge service">限定特典</span>
+
+													</div>
+
+													<div class="event-cupon-bot">
+
+														<div class="list-item">
+															<font color="#ff5000">1,200ポイントプレゼント</font>
+															<br/>＊最新作のレンタルやマンガ・書籍の購入、映画チケットの割引にご利用頂けます。</div>
+
+
+
+														</div>
+
+													</div>
+
+												</div>
+											</div>
+											<!--// 1. 에어카페 쿠폰 -->
+
+
+
+
+
+
+											<!-- 텍스트 -->
+
+
+											<div class="section-wrap">
+
+
+												<div class="event-txt-wrap sub-section">
+													<strong class="event-section-title">無料トライアルまで3ステップ</strong>
+													<p class="text__default">
+														<font color="#ff5000">01</font>　「U-NEXT無料トライアル」をクリック<br/>
+														<font color="#ff5000">02</font>　U-NEXTに新規のご登録<br/>
+														<font color="#ff5000">03</font>　話題の韓流・アジアドラマをU-NEXTでお楽しみください♪<br/>
+														<font color="#9c9c94">＊特設ページにてU-NEXT新規登録の方限定となります。</font><br/>
+														<font color="#9c9c94">＊必ず、注意事項のご確認の上ご登録ください。</font>
+													</p>
+												</div>
+
+											</div>
+											<!--// 텍스트 -->
+
+
+
+
+
+
+											<!-- 텍스트 -->
+
+
+											<div class="section-wrap">
+
+
+												<div class="event-txt-wrap sub-section">
+													<strong class="event-section-title">こんな方にオススメ！</strong>
+													<p class="text__default">
+														<font color="#ff5000">・</font>韓ドラ好きなら！<br/>
+														<font color="#ff5000">・</font>おうち時間が長いなら！<br/>
+														<font color="#ff5000">・</font>隔離生活の方なら！
+													</p>
+												</div>
+
+											</div>
+											<!--// 텍스트 -->
+
+
+
+
+
+
+											<!-- 링크 버튼 -->
+
+											<script
+												src="https://static.jejuair.net/hpgg/resources/bizjs/event/componentViews/btnLinkViewHandler.js">
+											</script>
+											<div class="section-wrap">
+												<div class="button-wrap event-btn-wrap">
+													<button type="button" class="button button--event03"
+                onclick="btnLinkViewHandler.goUrl(this)"
+                data-component-div-cd="btnLink"
+                data-web-url="https://www.video.unext.jp/lp/jejuair"
+                data-app-url="https://www.video.unext.jp/lp/jejuair"
+                data-collection="Y">
+            <span class="button__text">U-NEXT無料トライアル</span>
+        </button>
+												</div>
+											</div>
+											<!--// 링크 버튼 -->
+
+
+
+
+
+
+											<!-- 텍스트 -->
+
+
+											<div class="section-wrap">
+
+
+												<div class="event-anchor-title" data-tab-anchor="韓ドラプレゼントキャンペーン実施中！">
+													韓ドラプレゼントキャンペーン実施中！</div>
+
+												<div class="event-txt-wrap sub-section">
+													<strong class="event-section-title"></strong>
+													<p class="text__default">
+														チェジュ航空SNSフォロー＆RT(シェア)で、<br>大人気ドラマ「女神降臨」のオリジナルグッズを抽選でプレゼント</p>
+												</div>
+
+											</div>
+											<!--// 텍스트 -->
+
+
+
+
+
+
+
+
+											<!-- 이미지+텍스트_01 -->
+											<div class="section-wrap">
+
+
+												<div class="event-anchor-title" data-tab-anchor="U-NEXTで好評配信中！">
+													U-NEXTで好評配信中！</div>
+
+												<div class="event-image01-wrap">
+
+													<div class="event-txt-wrap sub-section">
+														<strong class="event-section-title">女神降臨</strong>
+														<p class="text__default">
+															ボーイズグループ・ASTROのチャウヌや子役出身のムン・ガヨンら実力派の若手俳優が勢揃い。<br/>ヒロインと2人のイケメンが巻き起こす胸キュン必至のシーンが満載。</p>
+													</div>
+												</div>
+
+
+												<div class="event-image01-wrap">
+
+
+													<a href="">
+														<img class="event-image01" src="https://static.jejuair.net/cms/images/event_scrn/20211119082919695.png" alt="">
+        </a>
+
+														<div class="event-txt-wrap sub-section">
+															<strong class="event-section-title">ホテルデルーナ</strong>
+															<p class="text__default">
+																『美男＜イケメン＞ですね』などを手掛けるヒットメーカー・ホン姉妹が脚本を担当。<br/>オ・ジホ、イ・ジュンギ、キム・スヒョンら豪華俳優陣が毎回カメオ出演している。</p>
+														</div>
+												</div>
+
+
+												<div class="event-image01-wrap">
+
+
+													<a href="">
+														<img class="event-image01" src="https://static.jejuair.net/cms/images/event_scrn/20211119082927829.png" alt="">
+        </a>
+
+														<div class="event-txt-wrap sub-section">
+															<strong class="event-section-title">僕を溶かしてくれ</strong>
+															<p class="text__default">
+																チ・チャンウクの除隊後復帰作。“冷凍人間”という運命を背負い、生きるためには恋に落ちてはならない2人のロマンスを描く。<br/>20年越しの多角関係という設定がユニークだ。</p>
+														</div>
+												</div>
+
+
+												<div class="event-image01-wrap">
+
+													<div class="event-txt-wrap sub-section">
+														<strong class="event-section-title"></strong>
+														<p class="text__default">
+															<font color="#9c9c94">画像提供：© STUDIO DRAGON CORPORATION
+															</font>
+														</p>
+													</div>
+												</div>
+
+											</div>
+											<!-- //이미지+텍스트_01 -->
+
+
+
+
+
+
+
+
+											<!-- 이미지+텍스트_01 -->
+											<div class="section-wrap">
+
+
+												<div class="event-anchor-title"
+													data-tab-anchor="U-NEXT：映画やドラマ、アニメなどの動画が見放題">
+													U-NEXT：映画やドラマ、アニメなどの動画が見放題</div>
+
+												<div class="event-image01-wrap">
+
+
+													<a href="https://www.video.unext.jp/lp/jejuair">
+														<img class="event-image01" src="https://static.jejuair.net/cms/images/event_scrn/20211111091019268.jpg" alt="">
+        </a>
+
+														<div class="event-txt-wrap sub-section">
+															<strong class="event-section-title">見放題作品数No.1※！ U-NEXTとは</strong>
+															<p class="text__default">
+																<font color="#9c9c94">
+																	<span style="font-size: 10px;">※GEM Partners調べ/2021年10月 国内の主要な定額制動画配信サービスにおける洋画/邦画/海外ドラマ/韓流・アジアドラマ/国内ドラマ/アニメを調査。別途、有料作品あり。</font></span><br/>U-NEXTなら映画、ドラマ、アニメ、音楽・ライブなどの動画から、マンガ、ラノベをはじめとする電子書籍まで、<br/>１つのアプリで楽しめます。今すぐ無料でお試しいただけます。<br><br/><span style="font-size: 10px;">■検印番号：N3507-2111-2211</span>
+															</p>
+														</div>
+												</div>
+
+											</div>
+											<!-- //이미지+텍스트_01 -->
+
+
+
+
+
+
+											<!-- 도움되는 정보 : banner-area -->
+
+
+											<div class="section-wrap">
+												<div class="event-detail__banner">
+
+
+													<div class="text">
+														<p class="text__large text--exbold">東京・大阪↔ソウル、毎日運航</p>
+													</div>
+
+													<a href="https://www.jejuair.net/ja/ibe/booking/Availability.do"
+														class="event-detail__banner-item"
+														style="background-color: #ff5000">
+														<div class="event-detail__banner-content"
+															style="color: #ffffff">
+															2022年3月まで<br/>予約・販売開始
+            </div>
+															<div class="event-detail__banner-img">
+																<img src="" alt=""></div>
+													</a>
+
+												</div>
+											</div>
+											<!-- //도움되는 정보 : banner-area -->
+
+
+
+
+
+
+											<!-- 도움되는 정보 : banner-area -->
+
+
+											<div class="section-wrap">
+												<div class="event-detail__banner">
+
+
+													<div class="text">
+														<p class="text__large text--exbold">LINE限定プレゼント盛りだくさん！</p>
+													</div>
+
+													<a href="https://lin.ee/2Rg3m0J" class="event-detail__banner-item"
+														style="background-color: #06c755">
+														<div class="event-detail__banner-content"
+															style="color: #ffffff">
+															自動運行通知<br/>毎月限定特典イベントも実施中
+            </div>
+															<div class="event-detail__banner-img">
+																<img src="https://static.jejuair.net/cms/images/event_scrn/20211109165431016.png" alt=""></div>
+													</a>
+
+												</div>
+											</div>
+											<!-- //도움되는 정보 : banner-area -->
+
+
+
+
+
+
+											<!-- 유의사항 -->
+
+											<div class="section-wrap info-wrap">
+												<div class="service-information" data-element="toggle"
+													data-options='{"mode": "move scroll"}'>
+													<div class="service-information__title">
+														<button type="button" class="service-information__anchor" data-element="toggle__anchor">本キャンペーン全般について</button>
+													</div>
+													<div class="service-information__content"
+														data-element="toggle__panel">
+														<p><span style="font-size: 14px;">・本キャンペーンの実施期間、内容などにつきましては、予告なく変更する場合や中止する場合がございます。</span><br></p>
+															<p>・本キャンペーンにはお申込み期間の設定はございませんが、予告なく変更または終了する場合がございます。予めご了承ください。
+															</p>
+															<p>・本キャンペーンへのエントリーはお1人様1回限りとなります。重複するエントリーは無効とさせていただきます。同一人物と思われる方が複数回のエントリーを行った場合や当社が不正
+																とみなした場合は、本キャンペーンの適用対象外とさせていただきます。</p>
+															<p>・本キャンペーンに関するお問い合わせ：チェジュ航空日本カスタマーセンター(0570-001132、月～金
+																14:00～18:00)</p>
+													</div>
+												</div>
+											</div>
+											<!-- //유의사항 -->
+
+
+
+
+
+
+											<!-- 유의사항 -->
+
+											<div class="section-wrap info-wrap">
+												<div class="service-information" data-element="toggle"
+													data-options='{"mode": "move scroll"}'>
+													<div class="service-information__title">
+														<button type="button" class="service-information__anchor" data-element="toggle__anchor">SNSイベントについて</button>
+													</div>
+													<div class="service-information__content"
+														data-element="toggle__panel">
+														<p style="font-family: sans-serif; font-size: 14px;">
+															・イベント告知文を必ずご確認の上、ご参加ください。</p>
+														<p style="font-family: sans-serif; font-size: 14px;">
+															・イベントの景品および内容は予告なく変更になる場合がございます。</p>
+													</div>
+												</div>
+											</div>
+											<!-- //유의사항 -->
+
+										</div>
+										<button type="button" data-element="modal_anchor" data-target="" class="hidden"></button>
+
+
+
+									</div>
+								</div>
+
+								<div class="button-wrap pc-60" data-element="bottomContent" data-space="30">
+
+
+									<a href="/ja/event/event.do"
+										class="button button--primary button--active"><span class="button__text">他のイベントを見る</span></a>
+
+								</div>
+								<button type="button" class="button-top" aria-label="상단 이동"></button>
+								<!--Top 버튼-->
+
+
+
+							</div>
+				</main>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<div id="footer" class="footer pc-only">
+
+		<!-- pc -->
+		<footer class="footer__inner">
+			<div class="footer__top">
+				<div class="footer__top-item">
+					<a href="javascript:void(0);" class="footer__top-link" data-action="menu"
+						data-menu-name="about">チェジュ航空のご紹介</a>
+				</div>
+
+
+				<div class="footer__top-item">
+					<a href="javascript:void(0);" class="footer__top-link" data-action="menu"
+						data-menu-name="carriageTemrs">旅客運送約款</a>
+				</div>
+				<div class="footer__top-item">
+					<a href="javascript:void(0);" class="footer__top-link" data-action="menu"
+						data-menu-name="homepageTerms">ホームページの利用規約</a>
+				</div>
+				<div class="footer__top-item footer__top-item--privacy">
+					<a href="javascript:void(0);" class="footer__top-link" data-action="menu"
+						data-menu-name="personalTerms">プライバシーポリシー</a>
+				</div>
+				<div class="footer__top-item">
+					<a href="javascript:void(0);" class="footer__top-link" data-action="menu"
+						data-menu-name="sitemap">サイトマップ</a>
+				</div>
+
+				<div class="footer__top-item footer__top-item--family">
+					<div class="family-wrap" data-element="toggle"
+						data-options='{"mode": "slide", "speed": 100, "clickToClose": true}'>
+						<button type="button" class="button-family" data-element="toggle__anchor">Family Site</button>
+						<div class="family-list" data-element="toggle__panel">
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAekyung"> Aekyung Industrial Co., Ltd</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAtecltd">ATEC Co., Ltd</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAekyngst">AEKYUNG S.T. Co., Ltd</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAkis">AKIS CO. LTD</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAdmission">ADmission</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyNeopharm">Neopharm LTD</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAkp">AEKYUNG PETROCHEMICAL Co., Ltd</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAkc">AEKYUNG CHEMICAL Co., Ltd</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAkchemtech">AKCHEMTECH CO.,LTD.</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyKospa">KOSPA Co.,</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAkplaza">AK PLAZA</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAekyunggroup">AK holdings, Inc.</a>
+							<a href="javascript:void(0);" class="family-link" data-action="menu"
+								data-menu-name="familyAkdjbcc">JUNGBU COUNTRY CLUB</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<hr class="footer__spacer">
+			<div class="footer__bottom">
+
+
+				<a href="#" class="footer__logo" data-action="menu" data-menu-name="main" style="background: ;">
+					<img src="https://static.jejuair.net/cms/images/banner_image/20211108172526406.png" alt="제주항공로고" loading="lazy"/>
+				</a>
+
+					<div class="footer__bottom-contents">
+
+
+						<div class="footer__bottom-info">
+
+
+
+
+
+							<div class="info-item">
+								<a href="javascript:URL_LINK.getI18Url('/terms/page/transportationServicePlan.do');"
+									class="link">航空交通利用者サービス計画</a>
+							</div>
+
+
+
+
+
+
+
+							<div class="info-item">
+								<a href="javascript:URL_LINK.getI18Url('https://static.jejuair.net/hpgg/resources/pdf/Application_for_Damage_Redress.pdf');"
+									class="link">航空交通利用者被害救済計画</a>
+							</div>
+
+
+
+
+
+							<div class="info-item">
+								<a href="javascript:URL_LINK.getI18Url('https://www.avsec365.or.kr/');"
+									class="link">航空危険物について</a>
+							</div>
+
+						</div>
+
+
+
+
+						<div class="footer__bottom-util">
+							<a href="javascript:void(0);" class="util-app-ios" data-action="menu"
+								data-menu-name="iOSBtn"><img src="https://static.jejuair.net/hpgg/resources/images/icon/icon-footer-app-ios.png" alt="" loading="lazy"> IOS</a>
+								<a href="javascript:void(0);" class="util-app-aos" data-action="menu"
+									data-menu-name="AndroidBtn"><img src="https://static.jejuair.net/hpgg/resources/images/icon/icon-footer-app-aos.png" alt="" loading="lazy"> Android</a>
+						</div>
+
+						<p class="footer__bottom-address">
+							<span>事業者登録番号 : 616-81-50527</span><span>代表取締役：Kim, E-Bae</span><br>
+            	住所：済州特別自治道済州市新大路64、3階（蓮洞、建設共済会館）</p>
+							<p class="footer__bottom-copy">Copyright ⓒ JEJUAIR. All Rights Reserved.</p>
+
+					</div>
+			</div>
+		</footer>
+		<!-- //pc -->
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<!-- 공통 스크립트 선언 -->
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/lib/lib.min.js"></script>
+
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/lib/moment-with-locales.min.js">
+	</script>
+
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/lib/jquery.i18n.js"></script>
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/lib/jquery.i18n.messagestore.js">
+	</script>
+	<!-- 메인페이지 스크립트 에러 발생으로 이전 소스로 변경합니다. 
+<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/booking/plugin.js"></script>
+<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/booking/common.js"></script>
+-->
+	<script>
+		$(document).ready(function(){
+	
+		$.ajaxSetup({
+			beforeSend: function(xhr) {
+				xhr.setRequestHeader('tcode', '0000000607');
+				xhr.setRequestHeader('cname', USER_DEVICE.getName());
+			}
+		});
+	
+	
+	//BOOKING LAYOUT상태서 sub로 바뀔경우  
+	$(document).off('changeLayout').on('changeLayout', function(e, type) {
+		if(type==='sub') {
+			$('.bookingType').hide();
+			$('.subType').show();
+		}else if(type==='booking'){
+			$('.subType').hide();
+			$('.bookingType').show();
+		}
+	});
+    
+	//breadcrumbs cursor default
+	$('.breadcrumb__item > a').css('cursor','default');
+});
+
+//타이틀 설정
+$('header.mobile-only h2.header__page-name').text($('#main div.page-title').eq(0).text());
+	</script>
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/plugin.js"></script>
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/common.js"></script>
+
+	<!--필요시만 로드-->
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/vendor/lodash.min.js"></script>
+	<!--사용되지 않음-->
+	<!--<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/vendor/localforage.min.js"></script>-->
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/vendor/handlebars.min-v4.7.6.js">
+	</script>
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/handlebars.helpers.js"></script>
+
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/util/sUtil.js"></script>
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/util/dUtil.js"></script>
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/util/utils.js"></script>
+
+	<!--필요시만 로드-->
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/amcharts/amcharts.core.js">
+	</script>
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/amcharts/maps.js"></script>
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/amcharts/worldHigh.js"></script>
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/amcharts/animated.js"></script>
+
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/bizjs/commons/bizCommons.js"></script>
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/js/jj.helpers.js"></script>
+
+
+
+	<script type="text/javascript" src="https://static.jejuair.net/hpgg/resources/bizjs/event/eventDetail.js"></script>
+
+
+
+	<script type="application/javascript">
+		$('.button-top').hide();
+	</script>
+
+	<div id="ifmWrap"
+		style="height:100%; display:none; overflow:auto; text-align:center; -webkit-overflow-scrolling:touch;">
+		<iframe src="" width="100%" height="100%" name="popupChkApp"></iframe>
+	</div>
+	<script type="text/javascript" src="/ZbXKyjnC8J4W/lr4BUQ/XgRtpT/rEcY6fSf3D/OTsqAg/PF4H/IldHNFsB"></script>
+</body>
+
+</html>

@@ -25,6 +25,11 @@ $KakaoVisionAPIService = new KakaoVisionAPIService();
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
     <script src="/toastrWrapper.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+    <script type="text/javascript">
+        kakaoPixel('541043381581099928').pageView();
+        kakaoPixel('541043381581099928').signUp();
+    </script>    
 </head>
 
 <body>
@@ -45,14 +50,14 @@ $KakaoVisionAPIService = new KakaoVisionAPIService();
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?= $lang == "JavaScript" ? 'active' : '' ?>" data-toggle="tab" href="#JavaScript">JavaScript</a>
-                    </li>                    
+                    </li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade <?= $lang == "" ? 'show active' : '' ?>" id="PHP">
                         <p></p>
-                        <img src="http://test-tam.pe.kr/test/child.jpg" alt="ReBoPA" />
+                        <img src="http://test-tam.pe.kr/test/ch-ild.jpg" alt="ReBoPA" />
                         <div id="Response" class="alert alert-success" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= json_encode($KakaoVisionAPIService->faceDetect("http://test-tam.pe.kr/test/child.jpg")) ?>
+                            <?= json_encode($KakaoVisionAPIService->faceDetect("http://localhost/test/ch-ild.jpg")) ?>
                         </div>
                     </div>
                     <div class="tab-pane fade <?= $lang == "JavaScript" ? 'show active' : '' ?>" id="JavaScript">
@@ -71,7 +76,7 @@ $.ajax({
     }
 });      
                         </code></pre>
-                    </div>                    
+                    </div>
                 </div>
             </li>
             <li class="list-group-item">
@@ -90,7 +95,7 @@ $.ajax({
                         </div>
                     </div>
                 </div>
-            </li>         
+            </li>
             <li class="list-group-item">
                 <h2>성인 이미지 판별</h2>
                 <ul class="nav nav-tabs">
@@ -107,7 +112,7 @@ $.ajax({
                         </div>
                     </div>
                 </div>
-            </li>         
+            </li>
             <li class="list-group-item">
                 <h2>썸네일 생성</h2>
                 <ul class="nav nav-tabs">
@@ -124,7 +129,7 @@ $.ajax({
                         </div>
                     </div>
                 </div>
-            </li>               
+            </li>
             <li class="list-group-item">
                 <h2>썸네일 검출</h2>
                 <ul class="nav nav-tabs">
@@ -141,7 +146,7 @@ $.ajax({
                         </div>
                     </div>
                 </div>
-            </li>       
+            </li>
             <li class="list-group-item">
                 <h2>멀티태그 생성</h2>
                 <ul class="nav nav-tabs">
@@ -158,7 +163,7 @@ $.ajax({
                         </div>
                     </div>
                 </div>
-            </li>                                      
+            </li>
             <li class="list-group-item">
                 <h2>OCR</h2>
                 <ul class="nav nav-tabs">
@@ -176,7 +181,19 @@ $.ajax({
                     </div>
                 </div>
             </li>
-
+            <li class="list-group-item">
+                <h2>OCR</h2>
+                <ul class="nav nav-tabs">
+                    <li>
+                        <form action="kakaoVisionFormResult.php" method="post" enctype="multipart/form-data">
+                            파일명 : <input type="file" name="myfile">
+                            <button type="submit">제출하기</button>
+                        </form>
+                        
+                    </li>
+                </ul>
+               
+            </li>
         </ul>
     </div>
 

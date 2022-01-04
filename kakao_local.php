@@ -19,6 +19,12 @@ $KakaoAPIService = new KakaoAPIService();
     <!--bootstrapcdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>카카오톡 로컬</title>
+    <meta property="og:title" content="[홈쇼핑]AHC 유스래스팅 리얼 아이크림 포 페이스 (시즌9) (new콜라겐3종)" />
+    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+    <script type="text/javascript">
+        kakaoPixel('541043381581099928').pageView();
+        kakaoPixel('541043381581099928').participation();
+    </script>    
 </head>
 
 <body>
@@ -51,10 +57,15 @@ $KakaoAPIService = new KakaoAPIService();
                     <div class="tab-pane active" id="PHP">
                         <p></p>
                         <div id="Response" class="alert alert-success" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            GET dapi.kakao.com/v2/local/search/address.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
+                            GET dapi.kakao.com/v2/local/search/address.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY} 아동동 
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= json_encode($KakaoAPIService->getAddress("전북 삼성동 100")) ?>
+                            <?php 
+
+   $msg =  $KakaoAPIService->getAddress("파주시 아동동 147-2");
+  var_dump($msg);
+                            
+                             ?>
                         </div>
                         <pre><code class="php">
 public function getAddress($query){
@@ -82,7 +93,7 @@ public function getAddress($query){
                             GET dapi.kakao.com/v2/local/geo/coord2regioncode.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= json_encode($KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191)) ?>
+                            <?= ($KakaoAPIService->getCoord2regioncode(127.1086228, 37.4012191)) ?>
                         </div>
                         <pre><code class="php">
 public function getCoord2regioncode($x, $y){
@@ -109,7 +120,7 @@ public function getCoord2regioncode($x, $y){
                             GET dapi.kakao.com/v2/local/geo/coord2address.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= json_encode($KakaoAPIService->getCoord2address(127.1086228, 37.4012191)) ?>
+                            <?= ($KakaoAPIService->getCoord2address(127.1086228, 37.4012191)) ?>
                         </div>
                         <pre><code class="php">
 public function getCoord2address($x, $y){
@@ -136,7 +147,7 @@ public function getCoord2address($x, $y){
                             GET dapi.kakao.com/v2/local/geo/transcoord.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= json_encode($KakaoAPIService->getTranscoord(160710.37729270622, -4388.879299157299)) ?>
+                            <?= ($KakaoAPIService->getTranscoord(160710.37729270622, -4388.879299157299)) ?>
                         </div>
                         <pre><code class="php">
 public function getTranscoord($x, $y){
@@ -163,7 +174,7 @@ public function getTranscoord($x, $y){
                             GET dapi.kakao.com/v2/local/search/keyword.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= json_encode($KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191)) ?>
+                            <?= ($KakaoAPIService->getKeywordAddress("카카오프렌즈", 127.1086228, 37.4012191)) ?>
                         </div>
                         <pre><code class="php">
 public function getKeywordAddress($query, $x, $y, $radius=1000){
@@ -190,7 +201,7 @@ public function getKeywordAddress($query, $x, $y, $radius=1000){
                             GET dapi.kakao.com/v2/local/search/keyword.json HTTP/1.1 Authorization: KakaoAK {REST_API_KEY}
                         </div>
                         <div id="Response" class="alert alert-primary" role="alert" style="overflow:hidden;word-wrap:break-word;" class="w-100 p-3">
-                            <?= json_encode($KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191)) ?>
+                            <?= ($KakaoAPIService->getCategoryAddress("PM9", 127.1086228, 37.4012191)) ?>
                         </div>
                         <pre><code class="php">
 public function getCategoryAddress($category_group_code, $x, $y, $radius=1000){
