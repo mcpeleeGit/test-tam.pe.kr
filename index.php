@@ -97,11 +97,14 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title h5">
-                                    <a href="https://devtalk.kakao.com/t/rest-api-node-js/119865">node.js (rest api) 예제</a>
+                                    <a href="https://devtalk.kakao.com/t/rest-api-node-js/119865">rest api 예제</a>
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/kakao-tam/-Example-node.js">[Github]</a>
+                                <a href="https://devtalk.kakao.com/t/rest-api-node-js/119865">[node.js]</a> 
+                                <a href="https://devtalk.kakao.com/t/rest-api-php/115056">[php]</a> 
+                                <a href="https://devtalk.kakao.com/t/rest-api-c-asp-net-core/117166">[c# (asp.net core)]</a>
+                                
                             </div>
                         </div>
                         <div class="card">
@@ -115,16 +118,7 @@
                                 <a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/129">[OWIN Security]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://www.nuget.org/packages/Kakao.AspNetCore.SDK/">[Nuget SDK]</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title h5">
-                                    <a href="https://github.com/kakao-tam/react-native-kakao-sdk-all">react-native-kakao-sdk</a>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/kakao-tam/react-native-kakao-sdk-all">[Github]</a>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="card-deck">
                         <div class="card">
@@ -137,26 +131,8 @@
                                 <a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/54">[Spring Security 5, OAuth Client]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://github.com/kakao-tam/-Example-java-Spring-Boot-">[Github]</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title h5">
-                                    <a href="https://devtalk.kakao.com/t/rest-api-php/115056">php (rest api) 예제</a>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <a href="/kakao.php">[Sample]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://github.com/kakao-tam/-Example-PHP">[Github]</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title h5">
-                                    <a href="https://devtalk.kakao.com/t/rest-api-c-asp-net-core/117166">c# (asp.net core) 예제</a>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/kakao-tam/-Example-asp.net">[Github]</a>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
