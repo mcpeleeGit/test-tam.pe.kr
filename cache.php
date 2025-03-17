@@ -113,7 +113,7 @@ $cache->start();
     <title>Cache Test</title>
 </head>
 <body>
-    <h1>페이지 캐시 테스트</h1>
+    <h1>페이지 캐시 테스트 (클라이언트 브라우저 캐시)</h1>
     <p>현재 시간: <?php echo date('Y-m-d H:i:s'); ?></p>
     <p>이 내용은 브라우저 캐시에 1시간 동안 저장됩니다.</p>
 </body>
