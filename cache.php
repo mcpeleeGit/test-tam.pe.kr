@@ -1,59 +1,46 @@
 <?php
 class PageCache {
-    private $cachePath = 'cache/';
     private $cacheTime = 3600; // 1시간
     private $debugMode = true;
+    private $etag;
 
     public function __construct() {
-        if (!is_dir($this->cachePath)) {
-            mkdir($this->cachePath, 0777, true);
-        }
+        $this->etag = $this->generateETag();
     }
 
-    public function start() {
-        ob_start();
-        $this->displayCacheStatus();
+    private function generateETag() {
+        return md5($_SERVER['REQUEST_URI'] . filemtime(__FILE__));
     }
 
-    public function end($key) {
-        $content = ob_get_contents();
-        ob_end_flush();
-        $this->saveCache($key, $content);
+    private function setClientCache() {
+        header('Cache-Control: public, max-age=' . $this->cacheTime);
+        header('ETag: "' . $this->etag . '"');
+        header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime(__FILE__)) . ' GMT');
     }
 
-    public function getCache($key) {
-        $cacheFile = $this->getCacheFilePath($key);
+    private function checkClientCache() {
+        $ifNoneMatch = isset($_SERVER['HTTP_IF_NONE_MATCH']) ? stripslashes($_SERVER['HTTP_IF_NONE_MATCH']) : false;
+        $ifModifiedSince = isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) ? stripslashes($_SERVER['HTTP_IF_MODIFIED_SINCE']) : false;
         
-        if ($this->isCacheValid($cacheFile)) {
-            $content = file_get_contents($cacheFile);
-            if ($this->debugMode) {
-                $this->displayCacheInfo($cacheFile, true);
-            }
-            return $content;
+        if ($ifNoneMatch && $ifNoneMatch == '"' . $this->etag . '"') {
+            header('HTTP/1.1 304 Not Modified');
+            return true;
         }
         
-        if ($this->debugMode) {
-            $this->displayCacheInfo($cacheFile, false);
+        if ($ifModifiedSince && strtotime($ifModifiedSince) >= filemtime(__FILE__)) {
+            header('HTTP/1.1 304 Not Modified');
+            return true;
         }
+        
         return false;
     }
 
-    private function saveCache($key, $content) {
-        $cacheFile = $this->getCacheFilePath($key);
-        file_put_contents($cacheFile, $content);
-    }
-
-    private function getCacheFilePath($key) {
-        return $this->cachePath . md5($key) . '.cache';
-    }
-
-    private function isCacheValid($cacheFile) {
-        if (!file_exists($cacheFile)) {
-            return false;
+    public function start() {
+        $this->setClientCache();
+        if ($this->checkClientCache()) {
+            exit;
         }
-
-        $fileTime = filemtime($cacheFile);
-        return (time() - $fileTime) < $this->cacheTime;
+        $this->displayCacheStatus();
     }
 
     private function displayCacheStatus() {
@@ -63,56 +50,62 @@ class PageCache {
         echo '<div id="cache-status" style="position: fixed; bottom: 10px; right: 10px; 
             background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 5px; 
             font-family: monospace; font-size: 12px; z-index: 9999;">';
-        echo 'Cache Time: ' . date('Y-m-d H:i:s') . '<br>';
-        echo 'Cache Duration: ' . $this->cacheTime . 's<br>';
+        echo '<div><strong>Browser Cache:</strong><br>';
+        echo 'ETag: ' . $this->etag . '<br>';
+        echo 'Last-Modified: ' . gmdate('Y-m-d H:i:s', filemtime(__FILE__)) . '<br>';
+        echo 'Cache-Control: ' . $this->cacheTime . 's</div>';
         echo '</div>';
-    }
 
-    private function displayCacheInfo($cacheFile, $isHit) {
-        $status = $isHit ? 'HIT' : 'MISS';
-        $color = $isHit ? '#4CAF50' : '#F44336';
-        
-        if (file_exists($cacheFile)) {
-            $fileTime = filemtime($cacheFile);
-            $age = time() - $fileTime;
-            $timeLeft = $this->cacheTime - $age;
-            
-            echo '<script>
+        // 브라우저 캐시 상태를 JavaScript로 확인
+        echo '<script>
+        (function() {
+            function checkBrowserCache() {
                 var cacheStatus = document.getElementById("cache-status");
-                if (cacheStatus) {
-                    cacheStatus.innerHTML += "Cache ' . $status . ': <span style=\'color: ' . $color . '\'>' . $status . '</span><br>";
-                    cacheStatus.innerHTML += "Cache Age: ' . $age . 's<br>";
-                    cacheStatus.innerHTML += "Time Left: ' . $timeLeft . 's";
+                if (!cacheStatus) return;
+                
+                var browserCacheInfo = "";
+                
+                if (window.performance) {
+                    var perf = window.performance;
+                    var entries = perf.getEntriesByType("navigation");
+                    
+                    if (entries.length > 0) {
+                        var entry = entries[0];
+                        var type = entry.type;
+                        var color = "#F44336";
+                        
+                        if (type === "back_forward_cache") {
+                            color = "#2196F3";
+                        } else if (type === "reload" && entry.transferSize === 0) {
+                            color = "#4CAF50";
+                            type = "from_cache";
+                        }
+                        
+                        browserCacheInfo = "<br>Load Type: <span style=\'color: " + color + "\'>" + type + "</span>";
+                    }
                 }
-            </script>';
-        }
+                
+                var divs = cacheStatus.getElementsByTagName("div");
+                if (divs.length > 0) {
+                    divs[0].innerHTML += browserCacheInfo;
+                }
+            }
+            
+            if (document.readyState === "complete") {
+                checkBrowserCache();
+            } else {
+                window.addEventListener("load", checkBrowserCache);
+            }
+        })();
+        </script>';
     }
-}
-
-// 사용 예시
-function getCacheKey() {
-    return $_SERVER['REQUEST_URI'] . '_' . $_SERVER['QUERY_STRING'];
 }
 
 // 캐시 인스턴스 생성
 $cache = new PageCache();
 
-// 캐시 키 생성
-$cacheKey = getCacheKey();
-
-// 캐시된 내용이 있는지 확인
-$cachedContent = $cache->getCache($cacheKey);
-
-if ($cachedContent !== false) {
-    // 캐시된 내용 출력
-    echo $cachedContent;
-    exit;
-}
-
 // 캐시 시작
 $cache->start();
-
-// 여기서부터 실제 페이지 내용
 ?>
 <!DOCTYPE html>
 <html>
@@ -122,10 +115,6 @@ $cache->start();
 <body>
     <h1>페이지 캐시 테스트</h1>
     <p>현재 시간: <?php echo date('Y-m-d H:i:s'); ?></p>
-    <p>이 내용은 1시간 동안 캐시됩니다.</p>
+    <p>이 내용은 브라우저 캐시에 1시간 동안 저장됩니다.</p>
 </body>
-</html>
-<?php
-// 캐시 종료 및 저장
-$cache->end($cacheKey);
-?> 
+</html> 
