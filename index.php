@@ -152,17 +152,11 @@ Route::init($_SERVER['REQUEST_URI']);
                                 <a href="https://devtalk.kakao.com/c/rest-api/17" target="_blank">rest-api</a>
                             </li>
                             <li>
-                                <a href="https://devtalk.kakao.com/c/map-api/101" target="_blank">로컬/지도 API</a>
-                            </li>
-                            <li>
                                 <a href="https://devtalk.kakao.com/c/general/19" target="_blank">일반
                                 </a>
                             </li>
                             <li>
                                 <a href="https://devtalk.kakao.com/c/send-message/117" target="_blank">메시지 API</a>
-                            </li>
-                            <li>
-                                <a href="https://devtalk.kakao.com/c/kogpt-api/211" target="_blank">kogpt-api</a>
                             </li>
                             <li>
                                 <a href="https://devtalk.kakao.com/c/talkcalendar/213" target="_blank">톡캘린더 API</a>
@@ -173,12 +167,6 @@ Route::init($_SERVER['REQUEST_URI']);
                     <div class="p-4">
                         <h4 class="fst-italic">Elsewhere</h4>
                         <ol class="list-unstyled">
-                            <li>
-                                <a target="_blank" href="https://github.com/kakao-tam/">kakao-tam Github</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://kakao-tam.tistory.com/">Kakao-TAM blog</a>
-                            </li>
                             <li>
                                 <a target="_blank" href="https://developers.kakao.com/terms/latest/ko/site-policies">카카오 디벨로퍼스 운영 정책</a>
                             </li>
