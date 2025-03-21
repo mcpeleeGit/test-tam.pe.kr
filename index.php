@@ -108,37 +108,13 @@ Route::init($_SERVER['REQUEST_URI']);
                             <div class="card-footer">
                                 <a href="https://devtalk.kakao.com/t/rest-api-node-js/119865">[node.js]</a> 
                                 <a href="https://devtalk.kakao.com/t/rest-api-php/115056">[php]</a> 
+                                <a href="https://devtalk.kakao.com/t/rest-api-java-spring-boot/115579">[java (spring boot)]</a>
                                 <a href="https://devtalk.kakao.com/t/rest-api-c-asp-net-core/117166">[c# (asp.net core)]</a>
-                                
+                                <a href="https://devtalk.kakao.com/t/rest-api-c-asp-net-6-0-nuget-library/123358">[c# (asp.net 6.0 nuget library)]</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title h5">
-                                    <a href="https://devtalk.kakao.com/t/rest-api-c-asp-net-6-0-nuget-library/123358">c# (asp.net 6.0 nuget library)</a>
-                                </div>
-                                <p class="card-text"></p>
-                            </div>
-                            <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/129">[OWIN Security]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://www.nuget.org/packages/Kakao.AspNetCore.SDK/">[Nuget SDK]</a>
-                            </div>
-                        </div>
-                        
                     </div>
-                    <div class="card-deck">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title h5">
-                                    <a href="https://devtalk.kakao.com/t/rest-api-java-spring-boot/115579">java (spring boot) 예제</a>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/54">[Spring Security 5, OAuth Client]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://github.com/kakao-tam/-Example-java-Spring-Boot-">[Github]</a>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
+                    
                 </div>
             </div>
 
