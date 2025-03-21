@@ -151,16 +151,7 @@ Route::init($_SERVER['REQUEST_URI']);
                             <li>
                                 <a href="https://devtalk.kakao.com/c/rest-api/17" target="_blank">rest-api</a>
                             </li>
-                            <li>
-                                <a href="https://devtalk.kakao.com/c/general/19" target="_blank">일반
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://devtalk.kakao.com/c/send-message/117" target="_blank">메시지 API</a>
-                            </li>
-                            <li>
-                                <a href="https://devtalk.kakao.com/c/talkcalendar/213" target="_blank">톡캘린더 API</a>
-                            </li>
+                            
                         </ol>
                     </div>
 
