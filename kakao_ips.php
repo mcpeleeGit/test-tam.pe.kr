@@ -1,5 +1,4 @@
 <?php
-require_once 'cache.php';
 
 // API 설정
 $api_url = 'https://kapi.kakao.com/v1/system/ips';
@@ -36,67 +35,73 @@ function formatErrorMessage($msg) {
     return htmlspecialchars($msg);
 }
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="kr">
+
 <head>
-    <title>카카오 IP 목록</title>
+  <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/head.php'; ?>
+  <title>카카오 IP 목록</title>
     <style>
-        body {
+        main.container {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 20px auto;
             background: #f5f5f5;
-        }
-        .container {
             max-width: 1200px;
-            margin: 0 auto;
-            background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        h1 {
+        main.container h1 {
             color: #000;
             border-bottom: 2px solid #fee500;
             padding-bottom: 10px;
         }
-        .ip-section {
+        main.container .ip-section {
             margin: 20px 0;
             padding: 15px;
             background: #f8f8f8;
             border-radius: 5px;
         }
-        .ip-section h2 {
+        main.container .ip-section h2 {
             color: #000;
             margin-top: 0;
         }
-        .ip-list {
+        main.container .ip-list {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
-        .ip-item {
+        main.container .ip-item {
             background: #fee500;
             color: #000;
             padding: 5px 10px;
             border-radius: 3px;
             font-family: monospace;
         }
-        .error {
+        main.container .error {
             color: #ff0000;
             padding: 10px;
             background: #ffe6e6;
             border-radius: 5px;
             margin: 10px 0;
         }
-        .info {
+        main.container .info {
             color: #666;
             font-size: 0.9em;
             margin: 10px 0;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
+  <div class="container">
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/header.php'; ?>
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/menu.php'; ?>
+  </div>
+
+  <main class="container">
+  
         <h1>카카오 IP 목록</h1>
         
         <?php if ($error): ?>
@@ -140,6 +145,9 @@ function formatErrorMessage($msg) {
                 <?php endif; ?>
             </div>
         <?php endif; ?>
-    </div>
+   
+  </main>
+  <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/footer.php'; ?>
 </body>
-</html> 
+
+</html>
