@@ -81,7 +81,7 @@ Route::init($_SERVER['REQUEST_URI']);
                                 <p class="card-text"></p>
                             </div>
                             <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://developers.kakao.com/docs/latest/ko/kakaosync/common">[KakaoGuide]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com">[Blog]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://googsu.com">[Sample Site]</a>
+                                <a href="/inapp_check.php">[inapp check]</a>
                             </div>
                         </div>
                     </div>
