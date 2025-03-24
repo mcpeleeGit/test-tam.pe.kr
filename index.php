@@ -81,7 +81,7 @@ Route::init($_SERVER['REQUEST_URI']);
                                 <p class="card-text"></p>
                             </div>
                             <div class="card-footer">
-                                <a href="/inapp_check.php">[inapp check]</a>
+                                <a href="/inapp_check.php">[inapp check]</a><a class="p-2 link-secondary" href="/firebase.php">Firebase authetication OIDC 테스트</a><a class="p-2 link-secondary" href="/okta.php">OKTA OIDC 테스트</a>
                             </div>
                         </div>
                     </div>
