@@ -1,14 +1,12 @@
-    <footer class="blog-footer">
-        <p>
-            Blog template built for
-            <a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> by
-            <a target="_blank" href="https://twitter.com/mdo">@mdo</a>.
-            <br>
-            <a target="_blank" href="https://kakao-tam.tistory.com/">https://kakao-tam.tistory.com/</a>
-            <br>
-            <a target="_blank" href="https://github.com/kakao-tam">https://github.com/kakao-tam</a>
-        </p>
-        <p>
-            <a href="#">Back to top</a>
-        </p>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 test-tam.pe.kr. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="/privacy_policy.php" class="text-muted text-decoration-none">개인정보 처리방침</a>
+                </div>
+            </div>
+        </div>
     </footer>

@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="kr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OKTA OIDC 카카오 로그인</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/head.php'; ?>
     <style>
-        body {
+        main.container {
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f5f5f5;
-        }
-        .container {
-            text-align: center;
+            min-height: calc(100vh - 200px);
+            margin: 20px auto;
             padding: 20px;
             background: white;
             border-radius: 8px;
@@ -24,7 +17,13 @@
             max-width: 400px;
             width: 90%;
         }
-        .login-btn {
+        main.container h1 {
+            color: #000;
+            border-bottom: 2px solid #4285f4;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        main.container .login-btn {
             background-color: #FEE500;
             color: #000000;
             border: none;
@@ -37,14 +36,14 @@
             gap: 8px;
             margin: 20px auto;
         }
-        .login-btn:hover {
+        main.container .login-btn:hover {
             background-color: #E6CF00;
         }
-        .login-btn img {
+        main.container .login-btn img {
             width: 20px;
             height: 20px;
         }
-        .user-info {
+        main.container .user-info {
             display: none;
             margin-top: 20px;
             padding: 15px;
@@ -52,13 +51,13 @@
             border-radius: 4px;
             text-align: left;
         }
-        .user-info img {
+        main.container .user-info img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             margin-right: 10px;
         }
-        .logout-btn {
+        main.container .logout-btn {
             background-color: #dc3545;
             color: white;
             border: none;
@@ -67,13 +66,18 @@
             cursor: pointer;
             margin-top: 10px;
         }
-        .logout-btn:hover {
+        main.container .logout-btn:hover {
             background-color: #c82333;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/header.php'; ?>
+        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/menu.php'; ?>
+    </div>
+
+    <main class="container">
         <h1>OKTA OIDC 카카오 로그인</h1>
         <button id="kakaoLoginBtn" class="login-btn">
             <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" alt="카카오톡">
@@ -85,20 +89,32 @@
             <p>이메일: <span id="userEmail"></span></p>
             <button id="logoutBtn" class="logout-btn">로그아웃</button>
         </div>
-    </div>
+    </main>
+
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/footer.php'; ?>
 
     <script>
+        // 랜덤 문자열 생성 함수
+        function generateRandomString(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+        }
+
         // OKTA 설정
         const oktaConfig = {
-            clientId: '0oapyburr9sv1SM8i697', // OKTA 클라이언트 ID
-            idpId: '0oapybsli0LvHY9en697',
+            clientId: '4408b5bb51bdf4c89879e933556a21e8',
+            idpId: '0oapy6dolivNIdRrX697',
             authorizeUrl: 'https://trial-9470369.okta.com/oauth2/v1/authorize',
-            redirectUri: 'https://trial-9470369.okta.com/oauth2/v1/authorize/callback',
+            redirectUri: window.location.origin + '/okta.php',
             responseType: 'code',
             responseMode: 'query',
-            scope: 'openid email',
-            state: 'random_state_string', // 실제 구현시 랜덤 문자열로 생성
-            nonce: 'random_nonce_string'  // 실제 구현시 랜덤 문자열로 생성
+            scope: 'openid profile email',
+            state: generateRandomString(32),
+            nonce: generateRandomString(32)
         };
 
         // 카카오 로그인 버튼 클릭 이벤트
@@ -108,7 +124,7 @@
                 `client_id=${oktaConfig.clientId}&` +
                 `response_type=${oktaConfig.responseType}&` +
                 `response_mode=${oktaConfig.responseMode}&` +
-                `scope=${oktaConfig.scope}&` +
+                `scope=${encodeURIComponent(oktaConfig.scope)}&` +
                 `redirect_uri=${encodeURIComponent(oktaConfig.redirectUri)}&` +
                 `state=${oktaConfig.state}&` +
                 `nonce=${oktaConfig.nonce}`;
@@ -132,8 +148,9 @@
         $(document).ready(function() {
             const urlParams = new URLSearchParams(window.location.search);
             const code = urlParams.get('code');
+            const state = urlParams.get('state');
             
-            if (code) {
+            if (code && state === oktaConfig.state) {
                 // 인증 코드가 있으면 사용자 정보 요청
                 // 실제 구현시에는 서버 사이드에서 토큰 교환 및 사용자 정보 요청
                 // 여기서는 예시로 하드코딩된 정보 표시
