@@ -1,11 +1,4 @@
-<?php
-// HTTPS로 리다이렉트
-if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
-    $redirect_url = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    header('Location: ' . $redirect_url);
-    exit();
-}
-?>
+
 <!DOCTYPE html>
 <html lang="kr">
 <head>
