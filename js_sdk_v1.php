@@ -607,11 +607,6 @@
       </div>
     </div>
   </main>
-  <h1 class="name">이중유리 차망 티 텀블러 내열 유리 휴대용 다도세트 <div class="custom_pro dj_count0"><span class="dj-mov-fade-in-out2">0%</span></div> <!--       -->
-  </h1>
-  <p class="thumbnail">
-    <img src="//cafe24.poxo.com/ec01/ohubancha/YepDBcpQi6F1EGuL9rzRwQVdouaFzlaZGJQ4gSHFLYhRSL4IO+lRkO5vZ8rFv4txkUfNNqV75W5zqW3mE15MqA==/_/web/product/big/202307/65ec25bb91c3e549ed9e9211c1e37669.jpg" class="ThumbImage" alt="">
-  </p>
   <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/footer.php'; ?>
 </body>
 
