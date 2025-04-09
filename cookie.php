@@ -6,6 +6,11 @@ function createCookie($name, $value) {
     echo "쿠키 '{$name}'가 생성되었습니다.<br>";
 }
 
+function createNoExpiryCookie($name, $value) {
+    setcookie($name, $value);
+    echo "create_no_expiry 쿠키 '{$name}'가 생성되었습니다.<br>";
+}
+
 // 쿠키 삭제 함수
 function deleteCookie($name) {
     setcookie($name, '', time() - 3600, "/");
@@ -16,6 +21,8 @@ function deleteCookie($name) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['create'])) {
         createCookie("exampleCookie", "exampleValue");
+    } elseif (isset($_POST['create_no_expiry'])) {
+        createNoExpiryCookie("exampleCookie", "exampleValue no_expiry");
     } elseif (isset($_POST['delete'])) {
         deleteCookie("exampleCookie");
     }
@@ -40,6 +47,7 @@ function displayCookie($name) {
 <body>
     <form method="post">
         <button type="submit" name="create">쿠키 생성</button>
+        <button type="submit" name="create_no_expiry">쿠키 생성(만료기간 미지정)</button>
         <button type="submit" name="delete">쿠키 삭제</button>
     </form>
 
