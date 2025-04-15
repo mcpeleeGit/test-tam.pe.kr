@@ -503,6 +503,25 @@ session_start();
     }
 
 
+    function share_callback_template() {
+      Kakao.Share.sendCustom({
+        templateId: 57826,
+        templateArgs: {
+          "title": "테스트상품",
+          "imageUrl": "https://img1.daumcdn.net/thumb/S800x400/?scode=talkscrap&fname=http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
+          "imageWidth": 200,
+          "imageHeight": 100,
+          "btn_title": "구매하기",
+          'path': 'shop_view/?idx=303#review_detail',
+          "regularPrice": 50000
+        },
+        serverCallbackArgs: { // 사용자 정의 파라미터 설정
+          test: 'test'
+        }
+      });
+    }
+
+
     function share_callback() {
 
       // 공유할 링크 및 메시지
@@ -735,6 +754,7 @@ session_start();
               </div>
               <div class="card-footer">
                 -[<a href="javascript:share_callback()">콜백 테스트</a>]
+                -[<a href="javascript:share_callback_template()">콜백 템플릿 테스트</a>]
               </div>
             </div>
           </div>
