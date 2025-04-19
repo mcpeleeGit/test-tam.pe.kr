@@ -13,11 +13,11 @@ class familylocationDAO extends dao
                     uuid,
                     latlng
                   FROM familylocation 
-                 WHERE uuid= :uuid
+                 WHERE uuid= :familyuuid
                  ORDER BY id DESC
                  LIMIT 1
                 ';
-        return $this->getResult($sql, $familylocationRequestDTO->uuid);
+        return $this->getResult($sql, $familylocationRequestDTO->familyuuid);
     }
 
     public function insertFamilylocation($familylocationRequestDTO)
