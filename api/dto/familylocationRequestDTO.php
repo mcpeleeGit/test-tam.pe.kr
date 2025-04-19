@@ -2,7 +2,7 @@
 class FamilylocationRequestDTO {
     public function __construct()
     {
-        Request::setParam($this);
+        Request::setJsonParam($this);
     }   
     
     public $myuuid;
