@@ -554,6 +554,21 @@ session_start();
       });
     }
 
+    function defaultSendEmptyUrl() {
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '동원몰 카카오톡 공유하기 테스트',
+          description: '동원몰 카카오톡 공유하기 테스트 입니다.',
+          imageUrl: 'https://image.thebanchan.co.kr/tbcImg/web/images/event/240704_summer/type04_800.jpg',
+          link: { 
+            mobileWebUrl: '',
+            webUrl: ''
+          }
+        }
+      });
+    }
+
     function custermCommerceSend1vs1() {
       Kakao.Share.sendCustom({
         templateId: 57826,
@@ -755,6 +770,7 @@ session_start();
               <div class="card-footer">
                 -[<a href="javascript:share_callback()">콜백 테스트</a>]
                 -[<a href="javascript:share_callback_template()">콜백 템플릿 테스트</a>]
+                - [<a href="javascript:defaultSendEmptyUrl()">디폴트 템플릿(빈 URL)</a>]
               </div>
             </div>
           </div>
