@@ -1,5 +1,6 @@
 <?php
 session_start();
+$state = '';
 $access_token = '';
     $domain = $_SERVER['HTTP_HOST'];
     $redirect_uri = 'http://' . $domain . '/msg_test.php';
@@ -56,6 +57,19 @@ $access_token = '';
         }
     }
    
+    function getAccessTokenRtn($type) {
+      if(isset($_GET['state'])) {
+        $state = $_GET['state'];
+        if ($state == $type) {
+            return '로그인 완료 ⬛️';
+        } else {
+            return '로그인 먼저';
+        }
+      } else {
+        return '로그인 먼저';
+      }
+    }
+    
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -66,7 +80,7 @@ $access_token = '';
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 <body>
-    <h1>메시지 링크 테스트</h1>
+    <h1>메시지 링크 테스트(메시지API는 로그인 먼저해야 앱 변경됨)</h1>
     
     <table class="share-table">
         <thead>
@@ -80,7 +94,7 @@ $access_token = '';
         </thead>
         <tbody><!--플랫폼 정보 없음-->
             <tr>
-                <td rowspan="5">플랫폼 정보 없음</td>
+                <td rowspan="5">플랫폼 정보 없음 <button class="kakao-share-btn" onclick="loginWithKakao('none')">카카오로그인</button> <input type="text" value="<?=getAccessTokenRtn('none'); ?>" id="access_token"/> </td>
                 <td rowspan="5">디폴트 템플릿</td>
                 <td>  
                 <button class="kakao-share-btn" onclick="shareDefault('none')">Web 카카오톡 공유하기</button>
@@ -97,9 +111,9 @@ $access_token = '';
             </tr>
             <tr>
                 <td>
-                  <button class="kakao-share-btn" onclick="loginWithKakao('none')">카카오로그인</button>      
+                      
                   <button class="kakao-share-btn" onclick="msgDefault('none')">메시지 나에게 보내기</button>
-                  <input type="text" value="<?=$access_token; ?>" id="access_token"/>
+                  
                 </td>
                 <td> 모든링크 작동 안함 (버튼 없음, 모바일에서 확인해주세요.) </td>
                 <td> 모든링크 작동 안함 (버튼 없음)</td>
@@ -121,7 +135,7 @@ $access_token = '';
             
 <!--플랫폼 정보 Web Only-->
             <tr>
-                <td rowspan="6">플랫폼 정보 Web Only</td>
+                <td rowspan="6">플랫폼 정보 Web Only<button class="kakao-share-btn" onclick="loginWithKakao('web_only')">카카오로그인</button>   <input type="text" value="<?=getAccessTokenRtn('web_only'); ?>" id="access_token"/>  </td>
                 <td rowspan="6">디폴트 템플릿</td>
                 <td>  
                 <button class="kakao-share-btn" onclick="shareDefault('web_only')">Web 카카오톡 공유하기</button>
@@ -138,9 +152,9 @@ $access_token = '';
             </tr>
             <tr>
                 <td>
-                  <button class="kakao-share-btn" onclick="loginWithKakao('web_only')">카카오로그인</button>      
+                   
                   <button class="kakao-share-btn" onclick="msgDefault('web_only')">메시지 나에게 보내기</button>
-                  <input type="text" value="<?=$access_token; ?>" id="access_token"/>
+                  
                 </td>
                 <td> 웹으로 보기 버튼 표기 <br/> 앱으로 보기 버튼 없음  </td>
                 <td> 웹으로 보기 버튼 표기 <br/> 앱으로 보기 버튼 표기 (기본 도메인으로 대체)  </td>
@@ -168,7 +182,7 @@ $access_token = '';
             </tr>
 <!--플랫폼 정보 Android Only-->
             <tr>
-                <td rowspan="4">플랫폼 정보 Android Only</td>
+                <td rowspan="4">플랫폼 정보 Android Only<button class="kakao-share-btn" onclick="loginWithKakao('android_only')">카카오로그인</button> <input type="text" value="<?=getAccessTokenRtn('android_only'); ?>" id="access_token"/> </td>
                 <td rowspan="4">디폴트 템플릿</td>
                 <td>  
                 <button class="kakao-share-btn" onclick="shareDefault('android_only')">Web 카카오톡 공유하기</button>
@@ -185,9 +199,9 @@ $access_token = '';
             </tr>
             <tr>
                 <td>
-                  <button class="kakao-share-btn" onclick="loginWithKakao('android_only')">카카오로그인</button>      
+                        
                   <button class="kakao-share-btn" onclick="msgDefault('android_only')">메시지 나에게 보내기</button>
-                  <input type="text" value="<?=$access_token; ?>" id="access_token"/>
+                  
                 </td>
                 <td> 모든링크 작동 안함 (버튼 없음, 모바일에서 확인해주세요.) </td>
                 <td> 웹으로 보기 버튼 표기 (앱 스킴 실행, 미설치 시 스토어로 이동) <br/> 앱으로 보기 버튼 표기 (앱 스킴 실행, 미설치 시 스토어로 이동)</td>
@@ -202,7 +216,7 @@ $access_token = '';
 
 <!--플랫폼 정보 모두 있음-->
 <tr>
-                <td rowspan="12">플랫폼 정보 모두 있음</td>
+                <td rowspan="12">플랫폼 정보 모두 있음<button class="kakao-share-btn" onclick="loginWithKakao('all')">카카오로그인</button> <input type="text" value="<?=getAccessTokenRtn('all'); ?>" id="access_token"/> </td>
                 <td rowspan="6">디폴트 템플릿</td>
                 <td>  
                 <button class="kakao-share-btn" onclick="shareDefault('all')">Web 카카오톡 공유하기</button>
@@ -219,9 +233,9 @@ $access_token = '';
             </tr>
             <tr>
                 <td>
-                  <button class="kakao-share-btn" onclick="loginWithKakao('all')">카카오로그인</button>      
+                       
                   <button class="kakao-share-btn" onclick="msgDefault('all')">메시지 나에게 보내기</button>
-                  <input type="text" value="<?=$access_token; ?>" id="access_token"/>
+                  
                 </td>
                 <td> 웹으로 보기 버튼 표기, <br/> 앱으로 보기 버튼 없음 </td>
                 <td> 웹으로 보기 버튼 표기 <br/> 앱으로 보기 버튼 표기 (앱 스킴 실행, 미설치 시 스토어로 이동)</td>
@@ -284,7 +298,7 @@ $access_token = '';
                   <button class="kakao-share-btn" onclick="msgDefault('all_custom_wo_so_mx')">메시지 나에게 보내기 : 웹O, 스킴O, 마켓X</button>
                 </td>
                 <td> 버튼 있음 </td>
-                <td> 버튼 있음, (앱없으면 기본도메인으로 대체)</td>
+                <td> 버튼 있음, (앱없으면 설정도메인으로 대체)</td>
             </tr>
             <tr>
                 <td>   

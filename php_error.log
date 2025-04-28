@@ -1,1361 +1,194 @@
-[Thu Apr 24 15:30:08 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
-[Thu Apr 24 15:30:14 2025] 127.0.0.1:52011 Accepted
-[Thu Apr 24 15:30:14 2025] 127.0.0.1:52011 [302]: GET /msg_test.php?code=Xpx7Qy88a1xXyLuHACX7dcG9BJTBxKJdL1BwOBuEPTLujgZcYu5ytwAAAAQKFwFQAAABlmZ7gX0SmUam6ZdnFg&state=none
-[Thu Apr 24 15:30:14 2025] 127.0.0.1:52011 Closing
-[Thu Apr 24 15:30:14 2025] 127.0.0.1:52014 Accepted
-[Thu Apr 24 15:30:14 2025] 127.0.0.1:52014 [200]: GET /msg_test.php
-[Thu Apr 24 15:30:14 2025] 127.0.0.1:52014 Closing
-[Thu Apr 24 15:30:14 2025] 127.0.0.1:52023 Accepted
-[Thu Apr 24 15:30:14 2025] 127.0.0.1:52023 [200]: GET /favicon.ico
-[Thu Apr 24 15:30:14 2025] 127.0.0.1:52023 Closing
-[Thu Apr 24 15:30:39 2025] 127.0.0.1:52137 Accepted
-[Thu Apr 24 15:30:39 2025] 127.0.0.1:52137 [200]: GET /msg_test.php?code=Y8dE1BTvu4InXbwLw-fsyjN6j8NJ0fEbInPnbH99oHvGBcJJi-mI9QAAAAQKFwvXAAABlmZ9wQ0SmUam6ZdnFg&state=none
-[Thu Apr 24 15:30:39 2025] 127.0.0.1:52137 Closing
-[Thu Apr 24 15:30:39 2025] 127.0.0.1:52140 Accepted
-[Thu Apr 24 15:30:39 2025] 127.0.0.1:52140 [200]: GET /favicon.ico
-[Thu Apr 24 15:30:39 2025] 127.0.0.1:52140 Closing
-[Thu Apr 24 15:30:45 2025] 127.0.0.1:52166 Accepted
-[Thu Apr 24 15:30:45 2025] 127.0.0.1:52166 [200]: POST /msg_test_api.php
-[Thu Apr 24 15:30:45 2025] 127.0.0.1:52166 Closing
-[Thu Apr 24 15:33:15 2025] 127.0.0.1:52794 Accepted
-[Thu Apr 24 15:33:15 2025] 127.0.0.1:52794 [302]: GET /msg_test.php?code=Y8dE1BTvu4InXbwLw-fsyjN6j8NJ0fEbInPnbH99oHvGBcJJi-mI9QAAAAQKFwvXAAABlmZ9wQ0SmUam6ZdnFg&state=none
-[Thu Apr 24 15:33:15 2025] 127.0.0.1:52794 Closing
-[Thu Apr 24 15:33:15 2025] 127.0.0.1:52796 Accepted
-[Thu Apr 24 15:33:15 2025] 127.0.0.1:52796 [200]: GET /msg_test.php
-[Thu Apr 24 15:33:15 2025] 127.0.0.1:52796 Closing
-[Thu Apr 24 15:33:15 2025] 127.0.0.1:52799 Accepted
-[Thu Apr 24 15:33:15 2025] 127.0.0.1:52799 [200]: GET /favicon.ico
-[Thu Apr 24 15:33:15 2025] 127.0.0.1:52799 Closing
-[Thu Apr 24 15:33:16 2025] 127.0.0.1:52807 Accepted
-[Thu Apr 24 15:33:16 2025] 127.0.0.1:52807 [200]: GET /msg_test.php?code=8HfQ33bUf7Qf_uX_ytm1Stp3zyY7JRMPkhNs1OpswoikL5tCMmKzgQAAAAQKFwEPAAABlmaAJ2USmUam6ZdnFg&state=none
-[Thu Apr 24 15:33:16 2025] 127.0.0.1:52807 Closing
-[Thu Apr 24 15:33:17 2025] 127.0.0.1:52814 Accepted
-[Thu Apr 24 15:33:17 2025] 127.0.0.1:52814 [200]: GET /favicon.ico
-[Thu Apr 24 15:33:17 2025] 127.0.0.1:52814 Closing
-[Thu Apr 24 15:33:18 2025] 127.0.0.1:52820 Accepted
-[Thu Apr 24 15:33:18 2025] 127.0.0.1:52820 [200]: POST /msg_test_api.php
-[Thu Apr 24 15:33:18 2025] 127.0.0.1:52820 Closing
-[Thu Apr 24 15:34:03 2025] 127.0.0.1:53007 Accepted
-[Thu Apr 24 15:34:03 2025] PHP Warning:  Undefined array key "template_object" in /Users/kakao/Cursor/test-tam.pe.kr/msg_test_api.php on line 27
-[Thu Apr 24 15:34:03 2025] PHP Warning:  Array to string conversion in /Users/kakao/Cursor/test-tam.pe.kr/msg_test_api.php on line 34
-[Thu Apr 24 15:34:03 2025] 127.0.0.1:53007 [200]: POST /msg_test_api.php
-[Thu Apr 24 15:34:03 2025] 127.0.0.1:53007 Closing
-[Thu Apr 24 15:36:36 2025] 127.0.0.1:53652 Accepted
-[Thu Apr 24 15:36:36 2025] 127.0.0.1:53654 Accepted
-[Thu Apr 24 15:36:37 2025] 127.0.0.1:53652 [302]: GET /msg_test.php?code=8HfQ33bUf7Qf_uX_ytm1Stp3zyY7JRMPkhNs1OpswoikL5tCMmKzgQAAAAQKFwEPAAABlmaAJ2USmUam6ZdnFg&state=none
-[Thu Apr 24 15:36:37 2025] 127.0.0.1:53652 Closing
-[Thu Apr 24 15:36:37 2025] 127.0.0.1:53654 [200]: GET /msg_test.php
-[Thu Apr 24 15:36:37 2025] 127.0.0.1:53654 Closing
-[Thu Apr 24 15:36:37 2025] 127.0.0.1:53658 Accepted
-[Thu Apr 24 15:36:37 2025] 127.0.0.1:53658 [200]: GET /favicon.ico
-[Thu Apr 24 15:36:37 2025] 127.0.0.1:53658 Closing
-[Thu Apr 24 15:36:38 2025] 127.0.0.1:53667 Accepted
-[Thu Apr 24 15:36:38 2025] 127.0.0.1:53667 [200]: GET /msg_test.php?code=1udzR3nDFratUOfP5Co7H2phYJTAwFo8I2EXwc4prfnA3clkmsJUZgAAAAQKDR-XAAABlmaDOlMSmUam6ZdnFg&state=none
-[Thu Apr 24 15:36:38 2025] 127.0.0.1:53667 Closing
-[Thu Apr 24 15:36:38 2025] 127.0.0.1:53670 Accepted
-[Thu Apr 24 15:36:38 2025] 127.0.0.1:53670 [200]: GET /favicon.ico
-[Thu Apr 24 15:36:38 2025] 127.0.0.1:53670 Closing
-[Thu Apr 24 15:36:39 2025] 127.0.0.1:53676 Accepted
-[Thu Apr 24 15:36:39 2025] PHP Warning:  Undefined array key "template_object" in /Users/kakao/Cursor/test-tam.pe.kr/msg_test_api.php on line 27
-[Thu Apr 24 15:36:39 2025] PHP Warning:  Array to string conversion in /Users/kakao/Cursor/test-tam.pe.kr/msg_test_api.php on line 34
-[Thu Apr 24 15:36:39 2025] 127.0.0.1:53676 [200]: POST /msg_test_api.php
-[Thu Apr 24 15:36:39 2025] 127.0.0.1:53676 Closing
-[Thu Apr 24 15:37:05 2025] 127.0.0.1:53785 Accepted
-[Thu Apr 24 15:37:05 2025] PHP Warning:  Undefined array key "template_object" in /Users/kakao/Cursor/test-tam.pe.kr/msg_test_api.php on line 27
-[Thu Apr 24 15:37:05 2025] PHP Warning:  Array to string conversion in /Users/kakao/Cursor/test-tam.pe.kr/msg_test_api.php on line 34
-[Thu Apr 24 15:37:05 2025] 127.0.0.1:53785 [200]: POST /msg_test_api.php
-[Thu Apr 24 15:37:05 2025] 127.0.0.1:53785 Closing
-[Thu Apr 24 15:38:50 2025] 127.0.0.1:54241 Accepted
-[Thu Apr 24 15:38:50 2025] 127.0.0.1:54241 [400]: POST /msg_test_api.php
-[Thu Apr 24 15:38:50 2025] 127.0.0.1:54241 Closing
-[Thu Apr 24 15:38:54 2025] 127.0.0.1:54256 Accepted
-[Thu Apr 24 15:38:54 2025] 127.0.0.1:54257 Accepted
-[Thu Apr 24 15:38:54 2025] 127.0.0.1:54256 [302]: GET /msg_test.php?code=1udzR3nDFratUOfP5Co7H2phYJTAwFo8I2EXwc4prfnA3clkmsJUZgAAAAQKDR-XAAABlmaDOlMSmUam6ZdnFg&state=none
-[Thu Apr 24 15:38:54 2025] 127.0.0.1:54256 Closing
-[Thu Apr 24 15:38:54 2025] 127.0.0.1:54257 [200]: GET /msg_test.php
-[Thu Apr 24 15:38:54 2025] 127.0.0.1:54257 Closing
-[Thu Apr 24 15:38:54 2025] 127.0.0.1:54266 Accepted
-[Thu Apr 24 15:38:54 2025] 127.0.0.1:54266 [200]: GET /favicon.ico
-[Thu Apr 24 15:38:54 2025] 127.0.0.1:54266 Closing
-[Thu Apr 24 15:38:56 2025] 127.0.0.1:54278 Accepted
-[Thu Apr 24 15:38:56 2025] 127.0.0.1:54278 [200]: GET /msg_test.php?code=NBsg64cpKWQZeBqm6U8oguLEGu8sepBuMMUwbXs2u_5JmR5yrCYcrwAAAAQKDQ0hAAABlmaFVfESmUam6ZdnFg&state=none
-[Thu Apr 24 15:38:56 2025] 127.0.0.1:54278 Closing
-[Thu Apr 24 15:38:56 2025] 127.0.0.1:54281 Accepted
-[Thu Apr 24 15:38:56 2025] 127.0.0.1:54281 [200]: GET /favicon.ico
-[Thu Apr 24 15:38:56 2025] 127.0.0.1:54281 Closing
-[Thu Apr 24 15:38:57 2025] 127.0.0.1:54287 Accepted
-[Thu Apr 24 15:38:57 2025] 127.0.0.1:54287 [400]: POST /msg_test_api.php
-[Thu Apr 24 15:38:57 2025] 127.0.0.1:54287 Closing
-[Thu Apr 24 15:39:55 2025] 127.0.0.1:54560 Accepted
-[Thu Apr 24 15:39:55 2025] 127.0.0.1:54560 [302]: GET /msg_test.php?code=NBsg64cpKWQZeBqm6U8oguLEGu8sepBuMMUwbXs2u_5JmR5yrCYcrwAAAAQKDQ0hAAABlmaFVfESmUam6ZdnFg&state=none
-[Thu Apr 24 15:39:55 2025] 127.0.0.1:54560 Closing
-[Thu Apr 24 15:39:55 2025] 127.0.0.1:54562 Accepted
-[Thu Apr 24 15:39:55 2025] 127.0.0.1:54562 [200]: GET /msg_test.php
-[Thu Apr 24 15:39:55 2025] 127.0.0.1:54562 Closing
-[Thu Apr 24 15:39:56 2025] 127.0.0.1:54566 Accepted
-[Thu Apr 24 15:39:56 2025] 127.0.0.1:54566 [200]: GET /favicon.ico
-[Thu Apr 24 15:39:56 2025] 127.0.0.1:54566 Closing
-[Thu Apr 24 15:39:57 2025] 127.0.0.1:54574 Accepted
-[Thu Apr 24 15:39:57 2025] 127.0.0.1:54574 [200]: GET /msg_test.php?code=WQ1XYu6z1VqYVlF2MWxjsYqhOyfUrqRGHpb2BuL-tzb2dhGuYeiaVAAAAAQKDRWbAAABlmaGQxASmUam6ZdnFg&state=none
-[Thu Apr 24 15:39:57 2025] 127.0.0.1:54574 Closing
-[Thu Apr 24 15:39:57 2025] 127.0.0.1:54577 Accepted
-[Thu Apr 24 15:39:57 2025] 127.0.0.1:54577 [200]: GET /favicon.ico
-[Thu Apr 24 15:39:57 2025] 127.0.0.1:54577 Closing
-[Thu Apr 24 15:39:58 2025] 127.0.0.1:54583 Accepted
-[Thu Apr 24 15:39:58 2025] 127.0.0.1:54583 [200]: POST /msg_test_api.php
-[Thu Apr 24 15:39:58 2025] 127.0.0.1:54583 Closing
-[Thu Apr 24 15:41:09 2025] 127.0.0.1:54905 Accepted
-[Thu Apr 24 15:41:09 2025] 127.0.0.1:54905 [302]: GET /msg_test.php?code=WQ1XYu6z1VqYVlF2MWxjsYqhOyfUrqRGHpb2BuL-tzb2dhGuYeiaVAAAAAQKDRWbAAABlmaGQxASmUam6ZdnFg&state=none
-[Thu Apr 24 15:41:09 2025] 127.0.0.1:54905 Closing
-[Thu Apr 24 15:41:09 2025] 127.0.0.1:54907 Accepted
-[Thu Apr 24 15:41:09 2025] 127.0.0.1:54907 [200]: GET /msg_test.php
-[Thu Apr 24 15:41:09 2025] 127.0.0.1:54907 Closing
-[Thu Apr 24 15:41:09 2025] 127.0.0.1:54911 Accepted
-[Thu Apr 24 15:41:09 2025] 127.0.0.1:54911 [200]: GET /favicon.ico
-[Thu Apr 24 15:41:09 2025] 127.0.0.1:54911 Closing
-[Thu Apr 24 15:41:10 2025] 127.0.0.1:54918 Accepted
-[Thu Apr 24 15:41:13 2025] 127.0.0.1:54918 [200]: GET /msg_test.php?code=--AT-2DPmFf8lYfoTJn5ueJerz43XibbTKdHsei9aKYTXNGttlj92wAAAAQKDSKZAAABlmaHbZ4SmUam6ZdnFg&state=none
-[Thu Apr 24 15:41:13 2025] 127.0.0.1:54918 Closing
-[Thu Apr 24 15:41:13 2025] 127.0.0.1:54943 Accepted
-[Thu Apr 24 15:41:13 2025] 127.0.0.1:54943 [200]: GET /favicon.ico
-[Thu Apr 24 15:41:13 2025] 127.0.0.1:54943 Closing
-[Thu Apr 24 15:41:15 2025] 127.0.0.1:54953 Accepted
-[Thu Apr 24 15:41:15 2025] 127.0.0.1:54953 [200]: POST /msg_test_api.php
-[Thu Apr 24 15:41:15 2025] 127.0.0.1:54953 Closing
-[Thu Apr 24 15:43:49 2025] 127.0.0.1:55598 Accepted
-[Thu Apr 24 15:43:49 2025] 127.0.0.1:55598 [200]: POST /msg_test_api.php
-[Thu Apr 24 15:43:49 2025] 127.0.0.1:55598 Closing
-[Thu Apr 24 15:46:33 2025] 127.0.0.1:56306 Accepted
-[Thu Apr 24 15:46:33 2025] 127.0.0.1:56306 [302]: GET /msg_test.php?code=--AT-2DPmFf8lYfoTJn5ueJerz43XibbTKdHsei9aKYTXNGttlj92wAAAAQKDSKZAAABlmaHbZ4SmUam6ZdnFg&state=none
-[Thu Apr 24 15:46:33 2025] 127.0.0.1:56306 Closing
-[Thu Apr 24 15:46:33 2025] 127.0.0.1:56308 Accepted
-[Thu Apr 24 15:46:33 2025] 127.0.0.1:56308 [200]: GET /msg_test.php
-[Thu Apr 24 15:46:33 2025] 127.0.0.1:56308 Closing
-[Thu Apr 24 15:46:33 2025] 127.0.0.1:56313 Accepted
-[Thu Apr 24 15:46:33 2025] 127.0.0.1:56313 [200]: GET /favicon.ico
-[Thu Apr 24 15:46:33 2025] 127.0.0.1:56313 Closing
-[Thu Apr 24 15:46:34 2025] 127.0.0.1:56326 Accepted
-[Thu Apr 24 15:46:34 2025] 127.0.0.1:56326 [200]: GET /msg_test.php?code=1R7A2DMpHKhMNLIBrCvTfKFlibYsq1ApDIDkw3zpnp9uRRd_wEJ0jgAAAAQKDRWbAAABlmaMVIgSmUam6ZdnFg&state=none
-[Thu Apr 24 15:46:34 2025] 127.0.0.1:56326 Closing
-[Thu Apr 24 15:46:35 2025] 127.0.0.1:56329 Accepted
-[Thu Apr 24 15:46:35 2025] 127.0.0.1:56329 [200]: GET /favicon.ico
-[Thu Apr 24 15:46:35 2025] 127.0.0.1:56329 Closing
-[Thu Apr 24 15:46:36 2025] 127.0.0.1:56335 Accepted
-[Thu Apr 24 15:46:36 2025] 127.0.0.1:56335 [200]: GET /msg_test_api.php
-[Thu Apr 24 15:46:36 2025] 127.0.0.1:56335 Closing
-[Thu Apr 24 15:48:20 2025] 127.0.0.1:56795 Accepted
-[Thu Apr 24 15:48:20 2025] 127.0.0.1:56795 [200]: GET /msg_test_api.php
-[Thu Apr 24 15:48:20 2025] 127.0.0.1:56795 Closing
-[Thu Apr 24 15:49:34 2025] 127.0.0.1:57123 Accepted
-[Thu Apr 24 15:49:35 2025] 127.0.0.1:57123 [200]: GET /msg_test.php?code=ebx9b6wBCHk6SZPIav_ClmnThULTIETANGdLav4dIEXNxfYXiyIurAAAAAQKFxDvAAABlmaPE_8SmUam6ZdnFg&state=none
-[Thu Apr 24 15:49:35 2025] 127.0.0.1:57123 Closing
-[Thu Apr 24 15:49:35 2025] 127.0.0.1:57126 Accepted
-[Thu Apr 24 15:49:35 2025] 127.0.0.1:57126 [200]: GET /favicon.ico
-[Thu Apr 24 15:49:35 2025] 127.0.0.1:57126 Closing
-[Thu Apr 24 15:49:37 2025] 127.0.0.1:57140 Accepted
-[Thu Apr 24 15:49:37 2025] 127.0.0.1:57140 [200]: GET /msg_test_api.php
-[Thu Apr 24 15:49:37 2025] 127.0.0.1:57140 Closing
-[Thu Apr 24 15:52:00 2025] 127.0.0.1:57379 Accepted
-[Thu Apr 24 15:52:00 2025] 127.0.0.1:57380 Accepted
-[Thu Apr 24 15:52:00 2025] 127.0.0.1:57379 [302]: GET /msg_test.php?code=ebx9b6wBCHk6SZPIav_ClmnThULTIETANGdLav4dIEXNxfYXiyIurAAAAAQKFxDvAAABlmaPE_8SmUam6ZdnFg&state=none
-[Thu Apr 24 15:52:00 2025] 127.0.0.1:57379 Closing
-[Thu Apr 24 15:52:00 2025] 127.0.0.1:57380 [200]: GET /msg_test.php
-[Thu Apr 24 15:52:00 2025] 127.0.0.1:57380 Closing
-[Thu Apr 24 15:52:00 2025] 127.0.0.1:57384 Accepted
-[Thu Apr 24 15:52:00 2025] 127.0.0.1:57384 [200]: GET /favicon.ico
-[Thu Apr 24 15:52:00 2025] 127.0.0.1:57384 Closing
-[Thu Apr 24 15:52:18 2025] 127.0.0.1:57389 Accepted
-[Thu Apr 24 15:52:18 2025] 127.0.0.1:57390 Accepted
-[Thu Apr 24 15:52:18 2025] 127.0.0.1:57389 [200]: GET /msg_test.php
-[Thu Apr 24 15:52:18 2025] 127.0.0.1:57389 Closing
-[Thu Apr 24 15:52:18 2025] 127.0.0.1:57390 [200]: GET /favicon.ico
-[Thu Apr 24 15:52:18 2025] 127.0.0.1:57390 Closing
-[Thu Apr 24 15:57:46 2025] 127.0.0.1:57467 Accepted
-[Thu Apr 24 15:57:46 2025] 127.0.0.1:57467 [200]: GET /msg_test.php
-[Thu Apr 24 15:57:46 2025] 127.0.0.1:57467 Closing
-[Thu Apr 24 15:57:46 2025] 127.0.0.1:57469 Accepted
-[Thu Apr 24 15:57:46 2025] 127.0.0.1:57469 [200]: GET /favicon.ico
-[Thu Apr 24 15:57:46 2025] 127.0.0.1:57469 Closing
-[Thu Apr 24 15:57:51 2025] 127.0.0.1:57474 Accepted
-[Thu Apr 24 15:57:51 2025] 127.0.0.1:57475 Accepted
-[Thu Apr 24 15:57:51 2025] 127.0.0.1:57474 [200]: GET /msg_test.php
-[Thu Apr 24 15:57:51 2025] 127.0.0.1:57474 Closing
-[Thu Apr 24 15:57:51 2025] 127.0.0.1:57475 [200]: GET /favicon.ico
-[Thu Apr 24 15:57:51 2025] 127.0.0.1:57475 Closing
-[Thu Apr 24 16:03:57 2025] 127.0.0.1:57563 Accepted
-[Thu Apr 24 16:03:57 2025] 127.0.0.1:57564 Accepted
-[Thu Apr 24 16:03:57 2025] 127.0.0.1:57563 [200]: GET /msg_test.php
-[Thu Apr 24 16:03:57 2025] 127.0.0.1:57563 Closing
-[Thu Apr 24 16:03:57 2025] 127.0.0.1:57564 [200]: GET /favicon.ico
-[Thu Apr 24 16:03:57 2025] 127.0.0.1:57564 Closing
-[Thu Apr 24 16:04:07 2025] 127.0.0.1:57569 Accepted
-[Thu Apr 24 16:04:07 2025] 127.0.0.1:57569 [200]: GET /msg_test_api.php?type=none
-[Thu Apr 24 16:04:07 2025] 127.0.0.1:57569 Closing
-[Thu Apr 24 16:04:26 2025] 127.0.0.1:57574 Accepted
-[Thu Apr 24 16:04:27 2025] 127.0.0.1:57574 [200]: GET /msg_test_api.php?type=none_empty
-[Thu Apr 24 16:04:27 2025] 127.0.0.1:57574 Closing
-[Thu Apr 24 16:05:08 2025] 127.0.0.1:57598 Accepted
-[Thu Apr 24 16:05:08 2025] 127.0.0.1:57599 Accepted
-[Thu Apr 24 16:05:08 2025] 127.0.0.1:57598 [200]: GET /msg_test.php
-[Thu Apr 24 16:05:08 2025] 127.0.0.1:57598 Closing
-[Thu Apr 24 16:05:08 2025] 127.0.0.1:57599 [200]: GET /favicon.ico
-[Thu Apr 24 16:05:08 2025] 127.0.0.1:57599 Closing
-[Thu Apr 24 16:05:34 2025] 127.0.0.1:57606 Accepted
-[Thu Apr 24 16:05:34 2025] 127.0.0.1:57606 [200]: GET /msg_test.php
-[Thu Apr 24 16:05:34 2025] 127.0.0.1:57606 Closing
-[Thu Apr 24 16:05:34 2025] 127.0.0.1:57609 Accepted
-[Thu Apr 24 16:05:34 2025] 127.0.0.1:57609 [200]: GET /favicon.ico
-[Thu Apr 24 16:05:34 2025] 127.0.0.1:57609 Closing
-[Thu Apr 24 16:05:41 2025] 127.0.0.1:57612 Accepted
-[Thu Apr 24 16:05:41 2025] 127.0.0.1:57612 [200]: GET /msg_test_api.php?type=none_empty
-[Thu Apr 24 16:05:41 2025] 127.0.0.1:57612 Closing
-[Thu Apr 24 16:06:14 2025] 127.0.0.1:57621 Accepted
-[Thu Apr 24 16:06:14 2025] 127.0.0.1:57623 Accepted
-[Thu Apr 24 16:06:14 2025] 127.0.0.1:57621 [200]: GET /msg_test.php
-[Thu Apr 24 16:06:14 2025] 127.0.0.1:57621 Closing
-[Thu Apr 24 16:06:14 2025] 127.0.0.1:57623 [200]: GET /favicon.ico
-[Thu Apr 24 16:06:14 2025] 127.0.0.1:57623 Closing
-[Thu Apr 24 16:13:28 2025] 127.0.0.1:57709 Accepted
-[Thu Apr 24 16:13:28 2025] 127.0.0.1:57709 [200]: GET /msg_test.php
-[Thu Apr 24 16:13:28 2025] 127.0.0.1:57709 Closing
-[Thu Apr 24 16:13:28 2025] 127.0.0.1:57711 Accepted
-[Thu Apr 24 16:13:28 2025] 127.0.0.1:57711 [200]: GET /favicon.ico
-[Thu Apr 24 16:13:28 2025] 127.0.0.1:57711 Closing
-[Thu Apr 24 16:13:47 2025] 127.0.0.1:57720 Accepted
-[Thu Apr 24 16:13:47 2025] 127.0.0.1:57721 Accepted
-[Thu Apr 24 16:13:47 2025] 127.0.0.1:57720 [200]: GET /msg_test.php
-[Thu Apr 24 16:13:47 2025] 127.0.0.1:57720 Closing
-[Thu Apr 24 16:13:47 2025] 127.0.0.1:57721 [200]: GET /favicon.ico
-[Thu Apr 24 16:13:47 2025] 127.0.0.1:57721 Closing
-[Thu Apr 24 16:16:18 2025] 127.0.0.1:57744 Accepted
-[Thu Apr 24 16:16:18 2025] 127.0.0.1:57744 [200]: GET /msg_test.php
-[Thu Apr 24 16:16:18 2025] 127.0.0.1:57744 Closing
-[Thu Apr 24 16:16:18 2025] 127.0.0.1:57746 Accepted
-[Thu Apr 24 16:16:18 2025] 127.0.0.1:57746 [200]: GET /favicon.ico
-[Thu Apr 24 16:16:18 2025] 127.0.0.1:57746 Closing
-[Thu Apr 24 16:17:56 2025] 127.0.0.1:57775 Accepted
-[Thu Apr 24 16:17:56 2025] 127.0.0.1:57776 Accepted
-[Thu Apr 24 16:17:56 2025] 127.0.0.1:57775 [200]: GET /msg_test.php
-[Thu Apr 24 16:17:56 2025] 127.0.0.1:57775 Closing
-[Thu Apr 24 16:17:56 2025] 127.0.0.1:57776 [200]: GET /favicon.ico
-[Thu Apr 24 16:17:56 2025] 127.0.0.1:57776 Closing
-[Thu Apr 24 16:19:10 2025] 127.0.0.1:57787 Accepted
-[Thu Apr 24 16:19:10 2025] 127.0.0.1:57787 [200]: GET /msg_test.php?code=c1i3u_tUucEmJ0IfF84Hc4VbKGL17BZ0tRsvOywbqsekWNgzzFDWOgAAAAQKDRtZAAABlmaqKuQFVMIyByjmyg&state=web_only
-[Thu Apr 24 16:19:10 2025] 127.0.0.1:57787 Closing
-[Thu Apr 24 16:19:10 2025] 127.0.0.1:57789 Accepted
-[Thu Apr 24 16:19:10 2025] 127.0.0.1:57789 [200]: GET /favicon.ico
-[Thu Apr 24 16:19:10 2025] 127.0.0.1:57789 Closing
-[Thu Apr 24 16:19:15 2025] 127.0.0.1:57791 Accepted
-[Thu Apr 24 16:19:15 2025] 127.0.0.1:57791 [200]: GET /msg_test_api.php?type=web_only
-[Thu Apr 24 16:19:15 2025] 127.0.0.1:57791 Closing
-[Thu Apr 24 16:21:45 2025] 127.0.0.1:57820 Accepted
-[Thu Apr 24 16:21:45 2025] 127.0.0.1:57820 [200]: GET /msg_test.php?code=c1i3u_tUucEmJ0IfF84Hc4VbKGL17BZ0tRsvOywbqsekWNgzzFDWOgAAAAQKDRtZAAABlmaqKuQFVMIyByjmyg&state=web_only
-[Thu Apr 24 16:21:45 2025] 127.0.0.1:57820 Closing
-[Thu Apr 24 16:21:45 2025] 127.0.0.1:57823 Accepted
-[Thu Apr 24 16:21:45 2025] 127.0.0.1:57824 Accepted
-[Thu Apr 24 16:21:45 2025] 127.0.0.1:57823 [200]: GET /favicon.ico
-[Thu Apr 24 16:21:45 2025] 127.0.0.1:57823 Closing
-[Thu Apr 24 16:21:59 2025] 127.0.0.1:57824 [200]: GET /msg_test.php?code=RudCUpFJGALlTkFQMsniwB0CczCoR0iYgZo7s2EbsNCXEcKLbLMAXAAAAAQKDSAbAAABlmasv2ESmUam6ZdnFg&state=none
-[Thu Apr 24 16:21:59 2025] 127.0.0.1:57824 Closing
-[Thu Apr 24 16:21:59 2025] 127.0.0.1:57830 Accepted
-[Thu Apr 24 16:21:59 2025] 127.0.0.1:57830 [200]: GET /favicon.ico
-[Thu Apr 24 16:21:59 2025] 127.0.0.1:57830 Closing
-[Thu Apr 24 16:22:01 2025] 127.0.0.1:57832 Accepted
-[Thu Apr 24 16:22:01 2025] 127.0.0.1:57832 [200]: GET /msg_test_api.php?type=none
-[Thu Apr 24 16:22:01 2025] 127.0.0.1:57832 Closing
-[Thu Apr 24 16:22:11 2025] 127.0.0.1:57838 Accepted
-[Thu Apr 24 16:22:11 2025] 127.0.0.1:57838 [200]: GET /msg_test_api.php?type=none
-[Thu Apr 24 16:22:11 2025] 127.0.0.1:57838 Closing
-[Thu Apr 24 16:22:23 2025] 127.0.0.1:57841 Accepted
-[Thu Apr 24 16:22:24 2025] 127.0.0.1:57841 [200]: GET /msg_test_api.php?type=none_empty
-[Thu Apr 24 16:22:24 2025] 127.0.0.1:57841 Closing
-[Thu Apr 24 16:22:33 2025] 127.0.0.1:57844 Accepted
-[Thu Apr 24 16:22:33 2025] 127.0.0.1:57844 [200]: GET /msg_test_api.php?type=none_empty
-[Thu Apr 24 16:22:33 2025] 127.0.0.1:57844 Closing
-[Thu Apr 24 16:23:54 2025] 127.0.0.1:57858 Accepted
-[Thu Apr 24 16:23:54 2025] 127.0.0.1:57858 [302]: GET /msg_test.php?code=RudCUpFJGALlTkFQMsniwB0CczCoR0iYgZo7s2EbsNCXEcKLbLMAXAAAAAQKDSAbAAABlmasv2ESmUam6ZdnFg&state=none
-[Thu Apr 24 16:23:54 2025] 127.0.0.1:57858 Closing
-[Thu Apr 24 16:23:54 2025] 127.0.0.1:57860 Accepted
-[Thu Apr 24 16:23:54 2025] 127.0.0.1:57860 [200]: GET /msg_test.php
-[Thu Apr 24 16:23:54 2025] 127.0.0.1:57860 Closing
-[Thu Apr 24 16:23:54 2025] 127.0.0.1:57864 Accepted
-[Thu Apr 24 16:23:54 2025] 127.0.0.1:57864 [200]: GET /favicon.ico
-[Thu Apr 24 16:23:54 2025] 127.0.0.1:57864 Closing
-[Thu Apr 24 16:24:42 2025] 127.0.0.1:57873 Accepted
-[Thu Apr 24 16:24:42 2025] 127.0.0.1:57874 Accepted
-[Thu Apr 24 16:24:42 2025] 127.0.0.1:57873 [200]: GET /msg_test.php
-[Thu Apr 24 16:24:42 2025] 127.0.0.1:57873 Closing
-[Thu Apr 24 16:24:42 2025] 127.0.0.1:57874 [200]: GET /favicon.ico
-[Thu Apr 24 16:24:42 2025] 127.0.0.1:57874 Closing
-[Thu Apr 24 16:25:35 2025] 127.0.0.1:57893 Accepted
-[Thu Apr 24 16:25:35 2025] 127.0.0.1:57893 [200]: GET /msg_test.php
-[Thu Apr 24 16:25:35 2025] 127.0.0.1:57893 Closing
-[Thu Apr 24 16:25:35 2025] 127.0.0.1:57896 Accepted
-[Thu Apr 24 16:25:35 2025] 127.0.0.1:57897 Accepted
-[Thu Apr 24 16:25:35 2025] 127.0.0.1:57896 [200]: GET /favicon.ico
-[Thu Apr 24 16:25:35 2025] 127.0.0.1:57896 Closing
-[Thu Apr 24 16:25:41 2025] 127.0.0.1:57897 [200]: GET /msg_test.php?code=EQ4gb6x7KcfwEEM5CI-vBXLT-1aOBYqopMCFeVO9U-msGW4F1YWFcwAAAAQKFxJVAAABlmawIfMFVMIyByjmyg&state=web_only
-[Thu Apr 24 16:25:41 2025] 127.0.0.1:57897 Closing
-[Thu Apr 24 16:25:41 2025] 127.0.0.1:57901 Accepted
-[Thu Apr 24 16:25:41 2025] 127.0.0.1:57901 [200]: GET /favicon.ico
-[Thu Apr 24 16:25:41 2025] 127.0.0.1:57901 Closing
-[Thu Apr 24 16:25:49 2025] 127.0.0.1:57903 Accepted
-[Thu Apr 24 16:25:49 2025] 127.0.0.1:57903 [200]: GET /msg_test.php?code=eIYNiY_eNsdiCGMuuiqJCP3j5kgmBDn2vaHnOsoYC9FmMCLdWXf3qwAAAAQKFxJVAAABlmawQdEFVMIyByjmyg&state=web_only
-[Thu Apr 24 16:25:49 2025] 127.0.0.1:57903 Closing
-[Thu Apr 24 16:25:49 2025] 127.0.0.1:57905 Accepted
-[Thu Apr 24 16:25:49 2025] 127.0.0.1:57905 [200]: GET /favicon.ico
-[Thu Apr 24 16:25:49 2025] 127.0.0.1:57905 Closing
-[Thu Apr 24 16:25:52 2025] 127.0.0.1:57907 Accepted
-[Thu Apr 24 16:25:53 2025] 127.0.0.1:57907 [200]: GET /msg_test_api.php?type=web_only
-[Thu Apr 24 16:25:53 2025] 127.0.0.1:57907 Closing
-[Thu Apr 24 16:27:44 2025] 127.0.0.1:57918 Accepted
-[Thu Apr 24 16:27:44 2025] 127.0.0.1:57918 [200]: GET /msg_test.php?code=RjopJogurJkj2mCTRD6nV-QnKPZzMiWZnRXxFHdpseGZLIQ4nE7o4gAAAAQKDSCbAAABlmayAi8FVMIyByjmyg&state=web_only
-[Thu Apr 24 16:27:44 2025] 127.0.0.1:57918 Closing
-[Thu Apr 24 16:27:44 2025] 127.0.0.1:57920 Accepted
-[Thu Apr 24 16:27:44 2025] 127.0.0.1:57920 [200]: GET /favicon.ico
-[Thu Apr 24 16:27:44 2025] 127.0.0.1:57920 Closing
-[Thu Apr 24 16:29:18 2025] 127.0.0.1:57929 Accepted
-[Thu Apr 24 16:29:18 2025] 127.0.0.1:57929 [200]: GET /msg_test.php?code=_MiCR3Mh1w6BMlXzPTDjbeCllYf9fwHlPkFfSHYgAUwD5asdK-A0VAAAAAQKDRSjAAABlmazdH0FVMIyByjmyg&state=web_only
-[Thu Apr 24 16:29:18 2025] 127.0.0.1:57929 Closing
-[Thu Apr 24 16:29:19 2025] 127.0.0.1:57931 Accepted
-[Thu Apr 24 16:29:19 2025] 127.0.0.1:57931 [200]: GET /favicon.ico
-[Thu Apr 24 16:29:19 2025] 127.0.0.1:57931 Closing
-[Thu Apr 24 16:31:12 2025] 127.0.0.1:57950 Accepted
-[Thu Apr 24 16:31:12 2025] 127.0.0.1:57950 [200]: GET /msg_test_api.php?type=web_only
-[Thu Apr 24 16:31:12 2025] 127.0.0.1:57950 Closing
-[Thu Apr 24 16:32:06 2025] 127.0.0.1:57957 Accepted
-[Thu Apr 24 16:32:07 2025] 127.0.0.1:57957 [200]: GET /msg_test.php?code=J8_9Z-6-MGpEzJ4CjzkxMWoQRIwXU15KMSxFDHi-3lHFauzLvaRpewAAAAQKDRmQAAABlma2BFoSmUam6ZdnFg&state=none
-[Thu Apr 24 16:32:07 2025] 127.0.0.1:57957 Closing
-[Thu Apr 24 16:32:07 2025] 127.0.0.1:57960 Accepted
-[Thu Apr 24 16:32:07 2025] 127.0.0.1:57960 [200]: GET /favicon.ico
-[Thu Apr 24 16:32:07 2025] 127.0.0.1:57960 Closing
-[Thu Apr 24 16:32:51 2025] 127.0.0.1:57968 Accepted
-[Thu Apr 24 16:32:51 2025] 127.0.0.1:57968 [200]: GET /msg_test.php?code=QDYO7ecPWj25aM4HGekmYDOZRGRt1Sm0buF_zjGJa0u50TlyKyA4UAAAAAQKDQ1fAAABlma2si0FVMIyByjmyg&state=web_only
-[Thu Apr 24 16:32:51 2025] 127.0.0.1:57968 Closing
-[Thu Apr 24 16:32:51 2025] 127.0.0.1:57970 Accepted
-[Thu Apr 24 16:32:51 2025] 127.0.0.1:57970 [200]: GET /favicon.ico
-[Thu Apr 24 16:32:51 2025] 127.0.0.1:57970 Closing
-[Thu Apr 24 16:34:14 2025] 127.0.0.1:57984 Accepted
-[Thu Apr 24 16:34:14 2025] 127.0.0.1:57984 [200]: GET /msg_test.php?code=QDYO7ecPWj25aM4HGekmYDOZRGRt1Sm0buF_zjGJa0u50TlyKyA4UAAAAAQKDQ1fAAABlma2si0FVMIyByjmyg&state=web_only
-[Thu Apr 24 16:34:14 2025] 127.0.0.1:57984 Closing
-[Thu Apr 24 16:34:14 2025] 127.0.0.1:57986 Accepted
-[Thu Apr 24 16:34:14 2025] 127.0.0.1:57986 [200]: GET /favicon.ico
-[Thu Apr 24 16:34:14 2025] 127.0.0.1:57986 Closing
-[Thu Apr 24 16:34:18 2025] 127.0.0.1:57991 Accepted
-[Thu Apr 24 16:34:18 2025] 127.0.0.1:57991 [200]: GET /msg_test.php?code=unASIPuQDAkkHNNC0hjp7VKFCE3q03D5URko3UUJmlzEX0K3PGj26AAAAAQKDSHZAAABlma4BvMFVMIyByjmyg&state=web_only
-[Thu Apr 24 16:34:18 2025] 127.0.0.1:57991 Closing
-[Thu Apr 24 16:34:18 2025] 127.0.0.1:57993 Accepted
-[Thu Apr 24 16:34:18 2025] 127.0.0.1:57993 [200]: GET /favicon.ico
-[Thu Apr 24 16:34:18 2025] 127.0.0.1:57993 Closing
-[Thu Apr 24 16:35:02 2025] 127.0.0.1:58002 Accepted
-[Thu Apr 24 16:35:02 2025] 127.0.0.1:58002 [200]: GET /msg_test.php?code=unASIPuQDAkkHNNC0hjp7VKFCE3q03D5URko3UUJmlzEX0K3PGj26AAAAAQKDSHZAAABlma4BvMFVMIyByjmyg&state=web_only
-[Thu Apr 24 16:35:02 2025] 127.0.0.1:58002 Closing
-[Thu Apr 24 16:35:02 2025] 127.0.0.1:58004 Accepted
-[Thu Apr 24 16:35:02 2025] 127.0.0.1:58004 [200]: GET /favicon.ico
-[Thu Apr 24 16:35:02 2025] 127.0.0.1:58004 Closing
-[Thu Apr 24 16:35:09 2025] 127.0.0.1:58007 Accepted
-[Thu Apr 24 16:35:09 2025] 127.0.0.1:58007 [200]: GET /msg_test_api.php?type=web_only
-[Thu Apr 24 16:35:09 2025] 127.0.0.1:58007 Closing
-[Thu Apr 24 16:35:51 2025] 127.0.0.1:58022 Accepted
-[Thu Apr 24 16:35:51 2025] 127.0.0.1:58022 [200]: GET /msg_test_api.php?type=web_only_empty
-[Thu Apr 24 16:35:51 2025] 127.0.0.1:58022 Closing
-[Thu Apr 24 16:37:09 2025] 127.0.0.1:58039 Accepted
-[Thu Apr 24 16:37:10 2025] 127.0.0.1:58039 [200]: GET /msg_test_api.php?type=web_only
-[Thu Apr 24 16:37:10 2025] 127.0.0.1:58039 Closing
-[Thu Apr 24 16:37:25 2025] 127.0.0.1:58046 Accepted
-[Thu Apr 24 16:37:25 2025] 127.0.0.1:58046 [200]: GET /msg_test_api.php?type=web_only_empty
-[Thu Apr 24 16:37:25 2025] 127.0.0.1:58046 Closing
-[Thu Apr 24 16:37:40 2025] 127.0.0.1:58051 Accepted
-[Thu Apr 24 16:37:40 2025] 127.0.0.1:58051 [302]: GET /msg_test.php?code=unASIPuQDAkkHNNC0hjp7VKFCE3q03D5URko3UUJmlzEX0K3PGj26AAAAAQKDSHZAAABlma4BvMFVMIyByjmyg&state=web_only
-[Thu Apr 24 16:37:40 2025] 127.0.0.1:58051 Closing
-[Thu Apr 24 16:37:40 2025] 127.0.0.1:58052 Accepted
-[Thu Apr 24 16:37:40 2025] 127.0.0.1:58052 [200]: GET /msg_test.php
-[Thu Apr 24 16:37:40 2025] 127.0.0.1:58052 Closing
-[Thu Apr 24 16:37:40 2025] 127.0.0.1:58056 Accepted
-[Thu Apr 24 16:37:40 2025] 127.0.0.1:58056 [200]: GET /favicon.ico
-[Thu Apr 24 16:37:40 2025] 127.0.0.1:58056 Closing
-[Thu Apr 24 16:42:40 2025] 127.0.0.1:58125 Accepted
-[Thu Apr 24 16:42:40 2025] 127.0.0.1:58125 [200]: GET /msg_test.php
-[Thu Apr 24 16:42:40 2025] 127.0.0.1:58125 Closing
-[Thu Apr 24 16:42:40 2025] 127.0.0.1:58127 Accepted
-[Thu Apr 24 16:42:40 2025] 127.0.0.1:58127 [200]: GET /favicon.ico
-[Thu Apr 24 16:42:40 2025] 127.0.0.1:58127 Closing
-[Thu Apr 24 16:44:47 2025] 127.0.0.1:58149 Accepted
-[Thu Apr 24 16:44:47 2025] 127.0.0.1:58151 Accepted
-[Thu Apr 24 16:44:47 2025] 127.0.0.1:58149 [200]: GET /msg_test.php
-[Thu Apr 24 16:44:47 2025] 127.0.0.1:58149 Closing
-[Thu Apr 24 16:44:47 2025] 127.0.0.1:58151 [200]: GET /favicon.ico
-[Thu Apr 24 16:44:47 2025] 127.0.0.1:58151 Closing
-[Thu Apr 24 16:45:28 2025] 127.0.0.1:58163 Accepted
-[Thu Apr 24 16:45:28 2025] 127.0.0.1:58163 [200]: GET /msg_test.php?code=DNlf-0oVtimjjPCwMYEJXhKHPTBonUoHVJU6dcwm9qLE_uIeUFA0-gAAAAQKFxZiAAABlmbCQD1Udd9ffL_GXA&state=android_only
-[Thu Apr 24 16:45:28 2025] 127.0.0.1:58163 Closing
-[Thu Apr 24 16:45:28 2025] 127.0.0.1:58166 Accepted
-[Thu Apr 24 16:45:28 2025] 127.0.0.1:58166 [200]: GET /favicon.ico
-[Thu Apr 24 16:45:28 2025] 127.0.0.1:58166 Closing
-[Thu Apr 24 16:45:32 2025] 127.0.0.1:58168 Accepted
-[Thu Apr 24 16:45:32 2025] 127.0.0.1:58168 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 16:45:32 2025] 127.0.0.1:58168 Closing
-[Thu Apr 24 16:46:22 2025] 127.0.0.1:58182 Accepted
-[Thu Apr 24 16:46:22 2025] 127.0.0.1:58183 Accepted
-[Thu Apr 24 16:46:22 2025] 127.0.0.1:58182 [302]: GET /msg_test.php?code=DNlf-0oVtimjjPCwMYEJXhKHPTBonUoHVJU6dcwm9qLE_uIeUFA0-gAAAAQKFxZiAAABlmbCQD1Udd9ffL_GXA&state=android_only
-[Thu Apr 24 16:46:22 2025] 127.0.0.1:58182 Closing
-[Thu Apr 24 16:46:22 2025] 127.0.0.1:58183 [200]: GET /msg_test.php
-[Thu Apr 24 16:46:22 2025] 127.0.0.1:58183 Closing
-[Thu Apr 24 16:46:22 2025] 127.0.0.1:58187 Accepted
-[Thu Apr 24 16:46:22 2025] 127.0.0.1:58187 [200]: GET /favicon.ico
-[Thu Apr 24 16:46:22 2025] 127.0.0.1:58187 Closing
-[Thu Apr 24 16:46:39 2025] 127.0.0.1:58191 Accepted
-[Thu Apr 24 16:46:39 2025] 127.0.0.1:58191 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 16:46:39 2025] 127.0.0.1:58191 Closing
-[Thu Apr 24 16:47:49 2025] 127.0.0.1:58325 Accepted
-[Thu Apr 24 16:47:49 2025] 127.0.0.1:58325 [200]: GET /msg_test.php
-[Thu Apr 24 16:47:49 2025] 127.0.0.1:58325 Closing
-[Thu Apr 24 16:47:49 2025] 127.0.0.1:58328 Accepted
-[Thu Apr 24 16:47:49 2025] 127.0.0.1:58329 Accepted
-[Thu Apr 24 16:47:49 2025] 127.0.0.1:58328 [200]: GET /favicon.ico
-[Thu Apr 24 16:47:49 2025] 127.0.0.1:58328 Closing
-[Thu Apr 24 16:47:57 2025] 127.0.0.1:58329 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 16:47:57 2025] 127.0.0.1:58329 Closing
-[Thu Apr 24 16:49:52 2025] 127.0.0.1:58409 Accepted
-[Thu Apr 24 16:49:52 2025] 127.0.0.1:58409 [200]: GET /msg_test_api.php?type=android_only_empty
-[Thu Apr 24 16:49:52 2025] 127.0.0.1:58409 Closing
-[Thu Apr 24 16:51:32 2025] 127.0.0.1:58430 Accepted
-[Thu Apr 24 16:51:32 2025] 127.0.0.1:58431 Accepted
-[Thu Apr 24 16:51:32 2025] 127.0.0.1:58430 [200]: GET /msg_test.php
-[Thu Apr 24 16:51:32 2025] 127.0.0.1:58430 Closing
-[Thu Apr 24 16:51:32 2025] 127.0.0.1:58431 [200]: GET /favicon.ico
-[Thu Apr 24 16:51:32 2025] 127.0.0.1:58431 Closing
-[Thu Apr 24 16:51:33 2025] 127.0.0.1:58436 Accepted
-[Thu Apr 24 16:51:33 2025] 127.0.0.1:58436 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 16:51:33 2025] 127.0.0.1:58436 Closing
-[Thu Apr 24 16:51:40 2025] 127.0.0.1:58439 Accepted
-[Thu Apr 24 16:51:40 2025] 127.0.0.1:58439 [200]: GET /msg_test.php
-[Thu Apr 24 16:51:40 2025] 127.0.0.1:58439 Closing
-[Thu Apr 24 16:51:40 2025] 127.0.0.1:58442 Accepted
-[Thu Apr 24 16:51:40 2025] 127.0.0.1:58443 Accepted
-[Thu Apr 24 16:51:40 2025] 127.0.0.1:58442 [200]: GET /favicon.ico
-[Thu Apr 24 16:51:40 2025] 127.0.0.1:58442 Closing
-[Thu Apr 24 16:51:42 2025] 127.0.0.1:58443 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 16:51:42 2025] 127.0.0.1:58443 Closing
-[Thu Apr 24 16:53:27 2025] 127.0.0.1:58461 Accepted
-[Thu Apr 24 16:53:27 2025] 127.0.0.1:58461 [200]: GET /msg_test.php
-[Thu Apr 24 16:53:27 2025] 127.0.0.1:58461 Closing
-[Thu Apr 24 16:53:27 2025] 127.0.0.1:58464 Accepted
-[Thu Apr 24 16:53:27 2025] 127.0.0.1:58465 Accepted
-[Thu Apr 24 16:53:27 2025] 127.0.0.1:58464 [200]: GET /favicon.ico
-[Thu Apr 24 16:53:27 2025] 127.0.0.1:58464 Closing
-[Thu Apr 24 16:53:42 2025] 127.0.0.1:58465 [200]: GET /msg_test.php
-[Thu Apr 24 16:53:42 2025] 127.0.0.1:58465 Closing
-[Thu Apr 24 16:53:42 2025] 127.0.0.1:58471 Accepted
-[Thu Apr 24 16:53:42 2025] 127.0.0.1:58472 Accepted
-[Thu Apr 24 16:53:42 2025] 127.0.0.1:58471 [200]: GET /favicon.ico
-[Thu Apr 24 16:53:42 2025] 127.0.0.1:58471 Closing
-[Thu Apr 24 16:54:34 2025] 127.0.0.1:58472 [200]: GET /msg_test.php
-[Thu Apr 24 16:54:34 2025] 127.0.0.1:58472 Closing
-[Thu Apr 24 16:54:34 2025] 127.0.0.1:58484 Accepted
-[Thu Apr 24 16:54:34 2025] 127.0.0.1:58484 [200]: GET /favicon.ico
-[Thu Apr 24 16:54:34 2025] 127.0.0.1:58484 Closing
-[Thu Apr 24 16:55:11 2025] 127.0.0.1:58489 Accepted
-[Thu Apr 24 16:55:11 2025] 127.0.0.1:58489 [200]: GET /msg_test.php
-[Thu Apr 24 16:55:11 2025] 127.0.0.1:58489 Closing
-[Thu Apr 24 16:55:11 2025] 127.0.0.1:58492 Accepted
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58492 [200]: GET /favicon.ico
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58492 Closing
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58496 Accepted
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58497 Accepted
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58496 [200]: GET /msg_test.php
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58496 Closing
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58497 [200]: GET /favicon.ico
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58497 Closing
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58499 Accepted
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58499 [200]: GET /msg_test.php
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58499 Closing
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58501 Accepted
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58501 [200]: GET /favicon.ico
-[Thu Apr 24 16:55:12 2025] 127.0.0.1:58501 Closing
-[Thu Apr 24 16:55:39 2025] 127.0.0.1:58511 Accepted
-[Thu Apr 24 16:55:39 2025] 127.0.0.1:58511 [200]: GET /msg_test.php?code=yGGbw8n_v11CYBIrWkQOTzwAS0FX0ceAz_t59gbMmyZXnhukVojiMgAAAAQKFxTuAAABlmbLk0tUdd9ffL_GXA&state=android_only
-[Thu Apr 24 16:55:39 2025] 127.0.0.1:58511 Closing
-[Thu Apr 24 16:55:39 2025] 127.0.0.1:58514 Accepted
-[Thu Apr 24 16:55:39 2025] 127.0.0.1:58514 [200]: GET /favicon.ico
-[Thu Apr 24 16:55:39 2025] 127.0.0.1:58514 Closing
-[Thu Apr 24 16:55:41 2025] 127.0.0.1:58516 Accepted
-[Thu Apr 24 16:55:42 2025] 127.0.0.1:58516 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 16:55:42 2025] 127.0.0.1:58516 Closing
-[Thu Apr 24 16:57:16 2025] 127.0.0.1:58592 Accepted
-[Thu Apr 24 16:57:16 2025] 127.0.0.1:58592 [302]: GET /msg_test.php?code=yGGbw8n_v11CYBIrWkQOTzwAS0FX0ceAz_t59gbMmyZXnhukVojiMgAAAAQKFxTuAAABlmbLk0tUdd9ffL_GXA&state=android_only
-[Thu Apr 24 16:57:16 2025] 127.0.0.1:58592 Closing
-[Thu Apr 24 16:57:16 2025] 127.0.0.1:58594 Accepted
-[Thu Apr 24 16:57:16 2025] 127.0.0.1:58594 [200]: GET /msg_test.php
-[Thu Apr 24 16:57:16 2025] 127.0.0.1:58594 Closing
-[Thu Apr 24 16:57:16 2025] 127.0.0.1:58599 Accepted
-[Thu Apr 24 16:57:16 2025] 127.0.0.1:58599 [200]: GET /favicon.ico
-[Thu Apr 24 16:57:16 2025] 127.0.0.1:58599 Closing
-[Thu Apr 24 16:57:19 2025] 127.0.0.1:58612 Accepted
-[Thu Apr 24 16:57:19 2025] 127.0.0.1:58612 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 16:57:19 2025] 127.0.0.1:58612 Closing
-[Thu Apr 24 16:58:24 2025] 127.0.0.1:58643 Accepted
-[Thu Apr 24 16:58:25 2025] 127.0.0.1:58643 [200]: GET /msg_test.php?code=2J4VwBR25X2qppE-aVzmepVrxY6ZGZg1dyK8kXENGf-Q08iivSV-zwAAAAQKDSKZAAABlmbOGNkSmUam6ZdnFg&state=none
-[Thu Apr 24 16:58:25 2025] 127.0.0.1:58643 Closing
-[Thu Apr 24 16:58:25 2025] 127.0.0.1:58647 Accepted
-[Thu Apr 24 16:58:25 2025] 127.0.0.1:58647 [200]: GET /favicon.ico
-[Thu Apr 24 16:58:25 2025] 127.0.0.1:58647 Closing
-[Thu Apr 24 16:58:26 2025] 127.0.0.1:58649 Accepted
-[Thu Apr 24 16:58:26 2025] 127.0.0.1:58649 [200]: GET /msg_test_api.php?type=none
-[Thu Apr 24 16:58:26 2025] 127.0.0.1:58649 Closing
-[Thu Apr 24 16:58:37 2025] 127.0.0.1:58657 Accepted
-[Thu Apr 24 16:58:37 2025] 127.0.0.1:58657 [200]: GET /msg_test_api.php?type=none_empty
-[Thu Apr 24 16:58:37 2025] 127.0.0.1:58657 Closing
-[Thu Apr 24 16:58:49 2025] 127.0.0.1:58662 Accepted
-[Thu Apr 24 16:58:49 2025] 127.0.0.1:58662 [200]: GET /msg_test.php?code=6BbdRgDvPB2Sv8KeYeWD-9sYON5Z1ARvB1qGbekVrYXjWRmEkbApdgAAAAQKDSKZAAABlmbOd2wFVMIyByjmyg&state=web_only
-[Thu Apr 24 16:58:49 2025] 127.0.0.1:58662 Closing
-[Thu Apr 24 16:58:49 2025] 127.0.0.1:58665 Accepted
-[Thu Apr 24 16:58:49 2025] 127.0.0.1:58665 [200]: GET /favicon.ico
-[Thu Apr 24 16:58:49 2025] 127.0.0.1:58665 Closing
-[Thu Apr 24 16:58:51 2025] 127.0.0.1:58667 Accepted
-[Thu Apr 24 16:58:51 2025] 127.0.0.1:58667 [200]: GET /msg_test_api.php?type=web_only
-[Thu Apr 24 16:58:51 2025] 127.0.0.1:58667 Closing
-[Thu Apr 24 17:00:10 2025] 127.0.0.1:58695 Accepted
-[Thu Apr 24 17:00:10 2025] 127.0.0.1:58697 Accepted
-[Thu Apr 24 17:00:10 2025] 127.0.0.1:58695 [302]: GET /msg_test.php?code=6BbdRgDvPB2Sv8KeYeWD-9sYON5Z1ARvB1qGbekVrYXjWRmEkbApdgAAAAQKDSKZAAABlmbOd2wFVMIyByjmyg&state=web_only
-[Thu Apr 24 17:00:10 2025] 127.0.0.1:58695 Closing
-[Thu Apr 24 17:00:10 2025] 127.0.0.1:58697 [200]: GET /msg_test.php
-[Thu Apr 24 17:00:10 2025] 127.0.0.1:58697 Closing
-[Thu Apr 24 17:00:10 2025] 127.0.0.1:58702 Accepted
-[Thu Apr 24 17:00:10 2025] 127.0.0.1:58702 [200]: GET /favicon.ico
-[Thu Apr 24 17:00:10 2025] 127.0.0.1:58702 Closing
-[Thu Apr 24 17:00:23 2025] 127.0.0.1:58705 Accepted
-[Thu Apr 24 17:00:23 2025] 127.0.0.1:58705 [200]: GET /msg_test_api.php?type=web_only
-[Thu Apr 24 17:00:23 2025] 127.0.0.1:58705 Closing
-[Thu Apr 24 17:00:49 2025] 127.0.0.1:58720 Accepted
-[Thu Apr 24 17:00:49 2025] 127.0.0.1:58720 [200]: GET /msg_test_api.php?type=none
-[Thu Apr 24 17:00:49 2025] 127.0.0.1:58720 Closing
-[Thu Apr 24 17:00:55 2025] 127.0.0.1:58725 Accepted
-[Thu Apr 24 17:00:55 2025] 127.0.0.1:58725 [200]: GET /msg_test.php?code=wl8EBs3FsH4Lsq31YIvzB_ihH7hHQV2WvvVUUR4vqGbVGWQfyWaOxQAAAAQKFyIgAAABlmbQZBQSmUam6ZdnFg&state=none
-[Thu Apr 24 17:00:55 2025] 127.0.0.1:58725 Closing
-[Thu Apr 24 17:00:55 2025] 127.0.0.1:58728 Accepted
-[Thu Apr 24 17:00:55 2025] 127.0.0.1:58728 [200]: GET /favicon.ico
-[Thu Apr 24 17:00:55 2025] 127.0.0.1:58728 Closing
-[Thu Apr 24 17:00:56 2025] 127.0.0.1:58730 Accepted
-[Thu Apr 24 17:00:56 2025] 127.0.0.1:58730 [200]: GET /msg_test_api.php?type=none
-[Thu Apr 24 17:00:56 2025] 127.0.0.1:58730 Closing
-[Thu Apr 24 17:02:44 2025] 127.0.0.1:58754 Accepted
-[Thu Apr 24 17:02:44 2025] 127.0.0.1:58754 [302]: GET /msg_test.php?code=wl8EBs3FsH4Lsq31YIvzB_ihH7hHQV2WvvVUUR4vqGbVGWQfyWaOxQAAAAQKFyIgAAABlmbQZBQSmUam6ZdnFg&state=none
-[Thu Apr 24 17:02:44 2025] 127.0.0.1:58754 Closing
-[Thu Apr 24 17:02:44 2025] 127.0.0.1:58756 Accepted
-[Thu Apr 24 17:02:44 2025] 127.0.0.1:58756 [200]: GET /msg_test.php
-[Thu Apr 24 17:02:44 2025] 127.0.0.1:58756 Closing
-[Thu Apr 24 17:02:44 2025] 127.0.0.1:58760 Accepted
-[Thu Apr 24 17:02:44 2025] 127.0.0.1:58760 [200]: GET /favicon.ico
-[Thu Apr 24 17:02:44 2025] 127.0.0.1:58760 Closing
-[Thu Apr 24 17:02:55 2025] 127.0.0.1:58766 Accepted
-[Thu Apr 24 17:02:55 2025] 127.0.0.1:58768 Accepted
-[Thu Apr 24 17:02:55 2025] 127.0.0.1:58766 [200]: GET /msg_test.php
-[Thu Apr 24 17:02:55 2025] 127.0.0.1:58766 Closing
-[Thu Apr 24 17:02:55 2025] 127.0.0.1:58768 [200]: GET /favicon.ico
-[Thu Apr 24 17:02:55 2025] 127.0.0.1:58768 Closing
-[Thu Apr 24 17:03:46 2025] 127.0.0.1:58787 Accepted
-[Thu Apr 24 17:03:46 2025] 127.0.0.1:58789 Accepted
-[Thu Apr 24 17:03:46 2025] 127.0.0.1:58787 [200]: GET /msg_test.php
-[Thu Apr 24 17:03:46 2025] 127.0.0.1:58787 Closing
-[Thu Apr 24 17:03:46 2025] 127.0.0.1:58789 [200]: GET /favicon.ico
-[Thu Apr 24 17:03:46 2025] 127.0.0.1:58789 Closing
-[Thu Apr 24 17:04:11 2025] 127.0.0.1:58795 Accepted
-[Thu Apr 24 17:04:11 2025] 127.0.0.1:58796 Accepted
-[Thu Apr 24 17:04:11 2025] 127.0.0.1:58795 [200]: GET /msg_test.php
-[Thu Apr 24 17:04:11 2025] 127.0.0.1:58795 Closing
-[Thu Apr 24 17:04:11 2025] 127.0.0.1:58796 [200]: GET /favicon.ico
-[Thu Apr 24 17:04:11 2025] 127.0.0.1:58796 Closing
-[Thu Apr 24 17:04:15 2025] 127.0.0.1:58801 Accepted
-[Thu Apr 24 17:04:15 2025] 127.0.0.1:58801 [200]: GET /msg_test.php?code=n5TiHywRZ1DU3dB58CYDumbDEOAdFf80xNZNN6TvyDqBBYTmUbrpHgAAAAQKDQ1fAAABlmbTckwFVMIyByjmyg&state=web_only
-[Thu Apr 24 17:04:15 2025] 127.0.0.1:58801 Closing
-[Thu Apr 24 17:04:15 2025] 127.0.0.1:58804 Accepted
-[Thu Apr 24 17:04:15 2025] 127.0.0.1:58804 [200]: GET /favicon.ico
-[Thu Apr 24 17:04:15 2025] 127.0.0.1:58804 Closing
-[Thu Apr 24 17:04:17 2025] 127.0.0.1:58806 Accepted
-[Thu Apr 24 17:04:17 2025] 127.0.0.1:58806 [200]: GET /msg_test_api.php?type=web_only
-[Thu Apr 24 17:04:17 2025] 127.0.0.1:58806 Closing
-[Thu Apr 24 17:05:45 2025] 127.0.0.1:58838 Accepted
-[Thu Apr 24 17:05:45 2025] 127.0.0.1:58838 [302]: GET /msg_test.php?code=n5TiHywRZ1DU3dB58CYDumbDEOAdFf80xNZNN6TvyDqBBYTmUbrpHgAAAAQKDQ1fAAABlmbTckwFVMIyByjmyg&state=web_only
-[Thu Apr 24 17:05:45 2025] 127.0.0.1:58838 Closing
-[Thu Apr 24 17:05:45 2025] 127.0.0.1:58840 Accepted
-[Thu Apr 24 17:05:45 2025] 127.0.0.1:58840 [200]: GET /msg_test.php
-[Thu Apr 24 17:05:45 2025] 127.0.0.1:58840 Closing
-[Thu Apr 24 17:05:45 2025] 127.0.0.1:58844 Accepted
-[Thu Apr 24 17:05:45 2025] 127.0.0.1:58844 [200]: GET /favicon.ico
-[Thu Apr 24 17:05:45 2025] 127.0.0.1:58844 Closing
-[Thu Apr 24 17:05:48 2025] 127.0.0.1:58846 Accepted
-[Thu Apr 24 17:05:48 2025] 127.0.0.1:58846 [200]: GET /msg_test_api.php?type=web_only_empty
-[Thu Apr 24 17:05:48 2025] 127.0.0.1:58846 Closing
-[Thu Apr 24 17:06:17 2025] 127.0.0.1:58852 Accepted
-[Thu Apr 24 17:06:17 2025] 127.0.0.1:58852 [200]: GET /msg_test.php?code=0XIOHCBHYu0mFthxcIrrEWyfJdnDZmEMimmNhEH70kyob0cWxiUpQwAAAAQKDRuaAAABlmbVTKwFVMIyByjmyg&state=web_only
-[Thu Apr 24 17:06:17 2025] 127.0.0.1:58852 Closing
-[Thu Apr 24 17:06:17 2025] 127.0.0.1:58855 Accepted
-[Thu Apr 24 17:06:17 2025] 127.0.0.1:58855 [200]: GET /favicon.ico
-[Thu Apr 24 17:06:17 2025] 127.0.0.1:58855 Closing
-[Thu Apr 24 17:06:20 2025] 127.0.0.1:58857 Accepted
-[Thu Apr 24 17:06:20 2025] 127.0.0.1:58857 [200]: GET /msg_test_api.php?type=web_only
-[Thu Apr 24 17:06:20 2025] 127.0.0.1:58857 Closing
-[Thu Apr 24 17:06:29 2025] 127.0.0.1:58860 Accepted
-[Thu Apr 24 17:06:29 2025] 127.0.0.1:58860 [200]: GET /msg_test_api.php?type=web_only_empty
-[Thu Apr 24 17:06:29 2025] 127.0.0.1:58860 Closing
-[Thu Apr 24 17:06:56 2025] 127.0.0.1:58865 Accepted
-[Thu Apr 24 17:06:56 2025] 127.0.0.1:58865 [200]: GET /msg_test_api.php?type=web_only
-[Thu Apr 24 17:06:56 2025] 127.0.0.1:58865 Closing
-[Thu Apr 24 17:06:59 2025] 127.0.0.1:58868 Accepted
-[Thu Apr 24 17:06:59 2025] 127.0.0.1:58868 [200]: GET /msg_test_api.php?type=web_only_empty
-[Thu Apr 24 17:06:59 2025] 127.0.0.1:58868 Closing
-[Thu Apr 24 17:07:37 2025] 127.0.0.1:58881 Accepted
-[Thu Apr 24 17:07:37 2025] 127.0.0.1:58883 Accepted
-[Thu Apr 24 17:07:37 2025] 127.0.0.1:58881 [302]: GET /msg_test.php?code=0XIOHCBHYu0mFthxcIrrEWyfJdnDZmEMimmNhEH70kyob0cWxiUpQwAAAAQKDRuaAAABlmbVTKwFVMIyByjmyg&state=web_only
-[Thu Apr 24 17:07:37 2025] 127.0.0.1:58881 Closing
-[Thu Apr 24 17:07:37 2025] 127.0.0.1:58883 [200]: GET /msg_test.php
-[Thu Apr 24 17:07:37 2025] 127.0.0.1:58883 Closing
-[Thu Apr 24 17:07:37 2025] 127.0.0.1:58887 Accepted
-[Thu Apr 24 17:07:37 2025] 127.0.0.1:58887 [200]: GET /favicon.ico
-[Thu Apr 24 17:07:37 2025] 127.0.0.1:58887 Closing
-[Thu Apr 24 17:07:50 2025] 127.0.0.1:58892 Accepted
-[Thu Apr 24 17:07:50 2025] 127.0.0.1:58892 [200]: GET /msg_test.php?code=yylgILOq2b3Uez26ftA_hAWSfCwMG6ZanhjSzRBgu9fOOLPsRRDmMgAAAAQKFxBvAAABlmbWt_lUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:07:50 2025] 127.0.0.1:58892 Closing
-[Thu Apr 24 17:07:50 2025] 127.0.0.1:58895 Accepted
-[Thu Apr 24 17:07:50 2025] 127.0.0.1:58895 [200]: GET /favicon.ico
-[Thu Apr 24 17:07:50 2025] 127.0.0.1:58895 Closing
-[Thu Apr 24 17:07:51 2025] 127.0.0.1:58897 Accepted
-[Thu Apr 24 17:07:51 2025] 127.0.0.1:58897 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 17:07:51 2025] 127.0.0.1:58897 Closing
-[Thu Apr 24 17:08:48 2025] 127.0.0.1:58909 Accepted
-[Thu Apr 24 17:08:48 2025] 127.0.0.1:58911 Accepted
-[Thu Apr 24 17:08:48 2025] 127.0.0.1:58909 [302]: GET /msg_test.php?code=yylgILOq2b3Uez26ftA_hAWSfCwMG6ZanhjSzRBgu9fOOLPsRRDmMgAAAAQKFxBvAAABlmbWt_lUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:08:48 2025] 127.0.0.1:58909 Closing
-[Thu Apr 24 17:08:48 2025] 127.0.0.1:58911 [200]: GET /msg_test.php
-[Thu Apr 24 17:08:48 2025] 127.0.0.1:58911 Closing
-[Thu Apr 24 17:08:48 2025] 127.0.0.1:58915 Accepted
-[Thu Apr 24 17:08:48 2025] 127.0.0.1:58915 [200]: GET /favicon.ico
-[Thu Apr 24 17:08:48 2025] 127.0.0.1:58915 Closing
-[Thu Apr 24 17:08:50 2025] 127.0.0.1:58919 Accepted
-[Thu Apr 24 17:08:50 2025] 127.0.0.1:58919 [200]: GET /msg_test.php?code=luPG8ARpCzYegCHkMG5kO6v9_vl0YBKU3pizZlRIjCCHuo65YJ1dvAAAAAQKFzVXAAABlmbXpSZUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:08:50 2025] 127.0.0.1:58919 Closing
-[Thu Apr 24 17:08:50 2025] 127.0.0.1:58922 Accepted
-[Thu Apr 24 17:08:50 2025] 127.0.0.1:58922 [200]: GET /favicon.ico
-[Thu Apr 24 17:08:50 2025] 127.0.0.1:58922 Closing
-[Thu Apr 24 17:08:51 2025] 127.0.0.1:58924 Accepted
-[Thu Apr 24 17:08:51 2025] 127.0.0.1:58924 [200]: GET /msg_test_api.php?type=android_only_empty
-[Thu Apr 24 17:08:51 2025] 127.0.0.1:58924 Closing
-[Thu Apr 24 17:09:24 2025] 127.0.0.1:58929 Accepted
-[Thu Apr 24 17:09:24 2025] 127.0.0.1:58929 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 17:09:24 2025] 127.0.0.1:58929 Closing
-[Thu Apr 24 17:09:37 2025] 127.0.0.1:58936 Accepted
-[Thu Apr 24 17:09:37 2025] 127.0.0.1:58936 [200]: GET /msg_test.php?code=a-2DAafgoYE04A63YZmsczEORubMW_uayPqZU7v1veHlaLCws1BgwAAAAAQKFxDvAAABlmbYW6FUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:09:37 2025] 127.0.0.1:58936 Closing
-[Thu Apr 24 17:09:37 2025] 127.0.0.1:58939 Accepted
-[Thu Apr 24 17:09:37 2025] 127.0.0.1:58939 [200]: GET /favicon.ico
-[Thu Apr 24 17:09:37 2025] 127.0.0.1:58939 Closing
-[Thu Apr 24 17:09:39 2025] 127.0.0.1:58941 Accepted
-[Thu Apr 24 17:09:39 2025] 127.0.0.1:58941 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 17:09:39 2025] 127.0.0.1:58941 Closing
-[Thu Apr 24 17:10:45 2025] 127.0.0.1:58967 Accepted
-[Thu Apr 24 17:10:45 2025] 127.0.0.1:58969 Accepted
-[Thu Apr 24 17:10:45 2025] 127.0.0.1:58967 [302]: GET /msg_test.php?code=a-2DAafgoYE04A63YZmsczEORubMW_uayPqZU7v1veHlaLCws1BgwAAAAAQKFxDvAAABlmbYW6FUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:10:45 2025] 127.0.0.1:58967 Closing
-[Thu Apr 24 17:10:45 2025] 127.0.0.1:58969 [200]: GET /msg_test.php
-[Thu Apr 24 17:10:45 2025] 127.0.0.1:58969 Closing
-[Thu Apr 24 17:10:45 2025] 127.0.0.1:58973 Accepted
-[Thu Apr 24 17:10:45 2025] 127.0.0.1:58973 [200]: GET /favicon.ico
-[Thu Apr 24 17:10:45 2025] 127.0.0.1:58973 Closing
-[Thu Apr 24 17:17:43 2025] 127.0.0.1:59054 Accepted
-[Thu Apr 24 17:17:43 2025] 127.0.0.1:59054 [200]: GET /msg_test.php
-[Thu Apr 24 17:17:43 2025] 127.0.0.1:59054 Closing
-[Thu Apr 24 17:17:43 2025] 127.0.0.1:59056 Accepted
-[Thu Apr 24 17:17:43 2025] 127.0.0.1:59056 [200]: GET /favicon.ico
-[Thu Apr 24 17:17:43 2025] 127.0.0.1:59056 Closing
-[Thu Apr 24 17:17:50 2025] 127.0.0.1:59059 Accepted
-[Thu Apr 24 17:17:50 2025] 127.0.0.1:59059 [200]: GET /msg_test.php
-[Thu Apr 24 17:17:50 2025] 127.0.0.1:59059 Closing
-[Thu Apr 24 17:17:50 2025] 127.0.0.1:59062 Accepted
-[Thu Apr 24 17:17:50 2025] 127.0.0.1:59062 [200]: GET /favicon.ico
-[Thu Apr 24 17:17:50 2025] 127.0.0.1:59062 Closing
-[Thu Apr 24 17:20:56 2025] 127.0.0.1:59101 Accepted
-[Thu Apr 24 17:20:56 2025] 127.0.0.1:59101 [200]: GET /msg_test.php
-[Thu Apr 24 17:20:56 2025] 127.0.0.1:59101 Closing
-[Thu Apr 24 17:20:56 2025] 127.0.0.1:59103 Accepted
-[Thu Apr 24 17:20:56 2025] 127.0.0.1:59103 [200]: GET /favicon.ico
-[Thu Apr 24 17:20:56 2025] 127.0.0.1:59103 Closing
-[Thu Apr 24 17:23:12 2025] 127.0.0.1:59126 Accepted
-[Thu Apr 24 17:23:12 2025] 127.0.0.1:59126 [200]: GET /msg_test.php?code=VWo-8S57z1arUUfhKLS7fsgsKvY1XhQjR5Mw8kNnJWBu_ZabA38BTQAAAAQKFzVXAAABlmbky_m2xj-RG-1vuA&state=all
-[Thu Apr 24 17:23:12 2025] 127.0.0.1:59126 Closing
-[Thu Apr 24 17:23:12 2025] 127.0.0.1:59129 Accepted
-[Thu Apr 24 17:23:12 2025] 127.0.0.1:59129 [200]: GET /favicon.ico
-[Thu Apr 24 17:23:12 2025] 127.0.0.1:59129 Closing
-[Thu Apr 24 17:23:15 2025] 127.0.0.1:59131 Accepted
-[Thu Apr 24 17:23:15 2025] 127.0.0.1:59131 [200]: GET /msg_test.php?code=-eGoqJlNHR92GlGZA7l1gQaKJnpyj0YGrvXnniYpUpKAMWy1PNxEhQAAAAQKFzVXAAABlmbk1tm2xj-RG-1vuA&state=all
-[Thu Apr 24 17:23:15 2025] 127.0.0.1:59131 Closing
-[Thu Apr 24 17:23:15 2025] 127.0.0.1:59134 Accepted
-[Thu Apr 24 17:23:15 2025] 127.0.0.1:59134 [200]: GET /favicon.ico
-[Thu Apr 24 17:23:15 2025] 127.0.0.1:59134 Closing
-[Thu Apr 24 17:23:16 2025] 127.0.0.1:59136 Accepted
-[Thu Apr 24 17:23:17 2025] 127.0.0.1:59136 [200]: GET /msg_test_api.php?type=all
-[Thu Apr 24 17:23:17 2025] 127.0.0.1:59136 Closing
-[Thu Apr 24 17:24:15 2025] 127.0.0.1:59149 Accepted
-[Thu Apr 24 17:24:15 2025] 127.0.0.1:59150 Accepted
-[Thu Apr 24 17:24:16 2025] 127.0.0.1:59149 [302]: GET /msg_test.php?code=-eGoqJlNHR92GlGZA7l1gQaKJnpyj0YGrvXnniYpUpKAMWy1PNxEhQAAAAQKFzVXAAABlmbk1tm2xj-RG-1vuA&state=all
-[Thu Apr 24 17:24:16 2025] 127.0.0.1:59149 Closing
-[Thu Apr 24 17:24:16 2025] 127.0.0.1:59150 [200]: GET /msg_test.php
-[Thu Apr 24 17:24:16 2025] 127.0.0.1:59150 Closing
-[Thu Apr 24 17:24:16 2025] 127.0.0.1:59154 Accepted
-[Thu Apr 24 17:24:16 2025] 127.0.0.1:59154 [200]: GET /favicon.ico
-[Thu Apr 24 17:24:16 2025] 127.0.0.1:59154 Closing
-[Thu Apr 24 17:25:13 2025] 127.0.0.1:59165 Accepted
-[Thu Apr 24 17:25:13 2025] 127.0.0.1:59165 [200]: GET /msg_test.php?code=q7lN0QLZaHXi3ELF76JA1IG3qjJxNHhyv8q12id60F8H7mrVc1QaNQAAAAQKFxZiAAABlmbmpIa2xj-RG-1vuA&state=all
-[Thu Apr 24 17:25:13 2025] 127.0.0.1:59165 Closing
-[Thu Apr 24 17:25:13 2025] 127.0.0.1:59168 Accepted
-[Thu Apr 24 17:25:13 2025] 127.0.0.1:59168 [200]: GET /favicon.ico
-[Thu Apr 24 17:25:13 2025] 127.0.0.1:59168 Closing
-[Thu Apr 24 17:25:14 2025] 127.0.0.1:59170 Accepted
-[Thu Apr 24 17:25:15 2025] 127.0.0.1:59170 [200]: GET /msg_test_api.php?type=all_empty
-[Thu Apr 24 17:25:15 2025] 127.0.0.1:59170 Closing
-[Thu Apr 24 17:26:31 2025] 127.0.0.1:59195 Accepted
-[Thu Apr 24 17:26:31 2025] 127.0.0.1:59196 Accepted
-[Thu Apr 24 17:26:31 2025] 127.0.0.1:59195 [302]: GET /msg_test.php?code=q7lN0QLZaHXi3ELF76JA1IG3qjJxNHhyv8q12id60F8H7mrVc1QaNQAAAAQKFxZiAAABlmbmpIa2xj-RG-1vuA&state=all
-[Thu Apr 24 17:26:31 2025] 127.0.0.1:59195 Closing
-[Thu Apr 24 17:26:31 2025] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:58
+[Mon Apr 28 08:34:17 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53178 Accepted
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53180 Accepted
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53178 [200]: GET /
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53178 Closing
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53183 Accepted
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53180 [200]: GET /style/index.css
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53184 Accepted
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53183 [200]: GET /style/blog.css
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53186 Accepted
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53184 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53180 Closing
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53186 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53183 Closing
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53184 Closing
+[Mon Apr 28 09:36:30 2025] 127.0.0.1:53186 Closing
+[Mon Apr 28 09:36:31 2025] 127.0.0.1:53199 Accepted
+[Mon Apr 28 09:36:31 2025] 127.0.0.1:53199 [200]: GET /images/k.ico
+[Mon Apr 28 09:36:31 2025] 127.0.0.1:53199 Closing
+[Mon Apr 28 09:36:41 2025] 127.0.0.1:53205 Accepted
+[Mon Apr 28 09:36:41 2025] 127.0.0.1:53205 [200]: GET /msg_test.php
+[Mon Apr 28 09:36:41 2025] 127.0.0.1:53205 Closing
+[Mon Apr 28 09:36:41 2025] 127.0.0.1:53207 Accepted
+[Mon Apr 28 09:36:41 2025] 127.0.0.1:53207 [200]: GET /favicon.ico
+[Mon Apr 28 09:36:41 2025] 127.0.0.1:53207 Closing
+[Mon Apr 28 09:39:15 2025] 127.0.0.1:53277 Accepted
+[Mon Apr 28 09:39:15 2025] 127.0.0.1:53279 Accepted
+[Mon Apr 28 09:39:15 2025] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
 Stack trace:
-#0 {main}
-  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 58
-[Thu Apr 24 17:26:31 2025] 127.0.0.1:59196 [200]: GET /msg_test.php - Uncaught Error: Call to undefined function alert() in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:58
+#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
+#1 {main}
+  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
+[Mon Apr 28 09:39:15 2025] 127.0.0.1:53277 [200]: GET /msg_test.php - Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
 Stack trace:
-#0 {main}
-  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 58
-[Thu Apr 24 17:26:31 2025] 127.0.0.1:59196 Closing
-[Thu Apr 24 17:26:31 2025] 127.0.0.1:59200 Accepted
-[Thu Apr 24 17:26:31 2025] 127.0.0.1:59200 [200]: GET /favicon.ico
-[Thu Apr 24 17:26:31 2025] 127.0.0.1:59200 Closing
-[Thu Apr 24 17:26:41 2025] 127.0.0.1:59206 Accepted
-[Thu Apr 24 17:26:41 2025] 127.0.0.1:59207 Accepted
-[Thu Apr 24 17:26:41 2025] 127.0.0.1:59206 [200]: GET /msg_test.php
-[Thu Apr 24 17:26:41 2025] 127.0.0.1:59206 Closing
-[Thu Apr 24 17:26:41 2025] 127.0.0.1:59207 [200]: GET /favicon.ico
-[Thu Apr 24 17:26:41 2025] 127.0.0.1:59207 Closing
-[Thu Apr 24 17:26:43 2025] 127.0.0.1:59209 Accepted
-[Thu Apr 24 17:26:43 2025] 127.0.0.1:59209 [200]: GET /msg_test.php
-[Thu Apr 24 17:26:43 2025] 127.0.0.1:59209 Closing
-[Thu Apr 24 17:26:43 2025] 127.0.0.1:59212 Accepted
-[Thu Apr 24 17:26:43 2025] 127.0.0.1:59213 Accepted
-[Thu Apr 24 17:26:43 2025] 127.0.0.1:59212 [200]: GET /favicon.ico
-[Thu Apr 24 17:26:43 2025] 127.0.0.1:59212 Closing
-[Thu Apr 24 17:26:52 2025] 127.0.0.1:59213 [200]: GET /msg_test.php
-[Thu Apr 24 17:26:52 2025] 127.0.0.1:59213 Closing
-[Thu Apr 24 17:26:52 2025] 127.0.0.1:59216 Accepted
-[Thu Apr 24 17:26:52 2025] 127.0.0.1:59217 Accepted
-[Thu Apr 24 17:26:59 2025] 127.0.0.1:59216 [200]: GET /favicon.ico
-[Thu Apr 24 17:26:59 2025] 127.0.0.1:59216 Closing
-[Thu Apr 24 17:28:01 2025] 127.0.0.1:59217 Closed without sending a request; it was probably just an unused speculative preconnection
-[Thu Apr 24 17:28:01 2025] 127.0.0.1:59217 Closing
-[Thu Apr 24 17:28:09 2025] 127.0.0.1:59238 Accepted
-[Thu Apr 24 17:28:09 2025] 127.0.0.1:59239 Accepted
-[Thu Apr 24 17:28:09 2025] 127.0.0.1:59238 [200]: GET /msg_test.php
-[Thu Apr 24 17:28:09 2025] 127.0.0.1:59238 Closing
-[Thu Apr 24 17:28:09 2025] 127.0.0.1:59239 [200]: GET /favicon.ico
-[Thu Apr 24 17:28:09 2025] 127.0.0.1:59239 Closing
-[Thu Apr 24 17:28:15 2025] 127.0.0.1:59241 Accepted
-[Thu Apr 24 17:28:16 2025] 127.0.0.1:59241 [200]: GET /msg_test_api.php?type=all_empty
-[Thu Apr 24 17:28:16 2025] 127.0.0.1:59241 Closing
-[Thu Apr 24 17:28:51 2025] 127.0.0.1:59247 Accepted
-[Thu Apr 24 17:28:51 2025] 127.0.0.1:59247 [200]: GET /msg_test_api.php?type=android_only_empty
-[Thu Apr 24 17:28:51 2025] 127.0.0.1:59247 Closing
-[Thu Apr 24 17:29:29 2025] 127.0.0.1:59255 Accepted
-[Thu Apr 24 17:29:30 2025] 127.0.0.1:59255 [200]: GET /msg_test.php?code=lCSgD58yvZYVAf3mlsd-dsxZ0E_yqKDEf_tCp0k5KVIe5m14ke3BswAAAAQKDR_RAAABlmbqjgG2xj-RG-1vuA&state=all
-[Thu Apr 24 17:29:30 2025] 127.0.0.1:59255 Closing
-[Thu Apr 24 17:29:30 2025] 127.0.0.1:59258 Accepted
-[Thu Apr 24 17:29:30 2025] 127.0.0.1:59258 [200]: GET /favicon.ico
-[Thu Apr 24 17:29:30 2025] 127.0.0.1:59258 Closing
-[Thu Apr 24 17:29:32 2025] 127.0.0.1:59260 Accepted
-[Thu Apr 24 17:29:32 2025] 127.0.0.1:59260 [200]: GET /msg_test_api.php?type=all_empty
-[Thu Apr 24 17:29:32 2025] 127.0.0.1:59260 Closing
-[Thu Apr 24 17:29:59 2025] 127.0.0.1:59269 Accepted
-[Thu Apr 24 17:29:59 2025] 127.0.0.1:59269 [200]: GET /msg_test.php?code=gzTkhLHQBZtwu-j-q3eRj6-KJ5ouQky4cMBy5ZskafQVlbD_HVbqSwAAAAQKDR_RAAABlmbrAqEFVMIyByjmyg&state=web_only
-[Thu Apr 24 17:29:59 2025] 127.0.0.1:59269 Closing
-[Thu Apr 24 17:29:59 2025] 127.0.0.1:59272 Accepted
-[Thu Apr 24 17:29:59 2025] 127.0.0.1:59272 [200]: GET /favicon.ico
-[Thu Apr 24 17:29:59 2025] 127.0.0.1:59272 Closing
-[Thu Apr 24 17:30:01 2025] 127.0.0.1:59274 Accepted
-[Thu Apr 24 17:30:01 2025] 127.0.0.1:59274 [200]: GET /msg_test_api.php?type=web_only_empty
-[Thu Apr 24 17:30:01 2025] 127.0.0.1:59274 Closing
-[Thu Apr 24 17:30:51 2025] 127.0.0.1:59287 Accepted
-[Thu Apr 24 17:30:51 2025] 127.0.0.1:59287 [200]: GET /msg_test_api.php?type=all
-[Thu Apr 24 17:30:51 2025] 127.0.0.1:59287 Closing
-[Thu Apr 24 17:31:47 2025] 127.0.0.1:59301 Accepted
-[Thu Apr 24 17:31:47 2025] 127.0.0.1:59301 [200]: GET /msg_test_api.php?type=all
-[Thu Apr 24 17:31:47 2025] 127.0.0.1:59301 Closing
-[Thu Apr 24 17:34:05 2025] 127.0.0.1:59319 Accepted
-[Thu Apr 24 17:34:06 2025] 127.0.0.1:59319 [200]: GET /msg_test_api.php?type=all_empty
-[Thu Apr 24 17:34:06 2025] 127.0.0.1:59319 Closing
-[Thu Apr 24 17:34:15 2025] 127.0.0.1:59327 Accepted
-[Thu Apr 24 17:34:15 2025] 127.0.0.1:59327 [200]: GET /msg_test.php?code=SOvsv8VJlx2je6CTKEv6_tZGlueNycOb4z8jc7H83SoPkdDS1Z2MdgAAAAQKDSAbAAABlmbu6Ou2xj-RG-1vuA&state=all
-[Thu Apr 24 17:34:15 2025] 127.0.0.1:59327 Closing
-[Thu Apr 24 17:34:15 2025] 127.0.0.1:59330 Accepted
-[Thu Apr 24 17:34:15 2025] 127.0.0.1:59330 [200]: GET /favicon.ico
-[Thu Apr 24 17:34:15 2025] 127.0.0.1:59330 Closing
-[Thu Apr 24 17:34:17 2025] 127.0.0.1:59332 Accepted
-[Thu Apr 24 17:34:17 2025] 127.0.0.1:59332 [200]: GET /msg_test_api.php?type=all
-[Thu Apr 24 17:34:17 2025] 127.0.0.1:59332 Closing
-[Thu Apr 24 17:34:33 2025] 127.0.0.1:59337 Accepted
-[Thu Apr 24 17:34:33 2025] 127.0.0.1:59337 [200]: GET /msg_test.php?code=JUWS7jGlA6p5PE_FYWZfKnIrVPvGyRPIhM27S2rDNgXjtHsKMTUcYgAAAAQKDSAbAAABlmbvMCy2xj-RG-1vuA&state=all
-[Thu Apr 24 17:34:33 2025] 127.0.0.1:59337 Closing
-[Thu Apr 24 17:34:33 2025] 127.0.0.1:59340 Accepted
-[Thu Apr 24 17:34:33 2025] 127.0.0.1:59340 [200]: GET /favicon.ico
-[Thu Apr 24 17:34:33 2025] 127.0.0.1:59340 Closing
-[Thu Apr 24 17:34:35 2025] 127.0.0.1:59342 Accepted
-[Thu Apr 24 17:34:35 2025] 127.0.0.1:59342 [200]: GET /msg_test_api.php?type=all
-[Thu Apr 24 17:34:35 2025] 127.0.0.1:59342 Closing
-[Thu Apr 24 17:35:21 2025] 127.0.0.1:59353 Accepted
-[Thu Apr 24 17:35:21 2025] 127.0.0.1:59353 [200]: GET /msg_test_api.php?type=all_empty
-[Thu Apr 24 17:35:21 2025] 127.0.0.1:59353 Closing
-[Thu Apr 24 17:37:17 2025] 127.0.0.1:59377 Accepted
-[Thu Apr 24 17:37:17 2025] 127.0.0.1:59377 [200]: GET /msg_test.php?code=J3tdzaSC1R3d0sDuoQXnRaPVe-BmtlP4grqUL77Sbs0tt-jbr7XuYAAAAAQKDQ0hAAABlmbxsOZUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:37:17 2025] 127.0.0.1:59377 Closing
-[Thu Apr 24 17:37:17 2025] 127.0.0.1:59380 Accepted
-[Thu Apr 24 17:37:17 2025] 127.0.0.1:59380 [200]: GET /favicon.ico
-[Thu Apr 24 17:37:17 2025] 127.0.0.1:59380 Closing
-[Thu Apr 24 17:37:19 2025] 127.0.0.1:59382 Accepted
-[Thu Apr 24 17:37:19 2025] 127.0.0.1:59382 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 17:37:19 2025] 127.0.0.1:59382 Closing
-[Thu Apr 24 17:37:42 2025] 127.0.0.1:59389 Accepted
-[Thu Apr 24 17:37:42 2025] 127.0.0.1:59389 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 17:37:42 2025] 127.0.0.1:59389 Closing
-[Thu Apr 24 17:37:48 2025] 127.0.0.1:59393 Accepted
-[Thu Apr 24 17:37:48 2025] 127.0.0.1:59393 [200]: GET /msg_test.php?code=9BK4uC2aHAPcUdQjnW6B05Rmn76pYmAVRJ4L7kp8f5O2W3yM-mjfNgAAAAQKDRTdAAABlmbyKeFUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:37:48 2025] 127.0.0.1:59393 Closing
-[Thu Apr 24 17:37:48 2025] 127.0.0.1:59396 Accepted
-[Thu Apr 24 17:37:48 2025] 127.0.0.1:59396 [200]: GET /favicon.ico
-[Thu Apr 24 17:37:48 2025] 127.0.0.1:59396 Closing
-[Thu Apr 24 17:37:50 2025] 127.0.0.1:59398 Accepted
-[Thu Apr 24 17:37:50 2025] 127.0.0.1:59398 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 17:37:50 2025] 127.0.0.1:59398 Closing
-[Thu Apr 24 17:39:06 2025] 127.0.0.1:59408 Accepted
-[Thu Apr 24 17:39:06 2025] 127.0.0.1:59408 [200]: GET /msg_test.php?code=DfLdUT8N3qCkerc8CqyfbbTXbuFheIWDH8O8XMqtUUFtVSc89bsA3AAAAAQKDQxeAAABlmbzWVG2xj-RG-1vuA&state=all
-[Thu Apr 24 17:39:06 2025] 127.0.0.1:59408 Closing
-[Thu Apr 24 17:39:06 2025] 127.0.0.1:59411 Accepted
-[Thu Apr 24 17:39:06 2025] 127.0.0.1:59411 [200]: GET /favicon.ico
-[Thu Apr 24 17:39:06 2025] 127.0.0.1:59411 Closing
-[Thu Apr 24 17:39:07 2025] 127.0.0.1:59413 Accepted
-[Thu Apr 24 17:39:08 2025] 127.0.0.1:59413 [200]: GET /msg_test_api.php?type=all
-[Thu Apr 24 17:39:08 2025] 127.0.0.1:59413 Closing
-[Thu Apr 24 17:42:37 2025] 127.0.0.1:59555 Accepted
-[Thu Apr 24 17:42:37 2025] 127.0.0.1:59555 [200]: GET /msg_test.php?code=1YSnrW__gAC-ZF9td1GVWvtYQkY0nXUew9KE2itAB71HW6QJwlpR1AAAAAQKFwvXAAABlmb2kwm2xj-RG-1vuA&state=all
-[Thu Apr 24 17:42:37 2025] 127.0.0.1:59555 Closing
-[Thu Apr 24 17:42:37 2025] 127.0.0.1:59558 Accepted
-[Thu Apr 24 17:42:37 2025] 127.0.0.1:59558 [200]: GET /favicon.ico
-[Thu Apr 24 17:42:37 2025] 127.0.0.1:59558 Closing
-[Thu Apr 24 17:42:41 2025] 127.0.0.1:59561 Accepted
-[Thu Apr 24 17:42:41 2025] 127.0.0.1:59561 [200]: GET /msg_test_api.php?type=all_empty
-[Thu Apr 24 17:42:41 2025] 127.0.0.1:59561 Closing
-[Thu Apr 24 17:43:15 2025] 127.0.0.1:59574 Accepted
-[Thu Apr 24 17:43:15 2025] 127.0.0.1:59575 Accepted
-[Thu Apr 24 17:43:15 2025] 127.0.0.1:59574 [302]: GET /msg_test.php?code=1YSnrW__gAC-ZF9td1GVWvtYQkY0nXUew9KE2itAB71HW6QJwlpR1AAAAAQKFwvXAAABlmb2kwm2xj-RG-1vuA&state=all
-[Thu Apr 24 17:43:15 2025] 127.0.0.1:59574 Closing
-[Thu Apr 24 17:43:15 2025] 127.0.0.1:59575 [200]: GET /msg_test.php
-[Thu Apr 24 17:43:15 2025] 127.0.0.1:59575 Closing
-[Thu Apr 24 17:43:15 2025] 127.0.0.1:59579 Accepted
-[Thu Apr 24 17:43:15 2025] 127.0.0.1:59579 [200]: GET /favicon.ico
-[Thu Apr 24 17:43:15 2025] 127.0.0.1:59579 Closing
-[Thu Apr 24 17:44:56 2025] 127.0.0.1:59594 Accepted
-[Thu Apr 24 17:44:56 2025] 127.0.0.1:59595 Accepted
-[Thu Apr 24 17:44:56 2025] 127.0.0.1:59594 [200]: GET /msg_test.php
-[Thu Apr 24 17:44:56 2025] 127.0.0.1:59594 Closing
-[Thu Apr 24 17:44:56 2025] 127.0.0.1:59595 [200]: GET /favicon.ico
-[Thu Apr 24 17:44:56 2025] 127.0.0.1:59595 Closing
-[Thu Apr 24 17:45:17 2025] 127.0.0.1:59599 Accepted
-[Thu Apr 24 17:45:17 2025] 127.0.0.1:59599 [200]: GET /msg_test.php?code=X8JtWBdS0erTvFwt3AZlZtK7NjGjrNsvPdgp04TnLXuV2jF9305FzQAAAAQKFwtrAAABlmb5AaNUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:45:17 2025] 127.0.0.1:59599 Closing
-[Thu Apr 24 17:45:17 2025] 127.0.0.1:59602 Accepted
-[Thu Apr 24 17:45:17 2025] 127.0.0.1:59602 [200]: GET /favicon.ico
-[Thu Apr 24 17:45:17 2025] 127.0.0.1:59602 Closing
-[Thu Apr 24 17:45:18 2025] 127.0.0.1:59604 Accepted
-[Thu Apr 24 17:45:18 2025] 127.0.0.1:59604 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 17:45:18 2025] 127.0.0.1:59604 Closing
-[Thu Apr 24 17:45:42 2025] 127.0.0.1:59613 Accepted
-[Thu Apr 24 17:45:42 2025] 127.0.0.1:59613 [302]: GET /msg_test.php?code=X8JtWBdS0erTvFwt3AZlZtK7NjGjrNsvPdgp04TnLXuV2jF9305FzQAAAAQKFwtrAAABlmb5AaNUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:45:42 2025] 127.0.0.1:59613 Closing
-[Thu Apr 24 17:45:42 2025] 127.0.0.1:59616 Accepted
-[Thu Apr 24 17:45:42 2025] 127.0.0.1:59616 [200]: GET /msg_test.php
-[Thu Apr 24 17:45:42 2025] 127.0.0.1:59616 Closing
-[Thu Apr 24 17:45:42 2025] 127.0.0.1:59620 Accepted
-[Thu Apr 24 17:45:42 2025] 127.0.0.1:59620 [200]: GET /favicon.ico
-[Thu Apr 24 17:45:42 2025] 127.0.0.1:59620 Closing
-[Thu Apr 24 17:45:44 2025] 127.0.0.1:59622 Accepted
-[Thu Apr 24 17:45:44 2025] 127.0.0.1:59622 [200]: GET /msg_test.php?code=_FTkztCbDrd50qiS5FTipHknLHvmNreX6TNE6ugnoIPnEYG4PDaYYgAAAAQKFwtrAAABlmb5azZUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:45:44 2025] 127.0.0.1:59622 Closing
-[Thu Apr 24 17:45:44 2025] 127.0.0.1:59625 Accepted
-[Thu Apr 24 17:45:44 2025] 127.0.0.1:59625 [200]: GET /favicon.ico
-[Thu Apr 24 17:45:44 2025] 127.0.0.1:59625 Closing
-[Thu Apr 24 17:45:46 2025] 127.0.0.1:59627 Accepted
-[Thu Apr 24 17:45:46 2025] 127.0.0.1:59627 [200]: GET /msg_test_api.php?type=android_only
-[Thu Apr 24 17:45:46 2025] 127.0.0.1:59627 Closing
-[Thu Apr 24 17:45:57 2025] 127.0.0.1:59630 Accepted
-[Thu Apr 24 17:45:57 2025] 127.0.0.1:59630 [200]: GET /msg_test.php?code=fVccwuEArpyEEFUJw4FqwWSZtK2WhwgmOYaMfiwqOCkoGnCXBQi91wAAAAQKFwtrAAABlmb5nrm2xj-RG-1vuA&state=all
-[Thu Apr 24 17:45:57 2025] 127.0.0.1:59630 Closing
-[Thu Apr 24 17:45:57 2025] 127.0.0.1:59633 Accepted
-[Thu Apr 24 17:45:57 2025] 127.0.0.1:59633 [200]: GET /favicon.ico
-[Thu Apr 24 17:45:57 2025] 127.0.0.1:59633 Closing
-[Thu Apr 24 17:46:00 2025] 127.0.0.1:59635 Accepted
-[Thu Apr 24 17:46:00 2025] 127.0.0.1:59635 [200]: GET /msg_test_api.php?type=all_empty
-[Thu Apr 24 17:46:00 2025] 127.0.0.1:59635 Closing
-[Thu Apr 24 17:46:38 2025] 127.0.0.1:59647 Accepted
-[Thu Apr 24 17:46:38 2025] 127.0.0.1:59647 [302]: GET /msg_test.php?code=fVccwuEArpyEEFUJw4FqwWSZtK2WhwgmOYaMfiwqOCkoGnCXBQi91wAAAAQKFwtrAAABlmb5nrm2xj-RG-1vuA&state=all
-[Thu Apr 24 17:46:38 2025] 127.0.0.1:59647 Closing
-[Thu Apr 24 17:46:38 2025] 127.0.0.1:59649 Accepted
-[Thu Apr 24 17:46:38 2025] 127.0.0.1:59649 [200]: GET /msg_test.php
-[Thu Apr 24 17:46:38 2025] 127.0.0.1:59649 Closing
-[Thu Apr 24 17:46:38 2025] 127.0.0.1:59652 Accepted
-[Thu Apr 24 17:46:38 2025] 127.0.0.1:59652 [200]: GET /favicon.ico
-[Thu Apr 24 17:46:38 2025] 127.0.0.1:59652 Closing
-[Thu Apr 24 17:46:43 2025] 127.0.0.1:59656 Accepted
-[Thu Apr 24 17:46:43 2025] 127.0.0.1:59656 [200]: GET /msg_test.php?code=EgB2WzfiUOlxWettxvsK4pVjEmTFRuC0_tKpiXSdZJLNDscXS9PP0gAAAAQKFwAnAAABlmb6UllUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:46:43 2025] 127.0.0.1:59656 Closing
-[Thu Apr 24 17:46:43 2025] 127.0.0.1:59659 Accepted
-[Thu Apr 24 17:46:43 2025] 127.0.0.1:59659 [200]: GET /favicon.ico
-[Thu Apr 24 17:46:43 2025] 127.0.0.1:59659 Closing
-[Thu Apr 24 17:46:44 2025] 127.0.0.1:59661 Accepted
-[Thu Apr 24 17:46:44 2025] 127.0.0.1:59661 [200]: GET /msg_test_api.php?type=android_only_empty
-[Thu Apr 24 17:46:44 2025] 127.0.0.1:59661 Closing
-[Thu Apr 24 17:47:19 2025] 127.0.0.1:59666 Accepted
-[Thu Apr 24 17:47:20 2025] 127.0.0.1:59666 [200]: GET /msg_test_api.php?type=android_only_empty
-[Thu Apr 24 17:47:20 2025] 127.0.0.1:59666 Closing
-[Thu Apr 24 17:48:01 2025] 127.0.0.1:59678 Accepted
-[Thu Apr 24 17:48:01 2025] 127.0.0.1:59678 [302]: GET /msg_test.php?code=EgB2WzfiUOlxWettxvsK4pVjEmTFRuC0_tKpiXSdZJLNDscXS9PP0gAAAAQKFwAnAAABlmb6UllUdd9ffL_GXA&state=android_only
-[Thu Apr 24 17:48:01 2025] 127.0.0.1:59678 Closing
-[Thu Apr 24 17:48:01 2025] 127.0.0.1:59680 Accepted
-[Thu Apr 24 17:48:01 2025] 127.0.0.1:59680 [200]: GET /msg_test.php
-[Thu Apr 24 17:48:01 2025] 127.0.0.1:59680 Closing
-[Thu Apr 24 17:48:02 2025] 127.0.0.1:59684 Accepted
-[Thu Apr 24 17:48:02 2025] 127.0.0.1:59684 [200]: GET /favicon.ico
-[Thu Apr 24 17:48:02 2025] 127.0.0.1:59684 Closing
-[Thu Apr 24 17:55:13 2025] 127.0.0.1:59780 Accepted
-[Thu Apr 24 17:55:13 2025] 127.0.0.1:59780 [200]: GET /msg_test.php
-[Thu Apr 24 17:55:13 2025] 127.0.0.1:59780 Closing
-[Thu Apr 24 17:55:13 2025] 127.0.0.1:59782 Accepted
-[Thu Apr 24 17:55:13 2025] 127.0.0.1:59782 [200]: GET /favicon.ico
-[Thu Apr 24 17:55:13 2025] 127.0.0.1:59782 Closing
-[Thu Apr 24 17:56:04 2025] 127.0.0.1:59794 Accepted
-[Thu Apr 24 17:56:04 2025] 127.0.0.1:59794 [200]: GET /msg_test.php
-[Thu Apr 24 17:56:04 2025] 127.0.0.1:59794 Closing
-[Thu Apr 24 17:56:04 2025] 127.0.0.1:59797 Accepted
-[Thu Apr 24 17:56:04 2025] 127.0.0.1:59798 Accepted
-[Thu Apr 24 17:56:04 2025] 127.0.0.1:59797 [200]: GET /favicon.ico
-[Thu Apr 24 17:56:04 2025] 127.0.0.1:59797 Closing
-[Thu Apr 24 17:57:04 2025] 127.0.0.1:59798 Closed without sending a request; it was probably just an unused speculative preconnection
-[Thu Apr 24 17:57:04 2025] 127.0.0.1:59798 Closing
-[Thu Apr 24 18:00:45 2025] 127.0.0.1:59862 Accepted
-[Thu Apr 24 18:00:45 2025] 127.0.0.1:59862 [200]: GET /msg_test.php
-[Thu Apr 24 18:00:45 2025] 127.0.0.1:59862 Closing
-[Thu Apr 24 18:00:45 2025] 127.0.0.1:59864 Accepted
-[Thu Apr 24 18:00:45 2025] 127.0.0.1:59864 [200]: GET /favicon.ico
-[Thu Apr 24 18:00:45 2025] 127.0.0.1:59864 Closing
-[Thu Apr 24 18:05:14 2025] 127.0.0.1:59896 Accepted
-[Thu Apr 24 18:05:14 2025] 127.0.0.1:59896 [200]: GET /msg_test.php
-[Thu Apr 24 18:05:14 2025] 127.0.0.1:59896 Closing
-[Thu Apr 24 18:05:14 2025] 127.0.0.1:59898 Accepted
-[Thu Apr 24 18:05:14 2025] 127.0.0.1:59898 [200]: GET /favicon.ico
-[Thu Apr 24 18:05:14 2025] 127.0.0.1:59898 Closing
-[Thu Apr 24 18:05:18 2025] 127.0.0.1:59904 Accepted
-[Thu Apr 24 18:05:18 2025] 127.0.0.1:59904 [200]: GET /msg_test.php?code=ATvaDXPuQ1qSdY0s46vwmsaf2l5ZIUgM5nAxFu-ozpiZeLu3xfetjAAAAAQKDR_RAAABlmcLVb-2xj-RG-1vuA&state=all
-[Thu Apr 24 18:05:18 2025] 127.0.0.1:59904 Closing
-[Thu Apr 24 18:05:18 2025] 127.0.0.1:59907 Accepted
-[Thu Apr 24 18:05:18 2025] 127.0.0.1:59907 [200]: GET /favicon.ico
-[Thu Apr 24 18:05:18 2025] 127.0.0.1:59907 Closing
-[Thu Apr 24 18:06:13 2025] 127.0.0.1:59924 Accepted
-[Thu Apr 24 18:06:13 2025] 127.0.0.1:59924 [302]: GET /msg_test.php?code=ATvaDXPuQ1qSdY0s46vwmsaf2l5ZIUgM5nAxFu-ozpiZeLu3xfetjAAAAAQKDR_RAAABlmcLVb-2xj-RG-1vuA&state=all
-[Thu Apr 24 18:06:13 2025] 127.0.0.1:59924 Closing
-[Thu Apr 24 18:06:13 2025] 127.0.0.1:59926 Accepted
-[Thu Apr 24 18:06:13 2025] 127.0.0.1:59926 [200]: GET /msg_test.php
-[Thu Apr 24 18:06:13 2025] 127.0.0.1:59926 Closing
-[Thu Apr 24 18:06:13 2025] 127.0.0.1:59929 Accepted
-[Thu Apr 24 18:06:13 2025] 127.0.0.1:59929 [200]: GET /favicon.ico
-[Thu Apr 24 18:06:13 2025] 127.0.0.1:59929 Closing
-[Thu Apr 24 18:06:15 2025] 127.0.0.1:59932 Accepted
-[Thu Apr 24 18:06:15 2025] 127.0.0.1:59932 [200]: GET /msg_test.php?code=CYaw-Pa41pCx3PHgGifIWk0Cr9KimmauzW29Ooyq3JpfER_oLhc-QAAAAAQKDSHZAAABlmcMNjO2xj-RG-1vuA&state=all
-[Thu Apr 24 18:06:15 2025] 127.0.0.1:59932 Closing
-[Thu Apr 24 18:06:15 2025] 127.0.0.1:59935 Accepted
-[Thu Apr 24 18:06:15 2025] 127.0.0.1:59935 [200]: GET /favicon.ico
-[Thu Apr 24 18:06:15 2025] 127.0.0.1:59935 Closing
-[Thu Apr 24 18:07:10 2025] 127.0.0.1:60094 Accepted
-[Thu Apr 24 18:07:10 2025] 127.0.0.1:60094 [302]: GET /msg_test.php?code=CYaw-Pa41pCx3PHgGifIWk0Cr9KimmauzW29Ooyq3JpfER_oLhc-QAAAAAQKDSHZAAABlmcMNjO2xj-RG-1vuA&state=all
-[Thu Apr 24 18:07:10 2025] 127.0.0.1:60094 Closing
-[Thu Apr 24 18:07:10 2025] 127.0.0.1:60096 Accepted
-[Thu Apr 24 18:07:10 2025] 127.0.0.1:60096 [200]: GET /msg_test.php
-[Thu Apr 24 18:07:10 2025] 127.0.0.1:60096 Closing
-[Thu Apr 24 18:07:11 2025] 127.0.0.1:60100 Accepted
-[Thu Apr 24 18:07:11 2025] 127.0.0.1:60100 [200]: GET /favicon.ico
-[Thu Apr 24 18:07:11 2025] 127.0.0.1:60100 Closing
-[Thu Apr 24 18:07:16 2025] 127.0.0.1:60117 Accepted
-[Thu Apr 24 18:07:17 2025] 127.0.0.1:60117 [200]: GET /msg_test.php?code=Mt6FbCnMIbuOVcOBrzouEMYQHyYPaOBCjwnzyv-zqzvcmCp_2telvwAAAAQKFxDvAAABlmcNJYG2xj-RG-1vuA&state=all
-[Thu Apr 24 18:07:17 2025] 127.0.0.1:60117 Closing
-[Thu Apr 24 18:07:17 2025] 127.0.0.1:60120 Accepted
-[Thu Apr 24 18:07:17 2025] 127.0.0.1:60120 [200]: GET /favicon.ico
-[Thu Apr 24 18:07:17 2025] 127.0.0.1:60120 Closing
-[Thu Apr 24 18:07:20 2025] 127.0.0.1:60122 Accepted
-[Thu Apr 24 18:07:20 2025] 127.0.0.1:60122 [200]: GET /msg_test_api.php?type=all_custom
-[Thu Apr 24 18:07:20 2025] 127.0.0.1:60122 Closing
-[Thu Apr 24 18:10:25 2025] 127.0.0.1:60158 Accepted
-[Thu Apr 24 18:10:25 2025] 127.0.0.1:60158 [302]: GET /msg_test.php?code=Mt6FbCnMIbuOVcOBrzouEMYQHyYPaOBCjwnzyv-zqzvcmCp_2telvwAAAAQKFxDvAAABlmcNJYG2xj-RG-1vuA&state=all
-[Thu Apr 24 18:10:25 2025] 127.0.0.1:60158 Closing
-[Thu Apr 24 18:10:25 2025] 127.0.0.1:60160 Accepted
-[Thu Apr 24 18:10:26 2025] 127.0.0.1:60160 [200]: GET /msg_test.php
-[Thu Apr 24 18:10:26 2025] 127.0.0.1:60160 Closing
-[Thu Apr 24 18:10:26 2025] 127.0.0.1:60164 Accepted
-[Thu Apr 24 18:10:26 2025] 127.0.0.1:60164 [200]: GET /favicon.ico
-[Thu Apr 24 18:10:26 2025] 127.0.0.1:60164 Closing
-[Thu Apr 24 18:10:28 2025] 127.0.0.1:60168 Accepted
-[Thu Apr 24 18:10:28 2025] 127.0.0.1:60168 [200]: GET /msg_test.php?code=4qQ8F1sBQpd0wO1MFz5-fjNA8H5XynW5b7rROfKH4Cdjj7xIANZ2YwAAAAQKDRmQAAABlmcQEZm2xj-RG-1vuA&state=all
-[Thu Apr 24 18:10:28 2025] 127.0.0.1:60168 Closing
-[Thu Apr 24 18:10:28 2025] 127.0.0.1:60171 Accepted
-[Thu Apr 24 18:10:28 2025] 127.0.0.1:60171 [200]: GET /favicon.ico
-[Thu Apr 24 18:10:28 2025] 127.0.0.1:60171 Closing
-[Thu Apr 24 18:10:41 2025] 127.0.0.1:60181 Accepted
-[Thu Apr 24 18:10:41 2025] 127.0.0.1:60181 [200]: GET /msg_test_api.php?type=all_custom
-[Thu Apr 24 18:10:41 2025] 127.0.0.1:60181 Closing
-[Thu Apr 24 18:13:28 2025] 127.0.0.1:60216 Accepted
-[Thu Apr 24 18:13:28 2025] 127.0.0.1:60216 [302]: GET /msg_test.php?code=4qQ8F1sBQpd0wO1MFz5-fjNA8H5XynW5b7rROfKH4Cdjj7xIANZ2YwAAAAQKDRmQAAABlmcQEZm2xj-RG-1vuA&state=all
-[Thu Apr 24 18:13:28 2025] 127.0.0.1:60216 Closing
-[Thu Apr 24 18:13:28 2025] 127.0.0.1:60218 Accepted
-[Thu Apr 24 18:13:28 2025] 127.0.0.1:60218 [200]: GET /msg_test.php
-[Thu Apr 24 18:13:28 2025] 127.0.0.1:60218 Closing
-[Thu Apr 24 18:13:28 2025] 127.0.0.1:60222 Accepted
-[Thu Apr 24 18:13:28 2025] 127.0.0.1:60222 [200]: GET /favicon.ico
-[Thu Apr 24 18:13:28 2025] 127.0.0.1:60222 Closing
-[Thu Apr 24 18:13:30 2025] 127.0.0.1:60228 Accepted
-[Thu Apr 24 18:13:30 2025] 127.0.0.1:60228 [200]: GET /msg_test.php?code=ZxzdXVhm6feIABll5rT8kjG05U9F-VP-16hyGtGcQmKRGdBqhl9MsQAAAAQKFxItAAABlmcS2J62xj-RG-1vuA&state=all
-[Thu Apr 24 18:13:30 2025] 127.0.0.1:60228 Closing
-[Thu Apr 24 18:13:30 2025] 127.0.0.1:60231 Accepted
-[Thu Apr 24 18:13:30 2025] 127.0.0.1:60231 [200]: GET /favicon.ico
-[Thu Apr 24 18:13:30 2025] 127.0.0.1:60231 Closing
-[Thu Apr 24 18:13:32 2025] 127.0.0.1:60233 Accepted
-[Thu Apr 24 18:13:32 2025] 127.0.0.1:60233 [200]: GET /msg_test_api.php?type=all_custom
-[Thu Apr 24 18:13:32 2025] 127.0.0.1:60233 Closing
-[Thu Apr 24 18:14:17 2025] 127.0.0.1:60244 Accepted
-[Thu Apr 24 18:14:17 2025] 127.0.0.1:60244 [200]: GET /msg_test.php?code=d6QZO54TpdeawRMeinORMvEnGduafS8mroEy2IH8cnq2qEt6UPdN5AAAAAQKFwFQAAABlmcTkLG2xj-RG-1vuA&state=all
-[Thu Apr 24 18:14:17 2025] 127.0.0.1:60244 Closing
-[Thu Apr 24 18:14:17 2025] 127.0.0.1:60247 Accepted
-[Thu Apr 24 18:14:17 2025] 127.0.0.1:60247 [200]: GET /favicon.ico
-[Thu Apr 24 18:14:17 2025] 127.0.0.1:60247 Closing
-[Thu Apr 24 18:14:20 2025] 127.0.0.1:60249 Accepted
-[Thu Apr 24 18:14:20 2025] 127.0.0.1:60249 [200]: GET /msg_test_api.php?type=all_custom
-[Thu Apr 24 18:14:20 2025] 127.0.0.1:60249 Closing
-[Thu Apr 24 18:15:07 2025] 127.0.0.1:60257 Accepted
-[Thu Apr 24 18:15:07 2025] 127.0.0.1:60257 [200]: GET /msg_test_api.php?type=all_custom
-[Thu Apr 24 18:15:07 2025] 127.0.0.1:60257 Closing
-[Thu Apr 24 18:38:57 2025] 127.0.0.1:60507 Accepted
-[Thu Apr 24 18:38:57 2025] 127.0.0.1:60507 [302]: GET /msg_test.php?code=d6QZO54TpdeawRMeinORMvEnGduafS8mroEy2IH8cnq2qEt6UPdN5AAAAAQKFwFQAAABlmcTkLG2xj-RG-1vuA&state=all
-[Thu Apr 24 18:38:57 2025] 127.0.0.1:60507 Closing
-[Thu Apr 24 18:38:57 2025] 127.0.0.1:60509 Accepted
-[Thu Apr 24 18:38:57 2025] 127.0.0.1:60509 [200]: GET /msg_test.php
-[Thu Apr 24 18:38:57 2025] 127.0.0.1:60509 Closing
-[Thu Apr 24 18:38:57 2025] 127.0.0.1:60513 Accepted
-[Thu Apr 24 18:38:57 2025] 127.0.0.1:60513 [200]: GET /favicon.ico
-[Thu Apr 24 18:38:57 2025] 127.0.0.1:60513 Closing
-[Thu Apr 24 18:39:10 2025] 127.0.0.1:60517 Accepted
-[Thu Apr 24 18:39:10 2025] 127.0.0.1:60518 Accepted
-[Thu Apr 24 18:39:10 2025] 127.0.0.1:60517 [200]: GET /msg_test.php
-[Thu Apr 24 18:39:10 2025] 127.0.0.1:60517 Closing
-[Thu Apr 24 18:39:10 2025] 127.0.0.1:60518 [200]: GET /favicon.ico
-[Thu Apr 24 18:39:10 2025] 127.0.0.1:60518 Closing
-[Thu Apr 24 18:39:12 2025] 127.0.0.1:60523 Accepted
-[Thu Apr 24 18:39:13 2025] 127.0.0.1:60523 [200]: GET /msg_test.php?code=ga0U-zvdl4cKxA8rLG4jawUBNMRn7FijeeD-qUPcPUCWdAHc_3eESgAAAAQKDSHZAAABlmcqYbUSmUam6ZdnFg&state=none
-[Thu Apr 24 18:39:13 2025] 127.0.0.1:60523 Closing
-[Thu Apr 24 18:39:13 2025] 127.0.0.1:60526 Accepted
-[Thu Apr 24 18:39:13 2025] 127.0.0.1:60526 [200]: GET /favicon.ico
-[Thu Apr 24 18:39:13 2025] 127.0.0.1:60526 Closing
-[Thu Apr 24 18:39:15 2025] 127.0.0.1:60528 Accepted
-[Thu Apr 24 18:39:15 2025] 127.0.0.1:60528 [200]: GET /msg_test_api.php?type=none_diff
-[Thu Apr 24 18:39:15 2025] 127.0.0.1:60528 Closing
-[Thu Apr 24 18:39:22 2025] 127.0.0.1:60531 Accepted
-[Thu Apr 24 18:39:23 2025] 127.0.0.1:60531 [200]: GET /msg_test_api.php?type=none_diff
-[Thu Apr 24 18:39:23 2025] 127.0.0.1:60531 Closing
-[Thu Apr 24 18:40:33 2025] 127.0.0.1:60552 Accepted
-[Thu Apr 24 18:40:33 2025] 127.0.0.1:60552 [302]: GET /msg_test.php?code=ga0U-zvdl4cKxA8rLG4jawUBNMRn7FijeeD-qUPcPUCWdAHc_3eESgAAAAQKDSHZAAABlmcqYbUSmUam6ZdnFg&state=none
-[Thu Apr 24 18:40:33 2025] 127.0.0.1:60552 Closing
-[Thu Apr 24 18:40:33 2025] 127.0.0.1:60554 Accepted
-[Thu Apr 24 18:40:33 2025] 127.0.0.1:60554 [200]: GET /msg_test.php
-[Thu Apr 24 18:40:33 2025] 127.0.0.1:60554 Closing
-[Thu Apr 24 18:40:33 2025] 127.0.0.1:60557 Accepted
-[Thu Apr 24 18:40:33 2025] 127.0.0.1:60557 [200]: GET /favicon.ico
-[Thu Apr 24 18:40:33 2025] 127.0.0.1:60557 Closing
-[Thu Apr 24 18:40:48 2025] 127.0.0.1:60566 Accepted
-[Thu Apr 24 18:40:48 2025] 127.0.0.1:60568 Accepted
-[Thu Apr 24 18:40:48 2025] 127.0.0.1:60566 [200]: GET /msg_test.php
-[Thu Apr 24 18:40:48 2025] 127.0.0.1:60566 Closing
-[Thu Apr 24 18:40:48 2025] 127.0.0.1:60568 [200]: GET /favicon.ico
-[Thu Apr 24 18:40:48 2025] 127.0.0.1:60568 Closing
-[Thu Apr 24 18:40:52 2025] 127.0.0.1:60570 Accepted
-[Thu Apr 24 18:40:52 2025] 127.0.0.1:60570 [200]: GET /msg_test_api.php?type=all_diff
-[Thu Apr 24 18:40:52 2025] 127.0.0.1:60570 Closing
-[Thu Apr 24 18:41:01 2025] 127.0.0.1:60577 Accepted
-[Thu Apr 24 18:41:01 2025] 127.0.0.1:60577 [200]: GET /msg_test.php?code=Nkuj5Fr7-grjs3DUcQ7D76ary127RJ6f_zzqtKMOKBy4nxdJGY8QFAAAAAQKFwFQAAABlmcsCcG2xj-RG-1vuA&state=all
-[Thu Apr 24 18:41:01 2025] 127.0.0.1:60577 Closing
-[Thu Apr 24 18:41:01 2025] 127.0.0.1:60580 Accepted
-[Thu Apr 24 18:41:01 2025] 127.0.0.1:60580 [200]: GET /favicon.ico
-[Thu Apr 24 18:41:01 2025] 127.0.0.1:60580 Closing
-[Thu Apr 24 18:41:07 2025] 127.0.0.1:60585 Accepted
-[Thu Apr 24 18:41:07 2025] 127.0.0.1:60585 [200]: GET /msg_test_api.php?type=all_diff
-[Thu Apr 24 18:41:07 2025] 127.0.0.1:60585 Closing
-[Thu Apr 24 18:42:43 2025] 127.0.0.1:60610 Accepted
-[Thu Apr 24 18:42:43 2025] 127.0.0.1:60610 [302]: GET /msg_test.php?code=Nkuj5Fr7-grjs3DUcQ7D76ary127RJ6f_zzqtKMOKBy4nxdJGY8QFAAAAAQKFwFQAAABlmcsCcG2xj-RG-1vuA&state=all
-[Thu Apr 24 18:42:43 2025] 127.0.0.1:60610 Closing
-[Thu Apr 24 18:42:43 2025] 127.0.0.1:60612 Accepted
-[Thu Apr 24 18:42:43 2025] 127.0.0.1:60612 [200]: GET /msg_test.php
-[Thu Apr 24 18:42:43 2025] 127.0.0.1:60612 Closing
-[Thu Apr 24 18:42:43 2025] 127.0.0.1:60616 Accepted
-[Thu Apr 24 18:42:43 2025] 127.0.0.1:60616 [200]: GET /favicon.ico
-[Thu Apr 24 18:42:43 2025] 127.0.0.1:60616 Closing
-[Thu Apr 24 18:42:45 2025] 127.0.0.1:60620 Accepted
-[Thu Apr 24 18:42:45 2025] 127.0.0.1:60620 [200]: GET /msg_test.php?code=9ID-pHaeKQUiLshDFnnl_pXv6NrWLdR-ROtcL3tfJGXSV_GsYy2KmgAAAAQKFzXdAAABlmctoQ22xj-RG-1vuA&state=all
-[Thu Apr 24 18:42:45 2025] 127.0.0.1:60620 Closing
-[Thu Apr 24 18:42:45 2025] 127.0.0.1:60623 Accepted
-[Thu Apr 24 18:42:45 2025] 127.0.0.1:60623 [200]: GET /favicon.ico
-[Thu Apr 24 18:42:45 2025] 127.0.0.1:60623 Closing
-[Thu Apr 24 18:42:52 2025] 127.0.0.1:60625 Accepted
-[Thu Apr 24 18:42:52 2025] 127.0.0.1:60625 [200]: GET /msg_test_api.php?type=all_diff
-[Thu Apr 24 18:42:52 2025] 127.0.0.1:60625 Closing
-[Thu Apr 24 18:44:41 2025] 127.0.0.1:60640 Accepted
-[Thu Apr 24 18:44:41 2025] 127.0.0.1:60640 [200]: GET /msg_test.php?code=M62WMkpSFEAtLNqwB42wtNkcgRLMDCwQmfCpK70WTRWs2H7Mr-uxIAAAAAQKFwAnAAABlmcvYykSmUam6ZdnFg&state=none
-[Thu Apr 24 18:44:41 2025] 127.0.0.1:60640 Closing
-[Thu Apr 24 18:44:41 2025] 127.0.0.1:60643 Accepted
-[Thu Apr 24 18:44:41 2025] 127.0.0.1:60643 [200]: GET /favicon.ico
-[Thu Apr 24 18:44:41 2025] 127.0.0.1:60643 Closing
-[Thu Apr 24 18:44:42 2025] 127.0.0.1:60645 Accepted
-[Thu Apr 24 18:44:42 2025] 127.0.0.1:60645 [200]: GET /msg_test_api.php?type=none_diff
-[Thu Apr 24 18:44:42 2025] 127.0.0.1:60645 Closing
-[Thu Apr 24 18:50:52 2025] 127.0.0.1:60728 Accepted
-[Thu Apr 24 18:50:52 2025] 127.0.0.1:60728 [302]: GET /msg_test.php?code=M62WMkpSFEAtLNqwB42wtNkcgRLMDCwQmfCpK70WTRWs2H7Mr-uxIAAAAAQKFwAnAAABlmcvYykSmUam6ZdnFg&state=none
-[Thu Apr 24 18:50:52 2025] 127.0.0.1:60728 Closing
-[Thu Apr 24 18:50:52 2025] 127.0.0.1:60730 Accepted
-[Thu Apr 24 18:50:52 2025] 127.0.0.1:60730 [200]: GET /msg_test.php
-[Thu Apr 24 18:50:52 2025] 127.0.0.1:60730 Closing
-[Thu Apr 24 18:50:52 2025] 127.0.0.1:60734 Accepted
-[Thu Apr 24 18:50:52 2025] 127.0.0.1:60734 [200]: GET /favicon.ico
-[Thu Apr 24 18:50:52 2025] 127.0.0.1:60734 Closing
-[Thu Apr 24 18:51:03 2025] 127.0.0.1:60739 Accepted
-[Thu Apr 24 18:51:03 2025] 127.0.0.1:60739 [200]: GET /msg_test.php
-[Thu Apr 24 18:51:03 2025] 127.0.0.1:60739 Closing
-[Thu Apr 24 18:51:03 2025] 127.0.0.1:60741 Accepted
-[Thu Apr 24 18:51:03 2025] 127.0.0.1:60741 [200]: GET /favicon.ico
-[Thu Apr 24 18:51:03 2025] 127.0.0.1:60741 Closing
-[Thu Apr 24 18:52:32 2025] 127.0.0.1:60748 Accepted
-[Thu Apr 24 18:52:32 2025] 127.0.0.1:60748 [200]: GET /msg_test.php
-[Thu Apr 24 18:52:32 2025] 127.0.0.1:60748 Closing
-[Thu Apr 24 18:52:32 2025] 127.0.0.1:60751 Accepted
-[Thu Apr 24 18:52:32 2025] 127.0.0.1:60752 Accepted
-[Thu Apr 24 18:52:32 2025] 127.0.0.1:60751 [200]: GET /favicon.ico
-[Thu Apr 24 18:52:32 2025] 127.0.0.1:60751 Closing
-[Thu Apr 24 18:52:35 2025] 127.0.0.1:60752 [200]: GET /msg_test_api.php?type=all_custom_wx_so_mx
-[Thu Apr 24 18:52:35 2025] 127.0.0.1:60752 Closing
-[Thu Apr 24 18:52:48 2025] 127.0.0.1:60760 Accepted
-[Thu Apr 24 18:52:48 2025] 127.0.0.1:60761 Accepted
-[Thu Apr 24 18:52:48 2025] 127.0.0.1:60760 [200]: GET /msg_test.php
-[Thu Apr 24 18:52:48 2025] 127.0.0.1:60760 Closing
-[Thu Apr 24 18:52:48 2025] 127.0.0.1:60761 [200]: GET /favicon.ico
-[Thu Apr 24 18:52:48 2025] 127.0.0.1:60761 Closing
-[Thu Apr 24 18:56:22 2025] 127.0.0.1:60834 Accepted
-[Thu Apr 24 18:56:22 2025] 127.0.0.1:60836 Accepted
-[Thu Apr 24 18:56:22 2025] 127.0.0.1:60834 [200]: GET /msg_test.php
-[Thu Apr 24 18:56:22 2025] 127.0.0.1:60834 Closing
-[Thu Apr 24 18:56:22 2025] 127.0.0.1:60836 [200]: GET /favicon.ico
-[Thu Apr 24 18:56:22 2025] 127.0.0.1:60836 Closing
-[Thu Apr 24 18:56:24 2025] 127.0.0.1:60841 Accepted
-[Thu Apr 24 18:56:24 2025] 127.0.0.1:60841 [200]: GET /msg_test.php?code=7Qj3A1n4xtt3YYfSWRHZ5IccaY0uS8bzjyPj4oclQ5Wedo6xTHRq0QAAAAQKDRtZAAABlmc6IDq2xj-RG-1vuA&state=all
-[Thu Apr 24 18:56:24 2025] 127.0.0.1:60841 Closing
-[Thu Apr 24 18:56:24 2025] 127.0.0.1:60844 Accepted
-[Thu Apr 24 18:56:24 2025] 127.0.0.1:60844 [200]: GET /favicon.ico
-[Thu Apr 24 18:56:24 2025] 127.0.0.1:60844 Closing
-[Thu Apr 24 18:56:28 2025] 127.0.0.1:60846 Accepted
-[Thu Apr 24 18:56:28 2025] 127.0.0.1:60846 [200]: GET /msg_test_api.php?type=all_empty_one_btn
-[Thu Apr 24 18:56:28 2025] 127.0.0.1:60846 Closing
-[Thu Apr 24 18:56:39 2025] 127.0.0.1:60851 Accepted
-[Thu Apr 24 18:56:39 2025] 127.0.0.1:60851 [200]: GET /msg_test_api.php?type=all_empty_one_btn
-[Thu Apr 24 18:56:39 2025] 127.0.0.1:60851 Closing
-[Thu Apr 24 18:56:51 2025] 127.0.0.1:60854 Accepted
-[Thu Apr 24 18:56:51 2025] 127.0.0.1:60856 Accepted
-[Thu Apr 24 18:56:51 2025] 127.0.0.1:60854 [302]: GET /msg_test.php?code=7Qj3A1n4xtt3YYfSWRHZ5IccaY0uS8bzjyPj4oclQ5Wedo6xTHRq0QAAAAQKDRtZAAABlmc6IDq2xj-RG-1vuA&state=all
-[Thu Apr 24 18:56:51 2025] 127.0.0.1:60854 Closing
-[Thu Apr 24 18:56:51 2025] 127.0.0.1:60856 [200]: GET /msg_test.php
-[Thu Apr 24 18:56:51 2025] 127.0.0.1:60856 Closing
-[Thu Apr 24 18:56:51 2025] 127.0.0.1:60861 Accepted
-[Thu Apr 24 18:56:51 2025] 127.0.0.1:60861 [200]: GET /favicon.ico
-[Thu Apr 24 18:56:51 2025] 127.0.0.1:60861 Closing
-[Thu Apr 24 18:56:52 2025] 127.0.0.1:60863 Accepted
-[Thu Apr 24 18:56:52 2025] 127.0.0.1:60863 [200]: GET /msg_test.php?code=fQLvN-RxZPk57_2iPbDN7Jz20jE2PH2BBcuAMH4l3pW6ZvGZByJWNAAAAAQKDRtZAAABlmc6je62xj-RG-1vuA&state=all
-[Thu Apr 24 18:56:52 2025] 127.0.0.1:60863 Closing
-[Thu Apr 24 18:56:52 2025] 127.0.0.1:60866 Accepted
-[Thu Apr 24 18:56:52 2025] 127.0.0.1:60866 [200]: GET /favicon.ico
-[Thu Apr 24 18:56:52 2025] 127.0.0.1:60866 Closing
-[Thu Apr 24 18:56:59 2025] 127.0.0.1:60868 Accepted
-[Thu Apr 24 18:56:59 2025] 127.0.0.1:60868 [200]: GET /msg_test_api.php?type=all_empty_one_btn
-[Thu Apr 24 18:56:59 2025] 127.0.0.1:60868 Closing
-[Thu Apr 24 18:58:40 2025] 127.0.0.1:60888 Accepted
-[Thu Apr 24 18:58:41 2025] 127.0.0.1:60888 [200]: GET /msg_test_api.php?type=all_empty
-[Thu Apr 24 18:58:41 2025] 127.0.0.1:60888 Closing
-[Thu Apr 24 18:59:12 2025] 127.0.0.1:60896 Accepted
-[Thu Apr 24 18:59:12 2025] 127.0.0.1:60896 [200]: GET /msg_test_api.php?type=all_empty_one_btn
-[Thu Apr 24 18:59:12 2025] 127.0.0.1:60896 Closing
-[Thu Apr 24 19:01:26 2025] 127.0.0.1:60932 Accepted
-[Thu Apr 24 19:01:26 2025] 127.0.0.1:60934 Accepted
-[Thu Apr 24 19:01:26 2025] 127.0.0.1:60932 [302]: GET /msg_test.php?code=fQLvN-RxZPk57_2iPbDN7Jz20jE2PH2BBcuAMH4l3pW6ZvGZByJWNAAAAAQKDRtZAAABlmc6je62xj-RG-1vuA&state=all
-[Thu Apr 24 19:01:26 2025] 127.0.0.1:60932 Closing
-[Thu Apr 24 19:01:26 2025] 127.0.0.1:60934 [200]: GET /msg_test.php
-[Thu Apr 24 19:01:26 2025] 127.0.0.1:60934 Closing
-[Thu Apr 24 19:01:26 2025] 127.0.0.1:60938 Accepted
-[Thu Apr 24 19:01:26 2025] 127.0.0.1:60938 [200]: GET /favicon.ico
-[Thu Apr 24 19:01:26 2025] 127.0.0.1:60938 Closing
-[Thu Apr 24 19:02:14 2025] 127.0.0.1:60945 Accepted
-[Thu Apr 24 19:02:14 2025] 127.0.0.1:60945 [200]: GET /msg_test.php
-[Thu Apr 24 19:02:14 2025] 127.0.0.1:60945 Closing
-[Thu Apr 24 19:02:14 2025] 127.0.0.1:60948 Accepted
-[Thu Apr 24 19:02:14 2025] 127.0.0.1:60949 Accepted
-[Thu Apr 24 19:02:14 2025] 127.0.0.1:60948 [200]: GET /favicon.ico
-[Thu Apr 24 19:02:14 2025] 127.0.0.1:60948 Closing
-[Thu Apr 24 19:02:50 2025] 127.0.0.1:60949 [200]: GET /msg_test.php
-[Thu Apr 24 19:02:50 2025] 127.0.0.1:60949 Closing
-[Thu Apr 24 19:02:50 2025] 127.0.0.1:60958 Accepted
-[Thu Apr 24 19:02:50 2025] 127.0.0.1:60958 [200]: GET /favicon.ico
-[Thu Apr 24 19:02:50 2025] 127.0.0.1:60958 Closing
-[Thu Apr 24 19:02:52 2025] 127.0.0.1:60962 Accepted
-[Thu Apr 24 19:02:52 2025] 127.0.0.1:60962 [200]: GET /msg_test.php?code=OeG0ph418AQhsxPX_4vf-VfLZh-2CcrOfTXE71gwcw9qBhUleO1BSgAAAAQKFzVXAAABlmdACPIFVMIyByjmyg&state=web_only
-[Thu Apr 24 19:02:52 2025] 127.0.0.1:60962 Closing
-[Thu Apr 24 19:02:52 2025] 127.0.0.1:60965 Accepted
-[Thu Apr 24 19:02:52 2025] 127.0.0.1:60965 [200]: GET /favicon.ico
-[Thu Apr 24 19:02:52 2025] 127.0.0.1:60965 Closing
-[Thu Apr 24 19:03:01 2025] 127.0.0.1:60967 Accepted
-[Thu Apr 24 19:03:01 2025] 127.0.0.1:60967 [200]: GET /msg_test_api.php?type=web_only_empty_one_btn
-[Thu Apr 24 19:03:01 2025] 127.0.0.1:60967 Closing
-[Thu Apr 24 19:05:20 2025] 127.0.0.1:61017 Accepted
-[Thu Apr 24 19:05:20 2025] 127.0.0.1:61017 [302]: GET /msg_test.php?code=OeG0ph418AQhsxPX_4vf-VfLZh-2CcrOfTXE71gwcw9qBhUleO1BSgAAAAQKFzVXAAABlmdACPIFVMIyByjmyg&state=web_only
-[Thu Apr 24 19:05:20 2025] 127.0.0.1:61017 Closing
-[Thu Apr 24 19:05:20 2025] 127.0.0.1:61019 Accepted
-[Thu Apr 24 19:05:20 2025] 127.0.0.1:61019 [200]: GET /msg_test.php
-[Thu Apr 24 19:05:20 2025] 127.0.0.1:61019 Closing
-[Thu Apr 24 19:05:20 2025] 127.0.0.1:61023 Accepted
-[Thu Apr 24 19:05:20 2025] 127.0.0.1:61023 [200]: GET /favicon.ico
-[Thu Apr 24 19:05:20 2025] 127.0.0.1:61023 Closing
-[Thu Apr 24 19:05:26 2025] 127.0.0.1:61026 Accepted
-[Thu Apr 24 19:05:26 2025] 127.0.0.1:61026 [200]: GET /msg_test_api.php?type=web_only_empty_one_btn_no_app_param
-[Thu Apr 24 19:05:26 2025] 127.0.0.1:61026 Closing
-[Thu Apr 24 19:05:35 2025] 127.0.0.1:61034 Accepted
-[Thu Apr 24 19:05:35 2025] 127.0.0.1:61035 Accepted
-[Thu Apr 24 19:05:35 2025] 127.0.0.1:61034 [200]: GET /msg_test.php
-[Thu Apr 24 19:05:35 2025] 127.0.0.1:61034 Closing
-[Thu Apr 24 19:05:35 2025] 127.0.0.1:61035 [200]: GET /favicon.ico
-[Thu Apr 24 19:05:35 2025] 127.0.0.1:61035 Closing
-[Thu Apr 24 19:05:37 2025] 127.0.0.1:61041 Accepted
-[Thu Apr 24 19:05:37 2025] 127.0.0.1:61041 [200]: GET /msg_test.php?code=OiaYOabvDD0VkLdOxk_ZFuFddDcgd6IY9ehN6WRtBHQ-TCnvsvolMAAAAAQKFwtrAAABlmdCjswFVMIyByjmyg&state=web_only
-[Thu Apr 24 19:05:37 2025] 127.0.0.1:61041 Closing
-[Thu Apr 24 19:05:37 2025] 127.0.0.1:61044 Accepted
-[Thu Apr 24 19:05:37 2025] 127.0.0.1:61044 [200]: GET /favicon.ico
-[Thu Apr 24 19:05:37 2025] 127.0.0.1:61044 Closing
-[Thu Apr 24 19:05:50 2025] 127.0.0.1:61050 Accepted
-[Thu Apr 24 19:05:51 2025] 127.0.0.1:61050 [200]: GET /msg_test_api.php?type=web_only_empty_one_btn_no_app_param
-[Thu Apr 24 19:05:51 2025] 127.0.0.1:61050 Closing
-[Thu Apr 24 19:06:54 2025] 127.0.0.1:61060 Accepted
-[Thu Apr 24 19:06:54 2025] 127.0.0.1:61062 Accepted
-[Thu Apr 24 19:06:54 2025] 127.0.0.1:61060 [302]: GET /msg_test.php?code=OiaYOabvDD0VkLdOxk_ZFuFddDcgd6IY9ehN6WRtBHQ-TCnvsvolMAAAAAQKFwtrAAABlmdCjswFVMIyByjmyg&state=web_only
-[Thu Apr 24 19:06:54 2025] 127.0.0.1:61060 Closing
-[Thu Apr 24 19:06:54 2025] 127.0.0.1:61062 [200]: GET /msg_test.php
-[Thu Apr 24 19:06:54 2025] 127.0.0.1:61062 Closing
-[Thu Apr 24 19:06:54 2025] 127.0.0.1:61065 Accepted
-[Thu Apr 24 19:06:54 2025] 127.0.0.1:61065 [200]: GET /favicon.ico
-[Thu Apr 24 19:06:54 2025] 127.0.0.1:61065 Closing
-[Thu Apr 24 19:08:35 2025] 127.0.0.1:61082 Accepted
-[Thu Apr 24 19:08:35 2025] 127.0.0.1:61082 [200]: GET /msg_test_api.php?type=all_custom_wx_so_mx
-[Thu Apr 24 19:08:35 2025] 127.0.0.1:61082 Closing
-[Thu Apr 24 19:12:33 2025] 127.0.0.1:61138 Accepted
-[Thu Apr 24 19:12:33 2025] 127.0.0.1:61138 [200]: GET /msg_test_api.php?type=all_custom_wx_so_mx
-[Thu Apr 24 19:12:33 2025] 127.0.0.1:61138 Closing
-[Thu Apr 24 19:13:38 2025] 127.0.0.1:61144 Accepted
-[Thu Apr 24 19:13:38 2025] 127.0.0.1:61144 [200]: GET /msg_test.php
-[Thu Apr 24 19:13:38 2025] 127.0.0.1:61144 Closing
-[Thu Apr 24 19:13:38 2025] 127.0.0.1:61146 Accepted
-[Thu Apr 24 19:13:38 2025] 127.0.0.1:61146 [200]: GET /favicon.ico
-[Thu Apr 24 19:13:38 2025] 127.0.0.1:61146 Closing
-[Thu Apr 24 19:14:01 2025] 127.0.0.1:61152 Accepted
-[Thu Apr 24 19:14:01 2025] 127.0.0.1:61152 [200]: GET /msg_test.php
-[Thu Apr 24 19:14:01 2025] 127.0.0.1:61152 Closing
-[Thu Apr 24 19:14:01 2025] 127.0.0.1:61154 Accepted
-[Thu Apr 24 19:14:01 2025] 127.0.0.1:61154 [200]: GET /favicon.ico
-[Thu Apr 24 19:14:01 2025] 127.0.0.1:61154 Closing
-[Thu Apr 24 19:14:03 2025] 127.0.0.1:61158 Accepted
-[Thu Apr 24 19:14:03 2025] 127.0.0.1:61158 [200]: GET /msg_test.php?code=AYaARToJnUJpDN9cg4hc-s63i5FNOlfOjqaJPKih_nFDnbYAHhOeXAAAAAQKFxItAAABlmdKSHm2xj-RG-1vuA&state=all
-[Thu Apr 24 19:14:03 2025] 127.0.0.1:61158 Closing
-[Thu Apr 24 19:14:03 2025] 127.0.0.1:61161 Accepted
-[Thu Apr 24 19:14:03 2025] 127.0.0.1:61161 [200]: GET /favicon.ico
-[Thu Apr 24 19:14:03 2025] 127.0.0.1:61161 Closing
-[Thu Apr 24 19:14:07 2025] 127.0.0.1:61163 Accepted
-[Thu Apr 24 19:14:07 2025] 127.0.0.1:61163 [200]: GET /msg_test_api.php?type=all_custom_wx_so_mx
-[Thu Apr 24 19:14:07 2025] 127.0.0.1:61163 Closing
-[Thu Apr 24 19:14:52 2025] 127.0.0.1:61175 Accepted
-[Thu Apr 24 19:14:52 2025] 127.0.0.1:61176 Accepted
-[Thu Apr 24 19:14:52 2025] 127.0.0.1:61175 [302]: GET /msg_test.php?code=AYaARToJnUJpDN9cg4hc-s63i5FNOlfOjqaJPKih_nFDnbYAHhOeXAAAAAQKFxItAAABlmdKSHm2xj-RG-1vuA&state=all
-[Thu Apr 24 19:14:52 2025] 127.0.0.1:61175 Closing
-[Thu Apr 24 19:14:52 2025] 127.0.0.1:61176 [200]: GET /msg_test.php
-[Thu Apr 24 19:14:52 2025] 127.0.0.1:61176 Closing
-[Thu Apr 24 19:14:52 2025] 127.0.0.1:61180 Accepted
-[Thu Apr 24 19:14:52 2025] 127.0.0.1:61180 [200]: GET /favicon.ico
-[Thu Apr 24 19:14:52 2025] 127.0.0.1:61180 Closing
-[Thu Apr 24 19:15:48 2025] 127.0.0.1:61199 Accepted
-[Thu Apr 24 19:15:48 2025] 127.0.0.1:61199 [200]: GET /msg_test.php
-[Thu Apr 24 19:15:48 2025] 127.0.0.1:61199 Closing
-[Thu Apr 24 19:15:48 2025] 127.0.0.1:61201 Accepted
-[Thu Apr 24 19:15:48 2025] 127.0.0.1:61201 [200]: GET /favicon.ico
-[Thu Apr 24 19:15:48 2025] 127.0.0.1:61201 Closing
-[Thu Apr 24 19:17:07 2025] 127.0.0.1:61222 Accepted
-[Thu Apr 24 19:17:07 2025] 127.0.0.1:61223 Accepted
-[Thu Apr 24 19:17:07 2025] 127.0.0.1:61222 [200]: GET /msg_test.php
-[Thu Apr 24 19:17:07 2025] 127.0.0.1:61222 Closing
-[Thu Apr 24 19:17:07 2025] 127.0.0.1:61223 [200]: GET /favicon.ico
-[Thu Apr 24 19:17:07 2025] 127.0.0.1:61223 Closing
-[Thu Apr 24 19:20:30 2025] 127.0.0.1:61262 Accepted
-[Thu Apr 24 19:20:30 2025] 127.0.0.1:61262 [200]: GET /msg_test.php
-[Thu Apr 24 19:20:30 2025] 127.0.0.1:61262 Closing
-[Thu Apr 24 19:20:30 2025] 127.0.0.1:61264 Accepted
-[Thu Apr 24 19:20:31 2025] 127.0.0.1:61264 [200]: GET /favicon.ico
-[Thu Apr 24 19:20:31 2025] 127.0.0.1:61264 Closing
-[Thu Apr 24 19:20:41 2025] 127.0.0.1:61274 Accepted
-[Thu Apr 24 19:20:41 2025] 127.0.0.1:61274 [200]: GET /msg_test_api.php?type=all_custom_wx_so_mo
-[Thu Apr 24 19:20:41 2025] 127.0.0.1:61274 Closing
-[Thu Apr 24 19:25:42 2025] 127.0.0.1:61333 Accepted
-[Thu Apr 24 19:25:42 2025] 127.0.0.1:61334 Accepted
-[Thu Apr 24 19:25:42 2025] 127.0.0.1:61333 [200]: GET /msg_test.php
-[Thu Apr 24 19:25:42 2025] 127.0.0.1:61333 Closing
-[Thu Apr 24 19:25:42 2025] 127.0.0.1:61334 [200]: GET /favicon.ico
-[Thu Apr 24 19:25:42 2025] 127.0.0.1:61334 Closing
-[Thu Apr 24 19:25:44 2025] 127.0.0.1:61340 Accepted
-[Thu Apr 24 19:25:44 2025] 127.0.0.1:61340 [200]: GET /msg_test.php?code=SKQtvO9kdWlDoL6WmVSV55kukiwfp4s-TCfoyENBHraXNtKdSMr2mQAAAAQKFyIgAAABlmdU-4-2xj-RG-1vuA&state=all
-[Thu Apr 24 19:25:44 2025] 127.0.0.1:61340 Closing
-[Thu Apr 24 19:25:44 2025] 127.0.0.1:61343 Accepted
-[Thu Apr 24 19:25:44 2025] 127.0.0.1:61343 [200]: GET /favicon.ico
-[Thu Apr 24 19:25:44 2025] 127.0.0.1:61343 Closing
-[Thu Apr 24 19:25:48 2025] 127.0.0.1:61345 Accepted
-[Thu Apr 24 19:25:48 2025] 127.0.0.1:61345 [200]: GET /msg_test_api.php?type=all_custom_wo_so_mx
-[Thu Apr 24 19:25:48 2025] 127.0.0.1:61345 Closing
-[Thu Apr 24 19:28:49 2025] 127.0.0.1:61368 Accepted
-[Thu Apr 24 19:28:50 2025] 127.0.0.1:61368 [302]: GET /msg_test.php?code=SKQtvO9kdWlDoL6WmVSV55kukiwfp4s-TCfoyENBHraXNtKdSMr2mQAAAAQKFyIgAAABlmdU-4-2xj-RG-1vuA&state=all
-[Thu Apr 24 19:28:50 2025] 127.0.0.1:61368 Closing
-[Thu Apr 24 19:28:50 2025] 127.0.0.1:61370 Accepted
-[Thu Apr 24 19:28:50 2025] 127.0.0.1:61370 [200]: GET /msg_test.php
-[Thu Apr 24 19:28:50 2025] 127.0.0.1:61370 Closing
-[Thu Apr 24 19:28:50 2025] 127.0.0.1:61374 Accepted
-[Thu Apr 24 19:28:50 2025] 127.0.0.1:61374 [200]: GET /favicon.ico
-[Thu Apr 24 19:28:50 2025] 127.0.0.1:61374 Closing
-[Thu Apr 24 19:28:53 2025] 127.0.0.1:61376 Accepted
-[Thu Apr 24 19:28:53 2025] 127.0.0.1:61376 [200]: GET /msg_test_api.php?type=all_custom_wx_so_mx
-[Thu Apr 24 19:28:53 2025] 127.0.0.1:61376 Closing
-[Thu Apr 24 19:32:12 2025] 127.0.0.1:61393 Accepted
-[Thu Apr 24 19:32:12 2025] 127.0.0.1:61393 [200]: GET /msg_test_api.php?type=all_custom_wo_so_mx
-[Thu Apr 24 19:32:12 2025] 127.0.0.1:61393 Closing
-[Thu Apr 24 19:32:27 2025] 127.0.0.1:61396 Accepted
-[Thu Apr 24 19:32:27 2025] 127.0.0.1:61396 [200]: GET /msg_test_api.php?type=all_custom_wo_so_mx
-[Thu Apr 24 19:32:27 2025] 127.0.0.1:61396 Closing
-[Thu Apr 24 19:33:00 2025] 127.0.0.1:61407 Accepted
-[Thu Apr 24 19:33:00 2025] 127.0.0.1:61409 Accepted
-[Thu Apr 24 19:33:00 2025] 127.0.0.1:61407 [200]: GET /msg_test.php
-[Thu Apr 24 19:33:00 2025] 127.0.0.1:61407 Closing
-[Thu Apr 24 19:33:00 2025] 127.0.0.1:61409 [200]: GET /favicon.ico
-[Thu Apr 24 19:33:00 2025] 127.0.0.1:61409 Closing
+#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
+#1 {main}
+  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
+[Mon Apr 28 09:39:15 2025] 127.0.0.1:53277 Closing
+[Mon Apr 28 09:39:15 2025] 127.0.0.1:53279 [200]: GET /favicon.ico
+[Mon Apr 28 09:39:15 2025] 127.0.0.1:53279 Closing
+[Mon Apr 28 09:39:16 2025] 127.0.0.1:53282 Accepted
+[Mon Apr 28 09:39:16 2025] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
+Stack trace:
+#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
+#1 {main}
+  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
+[Mon Apr 28 09:39:16 2025] 127.0.0.1:53282 [200]: GET /msg_test.php - Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
+Stack trace:
+#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
+#1 {main}
+  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
+[Mon Apr 28 09:39:16 2025] 127.0.0.1:53282 Closing
+[Mon Apr 28 09:39:16 2025] 127.0.0.1:53285 Accepted
+[Mon Apr 28 09:39:16 2025] 127.0.0.1:53286 Accepted
+[Mon Apr 28 09:39:16 2025] 127.0.0.1:53285 [200]: GET /favicon.ico
+[Mon Apr 28 09:39:16 2025] 127.0.0.1:53285 Closing
+[Mon Apr 28 09:39:20 2025] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
+Stack trace:
+#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
+#1 {main}
+  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
+[Mon Apr 28 09:39:20 2025] 127.0.0.1:53286 [200]: GET /msg_test.php - Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
+Stack trace:
+#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
+#1 {main}
+  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
+[Mon Apr 28 09:39:20 2025] 127.0.0.1:53286 Closing
+[Mon Apr 28 09:39:20 2025] 127.0.0.1:53290 Accepted
+[Mon Apr 28 09:39:20 2025] 127.0.0.1:53291 Accepted
+[Mon Apr 28 09:39:20 2025] 127.0.0.1:53290 [200]: GET /favicon.ico
+[Mon Apr 28 09:39:20 2025] 127.0.0.1:53290 Closing
+[Mon Apr 28 09:39:21 2025] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
+Stack trace:
+#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
+#1 {main}
+  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
+[Mon Apr 28 09:39:21 2025] 127.0.0.1:53291 [200]: GET /msg_test.php - Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
+Stack trace:
+#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
+#1 {main}
+  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
+[Mon Apr 28 09:39:21 2025] 127.0.0.1:53291 Closing
+[Mon Apr 28 09:39:21 2025] 127.0.0.1:53294 Accepted
+[Mon Apr 28 09:39:21 2025] 127.0.0.1:53295 Accepted
+[Mon Apr 28 09:39:21 2025] 127.0.0.1:53294 [200]: GET /favicon.ico
+[Mon Apr 28 09:39:21 2025] 127.0.0.1:53294 Closing
+[Mon Apr 28 09:40:25 2025] 127.0.0.1:53295 Closed without sending a request; it was probably just an unused speculative preconnection
+[Mon Apr 28 09:40:25 2025] 127.0.0.1:53295 Closing
+[Mon Apr 28 09:41:13 2025] 127.0.0.1:53331 Accepted
+[Mon Apr 28 09:41:13 2025] 127.0.0.1:53333 Accepted
+[Mon Apr 28 09:41:13 2025] 127.0.0.1:53331 [200]: GET /msg_test.php
+[Mon Apr 28 09:41:13 2025] 127.0.0.1:53331 Closing
+[Mon Apr 28 09:41:14 2025] 127.0.0.1:53333 [200]: GET /favicon.ico
+[Mon Apr 28 09:41:14 2025] 127.0.0.1:53333 Closing
+[Mon Apr 28 09:41:20 2025] 127.0.0.1:53338 Accepted
+[Mon Apr 28 09:41:20 2025] 127.0.0.1:53338 [200]: GET /msg_test.php?code=OAK2AMlkMozmrkUt70IYWcabe8ZkgnxX6I-kFk3eSeP_v6kxUYhz1wAAAAQKDQxeAAABlnnXYGkSmUam6ZdnFg&state=none
+[Mon Apr 28 09:41:20 2025] 127.0.0.1:53338 Closing
+[Mon Apr 28 09:41:20 2025] 127.0.0.1:53341 Accepted
+[Mon Apr 28 09:41:20 2025] 127.0.0.1:53341 [200]: GET /favicon.ico
+[Mon Apr 28 09:41:20 2025] 127.0.0.1:53341 Closing
+[Mon Apr 28 09:42:34 2025] 127.0.0.1:53368 Accepted
+[Mon Apr 28 09:42:34 2025] 127.0.0.1:53369 Accepted
+[Mon Apr 28 09:42:34 2025] 127.0.0.1:53368 [302]: GET /msg_test.php?code=OAK2AMlkMozmrkUt70IYWcabe8ZkgnxX6I-kFk3eSeP_v6kxUYhz1wAAAAQKDQxeAAABlnnXYGkSmUam6ZdnFg&state=none
+[Mon Apr 28 09:42:34 2025] 127.0.0.1:53368 Closing
+[Mon Apr 28 09:42:34 2025] PHP Warning:  Undefined variable $state in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 61
+[Mon Apr 28 09:42:34 2025] PHP Warning:  Undefined variable $state in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 61
+[Mon Apr 28 09:42:34 2025] PHP Warning:  Undefined variable $state in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 61
+[Mon Apr 28 09:42:34 2025] PHP Warning:  Undefined variable $state in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 61
+[Mon Apr 28 09:42:34 2025] 127.0.0.1:53369 [200]: GET /msg_test.php
+[Mon Apr 28 09:42:34 2025] 127.0.0.1:53369 Closing
+[Mon Apr 28 09:42:34 2025] 127.0.0.1:53373 Accepted
+[Mon Apr 28 09:42:34 2025] 127.0.0.1:53373 [200]: GET /favicon.ico
+[Mon Apr 28 09:42:34 2025] 127.0.0.1:53373 Closing
+[Mon Apr 28 09:44:05 2025] 127.0.0.1:53428 Accepted
+[Mon Apr 28 09:44:05 2025] 127.0.0.1:53429 Accepted
+[Mon Apr 28 09:44:05 2025] 127.0.0.1:53428 [200]: GET /msg_test.php
+[Mon Apr 28 09:44:05 2025] 127.0.0.1:53428 Closing
+[Mon Apr 28 09:44:05 2025] 127.0.0.1:53429 [200]: GET /favicon.ico
+[Mon Apr 28 09:44:05 2025] 127.0.0.1:53429 Closing
+[Mon Apr 28 09:44:50 2025] 127.0.0.1:53446 Accepted
+[Mon Apr 28 09:44:50 2025] 127.0.0.1:53448 Accepted
+[Mon Apr 28 09:44:50 2025] 127.0.0.1:53446 [200]: GET /msg_test.php
+[Mon Apr 28 09:44:50 2025] 127.0.0.1:53446 Closing
+[Mon Apr 28 09:44:50 2025] 127.0.0.1:53448 [200]: GET /favicon.ico
+[Mon Apr 28 09:44:50 2025] 127.0.0.1:53448 Closing
+[Mon Apr 28 09:44:52 2025] 127.0.0.1:53451 Accepted
+[Mon Apr 28 09:44:52 2025] 127.0.0.1:53451 [200]: GET /msg_test.php
+[Mon Apr 28 09:44:52 2025] 127.0.0.1:53451 Closing
+[Mon Apr 28 09:44:52 2025] 127.0.0.1:53454 Accepted
+[Mon Apr 28 09:44:52 2025] 127.0.0.1:53455 Accepted
+[Mon Apr 28 09:44:52 2025] 127.0.0.1:53454 [200]: GET /favicon.ico
+[Mon Apr 28 09:44:52 2025] 127.0.0.1:53454 Closing
+[Mon Apr 28 09:45:07 2025] 127.0.0.1:53455 [200]: GET /msg_test.php
+[Mon Apr 28 09:45:07 2025] 127.0.0.1:53455 Closing
+[Mon Apr 28 09:45:07 2025] 127.0.0.1:53465 Accepted
+[Mon Apr 28 09:45:07 2025] 127.0.0.1:53465 [200]: GET /favicon.ico
+[Mon Apr 28 09:45:07 2025] 127.0.0.1:53465 Closing
+[Mon Apr 28 09:46:24 2025] 127.0.0.1:53496 Accepted
+[Mon Apr 28 09:46:24 2025] 127.0.0.1:53498 Accepted
+[Mon Apr 28 09:46:24 2025] 127.0.0.1:53496 [200]: GET /msg_test.php
+[Mon Apr 28 09:46:24 2025] 127.0.0.1:53496 Closing
+[Mon Apr 28 09:46:24 2025] 127.0.0.1:53498 [200]: GET /favicon.ico
+[Mon Apr 28 09:46:24 2025] 127.0.0.1:53498 Closing
+[Mon Apr 28 09:46:52 2025] 127.0.0.1:53509 Accepted
+[Mon Apr 28 09:46:52 2025] 127.0.0.1:53510 Accepted
+[Mon Apr 28 09:46:52 2025] 127.0.0.1:53509 [200]: GET /msg_test.php
+[Mon Apr 28 09:46:52 2025] 127.0.0.1:53509 Closing
+[Mon Apr 28 09:46:52 2025] 127.0.0.1:53510 [200]: GET /favicon.ico
+[Mon Apr 28 09:46:52 2025] 127.0.0.1:53510 Closing
+[Mon Apr 28 09:47:03 2025] 127.0.0.1:53517 Accepted
+[Mon Apr 28 09:47:03 2025] 127.0.0.1:53517 [200]: GET /msg_test.php?code=9_fBs5zTFNF2HGJxVFLFOdNn99546gWpwdngLJZeH4riomtoBC5sBAAAAAQKDRtZAAABlnncnosSmUam6ZdnFg&state=none
+[Mon Apr 28 09:47:03 2025] 127.0.0.1:53517 Closing
+[Mon Apr 28 09:47:03 2025] 127.0.0.1:53520 Accepted
+[Mon Apr 28 09:47:03 2025] 127.0.0.1:53520 [200]: GET /favicon.ico
+[Mon Apr 28 09:47:03 2025] 127.0.0.1:53520 Closing
+[Mon Apr 28 09:47:11 2025] 127.0.0.1:53525 Accepted
+[Mon Apr 28 09:47:11 2025] 127.0.0.1:53525 [200]: GET /msg_test.php?code=mSthR2ItUIrljTrtmbN2Q71SGQExuMOIyr7VWInyMeC-McaoBBc2OwAAAAQKDRtZAAABlnncvB8FVMIyByjmyg&state=web_only
+[Mon Apr 28 09:47:11 2025] 127.0.0.1:53525 Closing
+[Mon Apr 28 09:47:11 2025] 127.0.0.1:53528 Accepted
+[Mon Apr 28 09:47:11 2025] 127.0.0.1:53528 [200]: GET /favicon.ico
+[Mon Apr 28 09:47:11 2025] 127.0.0.1:53528 Closing
+[Mon Apr 28 09:48:29 2025] 127.0.0.1:53560 Accepted
+[Mon Apr 28 09:48:29 2025] 127.0.0.1:53562 Accepted
+[Mon Apr 28 09:48:29 2025] 127.0.0.1:53560 [302]: GET /msg_test.php?code=mSthR2ItUIrljTrtmbN2Q71SGQExuMOIyr7VWInyMeC-McaoBBc2OwAAAAQKDRtZAAABlnncvB8FVMIyByjmyg&state=web_only
+[Mon Apr 28 09:48:29 2025] 127.0.0.1:53560 Closing
+[Mon Apr 28 09:48:29 2025] 127.0.0.1:53562 [200]: GET /msg_test.php
+[Mon Apr 28 09:48:29 2025] 127.0.0.1:53562 Closing
+[Mon Apr 28 09:48:29 2025] 127.0.0.1:53566 Accepted
+[Mon Apr 28 09:48:29 2025] 127.0.0.1:53566 [200]: GET /favicon.ico
+[Mon Apr 28 09:48:29 2025] 127.0.0.1:53566 Closing
+[Mon Apr 28 09:48:31 2025] 127.0.0.1:53568 Accepted
+[Mon Apr 28 09:48:31 2025] 127.0.0.1:53568 [200]: GET /msg_test.php
+[Mon Apr 28 09:48:31 2025] 127.0.0.1:53568 Closing
+[Mon Apr 28 09:48:31 2025] 127.0.0.1:53571 Accepted
+[Mon Apr 28 09:48:31 2025] 127.0.0.1:53572 Accepted
+[Mon Apr 28 09:48:31 2025] 127.0.0.1:53571 [200]: GET /favicon.ico
+[Mon Apr 28 09:48:31 2025] 127.0.0.1:53571 Closing
+[Mon Apr 28 09:48:37 2025] 127.0.0.1:53572 [200]: GET /msg_test.php?code=UnVEL2RAEchK960V4mGIGUsuMCL2LnRAhxkuDKwVrVQ60tXwSx7BgQAAAAQKFxBvAAABlnneDNYFVMIyByjmyg&state=web_only
+[Mon Apr 28 09:48:37 2025] 127.0.0.1:53572 Closing
+[Mon Apr 28 09:48:37 2025] 127.0.0.1:53579 Accepted
+[Mon Apr 28 09:48:37 2025] 127.0.0.1:53579 [200]: GET /favicon.ico
+[Mon Apr 28 09:48:37 2025] 127.0.0.1:53579 Closing
+[Mon Apr 28 09:48:42 2025] 127.0.0.1:53583 Accepted
+[Mon Apr 28 09:48:42 2025] 127.0.0.1:53583 [200]: GET /msg_test_api.php?type=web_only_empty_one_btn_no_app_param
+[Mon Apr 28 09:48:42 2025] 127.0.0.1:53583 Closing
+[Mon Apr 28 09:48:53 2025] 127.0.0.1:53588 Accepted
+[Mon Apr 28 09:48:53 2025] 127.0.0.1:53588 [200]: GET /msg_test.php?code=4SgM4p7oGFWtlOOC4CAWtJfd9dco8dvHPDnn-xVA3BrMY0XYBjs1oQAAAAQKFxBvAAABlnneSWO2xj-RG-1vuA&state=all
+[Mon Apr 28 09:48:53 2025] 127.0.0.1:53588 Closing
+[Mon Apr 28 09:48:53 2025] 127.0.0.1:53591 Accepted
+[Mon Apr 28 09:48:53 2025] 127.0.0.1:53591 [200]: GET /favicon.ico
+[Mon Apr 28 09:48:53 2025] 127.0.0.1:53591 Closing
+[Mon Apr 28 09:49:07 2025] 127.0.0.1:53594 Accepted
+[Mon Apr 28 09:49:07 2025] 127.0.0.1:53594 [200]: GET /msg_test_api.php?type=all_empty
+[Mon Apr 28 09:49:07 2025] 127.0.0.1:53594 Closing
