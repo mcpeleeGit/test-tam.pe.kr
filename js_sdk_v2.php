@@ -697,6 +697,46 @@ session_start();
           console.log(error);
         });
     }
+
+
+    function share_default_invalid_parameter() {
+      const mainTitle = '동원몰 카카오톡 공유하기 테스트';
+      const description = '동원몰 카카오톡 공유하기 테스트 입니다.';
+      const imageUrl = 'https://image.thebanchan.co.kr/tbcImg/web/images/event/240704_summer/type04_800.jpg';
+      const linkUrl = 'https://dev-m.dongwonmall.com/index.do';
+
+      Kakao.Share.sendDefault({
+          objectType: 'feed',
+          content: 
+          {
+            title: mainTitle, 
+            description: description,
+            imageUrl: imageUrl,
+            link: {
+              mobileWebUrl: linkUrl,
+              webUrl: linkUrl
+            }
+          },
+          buttons: [
+            {
+              title: '웹으로 보기',
+              link: {
+                mobileWebUrl: linkUrl,
+                webUrl: linkUrl
+              }
+            },
+            {
+              title: '앱으로 보기',
+              link: {          
+                androidExecParams: 'url=test',
+                iosExecParams: 'url=test'
+              }
+            }
+          ]
+      }); 
+      Kakao.Share.cleanup();
+    }
+
   </script>
 </head>
 
@@ -772,6 +812,10 @@ session_start();
                 -[<a href="javascript:share_callback_template()">콜백 템플릿 테스트</a>]
                 - [<a href="javascript:defaultSendEmptyUrl()">디폴트 템플릿(빈 URL)</a>]
               </div>
+              <div class="card-footer">
+                -[<a href="javascript:share_default_invalid_parameter()">디폴트 템플릿(유효하지 않은 파라미터)</a>]
+              </div>
+              
             </div>
           </div>
           <div class="card-deck">

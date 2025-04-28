@@ -1,194 +1,289 @@
-[Mon Apr 28 08:34:17 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53178 Accepted
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53180 Accepted
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53178 [200]: GET /
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53178 Closing
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53183 Accepted
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53180 [200]: GET /style/index.css
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53184 Accepted
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53183 [200]: GET /style/blog.css
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53186 Accepted
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53184 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53180 Closing
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53186 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53183 Closing
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53184 Closing
-[Mon Apr 28 09:36:30 2025] 127.0.0.1:53186 Closing
-[Mon Apr 28 09:36:31 2025] 127.0.0.1:53199 Accepted
-[Mon Apr 28 09:36:31 2025] 127.0.0.1:53199 [200]: GET /images/k.ico
-[Mon Apr 28 09:36:31 2025] 127.0.0.1:53199 Closing
-[Mon Apr 28 09:36:41 2025] 127.0.0.1:53205 Accepted
-[Mon Apr 28 09:36:41 2025] 127.0.0.1:53205 [200]: GET /msg_test.php
-[Mon Apr 28 09:36:41 2025] 127.0.0.1:53205 Closing
-[Mon Apr 28 09:36:41 2025] 127.0.0.1:53207 Accepted
-[Mon Apr 28 09:36:41 2025] 127.0.0.1:53207 [200]: GET /favicon.ico
-[Mon Apr 28 09:36:41 2025] 127.0.0.1:53207 Closing
-[Mon Apr 28 09:39:15 2025] 127.0.0.1:53277 Accepted
-[Mon Apr 28 09:39:15 2025] 127.0.0.1:53279 Accepted
-[Mon Apr 28 09:39:15 2025] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
-Stack trace:
-#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
-#1 {main}
-  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
-[Mon Apr 28 09:39:15 2025] 127.0.0.1:53277 [200]: GET /msg_test.php - Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
-Stack trace:
-#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
-#1 {main}
-  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
-[Mon Apr 28 09:39:15 2025] 127.0.0.1:53277 Closing
-[Mon Apr 28 09:39:15 2025] 127.0.0.1:53279 [200]: GET /favicon.ico
-[Mon Apr 28 09:39:15 2025] 127.0.0.1:53279 Closing
-[Mon Apr 28 09:39:16 2025] 127.0.0.1:53282 Accepted
-[Mon Apr 28 09:39:16 2025] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
-Stack trace:
-#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
-#1 {main}
-  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
-[Mon Apr 28 09:39:16 2025] 127.0.0.1:53282 [200]: GET /msg_test.php - Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
-Stack trace:
-#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
-#1 {main}
-  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
-[Mon Apr 28 09:39:16 2025] 127.0.0.1:53282 Closing
-[Mon Apr 28 09:39:16 2025] 127.0.0.1:53285 Accepted
-[Mon Apr 28 09:39:16 2025] 127.0.0.1:53286 Accepted
-[Mon Apr 28 09:39:16 2025] 127.0.0.1:53285 [200]: GET /favicon.ico
-[Mon Apr 28 09:39:16 2025] 127.0.0.1:53285 Closing
-[Mon Apr 28 09:39:20 2025] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
-Stack trace:
-#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
-#1 {main}
-  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
-[Mon Apr 28 09:39:20 2025] 127.0.0.1:53286 [200]: GET /msg_test.php - Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
-Stack trace:
-#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
-#1 {main}
-  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
-[Mon Apr 28 09:39:20 2025] 127.0.0.1:53286 Closing
-[Mon Apr 28 09:39:20 2025] 127.0.0.1:53290 Accepted
-[Mon Apr 28 09:39:20 2025] 127.0.0.1:53291 Accepted
-[Mon Apr 28 09:39:20 2025] 127.0.0.1:53290 [200]: GET /favicon.ico
-[Mon Apr 28 09:39:20 2025] 127.0.0.1:53290 Closing
-[Mon Apr 28 09:39:21 2025] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
-Stack trace:
-#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
-#1 {main}
-  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
-[Mon Apr 28 09:39:21 2025] 127.0.0.1:53291 [200]: GET /msg_test.php - Uncaught ArgumentCountError: Too few arguments to function getAccessToken(), 1 passed in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 102 and exactly 3 expected in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php:17
-Stack trace:
-#0 /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php(102): getAccessToken('none')
-#1 {main}
-  thrown in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 17
-[Mon Apr 28 09:39:21 2025] 127.0.0.1:53291 Closing
-[Mon Apr 28 09:39:21 2025] 127.0.0.1:53294 Accepted
-[Mon Apr 28 09:39:21 2025] 127.0.0.1:53295 Accepted
-[Mon Apr 28 09:39:21 2025] 127.0.0.1:53294 [200]: GET /favicon.ico
-[Mon Apr 28 09:39:21 2025] 127.0.0.1:53294 Closing
-[Mon Apr 28 09:40:25 2025] 127.0.0.1:53295 Closed without sending a request; it was probably just an unused speculative preconnection
-[Mon Apr 28 09:40:25 2025] 127.0.0.1:53295 Closing
-[Mon Apr 28 09:41:13 2025] 127.0.0.1:53331 Accepted
-[Mon Apr 28 09:41:13 2025] 127.0.0.1:53333 Accepted
-[Mon Apr 28 09:41:13 2025] 127.0.0.1:53331 [200]: GET /msg_test.php
-[Mon Apr 28 09:41:13 2025] 127.0.0.1:53331 Closing
-[Mon Apr 28 09:41:14 2025] 127.0.0.1:53333 [200]: GET /favicon.ico
-[Mon Apr 28 09:41:14 2025] 127.0.0.1:53333 Closing
-[Mon Apr 28 09:41:20 2025] 127.0.0.1:53338 Accepted
-[Mon Apr 28 09:41:20 2025] 127.0.0.1:53338 [200]: GET /msg_test.php?code=OAK2AMlkMozmrkUt70IYWcabe8ZkgnxX6I-kFk3eSeP_v6kxUYhz1wAAAAQKDQxeAAABlnnXYGkSmUam6ZdnFg&state=none
-[Mon Apr 28 09:41:20 2025] 127.0.0.1:53338 Closing
-[Mon Apr 28 09:41:20 2025] 127.0.0.1:53341 Accepted
-[Mon Apr 28 09:41:20 2025] 127.0.0.1:53341 [200]: GET /favicon.ico
-[Mon Apr 28 09:41:20 2025] 127.0.0.1:53341 Closing
-[Mon Apr 28 09:42:34 2025] 127.0.0.1:53368 Accepted
-[Mon Apr 28 09:42:34 2025] 127.0.0.1:53369 Accepted
-[Mon Apr 28 09:42:34 2025] 127.0.0.1:53368 [302]: GET /msg_test.php?code=OAK2AMlkMozmrkUt70IYWcabe8ZkgnxX6I-kFk3eSeP_v6kxUYhz1wAAAAQKDQxeAAABlnnXYGkSmUam6ZdnFg&state=none
-[Mon Apr 28 09:42:34 2025] 127.0.0.1:53368 Closing
-[Mon Apr 28 09:42:34 2025] PHP Warning:  Undefined variable $state in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 61
-[Mon Apr 28 09:42:34 2025] PHP Warning:  Undefined variable $state in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 61
-[Mon Apr 28 09:42:34 2025] PHP Warning:  Undefined variable $state in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 61
-[Mon Apr 28 09:42:34 2025] PHP Warning:  Undefined variable $state in /Users/kakao/Cursor/test-tam.pe.kr/msg_test.php on line 61
-[Mon Apr 28 09:42:34 2025] 127.0.0.1:53369 [200]: GET /msg_test.php
-[Mon Apr 28 09:42:34 2025] 127.0.0.1:53369 Closing
-[Mon Apr 28 09:42:34 2025] 127.0.0.1:53373 Accepted
-[Mon Apr 28 09:42:34 2025] 127.0.0.1:53373 [200]: GET /favicon.ico
-[Mon Apr 28 09:42:34 2025] 127.0.0.1:53373 Closing
-[Mon Apr 28 09:44:05 2025] 127.0.0.1:53428 Accepted
-[Mon Apr 28 09:44:05 2025] 127.0.0.1:53429 Accepted
-[Mon Apr 28 09:44:05 2025] 127.0.0.1:53428 [200]: GET /msg_test.php
-[Mon Apr 28 09:44:05 2025] 127.0.0.1:53428 Closing
-[Mon Apr 28 09:44:05 2025] 127.0.0.1:53429 [200]: GET /favicon.ico
-[Mon Apr 28 09:44:05 2025] 127.0.0.1:53429 Closing
-[Mon Apr 28 09:44:50 2025] 127.0.0.1:53446 Accepted
-[Mon Apr 28 09:44:50 2025] 127.0.0.1:53448 Accepted
-[Mon Apr 28 09:44:50 2025] 127.0.0.1:53446 [200]: GET /msg_test.php
-[Mon Apr 28 09:44:50 2025] 127.0.0.1:53446 Closing
-[Mon Apr 28 09:44:50 2025] 127.0.0.1:53448 [200]: GET /favicon.ico
-[Mon Apr 28 09:44:50 2025] 127.0.0.1:53448 Closing
-[Mon Apr 28 09:44:52 2025] 127.0.0.1:53451 Accepted
-[Mon Apr 28 09:44:52 2025] 127.0.0.1:53451 [200]: GET /msg_test.php
-[Mon Apr 28 09:44:52 2025] 127.0.0.1:53451 Closing
-[Mon Apr 28 09:44:52 2025] 127.0.0.1:53454 Accepted
-[Mon Apr 28 09:44:52 2025] 127.0.0.1:53455 Accepted
-[Mon Apr 28 09:44:52 2025] 127.0.0.1:53454 [200]: GET /favicon.ico
-[Mon Apr 28 09:44:52 2025] 127.0.0.1:53454 Closing
-[Mon Apr 28 09:45:07 2025] 127.0.0.1:53455 [200]: GET /msg_test.php
-[Mon Apr 28 09:45:07 2025] 127.0.0.1:53455 Closing
-[Mon Apr 28 09:45:07 2025] 127.0.0.1:53465 Accepted
-[Mon Apr 28 09:45:07 2025] 127.0.0.1:53465 [200]: GET /favicon.ico
-[Mon Apr 28 09:45:07 2025] 127.0.0.1:53465 Closing
-[Mon Apr 28 09:46:24 2025] 127.0.0.1:53496 Accepted
-[Mon Apr 28 09:46:24 2025] 127.0.0.1:53498 Accepted
-[Mon Apr 28 09:46:24 2025] 127.0.0.1:53496 [200]: GET /msg_test.php
-[Mon Apr 28 09:46:24 2025] 127.0.0.1:53496 Closing
-[Mon Apr 28 09:46:24 2025] 127.0.0.1:53498 [200]: GET /favicon.ico
-[Mon Apr 28 09:46:24 2025] 127.0.0.1:53498 Closing
-[Mon Apr 28 09:46:52 2025] 127.0.0.1:53509 Accepted
-[Mon Apr 28 09:46:52 2025] 127.0.0.1:53510 Accepted
-[Mon Apr 28 09:46:52 2025] 127.0.0.1:53509 [200]: GET /msg_test.php
-[Mon Apr 28 09:46:52 2025] 127.0.0.1:53509 Closing
-[Mon Apr 28 09:46:52 2025] 127.0.0.1:53510 [200]: GET /favicon.ico
-[Mon Apr 28 09:46:52 2025] 127.0.0.1:53510 Closing
-[Mon Apr 28 09:47:03 2025] 127.0.0.1:53517 Accepted
-[Mon Apr 28 09:47:03 2025] 127.0.0.1:53517 [200]: GET /msg_test.php?code=9_fBs5zTFNF2HGJxVFLFOdNn99546gWpwdngLJZeH4riomtoBC5sBAAAAAQKDRtZAAABlnncnosSmUam6ZdnFg&state=none
-[Mon Apr 28 09:47:03 2025] 127.0.0.1:53517 Closing
-[Mon Apr 28 09:47:03 2025] 127.0.0.1:53520 Accepted
-[Mon Apr 28 09:47:03 2025] 127.0.0.1:53520 [200]: GET /favicon.ico
-[Mon Apr 28 09:47:03 2025] 127.0.0.1:53520 Closing
-[Mon Apr 28 09:47:11 2025] 127.0.0.1:53525 Accepted
-[Mon Apr 28 09:47:11 2025] 127.0.0.1:53525 [200]: GET /msg_test.php?code=mSthR2ItUIrljTrtmbN2Q71SGQExuMOIyr7VWInyMeC-McaoBBc2OwAAAAQKDRtZAAABlnncvB8FVMIyByjmyg&state=web_only
-[Mon Apr 28 09:47:11 2025] 127.0.0.1:53525 Closing
-[Mon Apr 28 09:47:11 2025] 127.0.0.1:53528 Accepted
-[Mon Apr 28 09:47:11 2025] 127.0.0.1:53528 [200]: GET /favicon.ico
-[Mon Apr 28 09:47:11 2025] 127.0.0.1:53528 Closing
-[Mon Apr 28 09:48:29 2025] 127.0.0.1:53560 Accepted
-[Mon Apr 28 09:48:29 2025] 127.0.0.1:53562 Accepted
-[Mon Apr 28 09:48:29 2025] 127.0.0.1:53560 [302]: GET /msg_test.php?code=mSthR2ItUIrljTrtmbN2Q71SGQExuMOIyr7VWInyMeC-McaoBBc2OwAAAAQKDRtZAAABlnncvB8FVMIyByjmyg&state=web_only
-[Mon Apr 28 09:48:29 2025] 127.0.0.1:53560 Closing
-[Mon Apr 28 09:48:29 2025] 127.0.0.1:53562 [200]: GET /msg_test.php
-[Mon Apr 28 09:48:29 2025] 127.0.0.1:53562 Closing
-[Mon Apr 28 09:48:29 2025] 127.0.0.1:53566 Accepted
-[Mon Apr 28 09:48:29 2025] 127.0.0.1:53566 [200]: GET /favicon.ico
-[Mon Apr 28 09:48:29 2025] 127.0.0.1:53566 Closing
-[Mon Apr 28 09:48:31 2025] 127.0.0.1:53568 Accepted
-[Mon Apr 28 09:48:31 2025] 127.0.0.1:53568 [200]: GET /msg_test.php
-[Mon Apr 28 09:48:31 2025] 127.0.0.1:53568 Closing
-[Mon Apr 28 09:48:31 2025] 127.0.0.1:53571 Accepted
-[Mon Apr 28 09:48:31 2025] 127.0.0.1:53572 Accepted
-[Mon Apr 28 09:48:31 2025] 127.0.0.1:53571 [200]: GET /favicon.ico
-[Mon Apr 28 09:48:31 2025] 127.0.0.1:53571 Closing
-[Mon Apr 28 09:48:37 2025] 127.0.0.1:53572 [200]: GET /msg_test.php?code=UnVEL2RAEchK960V4mGIGUsuMCL2LnRAhxkuDKwVrVQ60tXwSx7BgQAAAAQKFxBvAAABlnneDNYFVMIyByjmyg&state=web_only
-[Mon Apr 28 09:48:37 2025] 127.0.0.1:53572 Closing
-[Mon Apr 28 09:48:37 2025] 127.0.0.1:53579 Accepted
-[Mon Apr 28 09:48:37 2025] 127.0.0.1:53579 [200]: GET /favicon.ico
-[Mon Apr 28 09:48:37 2025] 127.0.0.1:53579 Closing
-[Mon Apr 28 09:48:42 2025] 127.0.0.1:53583 Accepted
-[Mon Apr 28 09:48:42 2025] 127.0.0.1:53583 [200]: GET /msg_test_api.php?type=web_only_empty_one_btn_no_app_param
-[Mon Apr 28 09:48:42 2025] 127.0.0.1:53583 Closing
-[Mon Apr 28 09:48:53 2025] 127.0.0.1:53588 Accepted
-[Mon Apr 28 09:48:53 2025] 127.0.0.1:53588 [200]: GET /msg_test.php?code=4SgM4p7oGFWtlOOC4CAWtJfd9dco8dvHPDnn-xVA3BrMY0XYBjs1oQAAAAQKFxBvAAABlnneSWO2xj-RG-1vuA&state=all
-[Mon Apr 28 09:48:53 2025] 127.0.0.1:53588 Closing
-[Mon Apr 28 09:48:53 2025] 127.0.0.1:53591 Accepted
-[Mon Apr 28 09:48:53 2025] 127.0.0.1:53591 [200]: GET /favicon.ico
-[Mon Apr 28 09:48:53 2025] 127.0.0.1:53591 Closing
-[Mon Apr 28 09:49:07 2025] 127.0.0.1:53594 Accepted
-[Mon Apr 28 09:49:07 2025] 127.0.0.1:53594 [200]: GET /msg_test_api.php?type=all_empty
-[Mon Apr 28 09:49:07 2025] 127.0.0.1:53594 Closing
+[Mon Apr 28 17:50:23 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50102 Accepted
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50104 Accepted
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50102 [200]: GET /
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50102 Closing
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50104 [200]: GET /style/index.css
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50104 Closing
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50107 Accepted
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50108 Accepted
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50110 Accepted
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50107 [200]: GET /style/blog.css
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50108 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50110 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50107 Closing
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50108 Closing
+[Mon Apr 28 17:50:31 2025] 127.0.0.1:50110 Closing
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50137 Accepted
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50137 [200]: GET /kakao.php
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50137 Closing
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50140 Accepted
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50142 Accepted
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50140 [200]: GET /style/index.css
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50140 Closing
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50142 [200]: GET /style/blog.css
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50142 Closing
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50144 Accepted
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50146 Accepted
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50144 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50146 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50144 Closing
+[Mon Apr 28 17:50:37 2025] 127.0.0.1:50146 Closing
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50152 Accepted
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50152 [200]: GET /kakao.php
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50152 Closing
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50155 Accepted
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50156 Accepted
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50155 [200]: GET /style/index.css
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50155 Closing
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50161 Accepted
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50156 [200]: GET /style/blog.css
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50162 Accepted
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50161 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50162 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50156 Closing
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50161 Closing
+[Mon Apr 28 17:50:40 2025] 127.0.0.1:50162 Closing
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50167 Accepted
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50167 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50167 Closing
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50169 Accepted
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50169 [200]: GET /style/index.css
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50169 Closing
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50173 Accepted
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50174 Accepted
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50173 [200]: GET /style/blog.css
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50175 Accepted
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50174 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50175 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50173 Closing
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50174 Closing
+[Mon Apr 28 17:50:42 2025] 127.0.0.1:50175 Closing
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50221 Accepted
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50223 Accepted
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50221 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50221 Closing
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50223 [200]: GET /style/index.css
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50223 Closing
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50227 Accepted
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50228 Accepted
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50230 Accepted
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50227 [200]: GET /style/blog.css
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50228 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50227 Closing
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50228 Closing
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50230 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50230 Closing
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50236 Accepted
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50236 [200]: GET /images/k.ico
+[Mon Apr 28 17:52:42 2025] 127.0.0.1:50236 Closing
+[Mon Apr 28 17:52:49 2025] 127.0.0.1:50249 Accepted
+[Mon Apr 28 17:52:49 2025] 127.0.0.1:50251 Accepted
+[Mon Apr 28 17:52:49 2025] 127.0.0.1:50249 [200]: GET /style/index.css
+[Mon Apr 28 17:52:49 2025] 127.0.0.1:50252 Accepted
+[Mon Apr 28 17:52:49 2025] 127.0.0.1:50251 [200]: GET /style/blog.css
+[Mon Apr 28 17:52:49 2025] 127.0.0.1:50252 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 17:52:49 2025] 127.0.0.1:50249 Closing
+[Mon Apr 28 17:52:49 2025] 127.0.0.1:50251 Closing
+[Mon Apr 28 17:52:49 2025] 127.0.0.1:50252 Closing
+[Mon Apr 28 17:52:50 2025] 127.0.0.1:50254 Accepted
+[Mon Apr 28 17:52:50 2025] 127.0.0.1:50254 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 17:52:50 2025] 127.0.0.1:50254 Closing
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50298 Accepted
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50300 Accepted
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50298 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50298 Closing
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50304 Accepted
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50300 [200]: GET /style/index.css
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50307 Accepted
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50304 [200]: GET /style/blog.css
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50308 Accepted
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50307 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50300 Closing
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50308 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50304 Closing
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50307 Closing
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50308 Closing
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50310 Accepted
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50310 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50310 Closing
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50313 Accepted
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50313 [200]: GET /images/k.ico
+[Mon Apr 28 17:53:00 2025] 127.0.0.1:50313 Closing
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50509 Accepted
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50511 Accepted
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50509 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50509 Closing
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50511 [200]: GET /style/index.css
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50511 Closing
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50514 Accepted
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50517 Accepted
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50514 [200]: GET /style/blog.css
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50518 Accepted
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50517 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50518 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50514 Closing
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50517 Closing
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50518 Closing
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50520 Accepted
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50520 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50520 Closing
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50527 Accepted
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50527 [200]: GET /images/k.ico
+[Mon Apr 28 17:53:45 2025] 127.0.0.1:50527 Closing
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50600 Accepted
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50603 Accepted
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50600 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50600 Closing
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50607 Accepted
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50603 [200]: GET /style/index.css
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50609 Accepted
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50607 [200]: GET /style/blog.css
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50611 Accepted
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50609 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50603 Closing
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50611 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50607 Closing
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50609 Closing
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50611 Closing
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50613 Accepted
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50613 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 17:54:02 2025] 127.0.0.1:50613 Closing
+[Mon Apr 28 17:54:03 2025] 127.0.0.1:50620 Accepted
+[Mon Apr 28 17:54:03 2025] 127.0.0.1:50620 [200]: GET /images/k.ico
+[Mon Apr 28 17:54:03 2025] 127.0.0.1:50620 Closing
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56397 Accepted
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56397 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56397 Closing
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56399 Accepted
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56402 Accepted
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56399 [200]: GET /style/index.css
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56403 Accepted
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56402 [200]: GET /style/blog.css
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56405 Accepted
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56403 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56399 Closing
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56405 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56402 Closing
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56403 Closing
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56405 Closing
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56407 Accepted
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56407 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 18:15:42 2025] 127.0.0.1:56407 Closing
+[Mon Apr 28 18:15:43 2025] 127.0.0.1:56418 Accepted
+[Mon Apr 28 18:15:43 2025] 127.0.0.1:56418 [200]: GET /images/k.ico
+[Mon Apr 28 18:15:43 2025] 127.0.0.1:56418 Closing
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56639 Accepted
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56639 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56639 Closing
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56642 Accepted
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56643 Accepted
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56642 [200]: GET /style/index.css
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56643 [200]: GET /style/blog.css
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56647 Accepted
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56648 Accepted
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56647 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56642 Closing
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56643 Closing
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56648 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56647 Closing
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56648 Closing
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56650 Accepted
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56650 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56650 Closing
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56653 Accepted
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56653 [200]: GET /images/k.ico
+[Mon Apr 28 18:16:31 2025] 127.0.0.1:56653 Closing
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57214 Accepted
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57214 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57214 Closing
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57216 Accepted
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57219 Accepted
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57216 [200]: GET /style/index.css
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57220 Accepted
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57219 [200]: GET /style/blog.css
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57222 Accepted
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57220 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57216 Closing
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57222 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57219 Closing
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57220 Closing
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57222 Closing
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57224 Accepted
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57224 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57224 Closing
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57235 Accepted
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57235 [200]: GET /images/k.ico
+[Mon Apr 28 18:18:40 2025] 127.0.0.1:57235 Closing
+[Mon Apr 28 18:22:04 2025] 127.0.0.1:58122 Accepted
+[Mon Apr 28 18:22:04 2025] 127.0.0.1:58122 [200]: GET /
+[Mon Apr 28 18:22:04 2025] 127.0.0.1:58122 Closing
+[Mon Apr 28 18:22:04 2025] 127.0.0.1:58124 Accepted
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58124 [200]: GET /style/index.css
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58127 Accepted
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58128 Accepted
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58127 [200]: GET /style/blog.css
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58124 Closing
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58128 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58127 Closing
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58128 Closing
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58130 Accepted
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58130 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 18:22:05 2025] 127.0.0.1:58130 Closing
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58144 Accepted
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58144 [200]: GET /js_sdk_v1.php
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58144 Closing
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58147 Accepted
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58148 Accepted
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58147 [200]: GET /style/index.css
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58147 Closing
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58148 [200]: GET /style/blog.css
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58152 Accepted
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58153 Accepted
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58148 Closing
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58152 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58153 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58152 Closing
+[Mon Apr 28 18:22:06 2025] 127.0.0.1:58153 Closing
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58400 Accepted
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58400 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58400 Closing
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58402 Accepted
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58405 Accepted
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58402 [200]: GET /style/index.css
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58407 Accepted
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58409 Accepted
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58402 Closing
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58405 [200]: GET /style/blog.css
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58407 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58409 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58405 Closing
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58407 Closing
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58409 Closing
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58411 Accepted
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58411 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 18:23:03 2025] 127.0.0.1:58411 Closing
+[Mon Apr 28 18:23:04 2025] 127.0.0.1:58414 Accepted
+[Mon Apr 28 18:23:04 2025] 127.0.0.1:58414 [200]: GET /images/k.ico
+[Mon Apr 28 18:23:04 2025] 127.0.0.1:58414 Closing
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58553 Accepted
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58555 Accepted
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58553 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58553 Closing
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58555 [200]: GET /style/index.css
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58555 Closing
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58559 Accepted
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58560 Accepted
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58561 Accepted
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58559 [200]: GET /style/blog.css
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58560 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58561 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58559 Closing
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58561 Closing
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58560 Closing
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58563 Accepted
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58563 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58563 Closing
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58570 Accepted
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58570 [200]: GET /images/k.ico
+[Mon Apr 28 18:23:35 2025] 127.0.0.1:58570 Closing
