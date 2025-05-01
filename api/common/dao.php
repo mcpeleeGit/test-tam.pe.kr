@@ -7,6 +7,16 @@ class dao
         $this->pdo = $pdo;
     }
 
+
+    protected function getSqlResult($sql)
+    {
+        $sth = ($this->pdo)->prepare($sql);
+        $sth->execute();
+        $row = $sth->fetch();
+        return $row;
+    }
+
+
     protected function getResult($sql, $object)
     {
         $sth = ($this->pdo)->prepare($sql);

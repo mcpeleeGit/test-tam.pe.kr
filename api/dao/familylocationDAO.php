@@ -8,17 +8,17 @@ class familylocationDAO extends dao
 
     public function findFamilylocationByUuid($familylocationRequestDTO)
     {
-        $sql = 'SELECT 
+        $sql = "SELECT 
                     id,
                     uuid,
                     latlng,
                     familyuuid
                   FROM familylocation 
-                 WHERE uuid= :familyuuid
+                 WHERE uuid= '".$familylocationRequestDTO->familyuuid."'
                  ORDER BY id DESC
                  LIMIT 1
-                ';
-        return $this->getResult($sql, $familylocationRequestDTO->familyuuid);
+                ";
+        return $this->getSqlResult($sql);
     }
 
     public function insertFamilylocation($familylocationRequestDTO)
