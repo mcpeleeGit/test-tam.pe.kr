@@ -11,7 +11,8 @@ class familylocationDAO extends dao
         $sql = 'SELECT 
                     id,
                     uuid,
-                    latlng
+                    latlng,
+                    familyuuid
                   FROM familylocation 
                  WHERE uuid= :familyuuid
                  ORDER BY id DESC
@@ -22,7 +23,7 @@ class familylocationDAO extends dao
 
     public function insertFamilylocation($familylocationRequestDTO)
     {
-        $sql = 'INSERT INTO familylocation (uuid, latlng) VALUES (:myuuid, :mylatlng)';
-        return $this->execute($sql, $familylocationRequestDTO->myuuid, $familylocationRequestDTO->mylatlng);
+        $sql = 'INSERT INTO familylocation (uuid, latlng, familyuuid) VALUES (:myuuid, :mylatlng, :myfamilyuuid)';
+        return $this->execute($sql, $familylocationRequestDTO->myuuid, $familylocationRequestDTO->mylatlng, $familylocationRequestDTO->familyuuid);
     }
 }
