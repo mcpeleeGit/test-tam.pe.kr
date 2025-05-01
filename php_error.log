@@ -287,3 +287,45 @@
 [Mon Apr 28 18:23:35 2025] 127.0.0.1:58570 Accepted
 [Mon Apr 28 18:23:35 2025] 127.0.0.1:58570 [200]: GET /images/k.ico
 [Mon Apr 28 18:23:35 2025] 127.0.0.1:58570 Closing
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58856 Accepted
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58858 Accepted
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58856 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58856 Closing
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58858 [200]: GET /style/index.css
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58858 Closing
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58860 Accepted
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58862 Accepted
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58864 Accepted
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58860 [200]: GET /style/blog.css
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58862 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58864 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58860 Closing
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58862 Closing
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58864 Closing
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58866 Accepted
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58866 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58866 Closing
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58872 Accepted
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58872 [200]: GET /images/k.ico
+[Mon Apr 28 18:24:42 2025] 127.0.0.1:58872 Closing
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65438 Accepted
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65438 [200]: GET /js_sdk_v2.php
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65438 Closing
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65440 Accepted
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65442 Accepted
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65444 Accepted
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65440 [200]: GET /style/index.css
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65446 Accepted
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65442 [200]: GET /style/blog.css
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65444 [200]: GET /style/bootstrap.min.css
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65440 Closing
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65446 [200]: GET /script/toastrWrapper.js?test1
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65442 Closing
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65444 Closing
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65446 Closing
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65449 Accepted
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65449 [404]: GET /style/bootstrap.min.css.map - No such file or directory
+[Mon Apr 28 18:48:54 2025] 127.0.0.1:65449 Closing
+[Mon Apr 28 18:48:55 2025] 127.0.0.1:65458 Accepted
+[Mon Apr 28 18:48:55 2025] 127.0.0.1:65458 [200]: GET /images/k.ico
+[Mon Apr 28 18:48:55 2025] 127.0.0.1:65458 Closing

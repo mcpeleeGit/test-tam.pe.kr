@@ -1,6 +1,6 @@
 <?php
 require('api/service/familylocationService.php');
-require('api/dto/FamilylocationRequestDTO.php');
+require('api/dto/familylocationRequestDTO.php');
 class familylocationController
 {
 

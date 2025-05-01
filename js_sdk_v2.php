@@ -728,8 +728,8 @@ session_start();
             {
               title: '앱으로 보기',
               link: {          
-                androidExecParams: 'url=test',
-                iosExecParams: 'url=test'
+                androidExecutionParams: 'url=test',
+                androidExecutionParams: 'url=test'
               }
             }
           ]
