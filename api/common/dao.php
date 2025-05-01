@@ -53,19 +53,10 @@ class dao
         return $sth->fetchColumn();
     }
 
-    protected function execute($sql, $object = null)
+    protected function execute($sql)
     {
         try {
             $sth = ($this->pdo)->prepare($sql);
-
-            if ($object != null) {
-                $reflect = new ReflectionClass($object);
-                $props   = $reflect->getProperties(ReflectionProperty::IS_PUBLIC);
-                foreach ($props as $prop) {
-                    $sth->bindValue(':' . $prop->getName(), $object->{$prop->getName()}, PDO::PARAM_STR);
-                }
-            }
-
             return $sth->execute();
         } catch (PDOException $e) {
             // 에러 로깅이나 처리가 필요한 경우 여기에 추가

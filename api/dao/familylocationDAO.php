@@ -23,7 +23,10 @@ class familylocationDAO extends dao
 
     public function insertFamilylocation($familylocationRequestDTO)
     {
-        $sql = 'INSERT INTO familylocation (uuid, latlng, familyuuid) VALUES (:myuuid, :mylatlng, :myfamilyuuid)';
-        return $this->execute($sql, $familylocationRequestDTO->myuuid, $familylocationRequestDTO->mylatlng, $familylocationRequestDTO->familyuuid);
+        $sql = "INSERT INTO familylocation (uuid, latlng, familyuuid) VALUES ('"
+                    .$familylocationRequestDTO->myuuid."', '"
+                    .$familylocationRequestDTO->mylatlng."', '"
+                    .$familylocationRequestDTO->familyuuid."')";
+        return $this->execute($sql);
     }
 }
