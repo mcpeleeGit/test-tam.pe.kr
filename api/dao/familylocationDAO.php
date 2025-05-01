@@ -15,6 +15,7 @@ class familylocationDAO extends dao
                     familyuuid
                   FROM familylocation 
                  WHERE uuid= '".$familylocationRequestDTO->familyuuid."'
+                 AND familyuuid= '".$familylocationRequestDTO->myuuid."'
                  ORDER BY id DESC
                  LIMIT 1
                 ";
