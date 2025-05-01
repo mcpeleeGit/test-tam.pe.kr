@@ -24,6 +24,6 @@ class familylocationService extends service
         ($this->familylocationDAO)->insertFamilylocation($familylocationRequestDTO);
         $result = ($this->familylocationDAO)->findFamilylocationByUuid($familylocationRequestDTO);
         $familylocationResponseVO = familylocationTransformer::transform($result, new familylocationResponseVO());
-        return json_encode($famoussayingResponseVO, JSON_UNESCAPED_UNICODE);
+        echo (json_encode($familylocationResponseVO, JSON_UNESCAPED_UNICODE));
     }
 }
