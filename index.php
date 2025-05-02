@@ -59,7 +59,7 @@ Route::init($_SERVER['REQUEST_URI']);
                                 <p class="card-text"></p>
                             </div>
                             <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://developers.kakao.com/docs/latest/ko/kakaologin/common">[KakaoGuide]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/2">[Blog]</a>&nbsp;<a href="/kakao.php">[Sample]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://github.com/kakao-tam/KakaoAPIForPHP-REST-API-/blob/main/kakao.php">[Github]</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://developers.kakao.com/docs/latest/ko/kakaologin/common">[KakaoGuide]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/2">[Blog]</a>&nbsp;<a href="/kakao.php">[Sample]</a>&nbsp;
                             </div>
                         </div>
                         <div class="card">
@@ -70,7 +70,7 @@ Route::init($_SERVER['REQUEST_URI']);
                                 <p class="card-text"></p>
                             </div>
                             <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://developers.kakao.com/docs/latest/ko/kakaotalk-channel/common">[KakaoGuide]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/14">[Blog]</a>&nbsp;<a href="/kakao_talk_channel.php">[Sample]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://github.com/kakao-tam/KakaoAPIForPHP-REST-API-/blob/main/kakao_talk_channel.php">[Github]</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://developers.kakao.com/docs/latest/ko/kakaotalk-channel/common">[KakaoGuide]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/14">[Blog]</a>&nbsp;<a href="/kakao_talk_channel.php">[Sample]</a>&nbsp;
                             </div>
                         </div>
                         <div class="card">
@@ -84,6 +84,7 @@ Route::init($_SERVER['REQUEST_URI']);
                                 <a href="/inapp_check.php">[inapp check]</a>
                                 <a href="/facebook.php">[Facebook]</a>
                                 <a class="p-2 link-secondary" href="/firebase.php">Firebase authetication OIDC 테스트</a><a class="p-2 link-secondary" href="/okta.php">OKTA OIDC 테스트</a>
+                                <a target="_blank" href="/msg_test.php">[카카오톡 공유 버튼 링크]</a>
                             </div>
                         </div>
                     </div>
@@ -96,7 +97,7 @@ Route::init($_SERVER['REQUEST_URI']);
                                 <p class="card-text"></p>
                             </div>
                             <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://developers.kakao.com/docs/latest/ko/kakaotalk-social/common">[KakaoGuide]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/3">[Blog]</a>&nbsp;<a href="/kakao_talk_social.php">[Sample]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://github.com/kakao-tam/KakaoAPIForPHP-REST-API-/blob/main/kakao_talk_social.php">[Github]</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://developers.kakao.com/docs/latest/ko/kakaotalk-social/common">[KakaoGuide]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/3">[Blog]</a>&nbsp;<a href="/kakao_talk_social.php">[Sample]</a>&nbsp;
                             </div>
                         </div>
                     </div>
@@ -135,25 +136,6 @@ Route::init($_SERVER['REQUEST_URI']);
                             <li>
                                 <a href="https://devtalk.kakao.com/c/notice/108" target="_blank">Notice / 공지</a>
                             </li>
-                            <li>
-                                <a href="https://devtalk.kakao.com/c/kakao-sync/115" target="_blank">카카오싱크(Kakao Sync)</a>
-                            </li>
-                            <li>
-                                <a href="https://devtalk.kakao.com/c/android/16" target="_blank">android</a>
-                            </li>
-                            <li>
-                                <a href="https://devtalk.kakao.com/c/ios/15" target="_blank">ios</a>
-                            </li>
-                            <li>
-                                <a href="https://devtalk.kakao.com/c/javascript/18" target="_blank">javascript</a>
-                            </li>
-                            <li>
-                                <a href="https://devtalk.kakao.com/c/flutter/198" target="_blank">flutter</a>
-                            </li>
-                            <li>
-                                <a href="https://devtalk.kakao.com/c/rest-api/17" target="_blank">rest-api</a>
-                            </li>
-                            
                         </ol>
                     </div>
 
