@@ -2,7 +2,7 @@
 <html lang="kr">
 
 <head>
-  <title>Kakao API Platform TAM Test Site - Legacy JS SDK v1</title>
+  <title>Kakao API Platform TAM Test Site - Legacy JS SDK v1_1.43.5</title>
   <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/head.php'; ?>
   <script type="text/javascript" src="/script/kakao-1.43.5.min.js"></script>
   <script type="text/javascript">
@@ -457,7 +457,7 @@
 
     <div class="row g-5">
       <div class="col-md-8">
-        <h3 class="pb-4 mb-4 fst-italic border-bottom">Kakao Legacy Javascript SDK v1 Test</h3>
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">Kakao Legacy Javascript SDK v1_1.43.5 Test</h3>
 
         <div>
           <div class="card-deck">
