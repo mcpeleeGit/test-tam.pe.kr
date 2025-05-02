@@ -42,6 +42,10 @@
       });
     }
 
+    function logoutWithKakaoAccount() {
+      location.href = 'https://kauth.kakao.com/oauth/logout?client_id=2d68640b56d986af5c8a48505c7c8c71&logout_redirect_uri=http://test-tam.pe.kr/js_sdk_v1.php';
+    }
+
     function unlink() {
       Kakao.API.request({
           url: '/v1/user/unlink',
@@ -468,6 +472,7 @@
               </div>
               <div class="card-footer">
                 [<a href="javascript:logout()">로그아웃</a>]
+                [<a href="javascript:logoutWithKakaoAccount()">카카오계정과 함께 로그아웃</a>]
                 [<a href="javascript:unlink()">연결끊기</a>]
                 [<a href="javascript:me()">사용자 정보 가져오기</a>]
                 [<a href="javascript:update_profile()">사용자 정보 저장하기</a>]
