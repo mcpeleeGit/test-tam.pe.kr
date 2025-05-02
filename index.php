@@ -85,6 +85,7 @@ Route::init($_SERVER['REQUEST_URI']);
                                 <a href="/facebook.php">[Facebook]</a>
                                 <a class="p-2 link-secondary" href="/firebase.php">Firebase authetication OIDC 테스트</a><a class="p-2 link-secondary" href="/okta.php">OKTA OIDC 테스트</a>
                                 <a target="_blank" href="/msg_test.php">[카카오톡 공유 버튼 링크]</a>
+                                <a href="/js_sdk_v1_1.43.5.php">[Kakao Javascript SDK v1.43.5]</a>
                             </div>
                         </div>
                     </div>
