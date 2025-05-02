@@ -18,33 +18,6 @@ Route::init($_SERVER['REQUEST_URI']);
     </div>
 
     <main class="container">
-        <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
-            <div class="col-md-6 px-0">
-                <h1 class="display-4 fst-italic">Kakao JavaScript SDK V2</h1>
-                <p class="lead my-3"></p>
-                <p class="lead mb-0">
-                    <a href="https://developers.kakao.com/docs/latest/ko/javascript/download" target="_blank" class="text-white fw-bold">Downloads...</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="row mb-2">
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <a href="/js_sdk_v1.php" class="stretched-link"><strong class="d-inline-block mb-2 text-primary">Kakao Javascript SDK v1 Test</strong></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <a href="/js_sdk_v2.php" class="stretched-link"><strong class="d-inline-block mb-2 text-primary">Kakao Javascript SDK v2 Test</strong></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="row g-5">
             <div class="col-md-8">
                 <h3 class="pb-4 mb-4 fst-italic border-bottom">Kakao API Test</h3>
@@ -59,20 +32,11 @@ Route::init($_SERVER['REQUEST_URI']);
                                 <p class="card-text"></p>
                             </div>
                             <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://developers.kakao.com/docs/latest/ko/kakaologin/common">[KakaoGuide]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/2">[Blog]</a>&nbsp;<a href="/kakao.php">[Sample]</a>&nbsp;
+                                <a href="/kakao_talk_channel.php">[카카오톡 채널]</a> 
+                                <a href="/kakao_talk_social.php">[카카오톡 소셜]</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title h5">
-                                    <a href="/kakao_talk_channel.php">카카오톡 채널</a>
-                                </div>
-                                <p class="card-text"></p>
-                            </div>
-                            <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://developers.kakao.com/docs/latest/ko/kakaotalk-channel/common">[KakaoGuide]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/14">[Blog]</a>&nbsp;<a href="/kakao_talk_channel.php">[Sample]</a>&nbsp;
-                            </div>
-                        </div>
+                        
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title h5">
@@ -89,19 +53,7 @@ Route::init($_SERVER['REQUEST_URI']);
                             </div>
                         </div>
                     </div>
-                    <div class="card-deck">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title h5">
-                                    <a href="/kakao_talk_social.php">카카오톡 소셜</a>
-                                </div>
-                                <p class="card-text"></p>
-                            </div>
-                            <div class="card-footer">
-                                <a target="_blank" rel="noopener noreferrer" href="https://developers.kakao.com/docs/latest/ko/kakaotalk-social/common">[KakaoGuide]</a>&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://kakao-tam.tistory.com/3">[Blog]</a>&nbsp;<a href="/kakao_talk_social.php">[Sample]</a>&nbsp;
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="card-deck">
                         <div class="card">
                             <div class="card-body">

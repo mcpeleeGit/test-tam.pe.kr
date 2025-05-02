@@ -1,331 +1,882 @@
-[Mon Apr 28 17:50:23 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50102 Accepted
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50104 Accepted
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50102 [200]: GET /
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50102 Closing
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50104 [200]: GET /style/index.css
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50104 Closing
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50107 Accepted
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50108 Accepted
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50110 Accepted
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50107 [200]: GET /style/blog.css
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50108 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50110 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50107 Closing
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50108 Closing
-[Mon Apr 28 17:50:31 2025] 127.0.0.1:50110 Closing
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50137 Accepted
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50137 [200]: GET /kakao.php
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50137 Closing
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50140 Accepted
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50142 Accepted
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50140 [200]: GET /style/index.css
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50140 Closing
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50142 [200]: GET /style/blog.css
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50142 Closing
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50144 Accepted
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50146 Accepted
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50144 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50146 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50144 Closing
-[Mon Apr 28 17:50:37 2025] 127.0.0.1:50146 Closing
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50152 Accepted
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50152 [200]: GET /kakao.php
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50152 Closing
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50155 Accepted
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50156 Accepted
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50155 [200]: GET /style/index.css
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50155 Closing
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50161 Accepted
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50156 [200]: GET /style/blog.css
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50162 Accepted
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50161 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50162 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50156 Closing
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50161 Closing
-[Mon Apr 28 17:50:40 2025] 127.0.0.1:50162 Closing
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50167 Accepted
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50167 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50167 Closing
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50169 Accepted
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50169 [200]: GET /style/index.css
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50169 Closing
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50173 Accepted
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50174 Accepted
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50173 [200]: GET /style/blog.css
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50175 Accepted
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50174 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50175 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50173 Closing
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50174 Closing
-[Mon Apr 28 17:50:42 2025] 127.0.0.1:50175 Closing
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50221 Accepted
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50223 Accepted
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50221 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50221 Closing
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50223 [200]: GET /style/index.css
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50223 Closing
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50227 Accepted
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50228 Accepted
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50230 Accepted
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50227 [200]: GET /style/blog.css
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50228 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50227 Closing
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50228 Closing
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50230 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50230 Closing
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50236 Accepted
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50236 [200]: GET /images/k.ico
-[Mon Apr 28 17:52:42 2025] 127.0.0.1:50236 Closing
-[Mon Apr 28 17:52:49 2025] 127.0.0.1:50249 Accepted
-[Mon Apr 28 17:52:49 2025] 127.0.0.1:50251 Accepted
-[Mon Apr 28 17:52:49 2025] 127.0.0.1:50249 [200]: GET /style/index.css
-[Mon Apr 28 17:52:49 2025] 127.0.0.1:50252 Accepted
-[Mon Apr 28 17:52:49 2025] 127.0.0.1:50251 [200]: GET /style/blog.css
-[Mon Apr 28 17:52:49 2025] 127.0.0.1:50252 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 17:52:49 2025] 127.0.0.1:50249 Closing
-[Mon Apr 28 17:52:49 2025] 127.0.0.1:50251 Closing
-[Mon Apr 28 17:52:49 2025] 127.0.0.1:50252 Closing
-[Mon Apr 28 17:52:50 2025] 127.0.0.1:50254 Accepted
-[Mon Apr 28 17:52:50 2025] 127.0.0.1:50254 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 17:52:50 2025] 127.0.0.1:50254 Closing
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50298 Accepted
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50300 Accepted
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50298 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50298 Closing
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50304 Accepted
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50300 [200]: GET /style/index.css
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50307 Accepted
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50304 [200]: GET /style/blog.css
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50308 Accepted
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50307 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50300 Closing
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50308 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50304 Closing
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50307 Closing
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50308 Closing
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50310 Accepted
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50310 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50310 Closing
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50313 Accepted
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50313 [200]: GET /images/k.ico
-[Mon Apr 28 17:53:00 2025] 127.0.0.1:50313 Closing
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50509 Accepted
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50511 Accepted
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50509 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50509 Closing
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50511 [200]: GET /style/index.css
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50511 Closing
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50514 Accepted
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50517 Accepted
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50514 [200]: GET /style/blog.css
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50518 Accepted
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50517 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50518 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50514 Closing
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50517 Closing
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50518 Closing
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50520 Accepted
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50520 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50520 Closing
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50527 Accepted
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50527 [200]: GET /images/k.ico
-[Mon Apr 28 17:53:45 2025] 127.0.0.1:50527 Closing
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50600 Accepted
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50603 Accepted
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50600 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50600 Closing
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50607 Accepted
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50603 [200]: GET /style/index.css
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50609 Accepted
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50607 [200]: GET /style/blog.css
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50611 Accepted
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50609 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50603 Closing
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50611 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50607 Closing
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50609 Closing
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50611 Closing
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50613 Accepted
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50613 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 17:54:02 2025] 127.0.0.1:50613 Closing
-[Mon Apr 28 17:54:03 2025] 127.0.0.1:50620 Accepted
-[Mon Apr 28 17:54:03 2025] 127.0.0.1:50620 [200]: GET /images/k.ico
-[Mon Apr 28 17:54:03 2025] 127.0.0.1:50620 Closing
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56397 Accepted
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56397 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56397 Closing
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56399 Accepted
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56402 Accepted
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56399 [200]: GET /style/index.css
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56403 Accepted
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56402 [200]: GET /style/blog.css
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56405 Accepted
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56403 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56399 Closing
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56405 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56402 Closing
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56403 Closing
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56405 Closing
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56407 Accepted
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56407 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 18:15:42 2025] 127.0.0.1:56407 Closing
-[Mon Apr 28 18:15:43 2025] 127.0.0.1:56418 Accepted
-[Mon Apr 28 18:15:43 2025] 127.0.0.1:56418 [200]: GET /images/k.ico
-[Mon Apr 28 18:15:43 2025] 127.0.0.1:56418 Closing
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56639 Accepted
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56639 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56639 Closing
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56642 Accepted
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56643 Accepted
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56642 [200]: GET /style/index.css
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56643 [200]: GET /style/blog.css
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56647 Accepted
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56648 Accepted
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56647 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56642 Closing
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56643 Closing
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56648 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56647 Closing
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56648 Closing
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56650 Accepted
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56650 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56650 Closing
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56653 Accepted
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56653 [200]: GET /images/k.ico
-[Mon Apr 28 18:16:31 2025] 127.0.0.1:56653 Closing
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57214 Accepted
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57214 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57214 Closing
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57216 Accepted
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57219 Accepted
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57216 [200]: GET /style/index.css
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57220 Accepted
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57219 [200]: GET /style/blog.css
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57222 Accepted
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57220 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57216 Closing
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57222 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57219 Closing
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57220 Closing
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57222 Closing
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57224 Accepted
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57224 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57224 Closing
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57235 Accepted
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57235 [200]: GET /images/k.ico
-[Mon Apr 28 18:18:40 2025] 127.0.0.1:57235 Closing
-[Mon Apr 28 18:22:04 2025] 127.0.0.1:58122 Accepted
-[Mon Apr 28 18:22:04 2025] 127.0.0.1:58122 [200]: GET /
-[Mon Apr 28 18:22:04 2025] 127.0.0.1:58122 Closing
-[Mon Apr 28 18:22:04 2025] 127.0.0.1:58124 Accepted
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58124 [200]: GET /style/index.css
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58127 Accepted
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58128 Accepted
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58127 [200]: GET /style/blog.css
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58124 Closing
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58128 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58127 Closing
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58128 Closing
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58130 Accepted
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58130 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 18:22:05 2025] 127.0.0.1:58130 Closing
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58144 Accepted
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58144 [200]: GET /js_sdk_v1.php
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58144 Closing
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58147 Accepted
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58148 Accepted
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58147 [200]: GET /style/index.css
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58147 Closing
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58148 [200]: GET /style/blog.css
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58152 Accepted
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58153 Accepted
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58148 Closing
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58152 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58153 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58152 Closing
-[Mon Apr 28 18:22:06 2025] 127.0.0.1:58153 Closing
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58400 Accepted
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58400 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58400 Closing
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58402 Accepted
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58405 Accepted
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58402 [200]: GET /style/index.css
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58407 Accepted
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58409 Accepted
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58402 Closing
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58405 [200]: GET /style/blog.css
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58407 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58409 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58405 Closing
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58407 Closing
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58409 Closing
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58411 Accepted
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58411 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 18:23:03 2025] 127.0.0.1:58411 Closing
-[Mon Apr 28 18:23:04 2025] 127.0.0.1:58414 Accepted
-[Mon Apr 28 18:23:04 2025] 127.0.0.1:58414 [200]: GET /images/k.ico
-[Mon Apr 28 18:23:04 2025] 127.0.0.1:58414 Closing
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58553 Accepted
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58555 Accepted
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58553 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58553 Closing
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58555 [200]: GET /style/index.css
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58555 Closing
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58559 Accepted
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58560 Accepted
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58561 Accepted
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58559 [200]: GET /style/blog.css
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58560 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58561 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58559 Closing
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58561 Closing
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58560 Closing
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58563 Accepted
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58563 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58563 Closing
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58570 Accepted
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58570 [200]: GET /images/k.ico
-[Mon Apr 28 18:23:35 2025] 127.0.0.1:58570 Closing
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58856 Accepted
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58858 Accepted
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58856 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58856 Closing
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58858 [200]: GET /style/index.css
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58858 Closing
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58860 Accepted
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58862 Accepted
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58864 Accepted
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58860 [200]: GET /style/blog.css
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58862 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58864 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58860 Closing
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58862 Closing
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58864 Closing
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58866 Accepted
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58866 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58866 Closing
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58872 Accepted
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58872 [200]: GET /images/k.ico
-[Mon Apr 28 18:24:42 2025] 127.0.0.1:58872 Closing
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65438 Accepted
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65438 [200]: GET /js_sdk_v2.php
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65438 Closing
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65440 Accepted
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65442 Accepted
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65444 Accepted
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65440 [200]: GET /style/index.css
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65446 Accepted
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65442 [200]: GET /style/blog.css
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65444 [200]: GET /style/bootstrap.min.css
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65440 Closing
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65446 [200]: GET /script/toastrWrapper.js?test1
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65442 Closing
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65444 Closing
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65446 Closing
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65449 Accepted
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65449 [404]: GET /style/bootstrap.min.css.map - No such file or directory
-[Mon Apr 28 18:48:54 2025] 127.0.0.1:65449 Closing
-[Mon Apr 28 18:48:55 2025] 127.0.0.1:65458 Accepted
-[Mon Apr 28 18:48:55 2025] 127.0.0.1:65458 [200]: GET /images/k.ico
-[Mon Apr 28 18:48:55 2025] 127.0.0.1:65458 Closing
+[Fri May  2 16:55:38 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
+[Fri May  2 16:56:21 2025] [::1]:61781 Accepted
+[Fri May  2 16:56:21 2025] [::1]:61781 [200]: GET /
+[Fri May  2 16:56:21 2025] [::1]:61781 Closing
+[Fri May  2 16:56:21 2025] [::1]:61782 Accepted
+[Fri May  2 16:56:21 2025] [::1]:61782 [200]: GET /style/index.css
+[Fri May  2 16:56:21 2025] [::1]:61782 Closing
+[Fri May  2 16:56:21 2025] [::1]:61784 Accepted
+[Fri May  2 16:56:21 2025] [::1]:61785 Accepted
+[Fri May  2 16:56:21 2025] [::1]:61786 Accepted
+[Fri May  2 16:56:21 2025] [::1]:61784 [200]: GET /style/blog.css
+[Fri May  2 16:56:21 2025] [::1]:61785 [200]: GET /style/bootstrap.min.css
+[Fri May  2 16:56:21 2025] [::1]:61784 Closing
+[Fri May  2 16:56:21 2025] [::1]:61786 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 16:56:21 2025] [::1]:61785 Closing
+[Fri May  2 16:56:21 2025] [::1]:61786 Closing
+[Fri May  2 16:58:24 2025] [::1]:61813 Accepted
+[Fri May  2 16:58:24 2025] [::1]:61813 [200]: GET /
+[Fri May  2 16:58:24 2025] [::1]:61813 Closing
+[Fri May  2 16:58:24 2025] [::1]:61814 Accepted
+[Fri May  2 16:58:24 2025] [::1]:61815 Accepted
+[Fri May  2 16:58:24 2025] [::1]:61817 Accepted
+[Fri May  2 16:58:24 2025] [::1]:61814 [200]: GET /style/index.css
+[Fri May  2 16:58:24 2025] [::1]:61815 [200]: GET /style/blog.css
+[Fri May  2 16:58:24 2025] [::1]:61818 Accepted
+[Fri May  2 16:58:24 2025] [::1]:61817 [200]: GET /style/bootstrap.min.css
+[Fri May  2 16:58:24 2025] [::1]:61818 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 16:58:24 2025] [::1]:61814 Closing
+[Fri May  2 16:58:24 2025] [::1]:61815 Closing
+[Fri May  2 16:58:24 2025] [::1]:61817 Closing
+[Fri May  2 16:58:24 2025] [::1]:61818 Closing
+[Fri May  2 16:58:24 2025] [::1]:61821 Accepted
+[Fri May  2 16:58:24 2025] [::1]:61821 [200]: GET /images/k.ico
+[Fri May  2 16:58:24 2025] [::1]:61821 Closing
+[Fri May  2 16:58:45 2025] [::1]:61825 Accepted
+[Fri May  2 16:58:45 2025] [::1]:61826 Accepted
+[Fri May  2 16:58:45 2025] [::1]:61825 [200]: GET /
+[Fri May  2 16:58:45 2025] [::1]:61825 Closing
+[Fri May  2 16:58:45 2025] [::1]:61826 [200]: GET /style/index.css
+[Fri May  2 16:58:45 2025] [::1]:61826 Closing
+[Fri May  2 16:58:45 2025] [::1]:61830 Accepted
+[Fri May  2 16:58:45 2025] [::1]:61831 Accepted
+[Fri May  2 16:58:45 2025] [::1]:61832 Accepted
+[Fri May  2 16:58:45 2025] [::1]:61830 [200]: GET /style/blog.css
+[Fri May  2 16:58:45 2025] [::1]:61830 Closing
+[Fri May  2 16:58:45 2025] [::1]:61831 [200]: GET /style/bootstrap.min.css
+[Fri May  2 16:58:45 2025] [::1]:61832 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 16:58:45 2025] [::1]:61831 Closing
+[Fri May  2 16:58:45 2025] [::1]:61832 Closing
+[Fri May  2 16:58:45 2025] [::1]:61833 Accepted
+[Fri May  2 16:58:45 2025] [::1]:61833 [200]: GET /images/k.ico
+[Fri May  2 16:58:45 2025] [::1]:61833 Closing
+[Fri May  2 16:59:02 2025] [::1]:61840 Accepted
+[Fri May  2 16:59:02 2025] [::1]:61841 Accepted
+[Fri May  2 16:59:02 2025] [::1]:61840 [200]: GET /
+[Fri May  2 16:59:02 2025] [::1]:61840 Closing
+[Fri May  2 16:59:02 2025] [::1]:61841 [200]: GET /style/index.css
+[Fri May  2 16:59:02 2025] [::1]:61841 Closing
+[Fri May  2 16:59:02 2025] [::1]:61843 Accepted
+[Fri May  2 16:59:02 2025] [::1]:61844 Accepted
+[Fri May  2 16:59:02 2025] [::1]:61845 Accepted
+[Fri May  2 16:59:02 2025] [::1]:61843 [200]: GET /style/blog.css
+[Fri May  2 16:59:02 2025] [::1]:61843 Closing
+[Fri May  2 16:59:02 2025] [::1]:61844 [200]: GET /style/bootstrap.min.css
+[Fri May  2 16:59:02 2025] [::1]:61845 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 16:59:02 2025] [::1]:61844 Closing
+[Fri May  2 16:59:02 2025] [::1]:61845 Closing
+[Fri May  2 16:59:03 2025] [::1]:61846 Accepted
+[Fri May  2 16:59:03 2025] [::1]:61846 [200]: GET /images/k.ico
+[Fri May  2 16:59:03 2025] [::1]:61846 Closing
+[Fri May  2 16:59:22 2025] [::1]:61851 Accepted
+[Fri May  2 16:59:22 2025] [::1]:61851 [200]: GET /
+[Fri May  2 16:59:22 2025] [::1]:61851 Closing
+[Fri May  2 16:59:22 2025] [::1]:61852 Accepted
+[Fri May  2 16:59:22 2025] [::1]:61853 Accepted
+[Fri May  2 16:59:22 2025] [::1]:61852 [200]: GET /style/index.css
+[Fri May  2 16:59:22 2025] [::1]:61852 Closing
+[Fri May  2 16:59:22 2025] [::1]:61855 Accepted
+[Fri May  2 16:59:22 2025] [::1]:61856 Accepted
+[Fri May  2 16:59:22 2025] [::1]:61853 [200]: GET /style/blog.css
+[Fri May  2 16:59:22 2025] [::1]:61855 [200]: GET /style/bootstrap.min.css
+[Fri May  2 16:59:22 2025] [::1]:61856 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 16:59:22 2025] [::1]:61853 Closing
+[Fri May  2 16:59:22 2025] [::1]:61855 Closing
+[Fri May  2 16:59:22 2025] [::1]:61856 Closing
+[Fri May  2 16:59:22 2025] [::1]:61857 Accepted
+[Fri May  2 16:59:22 2025] [::1]:61857 [200]: GET /images/k.ico
+[Fri May  2 16:59:22 2025] [::1]:61857 Closing
+[Fri May  2 17:00:25 2025] [::1]:61868 Accepted
+[Fri May  2 17:00:25 2025] [::1]:61868 [200]: GET /
+[Fri May  2 17:00:25 2025] [::1]:61868 Closing
+[Fri May  2 17:00:25 2025] [::1]:61869 Accepted
+[Fri May  2 17:00:25 2025] [::1]:61870 Accepted
+[Fri May  2 17:00:25 2025] [::1]:61869 [200]: GET /style/index.css
+[Fri May  2 17:00:25 2025] [::1]:61869 Closing
+[Fri May  2 17:00:25 2025] [::1]:61873 Accepted
+[Fri May  2 17:00:25 2025] [::1]:61874 Accepted
+[Fri May  2 17:00:25 2025] [::1]:61870 [200]: GET /style/blog.css
+[Fri May  2 17:00:25 2025] [::1]:61870 Closing
+[Fri May  2 17:00:25 2025] [::1]:61873 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:00:25 2025] [::1]:61874 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:00:25 2025] [::1]:61873 Closing
+[Fri May  2 17:00:25 2025] [::1]:61874 Closing
+[Fri May  2 17:00:26 2025] [::1]:61875 Accepted
+[Fri May  2 17:00:26 2025] [::1]:61875 [200]: GET /images/k.ico
+[Fri May  2 17:00:26 2025] [::1]:61875 Closing
+[Fri May  2 17:01:24 2025] [::1]:61883 Accepted
+[Fri May  2 17:01:24 2025] [::1]:61884 Accepted
+[Fri May  2 17:01:24 2025] [::1]:61883 [200]: GET /
+[Fri May  2 17:01:24 2025] [::1]:61883 Closing
+[Fri May  2 17:01:24 2025] [::1]:61886 Accepted
+[Fri May  2 17:01:24 2025] [::1]:61884 [200]: GET /style/index.css
+[Fri May  2 17:01:24 2025] [::1]:61887 Accepted
+[Fri May  2 17:01:24 2025] [::1]:61886 [200]: GET /style/blog.css
+[Fri May  2 17:01:24 2025] [::1]:61888 Accepted
+[Fri May  2 17:01:24 2025] [::1]:61887 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:01:24 2025] [::1]:61884 Closing
+[Fri May  2 17:01:24 2025] [::1]:61888 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:01:24 2025] [::1]:61886 Closing
+[Fri May  2 17:01:24 2025] [::1]:61887 Closing
+[Fri May  2 17:01:24 2025] [::1]:61888 Closing
+[Fri May  2 17:01:24 2025] [::1]:61890 Accepted
+[Fri May  2 17:01:24 2025] [::1]:61890 [200]: GET /images/k.ico
+[Fri May  2 17:01:24 2025] [::1]:61890 Closing
+[Fri May  2 17:01:42 2025] [::1]:61893 Accepted
+[Fri May  2 17:01:42 2025] [::1]:61894 Accepted
+[Fri May  2 17:01:42 2025] [::1]:61893 [200]: GET /
+[Fri May  2 17:01:42 2025] [::1]:61893 Closing
+[Fri May  2 17:01:42 2025] [::1]:61894 [200]: GET /style/index.css
+[Fri May  2 17:01:42 2025] [::1]:61896 Accepted
+[Fri May  2 17:01:42 2025] [::1]:61894 Closing
+[Fri May  2 17:01:42 2025] [::1]:61897 Accepted
+[Fri May  2 17:01:42 2025] [::1]:61898 Accepted
+[Fri May  2 17:01:42 2025] [::1]:61896 [200]: GET /style/blog.css
+[Fri May  2 17:01:42 2025] [::1]:61897 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:01:42 2025] [::1]:61896 Closing
+[Fri May  2 17:01:42 2025] [::1]:61897 Closing
+[Fri May  2 17:01:42 2025] [::1]:61898 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:01:42 2025] [::1]:61898 Closing
+[Fri May  2 17:01:42 2025] [::1]:61899 Accepted
+[Fri May  2 17:01:42 2025] [::1]:61899 [200]: GET /images/k.ico
+[Fri May  2 17:01:42 2025] [::1]:61899 Closing
+[Fri May  2 17:01:57 2025] [::1]:61903 Accepted
+[Fri May  2 17:01:57 2025] [::1]:61904 Accepted
+[Fri May  2 17:01:57 2025] [::1]:61903 [200]: GET /
+[Fri May  2 17:01:57 2025] [::1]:61903 Closing
+[Fri May  2 17:01:57 2025] [::1]:61904 [200]: GET /style/index.css
+[Fri May  2 17:01:57 2025] [::1]:61904 Closing
+[Fri May  2 17:01:57 2025] [::1]:61905 Accepted
+[Fri May  2 17:01:57 2025] [::1]:61906 Accepted
+[Fri May  2 17:01:57 2025] [::1]:61907 Accepted
+[Fri May  2 17:01:57 2025] [::1]:61905 [200]: GET /style/blog.css
+[Fri May  2 17:01:57 2025] [::1]:61906 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:01:57 2025] [::1]:61907 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:01:57 2025] [::1]:61905 Closing
+[Fri May  2 17:01:57 2025] [::1]:61907 Closing
+[Fri May  2 17:01:57 2025] [::1]:61906 Closing
+[Fri May  2 17:01:58 2025] [::1]:61908 Accepted
+[Fri May  2 17:01:58 2025] [::1]:61908 [200]: GET /images/k.ico
+[Fri May  2 17:01:58 2025] [::1]:61908 Closing
+[Fri May  2 17:02:21 2025] [::1]:61920 Accepted
+[Fri May  2 17:02:21 2025] [::1]:61921 Accepted
+[Fri May  2 17:02:21 2025] [::1]:61920 [200]: GET /
+[Fri May  2 17:02:21 2025] [::1]:61920 Closing
+[Fri May  2 17:02:21 2025] [::1]:61923 Accepted
+[Fri May  2 17:02:21 2025] [::1]:61921 [200]: GET /style/index.css
+[Fri May  2 17:02:21 2025] [::1]:61921 Closing
+[Fri May  2 17:02:21 2025] [::1]:61924 Accepted
+[Fri May  2 17:02:21 2025] [::1]:61925 Accepted
+[Fri May  2 17:02:21 2025] [::1]:61923 [200]: GET /style/blog.css
+[Fri May  2 17:02:21 2025] [::1]:61924 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:02:21 2025] [::1]:61925 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:02:21 2025] [::1]:61923 Closing
+[Fri May  2 17:02:21 2025] [::1]:61924 Closing
+[Fri May  2 17:02:21 2025] [::1]:61925 Closing
+[Fri May  2 17:02:21 2025] [::1]:61926 Accepted
+[Fri May  2 17:02:21 2025] [::1]:61926 [200]: GET /images/k.ico
+[Fri May  2 17:02:21 2025] [::1]:61926 Closing
+[Fri May  2 17:02:39 2025] [::1]:61929 Accepted
+[Fri May  2 17:02:39 2025] [::1]:61929 [200]: GET /
+[Fri May  2 17:02:39 2025] [::1]:61929 Closing
+[Fri May  2 17:02:39 2025] [::1]:61930 Accepted
+[Fri May  2 17:02:39 2025] [::1]:61931 Accepted
+[Fri May  2 17:02:39 2025] [::1]:61930 [200]: GET /style/index.css
+[Fri May  2 17:02:39 2025] [::1]:61930 Closing
+[Fri May  2 17:02:39 2025] [::1]:61933 Accepted
+[Fri May  2 17:02:39 2025] [::1]:61934 Accepted
+[Fri May  2 17:02:39 2025] [::1]:61931 [200]: GET /style/blog.css
+[Fri May  2 17:02:39 2025] [::1]:61931 Closing
+[Fri May  2 17:02:39 2025] [::1]:61933 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:02:39 2025] [::1]:61934 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:02:39 2025] [::1]:61934 Closing
+[Fri May  2 17:02:39 2025] [::1]:61933 Closing
+[Fri May  2 17:02:39 2025] [::1]:61937 Accepted
+[Fri May  2 17:02:39 2025] [::1]:61937 [200]: GET /images/k.ico
+[Fri May  2 17:02:39 2025] [::1]:61937 Closing
+[Fri May  2 17:02:46 2025] [::1]:61939 Accepted
+[Fri May  2 17:02:46 2025] [::1]:61940 Accepted
+[Fri May  2 17:02:46 2025] [::1]:61939 [200]: GET /
+[Fri May  2 17:02:46 2025] [::1]:61939 Closing
+[Fri May  2 17:02:46 2025] [::1]:61941 Accepted
+[Fri May  2 17:02:46 2025] [::1]:61940 [200]: GET /style/index.css
+[Fri May  2 17:02:46 2025] [::1]:61940 Closing
+[Fri May  2 17:02:46 2025] [::1]:61942 Accepted
+[Fri May  2 17:02:46 2025] [::1]:61943 Accepted
+[Fri May  2 17:02:46 2025] [::1]:61941 [200]: GET /style/blog.css
+[Fri May  2 17:02:46 2025] [::1]:61942 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:02:46 2025] [::1]:61943 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:02:46 2025] [::1]:61941 Closing
+[Fri May  2 17:02:46 2025] [::1]:61943 Closing
+[Fri May  2 17:02:46 2025] [::1]:61942 Closing
+[Fri May  2 17:02:46 2025] [::1]:61945 Accepted
+[Fri May  2 17:02:46 2025] [::1]:61945 [200]: GET /images/k.ico
+[Fri May  2 17:02:46 2025] [::1]:61945 Closing
+[Fri May  2 17:03:57 2025] [::1]:61956 Accepted
+[Fri May  2 17:03:57 2025] [::1]:61956 [200]: GET /
+[Fri May  2 17:03:57 2025] [::1]:61956 Closing
+[Fri May  2 17:03:57 2025] [::1]:61957 Accepted
+[Fri May  2 17:03:57 2025] [::1]:61958 Accepted
+[Fri May  2 17:03:57 2025] [::1]:61957 [200]: GET /style/index.css
+[Fri May  2 17:03:57 2025] [::1]:61957 Closing
+[Fri May  2 17:03:57 2025] [::1]:61959 Accepted
+[Fri May  2 17:03:57 2025] [::1]:61958 [200]: GET /style/blog.css
+[Fri May  2 17:03:57 2025] [::1]:61958 Closing
+[Fri May  2 17:03:57 2025] [::1]:61960 Accepted
+[Fri May  2 17:03:57 2025] [::1]:61959 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:03:57 2025] [::1]:61959 Closing
+[Fri May  2 17:03:57 2025] [::1]:61960 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:03:57 2025] [::1]:61960 Closing
+[Fri May  2 17:03:58 2025] [::1]:61961 Accepted
+[Fri May  2 17:03:58 2025] [::1]:61961 [200]: GET /images/k.ico
+[Fri May  2 17:03:58 2025] [::1]:61961 Closing
+[Fri May  2 17:04:24 2025] [::1]:61966 Accepted
+[Fri May  2 17:04:24 2025] [::1]:61967 Accepted
+[Fri May  2 17:04:24 2025] [::1]:61966 [200]: GET /
+[Fri May  2 17:04:24 2025] [::1]:61966 Closing
+[Fri May  2 17:04:24 2025] [::1]:61967 [200]: GET /style/index.css
+[Fri May  2 17:04:24 2025] [::1]:61970 Accepted
+[Fri May  2 17:04:24 2025] [::1]:61967 Closing
+[Fri May  2 17:04:24 2025] [::1]:61971 Accepted
+[Fri May  2 17:04:24 2025] [::1]:61972 Accepted
+[Fri May  2 17:04:24 2025] [::1]:61970 [200]: GET /style/blog.css
+[Fri May  2 17:04:24 2025] [::1]:61971 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:04:24 2025] [::1]:61972 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:04:24 2025] [::1]:61970 Closing
+[Fri May  2 17:04:24 2025] [::1]:61971 Closing
+[Fri May  2 17:04:24 2025] [::1]:61972 Closing
+[Fri May  2 17:04:25 2025] [::1]:61973 Accepted
+[Fri May  2 17:04:25 2025] [::1]:61973 [200]: GET /images/k.ico
+[Fri May  2 17:04:25 2025] [::1]:61973 Closing
+[Fri May  2 17:04:42 2025] [::1]:61979 Accepted
+[Fri May  2 17:04:42 2025] [::1]:61979 [200]: GET /
+[Fri May  2 17:04:42 2025] [::1]:61979 Closing
+[Fri May  2 17:04:42 2025] [::1]:61980 Accepted
+[Fri May  2 17:04:42 2025] [::1]:61981 Accepted
+[Fri May  2 17:04:42 2025] [::1]:61980 [200]: GET /style/index.css
+[Fri May  2 17:04:42 2025] [::1]:61980 Closing
+[Fri May  2 17:04:42 2025] [::1]:61983 Accepted
+[Fri May  2 17:04:42 2025] [::1]:61984 Accepted
+[Fri May  2 17:04:42 2025] [::1]:61981 [200]: GET /style/blog.css
+[Fri May  2 17:04:42 2025] [::1]:61981 Closing
+[Fri May  2 17:04:42 2025] [::1]:61983 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:04:42 2025] [::1]:61984 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:04:42 2025] [::1]:61983 Closing
+[Fri May  2 17:04:42 2025] [::1]:61984 Closing
+[Fri May  2 17:04:42 2025] [::1]:61985 Accepted
+[Fri May  2 17:04:42 2025] [::1]:61985 [200]: GET /images/k.ico
+[Fri May  2 17:04:42 2025] [::1]:61985 Closing
+[Fri May  2 17:05:03 2025] [::1]:61988 Accepted
+[Fri May  2 17:05:03 2025] [::1]:61989 Accepted
+[Fri May  2 17:05:03 2025] [::1]:61988 [200]: GET /
+[Fri May  2 17:05:03 2025] [::1]:61988 Closing
+[Fri May  2 17:05:03 2025] [::1]:61990 Accepted
+[Fri May  2 17:05:03 2025] [::1]:61989 [200]: GET /style/index.css
+[Fri May  2 17:05:03 2025] [::1]:61991 Accepted
+[Fri May  2 17:05:03 2025] [::1]:61989 Closing
+[Fri May  2 17:05:03 2025] [::1]:61992 Accepted
+[Fri May  2 17:05:03 2025] [::1]:61990 [200]: GET /style/blog.css
+[Fri May  2 17:05:03 2025] [::1]:61992 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:05:03 2025] [::1]:61991 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:05:03 2025] [::1]:61990 Closing
+[Fri May  2 17:05:03 2025] [::1]:61992 Closing
+[Fri May  2 17:05:03 2025] [::1]:61991 Closing
+[Fri May  2 17:05:03 2025] [::1]:61994 Accepted
+[Fri May  2 17:05:03 2025] [::1]:61994 [200]: GET /images/k.ico
+[Fri May  2 17:05:03 2025] [::1]:61994 Closing
+[Fri May  2 17:05:10 2025] [::1]:62002 Accepted
+[Fri May  2 17:05:10 2025] [::1]:62003 Accepted
+[Fri May  2 17:05:10 2025] [::1]:62002 [200]: GET /
+[Fri May  2 17:05:10 2025] [::1]:62002 Closing
+[Fri May  2 17:05:10 2025] [::1]:62003 [200]: GET /style/index.css
+[Fri May  2 17:05:10 2025] [::1]:62003 Closing
+[Fri May  2 17:05:10 2025] [::1]:62004 Accepted
+[Fri May  2 17:05:10 2025] [::1]:62005 Accepted
+[Fri May  2 17:05:10 2025] [::1]:62006 Accepted
+[Fri May  2 17:05:10 2025] [::1]:62004 [200]: GET /style/blog.css
+[Fri May  2 17:05:10 2025] [::1]:62005 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:05:10 2025] [::1]:62006 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:05:10 2025] [::1]:62004 Closing
+[Fri May  2 17:05:10 2025] [::1]:62005 Closing
+[Fri May  2 17:05:10 2025] [::1]:62006 Closing
+[Fri May  2 17:05:10 2025] [::1]:62008 Accepted
+[Fri May  2 17:05:10 2025] [::1]:62008 [200]: GET /images/k.ico
+[Fri May  2 17:05:10 2025] [::1]:62008 Closing
+[Fri May  2 17:05:21 2025] [::1]:62009 Accepted
+[Fri May  2 17:05:21 2025] [::1]:62009 [200]: GET /
+[Fri May  2 17:05:21 2025] [::1]:62009 Closing
+[Fri May  2 17:05:21 2025] [::1]:62010 Accepted
+[Fri May  2 17:05:21 2025] [::1]:62011 Accepted
+[Fri May  2 17:05:21 2025] [::1]:62010 [200]: GET /style/index.css
+[Fri May  2 17:05:21 2025] [::1]:62010 Closing
+[Fri May  2 17:05:21 2025] [::1]:62012 Accepted
+[Fri May  2 17:05:21 2025] [::1]:62013 Accepted
+[Fri May  2 17:05:21 2025] [::1]:62011 [200]: GET /style/blog.css
+[Fri May  2 17:05:21 2025] [::1]:62011 Closing
+[Fri May  2 17:05:21 2025] [::1]:62012 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:05:21 2025] [::1]:62013 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:05:21 2025] [::1]:62013 Closing
+[Fri May  2 17:05:21 2025] [::1]:62012 Closing
+[Fri May  2 17:05:21 2025] [::1]:62014 Accepted
+[Fri May  2 17:05:21 2025] [::1]:62014 [200]: GET /images/k.ico
+[Fri May  2 17:05:21 2025] [::1]:62014 Closing
+[Fri May  2 17:05:28 2025] [::1]:62016 Accepted
+[Fri May  2 17:05:28 2025] [::1]:62016 [200]: GET /js_sdk_v1.php
+[Fri May  2 17:05:28 2025] [::1]:62016 Closing
+[Fri May  2 17:05:28 2025] [::1]:62017 Accepted
+[Fri May  2 17:05:28 2025] [::1]:62018 Accepted
+[Fri May  2 17:05:28 2025] [::1]:62017 [200]: GET /style/index.css
+[Fri May  2 17:05:28 2025] [::1]:62017 Closing
+[Fri May  2 17:05:28 2025] [::1]:62020 Accepted
+[Fri May  2 17:05:28 2025] [::1]:62021 Accepted
+[Fri May  2 17:05:28 2025] [::1]:62018 [200]: GET /style/blog.css
+[Fri May  2 17:05:28 2025] [::1]:62020 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:05:28 2025] [::1]:62018 Closing
+[Fri May  2 17:05:28 2025] [::1]:62021 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:05:28 2025] [::1]:62020 Closing
+[Fri May  2 17:05:28 2025] [::1]:62021 Closing
+[Fri May  2 17:05:47 2025] [::1]:62025 Accepted
+[Fri May  2 17:05:47 2025] [::1]:62025 [200]: GET /js_sdk_v1.php
+[Fri May  2 17:05:47 2025] [::1]:62025 Closing
+[Fri May  2 17:05:47 2025] [::1]:62026 Accepted
+[Fri May  2 17:05:47 2025] [::1]:62027 Accepted
+[Fri May  2 17:05:47 2025] [::1]:62026 [200]: GET /style/index.css
+[Fri May  2 17:05:47 2025] [::1]:62026 Closing
+[Fri May  2 17:05:47 2025] [::1]:62028 Accepted
+[Fri May  2 17:05:47 2025] [::1]:62029 Accepted
+[Fri May  2 17:05:47 2025] [::1]:62027 [200]: GET /style/blog.css
+[Fri May  2 17:05:47 2025] [::1]:62027 Closing
+[Fri May  2 17:05:47 2025] [::1]:62028 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:05:47 2025] [::1]:62029 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:05:47 2025] [::1]:62029 Closing
+[Fri May  2 17:05:47 2025] [::1]:62028 Closing
+[Fri May  2 17:05:47 2025] [::1]:62030 Accepted
+[Fri May  2 17:05:47 2025] [::1]:62030 [200]: GET /images/k.ico
+[Fri May  2 17:05:47 2025] [::1]:62030 Closing
+[Fri May  2 17:06:05 2025] [::1]:62032 Accepted
+[Fri May  2 17:06:05 2025] [::1]:62032 [200]: GET /
+[Fri May  2 17:06:05 2025] [::1]:62032 Closing
+[Fri May  2 17:06:05 2025] [::1]:62033 Accepted
+[Fri May  2 17:06:05 2025] [::1]:62034 Accepted
+[Fri May  2 17:06:05 2025] [::1]:62033 [200]: GET /style/index.css
+[Fri May  2 17:06:05 2025] [::1]:62035 Accepted
+[Fri May  2 17:06:05 2025] [::1]:62034 [200]: GET /style/blog.css
+[Fri May  2 17:06:05 2025] [::1]:62036 Accepted
+[Fri May  2 17:06:05 2025] [::1]:62033 Closing
+[Fri May  2 17:06:05 2025] [::1]:62034 Closing
+[Fri May  2 17:06:05 2025] [::1]:62035 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:06:05 2025] [::1]:62036 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:06:05 2025] [::1]:62036 Closing
+[Fri May  2 17:06:05 2025] [::1]:62035 Closing
+[Fri May  2 17:06:16 2025] [::1]:62047 Accepted
+[Fri May  2 17:06:16 2025] [::1]:62048 Accepted
+[Fri May  2 17:06:16 2025] [::1]:62047 [200]: GET /
+[Fri May  2 17:06:16 2025] [::1]:62047 Closing
+[Fri May  2 17:06:16 2025] [::1]:62048 [200]: GET /style/index.css
+[Fri May  2 17:06:16 2025] [::1]:62048 Closing
+[Fri May  2 17:06:16 2025] [::1]:62049 Accepted
+[Fri May  2 17:06:16 2025] [::1]:62050 Accepted
+[Fri May  2 17:06:16 2025] [::1]:62051 Accepted
+[Fri May  2 17:06:16 2025] [::1]:62049 [200]: GET /style/blog.css
+[Fri May  2 17:06:16 2025] [::1]:62050 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:06:16 2025] [::1]:62051 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:06:16 2025] [::1]:62049 Closing
+[Fri May  2 17:06:16 2025] [::1]:62051 Closing
+[Fri May  2 17:06:16 2025] [::1]:62050 Closing
+[Fri May  2 17:06:17 2025] [::1]:62053 Accepted
+[Fri May  2 17:06:17 2025] [::1]:62053 [200]: GET /images/k.ico
+[Fri May  2 17:06:17 2025] [::1]:62053 Closing
+[Fri May  2 17:06:24 2025] [::1]:62054 Accepted
+[Fri May  2 17:06:24 2025] [::1]:62054 [200]: GET /js_sdk_v1.php
+[Fri May  2 17:06:24 2025] [::1]:62054 Closing
+[Fri May  2 17:06:24 2025] [::1]:62055 Accepted
+[Fri May  2 17:06:24 2025] [::1]:62056 Accepted
+[Fri May  2 17:06:24 2025] [::1]:62055 [200]: GET /style/index.css
+[Fri May  2 17:06:24 2025] [::1]:62055 Closing
+[Fri May  2 17:06:24 2025] [::1]:62057 Accepted
+[Fri May  2 17:06:24 2025] [::1]:62058 Accepted
+[Fri May  2 17:06:24 2025] [::1]:62056 [200]: GET /style/blog.css
+[Fri May  2 17:06:24 2025] [::1]:62057 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:06:24 2025] [::1]:62058 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:06:24 2025] [::1]:62056 Closing
+[Fri May  2 17:06:24 2025] [::1]:62058 Closing
+[Fri May  2 17:06:24 2025] [::1]:62057 Closing
+[Fri May  2 17:06:42 2025] [::1]:62068 Accepted
+[Fri May  2 17:06:42 2025] [::1]:62068 [200]: GET /
+[Fri May  2 17:06:42 2025] [::1]:62068 Closing
+[Fri May  2 17:06:42 2025] [::1]:62069 Accepted
+[Fri May  2 17:06:42 2025] [::1]:62069 [200]: GET /style/index.css
+[Fri May  2 17:06:42 2025] [::1]:62071 Accepted
+[Fri May  2 17:06:42 2025] [::1]:62072 Accepted
+[Fri May  2 17:06:42 2025] [::1]:62069 Closing
+[Fri May  2 17:06:42 2025] [::1]:62073 Accepted
+[Fri May  2 17:06:42 2025] [::1]:62071 [200]: GET /style/blog.css
+[Fri May  2 17:06:42 2025] [::1]:62073 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:06:42 2025] [::1]:62072 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:06:42 2025] [::1]:62071 Closing
+[Fri May  2 17:06:42 2025] [::1]:62073 Closing
+[Fri May  2 17:06:42 2025] [::1]:62072 Closing
+[Fri May  2 17:06:47 2025] [::1]:62074 Accepted
+[Fri May  2 17:06:47 2025] [::1]:62074 [200]: GET /
+[Fri May  2 17:06:47 2025] [::1]:62074 Closing
+[Fri May  2 17:06:47 2025] [::1]:62075 Accepted
+[Fri May  2 17:06:47 2025] [::1]:62076 Accepted
+[Fri May  2 17:06:47 2025] [::1]:62075 [200]: GET /style/index.css
+[Fri May  2 17:06:47 2025] [::1]:62075 Closing
+[Fri May  2 17:06:47 2025] [::1]:62077 Accepted
+[Fri May  2 17:06:47 2025] [::1]:62078 Accepted
+[Fri May  2 17:06:47 2025] [::1]:62076 [200]: GET /style/blog.css
+[Fri May  2 17:06:47 2025] [::1]:62077 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:06:47 2025] [::1]:62076 Closing
+[Fri May  2 17:06:47 2025] [::1]:62078 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:06:47 2025] [::1]:62077 Closing
+[Fri May  2 17:06:47 2025] [::1]:62078 Closing
+[Fri May  2 17:06:47 2025] [::1]:62079 Accepted
+[Fri May  2 17:06:47 2025] [::1]:62079 [200]: GET /images/k.ico
+[Fri May  2 17:06:47 2025] [::1]:62079 Closing
+[Fri May  2 17:06:49 2025] [::1]:62080 Accepted
+[Fri May  2 17:06:49 2025] PHP Warning:  Undefined array key "workershigh_user_session" in /Users/kakao/Cursor/test-tam.pe.kr/kakao.php on line 492
+[Fri May  2 17:06:49 2025] PHP Warning:  Undefined array key "compare_user_session" in /Users/kakao/Cursor/test-tam.pe.kr/kakao.php on line 494
+[Fri May  2 17:06:49 2025] [::1]:62080 [200]: GET /kakao.php
+[Fri May  2 17:06:49 2025] [::1]:62080 Closing
+[Fri May  2 17:06:49 2025] [::1]:62081 Accepted
+[Fri May  2 17:06:49 2025] [::1]:62081 [200]: GET /toastrWrapper.js?test1
+[Fri May  2 17:06:49 2025] [::1]:62081 Closing
+[Fri May  2 17:06:49 2025] [::1]:62088 Accepted
+[Fri May  2 17:06:49 2025] [::1]:62088 [200]: GET /manifest.json
+[Fri May  2 17:06:49 2025] [::1]:62088 Closing
+[Fri May  2 17:06:50 2025] [::1]:62091 Accepted
+[Fri May  2 17:06:50 2025] [::1]:62091 [200]: GET /favicon.ico
+[Fri May  2 17:06:50 2025] [::1]:62091 Closing
+[Fri May  2 17:06:53 2025] [::1]:62092 Accepted
+[Fri May  2 17:06:53 2025] [::1]:62092 [200]: GET /kakao_talk_channel.php
+[Fri May  2 17:06:53 2025] [::1]:62092 Closing
+[Fri May  2 17:06:53 2025] [::1]:62093 Accepted
+[Fri May  2 17:06:53 2025] [::1]:62093 [200]: GET /static/css/2.86aa6515.chunk.css
+[Fri May  2 17:06:53 2025] [::1]:62093 Closing
+[Fri May  2 17:06:53 2025] [::1]:62094 Accepted
+[Fri May  2 17:06:53 2025] [::1]:62094 [200]: GET /static/css/main.a583af82.chunk.css
+[Fri May  2 17:06:53 2025] [::1]:62094 Closing
+[Fri May  2 17:06:53 2025] [::1]:62096 Accepted
+[Fri May  2 17:06:53 2025] [::1]:62096 [200]: GET /manifest.json
+[Fri May  2 17:06:53 2025] [::1]:62096 Closing
+[Fri May  2 17:06:53 2025] [::1]:62097 Accepted
+[Fri May  2 17:06:53 2025] [::1]:62097 [200]: GET /favicon.ico
+[Fri May  2 17:06:53 2025] [::1]:62097 Closing
+[Fri May  2 17:07:05 2025] [::1]:62102 Accepted
+[Fri May  2 17:07:05 2025] [::1]:62102 [200]: GET /js_sdk_v1.php
+[Fri May  2 17:07:05 2025] [::1]:62102 Closing
+[Fri May  2 17:07:05 2025] [::1]:62103 Accepted
+[Fri May  2 17:07:05 2025] [::1]:62104 Accepted
+[Fri May  2 17:07:05 2025] [::1]:62103 [200]: GET /style/index.css
+[Fri May  2 17:07:05 2025] [::1]:62103 Closing
+[Fri May  2 17:07:05 2025] [::1]:62106 Accepted
+[Fri May  2 17:07:05 2025] [::1]:62107 Accepted
+[Fri May  2 17:07:05 2025] [::1]:62104 [200]: GET /style/blog.css
+[Fri May  2 17:07:05 2025] [::1]:62104 Closing
+[Fri May  2 17:07:05 2025] [::1]:62106 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:07:05 2025] [::1]:62107 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:07:05 2025] [::1]:62106 Closing
+[Fri May  2 17:07:05 2025] [::1]:62107 Closing
+[Fri May  2 17:07:08 2025] [::1]:62111 Accepted
+[Fri May  2 17:07:08 2025] [::1]:62111 [200]: GET /js_sdk_v2.php
+[Fri May  2 17:07:08 2025] [::1]:62111 Closing
+[Fri May  2 17:07:08 2025] [::1]:62112 Accepted
+[Fri May  2 17:07:08 2025] [::1]:62112 [200]: GET /style/index.css
+[Fri May  2 17:07:08 2025] [::1]:62112 Closing
+[Fri May  2 17:07:08 2025] [::1]:62113 Accepted
+[Fri May  2 17:07:08 2025] [::1]:62114 Accepted
+[Fri May  2 17:07:08 2025] [::1]:62115 Accepted
+[Fri May  2 17:07:08 2025] [::1]:62113 [200]: GET /style/blog.css
+[Fri May  2 17:07:08 2025] [::1]:62114 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:07:08 2025] [::1]:62113 Closing
+[Fri May  2 17:07:08 2025] [::1]:62115 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:07:08 2025] [::1]:62114 Closing
+[Fri May  2 17:07:08 2025] [::1]:62115 Closing
+[Fri May  2 17:07:11 2025] [::1]:62117 Accepted
+[Fri May  2 17:07:11 2025] [::1]:62117 [200]: GET /js_sdk_v1.php
+[Fri May  2 17:07:11 2025] [::1]:62117 Closing
+[Fri May  2 17:07:11 2025] [::1]:62118 Accepted
+[Fri May  2 17:07:11 2025] [::1]:62119 Accepted
+[Fri May  2 17:07:11 2025] [::1]:62118 [200]: GET /style/index.css
+[Fri May  2 17:07:11 2025] [::1]:62118 Closing
+[Fri May  2 17:07:11 2025] [::1]:62120 Accepted
+[Fri May  2 17:07:11 2025] [::1]:62121 Accepted
+[Fri May  2 17:07:11 2025] [::1]:62119 [200]: GET /style/blog.css
+[Fri May  2 17:07:11 2025] [::1]:62119 Closing
+[Fri May  2 17:07:11 2025] [::1]:62120 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:07:11 2025] [::1]:62120 Closing
+[Fri May  2 17:07:11 2025] [::1]:62121 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:07:11 2025] [::1]:62121 Closing
+[Fri May  2 17:07:12 2025] [::1]:62122 Accepted
+[Fri May  2 17:07:12 2025] [::1]:62122 [200]: GET /js_sdk_v2.php
+[Fri May  2 17:07:12 2025] [::1]:62122 Closing
+[Fri May  2 17:07:12 2025] [::1]:62123 Accepted
+[Fri May  2 17:07:12 2025] [::1]:62124 Accepted
+[Fri May  2 17:07:12 2025] [::1]:62123 [200]: GET /style/index.css
+[Fri May  2 17:07:12 2025] [::1]:62123 Closing
+[Fri May  2 17:07:12 2025] [::1]:62125 Accepted
+[Fri May  2 17:07:12 2025] [::1]:62126 Accepted
+[Fri May  2 17:07:12 2025] [::1]:62124 [200]: GET /style/blog.css
+[Fri May  2 17:07:12 2025] [::1]:62125 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:07:12 2025] [::1]:62126 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:07:12 2025] [::1]:62124 Closing
+[Fri May  2 17:07:12 2025] [::1]:62126 Closing
+[Fri May  2 17:07:12 2025] [::1]:62125 Closing
+[Fri May  2 17:07:15 2025] [::1]:62127 Accepted
+[Fri May  2 17:07:15 2025] [::1]:62127 [200]: GET /js_sdk_v1.php
+[Fri May  2 17:07:15 2025] [::1]:62127 Closing
+[Fri May  2 17:07:15 2025] [::1]:62128 Accepted
+[Fri May  2 17:07:15 2025] [::1]:62129 Accepted
+[Fri May  2 17:07:15 2025] [::1]:62128 [200]: GET /style/index.css
+[Fri May  2 17:07:15 2025] [::1]:62128 Closing
+[Fri May  2 17:07:15 2025] [::1]:62130 Accepted
+[Fri May  2 17:07:15 2025] [::1]:62131 Accepted
+[Fri May  2 17:07:15 2025] [::1]:62129 [200]: GET /style/blog.css
+[Fri May  2 17:07:15 2025] [::1]:62130 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:07:15 2025] [::1]:62131 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:07:15 2025] [::1]:62129 Closing
+[Fri May  2 17:07:15 2025] [::1]:62131 Closing
+[Fri May  2 17:07:15 2025] [::1]:62130 Closing
+[Fri May  2 17:07:18 2025] [::1]:62132 Accepted
+[Fri May  2 17:07:18 2025] [::1]:62132 [200]: GET /js_sdk_v2.php
+[Fri May  2 17:07:18 2025] [::1]:62132 Closing
+[Fri May  2 17:07:18 2025] [::1]:62133 Accepted
+[Fri May  2 17:07:18 2025] [::1]:62133 [200]: GET /style/index.css
+[Fri May  2 17:07:18 2025] [::1]:62133 Closing
+[Fri May  2 17:07:18 2025] [::1]:62134 Accepted
+[Fri May  2 17:07:18 2025] [::1]:62135 Accepted
+[Fri May  2 17:07:18 2025] [::1]:62136 Accepted
+[Fri May  2 17:07:18 2025] [::1]:62134 [200]: GET /style/blog.css
+[Fri May  2 17:07:18 2025] [::1]:62135 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:07:18 2025] [::1]:62136 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:07:18 2025] [::1]:62134 Closing
+[Fri May  2 17:07:18 2025] [::1]:62136 Closing
+[Fri May  2 17:07:18 2025] [::1]:62135 Closing
+[Fri May  2 17:07:35 2025] [::1]:62140 Accepted
+[Fri May  2 17:07:35 2025] [::1]:62141 Accepted
+[Fri May  2 17:07:35 2025] [::1]:62140 [200]: GET /js_sdk_v2.php
+[Fri May  2 17:07:35 2025] [::1]:62140 Closing
+[Fri May  2 17:07:35 2025] [::1]:62142 Accepted
+[Fri May  2 17:07:35 2025] [::1]:62143 Accepted
+[Fri May  2 17:07:35 2025] [::1]:62144 Accepted
+[Fri May  2 17:07:35 2025] [::1]:62141 [200]: GET /style/index.css
+[Fri May  2 17:07:35 2025] [::1]:62142 [200]: GET /style/blog.css
+[Fri May  2 17:07:35 2025] [::1]:62143 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:07:35 2025] [::1]:62141 Closing
+[Fri May  2 17:07:35 2025] [::1]:62144 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:07:35 2025] [::1]:62142 Closing
+[Fri May  2 17:07:35 2025] [::1]:62143 Closing
+[Fri May  2 17:07:35 2025] [::1]:62144 Closing
+[Fri May  2 17:07:36 2025] [::1]:62145 Accepted
+[Fri May  2 17:07:36 2025] [::1]:62145 [200]: GET /images/k.ico
+[Fri May  2 17:07:36 2025] [::1]:62145 Closing
+[Fri May  2 17:07:48 2025] [::1]:62150 Accepted
+[Fri May  2 17:07:48 2025] [::1]:62151 Accepted
+[Fri May  2 17:07:48 2025] [::1]:62150 [200]: GET /js_sdk_v2.php
+[Fri May  2 17:07:48 2025] [::1]:62150 Closing
+[Fri May  2 17:07:48 2025] [::1]:62151 [200]: GET /style/index.css
+[Fri May  2 17:07:48 2025] [::1]:62153 Accepted
+[Fri May  2 17:07:48 2025] [::1]:62154 Accepted
+[Fri May  2 17:07:48 2025] [::1]:62155 Accepted
+[Fri May  2 17:07:48 2025] [::1]:62151 Closing
+[Fri May  2 17:07:48 2025] [::1]:62153 [200]: GET /style/blog.css
+[Fri May  2 17:07:48 2025] [::1]:62154 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:07:48 2025] [::1]:62155 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:07:48 2025] [::1]:62153 Closing
+[Fri May  2 17:07:48 2025] [::1]:62154 Closing
+[Fri May  2 17:07:48 2025] [::1]:62155 Closing
+[Fri May  2 17:07:48 2025] [::1]:62156 Accepted
+[Fri May  2 17:07:48 2025] [::1]:62156 [200]: GET /images/k.ico
+[Fri May  2 17:07:48 2025] [::1]:62156 Closing
+[Fri May  2 17:07:49 2025] [::1]:62157 Accepted
+[Fri May  2 17:07:49 2025] [::1]:62157 [200]: GET /js_sdk_v2.php
+[Fri May  2 17:07:49 2025] [::1]:62157 Closing
+[Fri May  2 17:07:49 2025] [::1]:62158 Accepted
+[Fri May  2 17:07:49 2025] [::1]:62159 Accepted
+[Fri May  2 17:07:49 2025] [::1]:62158 [200]: GET /style/index.css
+[Fri May  2 17:07:49 2025] [::1]:62158 Closing
+[Fri May  2 17:07:49 2025] [::1]:62160 Accepted
+[Fri May  2 17:07:49 2025] [::1]:62161 Accepted
+[Fri May  2 17:07:49 2025] [::1]:62159 [200]: GET /style/blog.css
+[Fri May  2 17:07:49 2025] [::1]:62160 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:07:49 2025] [::1]:62159 Closing
+[Fri May  2 17:07:49 2025] [::1]:62161 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:07:49 2025] [::1]:62160 Closing
+[Fri May  2 17:07:49 2025] [::1]:62161 Closing
+[Fri May  2 17:07:49 2025] [::1]:62162 Accepted
+[Fri May  2 17:07:49 2025] [::1]:62162 [200]: GET /images/k.ico
+[Fri May  2 17:07:49 2025] [::1]:62162 Closing
+[Fri May  2 17:08:08 2025] [::1]:62165 Accepted
+[Fri May  2 17:08:08 2025] [::1]:62166 Accepted
+[Fri May  2 17:08:08 2025] [::1]:62165 [200]: GET /js_sdk_v2.php
+[Fri May  2 17:08:08 2025] [::1]:62165 Closing
+[Fri May  2 17:08:08 2025] [::1]:62166 [200]: GET /style/index.css
+[Fri May  2 17:08:08 2025] [::1]:62166 Closing
+[Fri May  2 17:08:08 2025] [::1]:62167 Accepted
+[Fri May  2 17:08:08 2025] [::1]:62168 Accepted
+[Fri May  2 17:08:08 2025] [::1]:62167 [200]: GET /style/blog.css
+[Fri May  2 17:08:08 2025] [::1]:62169 Accepted
+[Fri May  2 17:08:08 2025] [::1]:62168 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:08:08 2025] [::1]:62169 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:08:08 2025] [::1]:62167 Closing
+[Fri May  2 17:08:08 2025] [::1]:62168 Closing
+[Fri May  2 17:08:08 2025] [::1]:62169 Closing
+[Fri May  2 17:08:08 2025] [::1]:62171 Accepted
+[Fri May  2 17:08:08 2025] [::1]:62171 [200]: GET /images/k.ico
+[Fri May  2 17:08:08 2025] [::1]:62171 Closing
+[Fri May  2 17:08:12 2025] [::1]:62173 Accepted
+[Fri May  2 17:08:12 2025] [::1]:62173 [200]: GET /
+[Fri May  2 17:08:12 2025] [::1]:62173 Closing
+[Fri May  2 17:08:12 2025] [::1]:62174 Accepted
+[Fri May  2 17:08:12 2025] [::1]:62174 [200]: GET /style/index.css
+[Fri May  2 17:08:12 2025] [::1]:62174 Closing
+[Fri May  2 17:08:12 2025] [::1]:62175 Accepted
+[Fri May  2 17:08:12 2025] [::1]:62176 Accepted
+[Fri May  2 17:08:12 2025] [::1]:62177 Accepted
+[Fri May  2 17:08:12 2025] [::1]:62175 [200]: GET /style/blog.css
+[Fri May  2 17:08:12 2025] [::1]:62176 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:08:12 2025] [::1]:62177 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:08:12 2025] [::1]:62175 Closing
+[Fri May  2 17:08:12 2025] [::1]:62177 Closing
+[Fri May  2 17:08:12 2025] [::1]:62176 Closing
+[Fri May  2 17:08:22 2025] [::1]:62178 Accepted
+[Fri May  2 17:08:22 2025] [::1]:62178 [200]: GET /js_sdk_v1.php
+[Fri May  2 17:08:22 2025] [::1]:62178 Closing
+[Fri May  2 17:08:22 2025] [::1]:62179 Accepted
+[Fri May  2 17:08:22 2025] [::1]:62180 Accepted
+[Fri May  2 17:08:22 2025] [::1]:62179 [200]: GET /style/index.css
+[Fri May  2 17:08:22 2025] [::1]:62179 Closing
+[Fri May  2 17:08:22 2025] [::1]:62182 Accepted
+[Fri May  2 17:08:22 2025] [::1]:62183 Accepted
+[Fri May  2 17:08:22 2025] [::1]:62180 [200]: GET /style/blog.css
+[Fri May  2 17:08:22 2025] [::1]:62182 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:08:22 2025] [::1]:62183 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:08:22 2025] [::1]:62180 Closing
+[Fri May  2 17:08:22 2025] [::1]:62183 Closing
+[Fri May  2 17:08:22 2025] [::1]:62182 Closing
+[Fri May  2 17:08:24 2025] [::1]:62184 Accepted
+[Fri May  2 17:08:24 2025] [::1]:62184 [200]: GET /js_sdk_v2.php
+[Fri May  2 17:08:24 2025] [::1]:62184 Closing
+[Fri May  2 17:08:24 2025] [::1]:62185 Accepted
+[Fri May  2 17:08:24 2025] [::1]:62185 [200]: GET /style/index.css
+[Fri May  2 17:08:24 2025] [::1]:62186 Accepted
+[Fri May  2 17:08:24 2025] [::1]:62187 Accepted
+[Fri May  2 17:08:24 2025] [::1]:62186 [200]: GET /style/blog.css
+[Fri May  2 17:08:24 2025] [::1]:62188 Accepted
+[Fri May  2 17:08:24 2025] [::1]:62185 Closing
+[Fri May  2 17:08:24 2025] [::1]:62187 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:08:24 2025] [::1]:62188 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:08:24 2025] [::1]:62186 Closing
+[Fri May  2 17:08:24 2025] [::1]:62187 Closing
+[Fri May  2 17:08:24 2025] [::1]:62188 Closing
+[Fri May  2 17:08:58 2025] [::1]:62195 Accepted
+[Fri May  2 17:08:58 2025] [::1]:62196 Accepted
+[Fri May  2 17:08:58 2025] [::1]:62195 [200]: GET /js_sdk_v2.php
+[Fri May  2 17:08:58 2025] [::1]:62195 Closing
+[Fri May  2 17:09:01 2025] [::1]:62196 [200]: GET /js_sdk_v2.php
+[Fri May  2 17:09:01 2025] [::1]:62196 Closing
+[Fri May  2 17:09:01 2025] [::1]:62198 Accepted
+[Fri May  2 17:09:02 2025] [::1]:62200 Accepted
+[Fri May  2 17:09:02 2025] [::1]:62198 [200]: GET /style/index.css
+[Fri May  2 17:09:02 2025] [::1]:62201 Accepted
+[Fri May  2 17:09:02 2025] [::1]:62200 [200]: GET /style/blog.css
+[Fri May  2 17:09:02 2025] [::1]:62202 Accepted
+[Fri May  2 17:09:02 2025] [::1]:62201 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:09:02 2025] [::1]:62198 Closing
+[Fri May  2 17:09:02 2025] [::1]:62202 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:09:02 2025] [::1]:62200 Closing
+[Fri May  2 17:09:02 2025] [::1]:62201 Closing
+[Fri May  2 17:09:02 2025] [::1]:62202 Closing
+[Fri May  2 17:09:02 2025] [::1]:62203 Accepted
+[Fri May  2 17:09:02 2025] [::1]:62203 [200]: GET /images/k.ico
+[Fri May  2 17:09:02 2025] [::1]:62203 Closing
+[Fri May  2 17:09:08 2025] [::1]:62206 Accepted
+[Fri May  2 17:09:08 2025] [::1]:62206 [200]: GET /
+[Fri May  2 17:09:08 2025] [::1]:62206 Closing
+[Fri May  2 17:09:08 2025] [::1]:62207 Accepted
+[Fri May  2 17:09:08 2025] [::1]:62208 Accepted
+[Fri May  2 17:09:08 2025] [::1]:62207 [200]: GET /style/index.css
+[Fri May  2 17:09:08 2025] [::1]:62207 Closing
+[Fri May  2 17:09:08 2025] [::1]:62209 Accepted
+[Fri May  2 17:09:08 2025] [::1]:62210 Accepted
+[Fri May  2 17:09:08 2025] [::1]:62208 [200]: GET /style/blog.css
+[Fri May  2 17:09:08 2025] [::1]:62209 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:09:08 2025] [::1]:62210 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:09:08 2025] [::1]:62208 Closing
+[Fri May  2 17:09:08 2025] [::1]:62210 Closing
+[Fri May  2 17:09:08 2025] [::1]:62209 Closing
+[Fri May  2 17:09:20 2025] [::1]:62212 Accepted
+[Fri May  2 17:09:20 2025] PHP Warning:  Undefined array key "workershigh_user_session" in /Users/kakao/Cursor/test-tam.pe.kr/kakao.php on line 492
+[Fri May  2 17:09:20 2025] PHP Warning:  Undefined array key "compare_user_session" in /Users/kakao/Cursor/test-tam.pe.kr/kakao.php on line 494
+[Fri May  2 17:09:20 2025] [::1]:62212 [200]: GET /kakao.php
+[Fri May  2 17:09:20 2025] [::1]:62212 Closing
+[Fri May  2 17:09:20 2025] [::1]:62213 Accepted
+[Fri May  2 17:09:20 2025] [::1]:62213 [200]: GET /toastrWrapper.js?test1
+[Fri May  2 17:09:20 2025] [::1]:62213 Closing
+[Fri May  2 17:09:20 2025] [::1]:62215 Accepted
+[Fri May  2 17:09:20 2025] [::1]:62215 [200]: GET /manifest.json
+[Fri May  2 17:09:20 2025] [::1]:62215 Closing
+[Fri May  2 17:09:20 2025] [::1]:62216 Accepted
+[Fri May  2 17:09:20 2025] [::1]:62216 [200]: GET /favicon.ico
+[Fri May  2 17:09:20 2025] [::1]:62216 Closing
+[Fri May  2 17:10:04 2025] [::1]:62220 Accepted
+[Fri May  2 17:10:04 2025] [::1]:62221 Accepted
+[Fri May  2 17:10:14 2025] PHP Warning:  Undefined array key "accessToken" in /Users/kakao/Cursor/test-tam.pe.kr/kakao_talk_social.php on line 184
+[Fri May  2 17:10:14 2025] PHP Warning:  Undefined array key "accessToken" in /Users/kakao/Cursor/test-tam.pe.kr/kakao_talk_social.php on line 306
+[Fri May  2 17:10:14 2025] PHP Warning:  Undefined property: stdClass::$elements in /Users/kakao/Cursor/test-tam.pe.kr/kakao_talk_social.php on line 314
+[Fri May  2 17:10:14 2025] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/kakao/Cursor/test-tam.pe.kr/kakao_talk_social.php on line 314
+[Fri May  2 17:10:14 2025] [::1]:62220 [200]: GET /kakao_talk_social.php
+[Fri May  2 17:10:14 2025] [::1]:62220 Closing
+[Fri May  2 17:10:14 2025] [::1]:62229 Accepted
+[Fri May  2 17:10:14 2025] [::1]:62221 [200]: GET /static/css/2.86aa6515.chunk.css
+[Fri May  2 17:10:14 2025] [::1]:62221 Closing
+[Fri May  2 17:10:14 2025] [::1]:62229 [200]: GET /static/css/main.a583af82.chunk.css
+[Fri May  2 17:10:14 2025] [::1]:62229 Closing
+[Fri May  2 17:10:14 2025] [::1]:62233 Accepted
+[Fri May  2 17:10:14 2025] [::1]:62233 [200]: GET /manifest.json
+[Fri May  2 17:10:14 2025] [::1]:62233 Closing
+[Fri May  2 17:10:14 2025] [::1]:62234 Accepted
+[Fri May  2 17:10:14 2025] [::1]:62234 [200]: GET /favicon.ico
+[Fri May  2 17:10:14 2025] [::1]:62234 Closing
+[Fri May  2 17:11:27 2025] [::1]:62242 Accepted
+[Fri May  2 17:11:27 2025] [::1]:62242 [200]: GET /
+[Fri May  2 17:11:27 2025] [::1]:62242 Closing
+[Fri May  2 17:11:27 2025] [::1]:62243 Accepted
+[Fri May  2 17:11:27 2025] [::1]:62244 Accepted
+[Fri May  2 17:11:27 2025] [::1]:62243 [200]: GET /style/index.css
+[Fri May  2 17:11:27 2025] [::1]:62243 Closing
+[Fri May  2 17:11:27 2025] [::1]:62245 Accepted
+[Fri May  2 17:11:27 2025] [::1]:62244 [200]: GET /style/blog.css
+[Fri May  2 17:11:27 2025] [::1]:62244 Closing
+[Fri May  2 17:11:27 2025] [::1]:62247 Accepted
+[Fri May  2 17:11:27 2025] [::1]:62245 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:11:27 2025] [::1]:62247 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:11:27 2025] [::1]:62245 Closing
+[Fri May  2 17:11:27 2025] [::1]:62247 Closing
+[Fri May  2 17:11:27 2025] [::1]:62248 Accepted
+[Fri May  2 17:11:27 2025] [::1]:62248 [200]: GET /images/k.ico
+[Fri May  2 17:11:27 2025] [::1]:62248 Closing
+[Fri May  2 17:12:37 2025] [::1]:62258 Accepted
+[Fri May  2 17:12:37 2025] [::1]:62258 [200]: GET /
+[Fri May  2 17:12:37 2025] [::1]:62258 Closing
+[Fri May  2 17:12:37 2025] [::1]:62259 Accepted
+[Fri May  2 17:12:37 2025] [::1]:62260 Accepted
+[Fri May  2 17:12:37 2025] [::1]:62262 Accepted
+[Fri May  2 17:12:37 2025] [::1]:62259 [200]: GET /style/index.css
+[Fri May  2 17:12:37 2025] [::1]:62260 [200]: GET /style/blog.css
+[Fri May  2 17:12:37 2025] [::1]:62259 Closing
+[Fri May  2 17:12:37 2025] [::1]:62263 Accepted
+[Fri May  2 17:12:37 2025] [::1]:62260 Closing
+[Fri May  2 17:12:37 2025] [::1]:62262 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:12:37 2025] [::1]:62263 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:12:37 2025] [::1]:62263 Closing
+[Fri May  2 17:12:37 2025] [::1]:62262 Closing
+[Fri May  2 17:12:37 2025] [::1]:62266 Accepted
+[Fri May  2 17:12:37 2025] [::1]:62266 [200]: GET /images/k.ico
+[Fri May  2 17:12:37 2025] [::1]:62266 Closing
+[Fri May  2 17:12:57 2025] [::1]:62278 Accepted
+[Fri May  2 17:12:57 2025] [::1]:62279 Accepted
+[Fri May  2 17:12:57 2025] [::1]:62278 [200]: GET /
+[Fri May  2 17:12:57 2025] [::1]:62278 Closing
+[Fri May  2 17:12:57 2025] [::1]:62279 [200]: GET /style/index.css
+[Fri May  2 17:12:57 2025] [::1]:62279 Closing
+[Fri May  2 17:12:57 2025] [::1]:62282 Accepted
+[Fri May  2 17:12:57 2025] [::1]:62283 Accepted
+[Fri May  2 17:12:57 2025] [::1]:62284 Accepted
+[Fri May  2 17:12:57 2025] [::1]:62282 [200]: GET /style/blog.css
+[Fri May  2 17:12:57 2025] [::1]:62283 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:12:57 2025] [::1]:62282 Closing
+[Fri May  2 17:12:57 2025] [::1]:62284 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:12:57 2025] [::1]:62283 Closing
+[Fri May  2 17:12:57 2025] [::1]:62284 Closing
+[Fri May  2 17:12:58 2025] [::1]:62285 Accepted
+[Fri May  2 17:12:58 2025] [::1]:62285 [200]: GET /images/k.ico
+[Fri May  2 17:12:58 2025] [::1]:62285 Closing
+[Fri May  2 17:13:37 2025] [::1]:62293 Accepted
+[Fri May  2 17:13:37 2025] [::1]:62293 [200]: GET /
+[Fri May  2 17:13:37 2025] [::1]:62293 Closing
+[Fri May  2 17:13:37 2025] [::1]:62294 Accepted
+[Fri May  2 17:13:37 2025] [::1]:62294 [200]: GET /style/index.css
+[Fri May  2 17:13:37 2025] [::1]:62294 Closing
+[Fri May  2 17:13:37 2025] [::1]:62295 Accepted
+[Fri May  2 17:13:37 2025] [::1]:62296 Accepted
+[Fri May  2 17:13:37 2025] [::1]:62297 Accepted
+[Fri May  2 17:13:37 2025] [::1]:62295 [200]: GET /style/blog.css
+[Fri May  2 17:13:37 2025] [::1]:62296 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:13:37 2025] [::1]:62297 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:13:37 2025] [::1]:62295 Closing
+[Fri May  2 17:13:37 2025] [::1]:62296 Closing
+[Fri May  2 17:13:37 2025] [::1]:62297 Closing
+[Fri May  2 17:13:38 2025] [::1]:62299 Accepted
+[Fri May  2 17:13:38 2025] [::1]:62299 [200]: GET /images/k.ico
+[Fri May  2 17:13:38 2025] [::1]:62299 Closing
+[Fri May  2 17:13:49 2025] [::1]:62302 Accepted
+[Fri May  2 17:13:49 2025] [::1]:62302 [200]: GET /
+[Fri May  2 17:13:49 2025] [::1]:62302 Closing
+[Fri May  2 17:13:49 2025] [::1]:62303 Accepted
+[Fri May  2 17:13:49 2025] [::1]:62304 Accepted
+[Fri May  2 17:13:49 2025] [::1]:62303 [200]: GET /style/index.css
+[Fri May  2 17:13:49 2025] [::1]:62303 Closing
+[Fri May  2 17:13:49 2025] [::1]:62305 Accepted
+[Fri May  2 17:13:49 2025] [::1]:62304 [200]: GET /style/blog.css
+[Fri May  2 17:13:49 2025] [::1]:62304 Closing
+[Fri May  2 17:13:49 2025] [::1]:62306 Accepted
+[Fri May  2 17:13:49 2025] [::1]:62305 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:13:49 2025] [::1]:62305 Closing
+[Fri May  2 17:13:49 2025] [::1]:62306 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:13:49 2025] [::1]:62306 Closing
+[Fri May  2 17:13:50 2025] [::1]:62307 Accepted
+[Fri May  2 17:13:50 2025] [::1]:62307 [200]: GET /images/k.ico
+[Fri May  2 17:13:50 2025] [::1]:62307 Closing
+[Fri May  2 17:14:25 2025] [::1]:62313 Accepted
+[Fri May  2 17:14:25 2025] [::1]:62314 Accepted
+[Fri May  2 17:14:25 2025] [::1]:62313 [200]: GET /
+[Fri May  2 17:14:25 2025] [::1]:62313 Closing
+[Fri May  2 17:14:25 2025] [::1]:62314 [200]: GET /style/index.css
+[Fri May  2 17:14:25 2025] [::1]:62314 Closing
+[Fri May  2 17:14:25 2025] [::1]:62317 Accepted
+[Fri May  2 17:14:25 2025] [::1]:62318 Accepted
+[Fri May  2 17:14:25 2025] [::1]:62319 Accepted
+[Fri May  2 17:14:25 2025] [::1]:62317 [200]: GET /style/blog.css
+[Fri May  2 17:14:25 2025] [::1]:62318 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:14:25 2025] [::1]:62319 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:14:25 2025] [::1]:62317 Closing
+[Fri May  2 17:14:25 2025] [::1]:62318 Closing
+[Fri May  2 17:14:25 2025] [::1]:62319 Closing
+[Fri May  2 17:14:26 2025] [::1]:62320 Accepted
+[Fri May  2 17:14:26 2025] [::1]:62320 [200]: GET /images/k.ico
+[Fri May  2 17:14:26 2025] [::1]:62320 Closing
+[Fri May  2 17:14:27 2025] [::1]:62322 Accepted
+[Fri May  2 17:14:27 2025] [::1]:62322 [200]: GET /
+[Fri May  2 17:14:27 2025] [::1]:62322 Closing
+[Fri May  2 17:14:27 2025] [::1]:62323 Accepted
+[Fri May  2 17:14:27 2025] [::1]:62324 Accepted
+[Fri May  2 17:14:27 2025] [::1]:62323 [200]: GET /style/index.css
+[Fri May  2 17:14:27 2025] [::1]:62325 Accepted
+[Fri May  2 17:14:27 2025] [::1]:62323 Closing
+[Fri May  2 17:14:27 2025] [::1]:62324 [200]: GET /style/blog.css
+[Fri May  2 17:14:27 2025] [::1]:62326 Accepted
+[Fri May  2 17:14:27 2025] [::1]:62325 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:14:27 2025] [::1]:62326 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:14:27 2025] [::1]:62324 Closing
+[Fri May  2 17:14:27 2025] [::1]:62326 Closing
+[Fri May  2 17:14:27 2025] [::1]:62325 Closing
+[Fri May  2 17:14:27 2025] [::1]:62327 Accepted
+[Fri May  2 17:14:27 2025] [::1]:62327 [200]: GET /images/k.ico
+[Fri May  2 17:14:27 2025] [::1]:62327 Closing
+[Fri May  2 17:14:32 2025] [::1]:62328 Accepted
+[Fri May  2 17:14:32 2025] [::1]:62328 [200]: GET /privacy_policy.php
+[Fri May  2 17:14:32 2025] [::1]:62328 Closing
+[Fri May  2 17:14:32 2025] [::1]:62329 Accepted
+[Fri May  2 17:14:32 2025] [::1]:62330 Accepted
+[Fri May  2 17:14:32 2025] [::1]:62329 [200]: GET /style/index.css
+[Fri May  2 17:14:32 2025] [::1]:62329 Closing
+[Fri May  2 17:14:32 2025] [::1]:62331 Accepted
+[Fri May  2 17:14:32 2025] [::1]:62332 Accepted
+[Fri May  2 17:14:32 2025] [::1]:62330 [200]: GET /style/blog.css
+[Fri May  2 17:14:32 2025] [::1]:62331 [200]: GET /style/bootstrap.min.css
+[Fri May  2 17:14:32 2025] [::1]:62332 [200]: GET /script/toastrWrapper.js?test1
+[Fri May  2 17:14:32 2025] [::1]:62330 Closing
+[Fri May  2 17:14:32 2025] [::1]:62332 Closing
+[Fri May  2 17:14:32 2025] [::1]:62331 Closing
