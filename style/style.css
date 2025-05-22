@@ -1,0 +1,237 @@
+:root {
+    --kakao-black: #000000;
+    --kakao-yellow: #fee500;
+    --kakao-gray: #f6f6f6;
+    --kakao-dark-gray: #666666;
+    --kakao-blue: #4c4c4c;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: var(--kakao-black);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    background-color: var(--kakao-black);
+    color: white;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+  }
+  
+  .header h1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .main-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    background-color: var(--kakao-gray);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notice {
+    background-color: #ffffff;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #e5e5e5;
+  }
+  
+  .notice h3 {
+    color: var(--kakao-black);
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .notice pre {
+    color: var(--kakao-dark-gray);
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  button {
+    background-color: var(--kakao-yellow);
+    border: none;
+    padding: 8px 16px;
+    margin: 3px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--kakao-black);
+    transition: background-color 0.2s;
+    white-space: nowrap;
+  }
+  
+  button:hover {
+    background-color: #ffde00;
+  }
+  
+  input {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 3px;
+    box-sizing: border-box;
+  }
+  
+  input::placeholder {
+    color: #999;
+    font-size: 0.8rem;
+  }
+  
+  .friend-message-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0.5rem 0;
+    flex-wrap: wrap;
+  }
+  
+  textarea {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.4;
+    resize: none;
+    height: 150px;
+    box-sizing: border-box;
+  }
+  
+  .section-title {
+    color: var(--kakao-black);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .button-group {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .login-container {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .login-container img {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .api-container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    border: 1px solid #e5e5e5;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .vertical-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .login-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .kakao-js-login {
+    background-color: var(--kakao-yellow);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--kakao-black);
+    transition: background-color 0.2s;
+  }
+  
+  .kakao-js-login:hover {
+    background-color: #ffde00;
+  }
+  
+  @media (max-width: 600px) {
+    .header h1 {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .main-container {
+      padding: 0 0.5rem;
+    }
+  
+    .container {
+      padding: 0.5rem;
+    }
+  
+    .notice {
+      padding: 0.5rem;
+    }
+  
+    .button-group {
+      justify-content: center;
+    }
+  
+    .friend-message-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    input {
+      max-width: 100%;
+    }
+  
+    .login-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .kakao-js-login {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
