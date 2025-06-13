@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kakao REST-API PHP example</title>
+    <script src="https://t1-sandbox.kakaocdn.net/kakao_js_sdk/sandbox/2.7.5/kakao.min.js" integrity="sha384-HQ3QYWW1DwFgYlnYiZgiumj9KvKtJ1gzEnFj2UPOv132ty/brPLU+wEHKFPFPO/V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kakao-tam.github.io/developers-static/style.css" />
+    <link rel="icon" type="image/png"
+        href="https://devtalk.kakao.com/uploads/default/optimized/2X/9/9b7b5d9cbbe2e8d6a5410c2d28926804cd8b0bb1_2_32x32.png" />
+</head>
+
+<body>
+    <div class="header">
+        <h1>카카오 로그인 및 API 예제</h1>
+    </div>
+    <div class="main-container">
+        <div class="container">
+            <div class="vertical-layout">
+                <script>
+                    const domain = window.location.origin;
+                    //Kakao.init("04304cb8d31452cbce65ffc382dadac4"); // 여기에 JavaScript 키를 입력하세요
+                    Kakao.init("96372245e58849f89c06dc96796b00f7");
+                    function kakaoLogin() {
+                        Kakao.Auth.authorize({
+                            redirectUri: `${domain}/api.php?action=redirect`,
+                        });
+                    }
+
+                    function REST_Call(path) {
+                        fetch(domain + path)
+                            .then(response => response.text()) // 응답을 텍스트로 변환
+                            .then(data => {
+                                try {
+                                    // JSON 파싱 시도
+                                    const jsonData = JSON.parse(data);
+                                    setContents(JSON.stringify(jsonData, null, 2));
+                                } catch (e) {
+                                    // JSON 파싱 실패 시 텍스트로 출력
+                                    setContents(data);
+                                }
+                            })
+                            .catch(error => {
+                                console.error("Fetch 에러:", error);
+                            });
+                    }
+
+                    function setContents(data) {
+                        document.getElementById("contents").value = data;
+                    }
+
+                    // Check for login success parameter
+                    window.onload = function() {
+                        const urlParams = new URLSearchParams(window.location.search);
+                        if (urlParams.get('login') === 'success') {
+                        const successLabel = document.createElement('span');
+                        successLabel.textContent = '로그인 성공';
+                        successLabel.style.color = 'green';
+                        successLabel.style.marginLeft = '10px';
+                        document.querySelector('.login-buttons').appendChild(successLabel);
+                        }
+                    }             
+                    
+                    function shareButton() {
+                        Kakao.Share.createCustomButton({
+                            container: '#kakaotalk-sharing-btn',
+                            templateId: 1129, 
+                        });
+                    }
+                    function selectShippingAddress() {
+                        Kakao.Auth.selectShippingAddress()
+                        .then(function(selectedAddress) {
+                        // 배송지 가져오기
+                        return Kakao.API.request({
+                            url: '/v1/user/shipping_address',
+                            data: {
+                            address_id: selectedAddress.address_id,
+                            },
+                        });
+                        })
+                        .then(function(response) {
+                        console.log(response);
+                        })
+                        .catch(function(error) {
+                        console.log(error);
+                        });
+                    }
+                </script>
+
+                <div class="login-container">
+                    <div class="login-buttons">
+                        <a href="/api.php?action=authorize">
+                            <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" alt="카카오 로그인" />
+                        </a>
+                        <button onclick="kakaoLogin()"
+                            style="background-color: white; border: 1px solid var(--kakao-yellow);">
+                            JavaScript SDK로 로그인
+                        </button>
+
+                        <a id="kakaotalk-sharing-btn" href="javascript:shareButton()">
+                            <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+                              alt="카카오톡 공유 보내기 버튼" />
+                          </a>
+
+                          <a href="javascript:selectShippingAddress()">배송지 </a>
+                    </div>
+                </div>
+
+                <div class="api-container">
+                    <div class="section-title">기본 기능</div>
+                    <div class="button-group">
+                        <button onclick="REST_Call('/api.php?action=profile')">사용자 정보 가져오기</button>
+                        <button onclick="REST_Call('/api.php?action=logout')"
+                            style="background-color: white; border: 1px solid #E5E5E5;">로그아웃</button>
+                        <button onclick="REST_Call('/api.php?action=unlink')"
+                            style="background-color: white; color: #FF5C5C; border: 1px solid #FF5C5C;">연결 끊기</button>
+                    </div>
+                </div>
+
+                <textarea id="contents" placeholder="API 응답 결과가 여기에 표시됩니다..."></textarea>
+
+                <div class="api-container">
+                    <div class="section-title">추가 기능</div>
+                    <div class="button-group">
+                        <a href="/api.php?action=authorize&scope=friends,talk_message">
+                            <button style="background-color: white; border: 1px solid var(--kakao-yellow);">친구목록/메시지 권한
+                                획득</button>
+                        </a>
+                        <button onclick="REST_Call('/api.php?action=friends')">친구 목록 가져오기</button>
+                        <button onclick="REST_Call('/api.php?action=message')">나에게 메시지 발송</button>
+                        <div class="friend-message-container">
+                            <input type="text" id="friend-uuid" placeholder='UUID 입력 ex) "AAA","BBB" 쌍따옴표 포함' />
+                            <button
+                                onclick="REST_Call('/api.php?action=friend-message&uuid=' + document.getElementById('friend-uuid').value)">친구에게
+                                메시지 발송</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
