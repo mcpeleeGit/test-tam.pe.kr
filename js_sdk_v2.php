@@ -684,7 +684,7 @@ session_start();
     }
 
     function selectShippingAddress() {
-      Kakao.Auth.selectShippingAddress()
+      Kakao.Auth.selectShippingAddress({forceMobileLayout: true, enableBackButton: true})
         .then(function(selectedAddress) {
           // 배송지 가져오기
           return Kakao.API.request({
