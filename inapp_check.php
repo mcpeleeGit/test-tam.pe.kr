@@ -183,8 +183,6 @@
                 a.download = 'downloaded-image.webp';
                 document.body.appendChild(a);
                 a.click();
-                a.remove();
-                window.URL.revokeObjectURL(url);
                 
                 testArea.innerHTML = '<p style="color: green;">✅ 다운로드 성공! (Blob 방식)</p>';
             } catch (error) {
