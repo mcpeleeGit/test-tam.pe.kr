@@ -72,6 +72,46 @@
                 </td>
             </tr>
             <tr>
+                <td><a href="/test/review1_case1.php">리뷰형_1 상품 예시 case1</a></td>
+                <td><span id="url-review1-case1">http://test-tam.pe.kr/test/review1_case1.php</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-review1-case1', 'msg-review1-case1')">복사</button>
+                    <span id="msg-review1-case1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="/test/review1_case2.php">리뷰형_1 상품 예시 case2</a></td>
+                <td><span id="url-review1-case2">http://test-tam.pe.kr/test/review1_case2.php</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-review1-case2', 'msg-review1-case2')">복사</button>
+                    <span id="msg-review1-case2" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="/test/review1_case3.php">리뷰형_1 상품 예시 case3</a></td>
+                <td><span id="url-review1-case3">http://test-tam.pe.kr/test/review1_case3.php</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-review1-case3', 'msg-review1-case3')">복사</button>
+                    <span id="msg-review1-case3" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="/test/review1_case4.php">리뷰형_1 상품 예시 case4</a></td>
+                <td><span id="url-review1-case4">http://test-tam.pe.kr/test/review1_case4.php</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-review1-case4', 'msg-review1-case4')">복사</button>
+                    <span id="msg-review1-case4" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="/test/review1_case5.php">리뷰형_1 상품 예시 case5</a></td>
+                <td><span id="url-review1-case5">http://test-tam.pe.kr/test/review1_case5.php</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-review1-case5', 'msg-review1-case5')">복사</button>
+                    <span id="msg-review1-case5" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+            </tr>
+            <tr>
                 <td><a href="/test/review2.php">리뷰형_2 상품 예시</a></td>
                 <td><span id="url-review2">http://test-tam.pe.kr/test/review2.php</span></td>
                 <td>
@@ -172,15 +212,34 @@
     <script>
     function copyToClipboard(urlId, msgId) {
         const text = document.getElementById(urlId).textContent;
-        navigator.clipboard.writeText(text).then(function() {
-            const msg = document.getElementById(msgId);
-            msg.style.display = 'inline';
-            setTimeout(function() {
-                msg.style.display = 'none';
-            }, 1500);
-        }, function(err) {
-            alert('복사 실패: ' + err);
-        });
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function() {
+                const msg = document.getElementById(msgId);
+                msg.style.display = 'inline';
+                setTimeout(function() {
+                    msg.style.display = 'none';
+                }, 1500);
+            }, function(err) {
+                alert('복사 실패: ' + err);
+            });
+        } else {
+            // fallback for unsupported browsers
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                const msg = document.getElementById(msgId);
+                msg.style.display = 'inline';
+                setTimeout(function() {
+                    msg.style.display = 'none';
+                }, 1500);
+            } catch (err) {
+                alert('복사 실패: ' + err);
+            }
+            document.body.removeChild(tempInput);
+        }
     }
     </script>
 </body>
