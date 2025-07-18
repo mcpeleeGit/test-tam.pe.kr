@@ -80,6 +80,46 @@
                 </td>
             </tr>
             <tr>
+                <td><a href="/test/review2_case1.php">리뷰형_2 상품 예시 case1</a></td>
+                <td><span id="url-review2-case1">http://test-tam.pe.kr/test/review2_case1.php</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-review2-case1', 'msg-review2-case1')">복사</button>
+                    <span id="msg-review2-case1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="/test/review2_case2.php">리뷰형_2 상품 예시 case2</a></td>
+                <td><span id="url-review2-case2">http://test-tam.pe.kr/test/review2_case2.php</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-review2-case2', 'msg-review2-case2')">복사</button>
+                    <span id="msg-review2-case2" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="/test/review2_case3.php">리뷰형_2 상품 예시 case3</a></td>
+                <td><span id="url-review2-case3">http://test-tam.pe.kr/test/review2_case3.php</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-review2-case3', 'msg-review2-case3')">복사</button>
+                    <span id="msg-review2-case3" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="/test/review2_case4.php">리뷰형_2 상품 예시 case4</a></td>
+                <td><span id="url-review2-case4">http://test-tam.pe.kr/test/review2_case4.php</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-review2-case4', 'msg-review2-case4')">복사</button>
+                    <span id="msg-review2-case4" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="/test/review2_case5.php">리뷰형_2 상품 예시 case5</a></td>
+                <td><span id="url-review2-case5">http://test-tam.pe.kr/test/review2_case5.php</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-review2-case5', 'msg-review2-case5')">복사</button>
+                    <span id="msg-review2-case5" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+            </tr>
+            <tr>
                 <td><a href="/test/review3.php">리뷰형_3 상품 예시</a></td>
                 <td><span id="url-review3">http://test-tam.pe.kr/test/review3.php</span></td>
                 <td>
