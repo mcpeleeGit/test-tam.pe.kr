@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>카카오 커머스 메타태그 테스트</title>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js" integrity="sha384-dok87au0gKqJdxs7msEdBPNnKSRT+/mhTVzq+qOhcL464zXwvcrpjeWvyj1kCdq6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        Kakao.init('2d68640b56d986af5c8a48505c7c8c71');
+    </script>
 </head>
 <body>
     <h1>카카오 커머스 메타태그 테스트</h1>
@@ -209,6 +213,245 @@
             </tr>
         </tbody>
     </table>
+
+    <h2 style="margin-top: 40px;">외부 Boostlink 테스트</h2>
+    <table border="1" cellpadding="6" style="border-collapse:collapse; min-width:700px;">
+        <thead>
+            <tr>
+                <th>유형</th>
+                <th>Full URL</th>
+                <th>복사</th>
+                <th>OS공유</th>
+                <th>카카오톡공유</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_badge_01_1.html" target="_blank">Boostlink 뱃지 01_1</a></td>
+                <td><span id="url-boostlink-badge-01-1">http://34.9.208.145/rich/boostlink_badge_01_1.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-badge-01-1', 'msg-boostlink-badge-01-1')">복사</button>
+                    <span id="msg-boostlink-badge-01-1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-badge-01-1', 'Boostlink 뱃지 01_1')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_badge_01_1.html', 'Boostlink 뱃지 01_1')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_badge_01_2.html" target="_blank">Boostlink 뱃지 01_2</a></td>
+                <td><span id="url-boostlink-badge-01-2">http://34.9.208.145/rich/boostlink_badge_01_2.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-badge-01-2', 'msg-boostlink-badge-01-2')">복사</button>
+                    <span id="msg-boostlink-badge-01-2" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-badge-01-2', 'Boostlink 뱃지 01_2')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_badge_01_2.html', 'Boostlink 뱃지 01_2')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_base_1.html" target="_blank">Boostlink 기본 1</a></td>
+                <td><span id="url-boostlink-base-1">http://34.9.208.145/rich/boostlink_base_1.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-base-1', 'msg-boostlink-base-1')">복사</button>
+                    <span id="msg-boostlink-base-1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-base-1', 'Boostlink 기본 1')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_base_1.html', 'Boostlink 기본 1')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_coupon_01_1.html" target="_blank">Boostlink 쿠폰 01_1</a></td>
+                <td><span id="url-boostlink-coupon-01-1">http://34.9.208.145/rich/boostlink_coupon_01_1.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-coupon-01-1', 'msg-boostlink-coupon-01-1')">복사</button>
+                    <span id="msg-boostlink-coupon-01-1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-coupon-01-1', 'Boostlink 쿠폰 01_1')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_coupon_01_1.html', 'Boostlink 쿠폰 01_1')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_coupon_01_2.html" target="_blank">Boostlink 쿠폰 01_2</a></td>
+                <td><span id="url-boostlink-coupon-01-2">http://34.9.208.145/rich/boostlink_coupon_01_2.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-coupon-01-2', 'msg-boostlink-coupon-01-2')">복사</button>
+                    <span id="msg-boostlink-coupon-01-2" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-coupon-01-2', 'Boostlink 쿠폰 01_2')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_coupon_01_2.html', 'Boostlink 쿠폰 01_2')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_discounttype_01_1.html" target="_blank">Boostlink 할인타입 01_1</a></td>
+                <td><span id="url-boostlink-discounttype-01-1">http://34.9.208.145/rich/boostlink_discounttype_01_1.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-discounttype-01-1', 'msg-boostlink-discounttype-01-1')">복사</button>
+                    <span id="msg-boostlink-discounttype-01-1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-discounttype-01-1', 'Boostlink 할인타입 01_1')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_discounttype_01_1.html', 'Boostlink 할인타입 01_1')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_keycon_01_1.html" target="_blank">Boostlink 키컨텐츠 01_1</a></td>
+                <td><span id="url-boostlink-keycon-01-1">http://34.9.208.145/rich/boostlink_keycon_01_1.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-keycon-01-1', 'msg-boostlink-keycon-01-1')">복사</button>
+                    <span id="msg-boostlink-keycon-01-1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-keycon-01-1', 'Boostlink 키컨텐츠 01_1')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_keycon_01_1.html', 'Boostlink 키컨텐츠 01_1')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_point_01_1.html" target="_blank">Boostlink 포인트 01_1</a></td>
+                <td><span id="url-boostlink-point-01-1">http://34.9.208.145/rich/boostlink_point_01_1.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-point-01-1', 'msg-boostlink-point-01-1')">복사</button>
+                    <span id="msg-boostlink-point-01-1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-point-01-1', 'Boostlink 포인트 01_1')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_point_01_1.html', 'Boostlink 포인트 01_1')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_point_01_2.html" target="_blank">Boostlink 포인트 01_2</a></td>
+                <td><span id="url-boostlink-point-01-2">http://34.9.208.145/rich/boostlink_point_01_2.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-point-01-2', 'msg-boostlink-point-01-2')">복사</button>
+                    <span id="msg-boostlink-point-01-2" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-point-01-2', 'Boostlink 포인트 01_2')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_point_01_2.html', 'Boostlink 포인트 01_2')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_review_01_1.html" target="_blank">Boostlink 리뷰 01_1</a></td>
+                <td><span id="url-boostlink-review-01-1">http://34.9.208.145/rich/boostlink_review_01_1.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-review-01-1', 'msg-boostlink-review-01-1')">복사</button>
+                    <span id="msg-boostlink-review-01-1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-review-01-1', 'Boostlink 리뷰 01_1')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_review_01_1.html', 'Boostlink 리뷰 01_1')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_review_02_1.html" target="_blank">Boostlink 리뷰 02_1</a></td>
+                <td><span id="url-boostlink-review-02-1">http://34.9.208.145/rich/boostlink_review_02_1.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-review-02-1', 'msg-boostlink-review-02-1')">복사</button>
+                    <span id="msg-boostlink-review-02-1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-review-02-1', 'Boostlink 리뷰 02_1')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_review_02_1.html', 'Boostlink 리뷰 02_1')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_review_02_2.html" target="_blank">Boostlink 리뷰 02_2</a></td>
+                <td><span id="url-boostlink-review-02-2">http://34.9.208.145/rich/boostlink_review_02_2.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-review-02-2', 'msg-boostlink-review-02-2')">복사</button>
+                    <span id="msg-boostlink-review-02-2" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-review-02-2', 'Boostlink 리뷰 02_2')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_review_02_2.html', 'Boostlink 리뷰 02_2')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_review_03_1.html" target="_blank">Boostlink 리뷰 03_1</a></td>
+                <td><span id="url-boostlink-review-03-1">http://34.9.208.145/rich/boostlink_review_03_1.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-review-03-1', 'msg-boostlink-review-03-1')">복사</button>
+                    <span id="msg-boostlink-review-03-1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-review-03-1', 'Boostlink 리뷰 03_1')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_review_03_1.html', 'Boostlink 리뷰 03_1')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/boostlink_review_03_2.html" target="_blank">Boostlink 리뷰 03_2</a></td>
+                <td><span id="url-boostlink-review-03-2">http://34.9.208.145/rich/boostlink_review_03_2.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-boostlink-review-03-2', 'msg-boostlink-review-03-2')">복사</button>
+                    <span id="msg-boostlink-review-03-2" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-boostlink-review-03-2', 'Boostlink 리뷰 03_2')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/boostlink_review_03_2.html', 'Boostlink 리뷰 03_2')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/commerce_default1.html" target="_blank">Commerce 기본 1</a></td>
+                <td><span id="url-commerce-default1">http://34.9.208.145/rich/commerce_default1.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-commerce-default1', 'msg-commerce-default1')">복사</button>
+                    <span id="msg-commerce-default1" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-commerce-default1', 'Commerce 기본 1')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/commerce_default1.html', 'Commerce 기본 1')">카카오톡공유</button>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="http://34.9.208.145/rich/commerce_default1_2.html" target="_blank">Commerce 기본 1_2</a></td>
+                <td><span id="url-commerce-default1-2">http://34.9.208.145/rich/commerce_default1_2.html</span></td>
+                <td>
+                    <button onclick="copyToClipboard('url-commerce-default1-2', 'msg-commerce-default1-2')">복사</button>
+                    <span id="msg-commerce-default1-2" class="copy-msg" style="color:green; margin-left:8px; display:none;">복사됨!</span>
+                </td>
+                <td>
+                    <button onclick="shareUrl('url-commerce-default1-2', 'Commerce 기본 1_2')">OS공유</button>
+                </td>
+                <td>
+                    <button onclick="shareToKakao('http://34.9.208.145/rich/commerce_default1_2.html', 'Commerce 기본 1_2')">카카오톡공유</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <script>
     function copyToClipboard(urlId, msgId) {
         const text = document.getElementById(urlId).textContent;
@@ -241,6 +484,36 @@
             document.body.removeChild(tempInput);
         }
     }
+
+    function shareUrl(urlId, title) {
+        const url = document.getElementById(urlId).textContent;
+        
+        if (navigator.share) {
+            navigator.share({
+                title: title,
+                url: url
+            }).then(() => {
+                console.log('공유 성공');
+            }).catch((error) => {
+                console.log('공유 실패:', error);
+                // 공유 실패 시 클립보드에 복사
+                copyToClipboard(urlId, '');
+                alert('OS 공유가 지원되지 않습니다. URL이 클립보드에 복사되었습니다.');
+            });
+        } else {
+            // Web Share API가 지원되지 않는 경우 클립보드에 복사
+            copyToClipboard(urlId, '');
+            alert('OS 공유가 지원되지 않습니다. URL이 클립보드에 복사되었습니다.');
+        }
+    }
+
+    function shareToKakao(url, title) {
+        Kakao.Share.sendScrap({
+            requestUrl: url,
+        });
+    }
     </script>
 </body>
 </html>
+
+
