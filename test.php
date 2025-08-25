@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카카오톡 채널 간편 추가 테스트</title>
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.6/kakao.min.js" integrity="sha384-WAtVcQYcmTO/N+C1N+1m6Gp8qxh+3NlnP7X1U7qP6P5dQY/MsRBNTh+e1ahJrkEm" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: 'Malgun Gothic', sans-serif;
