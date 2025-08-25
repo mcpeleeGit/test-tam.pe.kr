@@ -1,24 +1,23 @@
+
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/head.php'; ?>
-    <title>API 호출 테스트</title>
-</head>
-<body>
-    <div class="container">
-        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/header.php'; ?>
-        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/menu.php'; ?>
-    </div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="google" content="notranslate">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
 
-    <main class="container" style="margin-top:30px;">
-        <h1>API 호출 테스트 페이지</h1>
-        <p>여기서 각종 API 호출을 테스트할 수 있습니다.</p>
-        <!-- 여기에 실제 API 테스트용 폼이나 버튼, 결과 출력 등을 추가하면 됩니다. -->
-        <div id="api-test-area">
-            <button class="btn btn-primary" onclick="alert('API 호출 예시!')">API 호출 테스트 버튼</button>
-        </div>
-    </main>
+    <meta property="og:title" content="최도현 ♥ 이하나 결혼합니다"/>
+    <meta property="og:site_name" content="최도현 ♥ 이하나 결혼합니다"/>
+    <meta property="og:description" content="10월 12일 오후 1시 30분"/>
+    <meta property="og:image" content="https://s3.ap-northeast-2.amazonaws.com/mcard.fromtoday.co.kr/w/Hr9Hp3/photos/Hr9Hp3_mcard_2024-02-29_09cea101c4e541a5978b059698133525_w800.jpg"/>
+    <meta property="og:type" content="website"/>
 
-    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/footer.php'; ?>
-</body>
+    <title>최도현 ♥ 이하나 결혼합니다</title>
+  </head>
+  <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <div id="app"></div>
+
+  </body>
 </html>
