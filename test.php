@@ -104,6 +104,10 @@
             <button id="follow-channel-btn" class="channel-button" onclick="followChannel()">
                 카카오톡 채널 추가하기
             </button>
+
+            <button class="channel-button" onclick="followChannel()">
+                카카오톡 채널 수동 클릭 추가하기
+            </button>
             
             <div id="follow-result" class="status"></div>
             
