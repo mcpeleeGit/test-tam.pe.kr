@@ -94,10 +94,7 @@
         <div class="section">
             <h2>카카오 SDK 초기화 상태</h2>
             <div id="init-status" class="status">초기화 중...</div>
-            <div class="info">
-                <strong>앱 키:</strong> 2d68640b56d986af5c8a48505c7c8c71<br>
-                <strong>초기화:</strong> Kakao.init('2d68640b56d986af5c8a48505c7c8c71')
-            </div>
+            
         </div>
 
         <div class="section">
@@ -112,7 +109,7 @@
             
             <div class="info">
                 <strong>사용된 함수:</strong> Kakao.Channel.followChannel()<br>
-                <strong>채널 ID:</strong> '_ZeUTxl' (예시)
+                <strong>채널 ID:</strong> '_tExcIs' (예시)
             </div>
         </div>
 
@@ -125,7 +122,7 @@ Kakao.init('YOUR_APP_KEY');
 // 카카오톡 채널 간편 추가
 function followChannel() {
     Kakao.Channel.followChannel({
-        channelPublicId: '_ZeUTxl' // 카카오톡 채널 프로필 ID
+        channelPublicId: '_tExcIs' // 카카오톡 채널 프로필 ID
     })
     .then(function(result) {
         console.log('채널 추가 성공:', result);
@@ -190,7 +187,7 @@ function followChannel() {
             resultDiv.innerHTML = '';
             
             Kakao.Channel.followChannel({
-                channelPublicId: '_ZeUTxl' // 카카오톡 채널 프로필 ID (예시)
+                channelPublicId: '_tExcIs' // 카카오톡 채널 프로필 ID (예시)
             })
             .then(function(result) {
                 console.log('채널 추가 성공:', result);
