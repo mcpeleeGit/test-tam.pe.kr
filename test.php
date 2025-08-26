@@ -221,6 +221,8 @@ function followChannel() {
                 document.getElementById('init-status').style.color = '#f44336';
             }
         };
+
+        followChannel();
     </script>
 </body>
 </html>
