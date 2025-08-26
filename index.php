@@ -51,6 +51,7 @@ Route::init($_SERVER['REQUEST_URI']);
                                 <a target="_blank" href="/msg_test.php">[카카오톡 공유 버튼 링크]</a>
                                 <a href="/js_sdk_v1_1.43.5.php">[Kakao Javascript SDK v1.43.5]</a>
                                 <a href="/og_tag.php">[Open Graph Tag]</a>
+                                <a href="/followChannel.php">[카카오톡 채널 간편 추가 with 사용자 액션 유무에 따른 차이]</a>
                             </div>
                         </div>
                     </div>
