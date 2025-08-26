@@ -125,15 +125,15 @@ Kakao.init('YOUR_APP_KEY');
 // 카카오톡 채널 간편 추가
 function followChannel() {
     Kakao.Channel.followChannel({
-        channelPublicId: '_ZeUTxl', // 카카오톡 채널 프로필 ID
-        success: function(result) {
-            console.log('채널 추가 성공:', result);
-            // 성공 처리
-        },
-        fail: function(error) {
-            console.log('채널 추가 실패:', error);
-            // 실패 처리
-        }
+        channelPublicId: '_ZeUTxl' // 카카오톡 채널 프로필 ID
+    })
+    .then(function(result) {
+        console.log('채널 추가 성공:', result);
+        // 성공 처리
+    })
+    .catch(function(error) {
+        console.log('채널 추가 실패:', error);
+        // 실패 처리
     });
 }
             </div>
@@ -190,27 +190,27 @@ function followChannel() {
             resultDiv.innerHTML = '';
             
             Kakao.Channel.followChannel({
-                channelPublicId: '_ZeUTxl', // 카카오톡 채널 프로필 ID (예시)
-                success: function(result) {
-                    console.log('채널 추가 성공:', result);
-                    resultDiv.innerHTML = '✅ 카카오톡 채널 추가 성공!';
-                    resultDiv.style.color = '#4caf50';
-                    
-                    // 성공 후 버튼 상태 복원
-                    setTimeout(() => {
-                        button.disabled = false;
-                        button.textContent = '카카오톡 채널 추가하기';
-                    }, 2000);
-                },
-                fail: function(error) {
-                    console.log('채널 추가 실패:', error);
-                    resultDiv.innerHTML = '❌ 카카오톡 채널 추가 실패: ' + (error.msg || '알 수 없는 오류');
-                    resultDiv.style.color = '#f44336';
-                    
-                    // 실패 후 버튼 상태 복원
+                channelPublicId: '_ZeUTxl' // 카카오톡 채널 프로필 ID (예시)
+            })
+            .then(function(result) {
+                console.log('채널 추가 성공:', result);
+                resultDiv.innerHTML = '✅ 카카오톡 채널 추가 성공!';
+                resultDiv.style.color = '#4caf50';
+                
+                // 성공 후 버튼 상태 복원
+                setTimeout(() => {
                     button.disabled = false;
                     button.textContent = '카카오톡 채널 추가하기';
-                }
+                }, 2000);
+            })
+            .catch(function(error) {
+                console.log('채널 추가 실패:', error);
+                resultDiv.innerHTML = '❌ 카카오톡 채널 추가 실패: ' + (error.message || '알 수 없는 오류');
+                resultDiv.style.color = '#f44336';
+                
+                // 실패 후 버튼 상태 복원
+                button.disabled = false;
+                button.textContent = '카카오톡 채널 추가하기';
             });
         }
 
