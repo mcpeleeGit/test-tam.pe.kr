@@ -51,6 +51,7 @@ setcookie('compare_user_session', $_SESSION["session"], time() + 31556926, '/', 
 
 
     <title>카카오 로그인 //developers.kakao.com/sdk/js/kakao.min.js</title>
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/head.php'; ?>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script>
         // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
@@ -65,13 +66,10 @@ setcookie('compare_user_session', $_SESSION["session"], time() + 31556926, '/', 
 </head>
 
 <body>
-    <header>
-        <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
-            <div class="container"><a class="navbar-brand" href="/">Kakao API Test</a>
-                <h1>카카오 로그인</h1>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/header.php'; ?>
+        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/menu.php'; ?>
+    </div>
     <div class="container">
         <ul class="list-group">
             <li class="list-group-item">

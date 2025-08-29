@@ -34,6 +34,7 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
     <!--bootstrapcdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>카카오톡 채널</title>
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/head.php'; ?>
     <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
     <script type="text/javascript">
         kakaoPixel('541043381581099928').pageView();
@@ -44,13 +45,10 @@ if (isset($_GET["sess"]) && $_GET["sess"] == "clear") {
 </head>
 
 <body>
-    <header>
-        <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
-            <div class="container"><a class="navbar-brand" href="/">Kakao API Test</a>
-                <h1>카카오톡 채널</h1>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/header.php'; ?>
+        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/menu.php'; ?>
+    </div>
     <div class="container">
         <ul class="list-group">
             <li class="list-group-item">

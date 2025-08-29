@@ -22,6 +22,7 @@ $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
     <!--bootstrapcdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>카카오톡 소셜</title>
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/head.php'; ?>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
         // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
@@ -38,14 +39,10 @@ $JAVASCRIPT_KEY = "2d68640b56d986af5c8a48505c7c8c71";
 </head>
 
 <body>
-    <header>
-        <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
-            <div class="container"><a class="navbar-brand" href="/">Kakao API Test</a>
-                <h1>카카오톡 소셜</h1>
-            </div>
-        </nav>
-    </header>
-    eeerwerwerwerwerwere
+    <div class="container">
+        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/header.php'; ?>
+        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/menu.php'; ?>
+    </div>
     <?php
     // $url = "https://kapi.kakao.com/v2/push/send?uuids=[1]&push_message={}";
     // $ch = curl_init();
