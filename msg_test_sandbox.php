@@ -80,7 +80,7 @@ $access_token = '';
     <script src="https://sandbox-developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
-    <h1>메시지 링크 테스트(메시지API는 로그인 먼저해야 앱 변경됨)</h1>
+    <h1>(Sandbox)메시지 링크 테스트(메시지API는 로그인 먼저해야 앱 변경됨)</h1>
     
     <table class="share-table">
         <thead>
