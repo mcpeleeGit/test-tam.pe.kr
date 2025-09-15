@@ -444,6 +444,18 @@
       Kakao.Share.cleanup();
     }
 
+    function custom_template_invalid_image_parameter() {
+      Kakao.Share.sendCustom({
+        templateId: 124198,
+        templateArgs: {
+          "imageUrl": "http://scrap.kakaocdn.net/dn/b5Vr5x/bl4Ql3BQtqh/zbyYRvGTSaAMfoBufxLfbk/kakaolink40_original.png?width=800&height=450",
+          "title": "테스트",
+          "description": "테스트",
+          "webUrl": "https://developers.kakao.com"
+        }
+      });
+    }
+
   </script>
 </head>
 
@@ -518,7 +530,8 @@
                 [<a href="javascript:scrap_param()">스크랩 Param 테스트</a>]
               </div>
               <div class="card-footer">
-                -[<a href="javascript:share_default_invalid_parameter()">디폴트 템플릿(유효하지 않은 파라미터)</a>]
+                -[<a href="javascript:share_default_invalid_parameter()">기본 템플릿(유효하지 않은 파라미터)</a>]
+                -[<a href="javascript:custom_template_invalid_image_parameter()">커스텀 템플릿(없는 이미지 도메인)</a>]
               </div>
             </div>
           </div>
