@@ -204,9 +204,11 @@
     }
 
     function share_installtalk() {
-      var kakao_title = document.querySelector("h1.name").textContent;
+      var titleEl = document.querySelector("h1.name");
+      var kakao_title = (titleEl && titleEl.textContent) || document.title || 'Kakao API Platform';
       var kakao_url = window.location.href;
-      var kakao_imageUrl = document.querySelector(".thumbnail .ThumbImage").src;
+      var thumbEl = document.querySelector(".thumbnail .ThumbImage");
+      var kakao_imageUrl = (thumbEl && (thumbEl.src || thumbEl.getAttribute('src'))) || (location.protocol + '//' + location.host + '/images/kakao.png');
       Kakao.Link.sendDefault({
         objectType: 'feed',
         content: {
