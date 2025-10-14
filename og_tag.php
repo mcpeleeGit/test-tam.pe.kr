@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Open Graph Meta Tags -->
+    <meta property="og:site_name" content="배민상회">
+    <meta property="og:title" content="배민상회 - 배달사장님의 비용을 아껴주는 식자재 장보기">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="2025 제2회 세금 재테크 포럼 | 한국벤처경영원">
-    <meta property="og:description" content="미국 국채·스테이블코인·부동산 자산·음악저작권 | 실물 자산 투자와 연결된 소득공제">
-    <meta property="og:image" content="http://test-tam.pe.kr/images/link_thumbnail_v2.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="한국벤처경영원">
+    <meta property="og:description" content="신선 식재료, 포장용기, 배달비품 전문 쇼핑몰, 배민상회입니다. 톡톡튀는 배민 디자인 제품과 품질로 엄선한 기성품을 특별 할인가로 만나보세요."><meta property="og:url" content="https://mart.baemin.com">
+    <meta property="og:image" content="https://cdn-mart.baemin.com/front-end/assets-static/open_graph_2021.png">  
+    <link rel="shortcut icon" href="https://cdn-mart.baemin.com/front-end/assets-static/favicon_2021.ico">
+    <link rel="icon" href="https://cdn-mart.baemin.com/front-end/assets-static/favicon_2021.ico">
+    <link rel="apple-touch-icon" href="https://cdn-mart.baemin.com/front-end/assets-static/touch_icon_2021.png">
     
     <title>페이지 제목</title>
 </head>
