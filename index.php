@@ -17,7 +17,7 @@ Route::init($_SERVER['REQUEST_URI']);
     $siteName = 'Kakao API Platform TAM Test Site';
     $ogTitle = 'Kakao API Test';
     $ogDesc = '카카오 API/SDK, 인앱브라우저 다운로드 등 테스트 데모 페이지';
-    $ogImage = 'https://cltoo.com/ko/opengraph-image.jpg';
+    $ogImage = '/images/opengraph-image.jpg';
     ?>
     <meta property="og:site_name" content="<?php echo htmlspecialchars($siteName, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:title" content="<?php echo htmlspecialchars($ogTitle, ENT_QUOTES, 'UTF-8'); ?>">
