@@ -1,3 +1,7 @@
+<?php
+header('Location: /', true, 307);
+exit;
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>

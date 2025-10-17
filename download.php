@@ -101,6 +101,44 @@ function outputDataUrlPage(string $downloadUrl, string $suggestedName): void {
     exit;
 }
 
+function outputBlobUrlPage(string $downloadUrl, string $suggestedName): void {
+    if (!headers_sent()) {
+        header('Content-Type: text/html; charset=utf-8');
+        header('X-Content-Type-Options: nosniff');
+        header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+        header('Pragma: no-cache');
+    }
+    $safeUrl = htmlspecialchars($downloadUrl, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $safeName = htmlspecialchars($suggestedName, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    echo '<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+        . '<title>다운로드 준비중…</title></head><body>'
+        . '<script>(function(){\n'
+        . 'var url = "' . $safeUrl . '";\n'
+        . 'var filename = "' . $safeName . '";\n'
+        . 'fetch(url, { credentials: "include" }).then(function(res){\n'
+        . '  if (!res.ok) throw new Error("HTTP " + res.status);\n'
+        . '  return res.blob();\n'
+        . '}).then(function(blob){\n'
+        . '  var objectUrl = (window.URL || window.webkitURL).createObjectURL(blob);\n'
+        . '  var a = document.createElement("a");\n'
+        . '  a.style.display = "none";\n'
+        . '  a.href = objectUrl;\n'
+        . '  a.download = filename;\n'
+        . '  document.body.appendChild(a);\n'
+        . '  a.click();\n'
+        . '  setTimeout(function(){\n'
+        . '    (window.URL || window.webkitURL).revokeObjectURL(objectUrl);\n'
+        . '    if (a && a.parentNode) a.parentNode.removeChild(a);\n'
+        . '    window.close && window.close();\n'
+        . '  }, 400);\n'
+        . '}).catch(function(err){\n'
+        . '  document.body.innerHTML = "다운로드 실패: " + (err && err.message ? err.message : err);\n'
+        . '});\n'
+        . '})();</script>'
+        . '</body></html>';
+    exit;
+}
+
 function outputLinkPage(string $rawUrl, string $suggestedName): void {
     if (!headers_sent()) {
         header('Content-Type: text/html; charset=utf-8');
@@ -119,6 +157,7 @@ function outputLinkPage(string $rawUrl, string $suggestedName): void {
         . '<p>파일명: ' . $safeName . '</p>'
         . '<a href="' . $safeUrl . '">일반 다운로드(권장: 헤더 기반)</a>'
         . '<a href="' . $safeUrl . '" download>Android: download 속성 사용</a>'
+        . '<a href="' . $safeUrl . '&mode=bloburl">Blob URL 폴백(createObjectURL)</a>'
         . '<a href="' . $safeUrl . '&mode=dataurl">iOS: dataUrl 폴백(소용량 권장)</a>'
         . '<small>참고: 환경에 따라 일부 링크는 동작 방식이 다를 수 있습니다.</small>'
         . '</body></html>';
@@ -168,6 +207,16 @@ if ($mode === 'link') {
     $baseQuery = http_build_query(['file' => $fileParam]);
     $rawUrl = $scheme . '://' . $host . $script . '?' . $baseQuery;
     outputLinkPage($rawUrl, $downloadName);
+}
+
+// Optional: Blob URL fallback page using createObjectURL
+if ($mode === 'bloburl') {
+    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $script = $_SERVER['SCRIPT_NAME'] ?? '/download.php';
+    $query = http_build_query(['file' => $fileParam]);
+    $rawUrl = $scheme . '://' . $host . $script . '?' . $query;
+    outputBlobUrlPage($rawUrl, $downloadName);
 }
 
 // Optional: iOS dataUrl fallback page
