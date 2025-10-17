@@ -9,6 +9,22 @@ Route::init($_SERVER['REQUEST_URI']);
 <head>
     <title>Kakao API Platform TAM Test Site</title>
     <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/head.php'; ?>
+    <?php
+    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $requestUri = $_SERVER['REQUEST_URI'] ?? '/';
+    $currentUrl = $scheme . '://' . $host . $requestUri;
+    $siteName = 'Kakao API Platform TAM Test Site';
+    $ogTitle = 'Kakao API Test';
+    $ogDesc = '카카오 API/SDK, 인앱브라우저 다운로드 등 테스트 데모 페이지';
+    $ogImage = $scheme . '://' . $host . '/images/kakao.png';
+    ?>
+    <meta property="og:site_name" content="<?php echo htmlspecialchars($siteName, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:title" content="<?php echo htmlspecialchars($ogTitle, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="<?php echo htmlspecialchars($ogDesc, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:url" content="<?php echo htmlspecialchars($currentUrl, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:image" content="<?php echo htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>">
 </head>
 
 <body>
